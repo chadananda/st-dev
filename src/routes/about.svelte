@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>About Sacred-Traditions.org</title>
+  <title>About: Sacred-Traditions.org</title>
 </svelte:head>
 
 <h1>About Us</h1>

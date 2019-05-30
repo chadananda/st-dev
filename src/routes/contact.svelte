@@ -1,3 +1,8 @@
+<svelte:head>
+	<title>Contact us: sacred-traditions.org</title>
+</svelte:head>
+
+
 
 <h1 class="entry-title">Contact</h1>
 

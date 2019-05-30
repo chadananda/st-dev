@@ -1,3 +1,18 @@
+
+
+<svelte:head>
+	<title>{status}</title>
+</svelte:head>
+
+<h1>{status}</h1>
+
+<p>{error.message}</p>
+
+{#if dev && error.stack}
+	<pre>{error.stack}</pre>
+{/if}
+
+
 <script>
 	export let status;
 	export let error;
@@ -27,14 +42,3 @@
 	}
 </style>
 
-<svelte:head>
-	<title>{status}</title>
-</svelte:head>
-
-<h1>{status}</h1>
-
-<p>{error.message}</p>
-
-{#if dev && error.stack}
-	<pre>{error.stack}</pre>
-{/if}

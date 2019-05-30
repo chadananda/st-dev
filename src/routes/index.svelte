@@ -33,7 +33,7 @@
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Sacred Traditions - Interfaith Exploration: sacred-traditions.org</title>
 </svelte:head>
 
 <h1>Great success!</h1>
