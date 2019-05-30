@@ -9,7 +9,8 @@
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "test": "run-p --race dev cy:run"
+    "test": "run-p --race dev cy:run",
+    "deploy": "NODE_ENV=production sapper export && push-dir --dir=__sapper__/export --branch=publish --cleanup --verbose"
   },
   "dependencies": {
     "compression": "^1.7.1",
@@ -35,6 +36,7 @@
     "md5": "^2.2.1",
     "moment": "^2.24.0",
     "npm-run-all": "^4.1.5",
+    "push-dir": "^0.4.1",
     "rollup": "^1.0.0",
     "rollup-plugin-babel": "^4.0.2",
     "rollup-plugin-commonjs": "^9.1.6",
