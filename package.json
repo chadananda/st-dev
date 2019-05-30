@@ -10,7 +10,7 @@
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run",
-    "deploy": "NODE_ENV=production sapper export && push-dir --dir=__sapper__/export --branch=publish --cleanup --verbose"
+    "deploy": "NODE_ENV=production sapper export && push-dir --dir=__sapper__/export --branch=gh-pages --cleanup --verbose"
   },
   "dependencies": {
     "compression": "^1.7.1",
