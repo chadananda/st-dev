@@ -35,6 +35,17 @@
 <ArticleFooter />
 <Footer/>
 
+<script type="text/javascript">
+	// defer loading of css
+	let tach = "https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"
+	var giftofspeed2 = document.createElement('link');
+		giftofspeed2.rel = 'stylesheet';
+		giftofspeed2.href = tach;
+		giftofspeed2.type = 'text/css';
+	var godefer2 = document.getElementsByTagName('link')[0];
+	godefer2.parentNode.insertBefore(giftofspeed2, godefer2);
+</script>
+
 {/if}
 
 
