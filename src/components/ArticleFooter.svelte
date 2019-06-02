@@ -1,8 +1,4 @@
-
-
-  <!-- the best way to predict the future is to create it. (Alan Kay) -->
-
-
+<!-- the best way to predict the future is to create it. (Alan Kay) -->
 <footer>
   {#each boxes as ar}
   <div class="box" >
