@@ -36,7 +36,7 @@
 	<title>Sacred Traditions - Interfaith Exploration: sacred-traditions.org</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1>Most Wonderful Success!</h1>
 
 <figure>
 	<img alt='Borat' src='great-success.png'>
