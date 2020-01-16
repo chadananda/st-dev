@@ -20,15 +20,19 @@
         {/if}
         {#if people[i].show}
           <div class="inputs container" transition:slide>
-            <label>First name</label>
-            <Input name="people[{i}].FirstName" />
-            <label>Last name</label>
-            <Input name="people[{i}].LastName" />
-            <label>Email address</label>
-            <Input name="people[{i}].Email" />
-            <label>Phone number</label>
-            <Input name="people[{i}].Phone" />
+            <div class="group info">
+              <h3>Personal information</h3>
+              <label>First name</label>
+              <Input name="people[{i}].FirstName" />
+              <label>Last name</label>
+              <Input name="people[{i}].LastName" />
+              <label>Email address</label>
+              <Input name="people[{i}].Email" />
+              <label>Phone number</label>
+              <Input name="people[{i}].Phone" />
+            </div>
             <div class="group housing">
+              <h3>Housing</h3>
               <p>
 Our facility has separate dormitories for men and women. For other genders,
 please call to make arrangements. It is also possible to bring an RV and park
@@ -36,7 +40,7 @@ in the lot. While some of our rooms are fully enclosed, others are open near
 the ceiling. We realize some of our questions can be sensitive in nature, so
 your responses will be shared only on a need to know basis).
               </p>
-              <label>Sleeping arrangement</label>
+              <label>Housing arrangement</label>
               <Select name="people[{i}].Housing" options={opts.housing} />
               {#if values.people && values.people[i] && values.people[i].Housing === "dorm"}
                 <label>Gender</label>
@@ -48,6 +52,7 @@ your responses will be shared only on a need to know basis).
               {/if}
             </div>
             <div class="group food">
+            <h3>Food</h3>
             <p>
 While this section is optional, please keep in mind that due to our location 
 there are no supermarkets close to us. We would appreciate you being as detailed 
@@ -190,8 +195,19 @@ should not be left in your vehicle due to local wildlife.
 </script>
 
 <style>
-  div.container { padding:.4em; }
-  
+  div.container, div.group { padding:.4em; }
+
+  div.group>h3 {
+    margin: 1.2em 0 .4em;
+    font-weight: bold;
+    opacity: .6
+  }
+  div.group>p { 
+    font-size: 85%;
+    font-style: italic;
+    opacity: .8;
+  }
+
   .person {
     display: inline-block;
     border-radius: 5px;
