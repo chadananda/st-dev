@@ -1,9 +1,10 @@
 $color-bg: white;
 $color-fg: #333;
 $color-error: red;
-$color-selected-bg: rgb(35, 177, 17);
+$color-selected-bg: #b4b1df;
 $color-selected-fg: white;
-$color-border: lightgray;
+$color-hover: darken($color-selected-bg, 50%);
+$color-border: desaturate($color-selected-bg, 30%);
 
 @mixin transition($args...) {
   -webkit-transition: $args;
@@ -28,7 +29,7 @@ $color-border: lightgray;
 }
 
 @mixin form-focus() {
-  @include shadow(lighten($color-selected-bg, 20%));
+  @include shadow($color-hover);
   outline: none;
   -moz-outline: none;
 }
