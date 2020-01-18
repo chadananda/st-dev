@@ -9,17 +9,19 @@
 
   <Input type="hidden" name="CourseID" value="{CourseID}" />
   <Input type="hidden" name="StartDate" value="{StartDate}" />
+  <Input type="hidden" name="Ref" />
 
-  {#each people as p,i}
-    {#if !people[i].deleted}
-      <div class="person" id="person{i}" transition:slide class:show={people[i].show} class:deleted={people[i].deleted}>
-        {#if (values.people && values.people[i])}
-          <div class="label container" class:show={people[i].show} class:new={!values.people[i].FirstName} on:click={() => {people[i].show = !people[i].show}}>
-            {values.people[i].FirstName || "[new person]"} {values.people[i].LastName}
-          </div>
-        {/if}
-        {#if people[i].show}
+  {#each values.people as p,i}
+    {#if !values.people[i].deleted}
+      <div class="person" id="person{i}" transition:slide class:show={values.people[i].show} class:deleted={values.people[i].deleted}>
+        <div class="label container" class:show={values.people[i].show} class:new={!values.people[i].FirstName} on:click={() => {setValue(`people[${i}].show`, !values.people[i].show)}}>
+          {values.people[i].FirstName || "[new person]"} {values.people[i].LastName}
+        </div>
+        {#if values.people[i].show}
           <div class="inputs container" transition:slide>
+
+            <!-- INFO -->
+
             <div class="group info">
               <h3>Personal information</h3>
               <label>First name</label>
@@ -31,6 +33,9 @@
               <label>Phone number</label>
               <Input name="people[{i}].Phone" />
             </div>
+
+            <!-- HOUSING -->
+
             <div class="group housing">
               <h3>Housing</h3>
               <p>
@@ -42,106 +47,175 @@ your responses will be shared only on a need to know basis).
               </p>
               <label>Housing arrangement</label>
               <Select name="people[{i}].Housing" options={opts.housing} />
-              {#if values.people && values.people[i] && values.people[i].Housing === "dorm"}
+              {#if values.people[i].Housing === "dorm"}
                 <label>Gender</label>
                 <Choice name="people[{i}].Sex" options={opts.sex} />
-                <label>How deeply does {values.people[i].FirstName || 'this person'} sleep?</label>
+                <label>How deeply does {personName(i,values)} sleep?</label>
                 <Select name="people[{i}].Sleep" options={opts.sleep} value="3" />
-                <label>How likely is {values.people[i].FirstName || 'this person'} to snore?</label>
+                <label>How likely is {personName(i,values)} to snore?</label>
                 <Select name="people[{i}].Snore" options={opts.snore} value="3" />
               {/if}
             </div>
+
+            <!-- FOOD -->
+
             <div class="group food">
-            <h3>Food</h3>
-            <p>
+              <h3>Food</h3>
+              <p>
 While this section is optional, please keep in mind that due to our location 
 there are no supermarkets close to us. We would appreciate you being as detailed 
 as possible as we strive to create meals and snacks that appeal to all of our 
 participants. We do provide a small refrigerator and cupboard for participant's 
 personal food you might bring with you. The dorm is a food-free zone and consumables 
 should not be left in your vehicle due to local wildlife.
-            </p>
-            <label for="people[{i}].Diet">Diet</label>
-            <Choice name="people[{i}].Diet" options={opts.diet} multiple />
-            <label for="people[{i}].Allergies">Allergies</label>
-            <Choice name="people[{i}].Allergies" options={people[i].allergies} multiple />
-            <label for="add-allergy">Other food allergies:</label>
-            <input type="text" name="add-allergy" placeholder="e.g. 'eggs'" on:keydown={(e) => {
-              let a = addAllergy(e,i)
-              if (a) setValue(`people[${i}].Allergies`, [...values.people[i].Allergies, a])
-            }} />
+              </p>
+              <label for="people[{i}].Diet">Diet</label>
+              <Choice name="people[{i}].Diet" options={opts.diet} multiple />
+              <label for="people[{i}].Allergies">Allergies</label>
+              <Choice name="people[{i}].Allergies" options={values.people[i].opts.allergies} multiple />
+              <label for="add-allergies">Other food allergies:</label>
+              <input type="text" name="add-allergies" placeholder="e.g. 'eggs'" on:keydown={(e) => {
+                let opt = addOpts(e,i,values)
+                if (opt) setValue(`people[${i}].Allergies`, [...values.people[i].Allergies, opt])
+              }} />
             </div>
+
+            <!-- TRANSPORT -->
+
+            <div class="group transport">
+              <h3>Transportation</h3>
+              <label for="Transport">How will {personName(i,values)} arrive at Firm Foundation Academy?</label>
+              <Select name="people[{i}].Transport" options={opts.transport} />
+              {#if values.people[i].Transport}
+                <p>
+If you need transportation to/from Firm Foundation Academy, we will be at
+Sacramento Airport on arrival and departure days at the following times: <br>
+- 9am - 9:45am <br>
+- 3pm - 3:45pm <br>
+If your arrival and departure times do not fit this schedule, there is a local
+shuttle company that you can book through directly with them (we can provide
+contact information upon request).
+                </p>
+                <label for="people[{i}].Arrival">Flight In</label>
+                <Input type="text" name="people[{i}].Arrival" />
+                <label for="people[{i}].Departure">Flight Out</label>
+                <Input type="text" name="people[{i}].Departure" />
+              {/if}
+            </div>
+
           </div>
         {/if}
       </div>
     {/if}
   {/each}
 
-  <a href="#person{people.length}" on:click|preventDefault={(e) => {
-    addPerson()
-    let i = people.length - 1
-    setValue(`people[${i}]`, people[i])
+  <a bind:this={addPersonLink} href="#person[0]" on:click|preventDefault={(e) => {
+    let p = new Person((values.people ? values.people[0] : {}))
+    let i = values.people.length
+    setValue(`people[${i}]`, p)
   }}>+ person</a>
 
   <div class="clearfix" />
-  <div class="container">
-
-    <label for="FlightIn">Flight In</label>
-    <Input type="text" name="FlightIn" placeholder="9am Southwest #867" />
-    <label for="FlightOut">Flight Out</label>
-    <Input type="text" name="FlightOut" placeholder="10pm Southwest #1032" />
-  </div>
   <div class="container">
     <button type="submit">Submit</button>
   </div>
   <div class="clearfix" />
   {JSON.stringify(values)}
+
+  {#if modalVisible}
+    <div class="modal">
+      <div id="paypal-buttons"></div>
+    </div>
+  {/if}
 </Form>
 
+<svelte:head>
+  <script src="https://www.paypal.com/sdk/js?client-id=ARLTZyWHyejtubwFnzlatVehD-WIp7wj-9Kfxfzj9YvPZVCB5e0W8Xe9LXf_we7NZ25OlGN_YxzVgKRr"></script>
+</svelte:head>
 
 <script>
 
+  import { onMount } from 'svelte'
   import { slide } from 'svelte/transition'
   import { Form, Input, Select, Choice } from 'sveltejs-forms';
   import * as yup from 'yup';
 
   export let CourseID
   export let StartDate
+  let values
 
-  class Person {
-    constructor(template = {}) {
-      this.FirstName = ''
-      this.LastName = template.LastName || ''
-      this.Email = ''
-      this.Phone = ''
-      this.Housing = template.Housing || 'dorm'
-      this.Sleep = "3"
-      this.Snore = "3"
-      this.show = true
-      this.deleted = false
-      this.allergies = [
-        { id: "corn", title: "corn" },
-        { id: "dairy", title: "dairy" },
-        { id: "nuts", title: "nuts" },
-        { id: "soy", title: "soy" },
-        { id: "sugar", title: "sugar" },
-      ]
-    }
-  }
+  let modalVisible
+  let addPersonLink
 
   let initialValues = { 
     CourseID: CourseID,
     StartDate: StartDate,
-    people: [ new Person ]
+    Ref: getRef(),
+    people: []
   }
 
-  let people = [new Person]
+  function getRef() {
+    let ref = Math.random().toString(36).substring(2,8).toUpperCase()
+    if (!/[A-Z0-9]{6}/.test(ref)) return getRef()
+    return ref
+  }
+  
+  class Person {
+    constructor(template = {}) {
+      this.FirstName = ''
+      this.LastName = ''
+      this.Email = ''
+      this.Phone = ''
+      this.Housing = template.Housing || 'dorm'
+      this.Sleep = '3'
+      this.Snore = '3'
+      this.Diet = []
+      this.Allergies = []
+      this.Transport = template.Transport || ''
+      this.Arrival = template.Arrival || ''
+      this.Departure = template.Departure || ''
+      this.show = true
+      this.deleted = false
+      this.opts = {
+        allergies: [
+          { id: "corn", title: "corn" },
+          { id: "dairy", title: "dairy" },
+          { id: "nuts", title: "nuts" },
+          { id: "soy", title: "soy" },
+          { id: "sugar", title: "sugar" },
+        ]
+      }
+    }
+  }
+
+  $: personName = (i, v) => {
+    if (v.people && v.people[i]) return v.people[i].FirstName.trim() || 'this person'
+    return 'this person'
+  }
+
+  onMount(() => {
+    addPersonLink.click()
+  })
 
   function handleSubmit({ detail: { values, setSubmitting, resetForm } }) {
-    setTimeout(() => {
-      console.log(values);
-      setSubmitting(false);
-    }, 2000)
+    
+    //       https://script.google.com/macros/s/AKfycbwey1mm7ceT_uydbuTN9iEsNVtM6pKK04-bS2Fa3Q/exec
+    //       https://script.google.com/macros/s/AKfycbyUVbn2gNvdJqjGuMnjt7HMxcvevS73m0ZBNYtYCeXGLeIDUT6A/exec
+    let url="https://script.google.com/macros/s/AKfycbwey1mm7ceT_uydbuTN9iEsNVtM6pKK04-bS2Fa3Q/exec"
+    fetch(url, {
+      method: "POST",
+      body: JSON.stringify(Object.assign({}, values, {testing: true})),
+    })
+    .then(r => {
+      r.json().then(result => {
+        setSubmitting(false)
+        console.log(result)
+      })
+    })
+    .catch(e => {
+      setSubmitting(false)
+      console.log(e)
+    })
   }
 
   let opts = {
@@ -154,8 +228,8 @@ should not be left in your vehicle due to local wildlife.
       { id: "F", title: "Female" }
     ],
     diet: [
-      { id: "VGN", title: "Vegan" },
-      { id: "V", title: "Vegetarian" },
+      { id: "Vegetarian", title: "Vegetarian" },
+      { id: "Vegan", title: "Vegan" },
       { id: "GF", title: "Gluten-Free" },
     ],
     sleep: [
@@ -172,24 +246,24 @@ should not be left in your vehicle due to local wildlife.
       { id: "4", title: "Yes" },
       { id: "5", title: "Often" },
     ],
+    transport: [
+      { id: "", title: "Drive / I will make arrangements"},
+      { id: "flight", title: "Flight (SMF, Sacramento Airport)" },
+      { id: "train", title: "Train (Sacramento / Auburn)"},
+      { id: "bus", title: "Bus (Sacramento)"},
+    ]
   }
 
-  function addAllergy(e,i) {
+  function addOpts(e,i,values) {
     if (e.key === "Enter") {
+      let opt = e.target.name.replace('add-', '')
       let a = e.target.value
-      people[i].allergies.push({id: a, title: a})
-      people = people
+      values.people[i].opts[opt].push({id: a, title: a})
       e.target.value = ''
+      e.preventDefault()
+      e.stopPropagation()
       return a
     }
-  }
-
-  function addPerson() {
-    for (let i = 0; i < people.length; i++) {
-      people[i].show = false
-    }
-    people.push(new Person())
-    people = people
   }
 
 </script>
@@ -209,12 +283,10 @@ should not be left in your vehicle due to local wildlife.
   }
 
   .person {
-    display: inline-block;
     border-radius: 5px;
     border: 1px solid lightgray;
-    margin: 0 10px 10px 0;
+    margin: 10px 0;
   }
-  .person.show { display:block; margin: 0; }
   .person.deleted { display:none; }
 
   .person .new { color:darkgray; }
