@@ -1,3 +1,4 @@
+<div class="form">
 <Form
   {initialValues}
   {schema}
@@ -71,15 +72,18 @@ participants. We do provide a small refrigerator and cupboard for participant's
 personal food you might bring with you. The dorm is a food-free zone and consumables 
 should not be left in your vehicle due to local wildlife.
               </p>
-              <label for="people[{i}].Diet">Diet</label>
-              <Choice name="people[{i}].Diet" options={opts.diet} multiple />
-              <label for="people[{i}].Allergies">Allergies</label>
-              <Choice name="people[{i}].Allergies" options={values.people[i].opts.allergies} multiple />
-              <label for="add-allergies">Other food allergies:</label>
-              <input type="text" name="add-allergies" placeholder="e.g. 'eggs'" on:keydown={(e) => {
-                let opt = addOpts(e,i,values)
-                if (opt) setValue(`people[${i}].Allergies`, [...values.people[i].Allergies, opt])
-              }} />
+              <div class="options">
+                <label for="people[{i}].Diet">Diet</label>
+                <Choice name="people[{i}].Diet" options={opts.diet} multiple />
+              </div>
+              <div class="options">
+                <label for="people[{i}].Allergies">Allergies</label>
+                <Choice name="people[{i}].Allergies" options={values.people[i].opts.allergies} multiple />
+                <input style="width:95px; margin-left:5px;" type="text" name="add-allergies" placeholder="more?" on:keydown={(e) => {
+                  let opt = addOpts(e,i,values)
+                  if (opt) setValue(`people[${i}].Allergies`, [...values.people[i].Allergies, opt])
+                }} />
+              </div>
             </div>
 
             <!-- TRANSPORT -->
@@ -129,6 +133,7 @@ contact information upon request).
     </div>
   {/if}
 </Form>
+</div>
 
 <svelte:head>
   <script src="https://www.paypal.com/sdk/js?client-id=ARLTZyWHyejtubwFnzlatVehD-WIp7wj-9Kfxfzj9YvPZVCB5e0W8Xe9LXf_we7NZ25OlGN_YxzVgKRr"></script>
@@ -269,7 +274,7 @@ contact information upon request).
       { id: "F", title: "Female" }
     ],
     diet: [
-      { id: "Vegetarian", title: "Vegetarian" },
+      { id: "V", title: "Vegetarian" },
       { id: "Vegan", title: "Vegan" },
       { id: "GF", title: "Gluten-Free" },
     ],
@@ -336,10 +341,13 @@ contact information upon request).
     background: lightgray;
   }
 
-  .clearfix:after { content:""; clear:both; display:table; }
+  .form { max-width:480px; margin:0 auto; }
 
   :global(.field .message) { font-size:80%; font-style:italic; }
   :global(.field.error) { color:red; }
   :global(.field.error input, .field.error select) { box-shadow: 0 0 4px red; }
+  :global(.group>.field>input[type="text"], .group>.field>select) { width:100%; }
+  :global(.options>.field) { display:inline; }
+  :global(.options>label) { display:block; }
 
 </style>
