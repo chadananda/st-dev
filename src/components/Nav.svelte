@@ -1,45 +1,67 @@
 <script>
-	 export let segment;
+	export let segment;
 </script>
 
-<header class="bg-white black-80 tc pv4 avenir">
-   <img class='logo' src="logo_lotus.svg" alt='logo'/>
-			<h1 class="mt2 mb0 baskerville i fw1 f1">Sacred Traditions</h1>
-			<!-- <h2 class="mt2 mb0 f6 fw4 ttu tracked">Your amazing subtitle</h2> -->
+<header>
+	<img class='logo' src="logo_lotus.svg" alt='our logo: a lotus bloom'/>
+	<h1>Sacred Traditions</h1>
 </header>
 
-<nav class="bg-white bt bb tc mw12 center mt2 bw1">
-		<a class="f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" href="/">
-		<img class="logo_icon" src="/favicon.ico" alt="logo icon" />
-		Home</a>
-		<a class="f6 f5-l link bg-animate black-80 hover-bg-light-green dib pa3 ph4-l" href="/ocean">
-		<img class="logo_ocean" src="/ocean_assets/favicon/favicon-32x32.png" alt="logo icon" />
-		Ocean 2.0</a>
-		<a class="f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l" href="/about">About</a>
-		<a class="f6 f5-l link bg-animate black-80 hover-bg-light-pink dib pa3 ph4-l" href="/contact">Contact</a>
-		<!-- <a class="f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pa3 ph4-l" href="/contact">Language: (en) +</a> -->
-		<a class="f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pa3 ph4-l" href="/articles">Articles</a>
+<nav>
+	<a href="/">
+		<img class="logo_icon" src="/favicon.ico" alt="our logo: a lotus bloom" />
+		Home
+	</a>
+	<a href="/ocean">
+		<img class="logo_ocean" src="/ocean_assets/favicon/favicon-32x32.png" alt="the world inside a drop" />
+		Ocean 2.0
+	</a>
+	<a href="/about">About</a>
+	<a href="/contact">Contact</a>
+	<a href="/articles">Articles</a>
 </nav>
 
-<style>
+<style lang="scss">
+	@import "../style/theme.scss";
   nav {
-			 position: -webkit-sticky; /* Safari */
-			 position: sticky !important;
-			 top: -4px;
-				z-index: 1000;
-				margin-top: 1em;
-				overflow: hidden;
-				border-color: #d9d5ef;
-				box-shadow: 0px 2px 6px 0px rgba(184,191,255,0.49);
+		position: -webkit-sticky; /* Safari */
+		position: sticky !important;
+		top: -4px;
+		z-index: 1000;
+		margin-top: 1em;
+		overflow: hidden;
+		border-color: $color-border;
+		box-shadow: 0px 2px 6px 0px rgba(184,191,255,0.49);
+		border-style: solid none;
+		border-width: .125rem;
+		text-align: center;
+		background: $color-bg;
+		a {
+			font-size: 1rem;
+			padding: 1rem 2rem;
+			transition: all .15s ease-in;
+			opacity: .8;
+			text-decoration: none;
+			display: inline-block;
+			text-align: center;
+			&:hover {
+				background-color: $color-hover;
+				color: $color-bg;
+			}
 		}
+	}
 		header {
 			 margin: 0; padding:0; margin-top:1em;
+			 text-align: center;
 		}
 		header img.logo {
 		  width: 200px; max-width: 50%; margin: 0; padding:0;
 		}
 		header h1 {
 			 margin:0;
+			 font-size:3rem;
+			 font-weight:100;
+			 font-family: avenir next, avenir, sans-serif;
 		}
 		img.logo_icon {
 			width: 20px; margin:0; padding: 0; margin-bottom: -8%; padding-right: .3em;
@@ -52,5 +74,4 @@
 			header img {width: 100%}
  }
 
- *, img, h1, h2 { transition: all .2s linear; }
 </style>
