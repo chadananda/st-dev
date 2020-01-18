@@ -270,27 +270,27 @@ contact information upon request).
       { id: "RV", title: "RV" },
     ],
     sex: [
-      { id: "M", title: "Male" },
-      { id: "F", title: "Female" }
+      { id: "M", title: "men" },
+      { id: "F", title: "women" }
     ],
     diet: [
-      { id: "V", title: "Vegetarian" },
-      { id: "Vegan", title: "Vegan" },
-      { id: "GF", title: "Gluten-Free" },
+      { id: "V", title: "vegetarian" },
+      { id: "Vegan", title: "vegan" },
+      { id: "GF", title: "gluten-free" },
     ],
     sleep: [
-      { id: "1", title: "Very light" },
-      { id: "2", title: "Light" },
-      { id: "3", title: "Normal" },
-      { id: "4", title: "Heavy" },
-      { id: "5", title: "Very heavy" },
+      { id: "1", title: "1: very light" },
+      { id: "2", title: "2: light" },
+      { id: "3", title: "3: don't know" },
+      { id: "4", title: "4: heavy" },
+      { id: "5", title: "5: very heavy" },
     ],
     snore: [
-      { id: "1", title: "Unlikely" },
-      { id: "2", title: "Lightly" },
-      { id: "3", title: "Not sure" },
-      { id: "4", title: "Yes" },
-      { id: "5", title: "Often" },
+      { id: "1", title: "1. unlikely" },
+      { id: "2", title: "2. occasionally" },
+      { id: "3", title: "3. don't know" },
+      { id: "4", title: "4. likely" },
+      { id: "5", title: "5. definitely" },
     ],
     transport: [
       { id: "", title: "Drive / I will make arrangements"},
