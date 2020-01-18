@@ -119,8 +119,6 @@ contact information upon request).
   <div class="container">
     <button type="submit">Submit</button>
   </div>
-  <div class="clearfix" />
-  {JSON.stringify(values)}
 
   {#if modalVisible}
     <div class="modal">
