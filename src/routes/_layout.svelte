@@ -32,7 +32,6 @@
 <Nav {segment}/>
 <main class="main"> <slot></slot> </main>
 
-<ArticleFooter />
 <Footer/>
 
 <script type="text/javascript">
