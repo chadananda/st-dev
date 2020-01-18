@@ -76,10 +76,10 @@ should not be left in your vehicle due to local wildlife.
                 <label for="people[{i}].Diet">Diet</label>
                 <Choice name="people[{i}].Diet" options={opts.diet} multiple />
               </div>
-              <div class="options">
+              <div class="options inline">
                 <label for="people[{i}].Allergies">Allergies</label>
                 <Choice name="people[{i}].Allergies" options={values.people[i].opts.allergies} multiple />
-                <input style="width:95px; margin-left:5px;" type="text" name="add-allergies" placeholder="more?" on:keydown={(e) => {
+                <input style="width:95px;" type="text" name="add-allergies" placeholder="more?" on:keydown={(e) => {
                   let opt = addOpts(e,i,values)
                   if (opt) setValue(`people[${i}].Allergies`, [...values.people[i].Allergies, opt])
                 }} />
@@ -131,7 +131,7 @@ contact information upon request).
       }}
     >+ person</button>
 
-    <button class="big fab" type="submit">Submit</button>
+    <button class="big fab" type="submit">Register</button>
   </div>
 
   {#if modalVisible}
@@ -323,7 +323,7 @@ contact information upon request).
 
 <style lang="scss">
   @import "../style/theme.scss";
-  .form { max-width:480px; margin:0 auto; }
+  .form { max-width:600px; margin:0 auto; }
   .container, .group { padding:.4em; }
   .group>h3 {
     margin: .6em 0 .4em;
