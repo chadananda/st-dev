@@ -42,8 +42,8 @@
             <div class="group housing">
               <h3>Housing</h3>
               <p>
-Our facility has separate dormitories for men and women. For other genders,
-please call to make arrangements. It is also possible to bring an RV and park
+Our facility has dormitories and bathrooms for men and women; for other needs
+please contact us. It is also possible to bring an RV and park
 in the lot. While some of our rooms are fully enclosed, others are open near
 the ceiling. We realize some of our questions can be sensitive in nature, so
 your responses will be shared only on a need to know basis.
