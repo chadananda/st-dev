@@ -1,5 +1,6 @@
 <Form
   {initialValues}
+  {schema}
   on:submit={handleSubmit}
   let:isSubmitting
   let:setValue
@@ -17,6 +18,7 @@
         <div class="label container" class:show={values.people[i].show} class:new={!values.people[i].FirstName} on:click={() => {setValue(`people[${i}].show`, !values.people[i].show)}}>
           {values.people[i].FirstName || "[new person]"} {values.people[i].LastName}
         </div>
+        <Input type="hidden" name="people[{i}].idx" value="{i}" />
         {#if values.people[i].show}
           <div class="inputs container" transition:slide>
 
@@ -43,7 +45,7 @@ Our facility has separate dormitories for men and women. For other genders,
 please call to make arrangements. It is also possible to bring an RV and park
 in the lot. While some of our rooms are fully enclosed, others are open near
 the ceiling. We realize some of our questions can be sensitive in nature, so
-your responses will be shared only on a need to know basis).
+your responses will be shared only on a need to know basis.
               </p>
               <label>Housing arrangement</label>
               <Select name="people[{i}].Housing" options={opts.housing} />
@@ -113,6 +115,7 @@ contact information upon request).
     let p = new Person((values.people ? values.people[0] : {}))
     let i = values.people.length
     setValue(`people[${i}]`, p)
+    setValue(`people[${i}].idx`,i)
   }}>+ person</a>
 
   <div class="clearfix" />
@@ -157,7 +160,47 @@ contact information upon request).
     if (!/[A-Z0-9]{6}/.test(ref)) return getRef()
     return ref
   }
-  
+
+  const schema = yup.object().shape({
+    Ref: yup.string().required().matches(/[A-Z0-9]{6}/),
+    CourseID: yup.string().required().max(50),
+    StartDate: yup.string().required().matches(/\d{4}-\d{2}-\d{2}/),
+    people: yup.array().min(1).of(
+      yup.object().shape({
+        idx: yup.mixed(),
+        FirstName: yup.string().label('First Name').required().max(255),
+        LastName: yup.string().label('Last Name').max(255),
+        Email: yup.mixed().label('Email').when('idx', {
+          is: 0,
+          then: yup.string().required().email(),
+          otherwise: yup.string().email()
+        }),
+        Phone: yup.mixed().label('Phone number').when('idx', {
+          is: 0,
+          then: yup.string().matches(/(^\+[-\d\.]+$|\(\d{3}\) \d{3}-\d{3}( x\d{1,5})?)/, {message: 'A valid phone number is required'}),
+          otherwise: yup.string().matches(/(^\+[-\d\.]+$|\(\d{3}\) \d{3}-\d{3})/, { excludeEmptyString: true }),
+        }),
+        Housing: yup.string().label('Housing').oneOf(['dorm', 'RV']),
+        Sex: yup.mixed().label('Dorm gender').when('Housing', {
+          is: 'dorm',
+          then: yup.string().required().oneOf(['M', 'F']),
+        }),
+        Sleep: yup.mixed().label('Slumber depth').when('Housing', {
+          is: 'dorm',
+          then: yup.number().oneOf([1,2,3,4,5])
+        }),
+        Snore: yup.mixed().label('Snore probability').when('Housing', {
+          is: 'dorm',
+          then: yup.number().oneOf([1,2,3,4,5]),
+        }),
+        Diet: yup.array().label('Diet'),
+        Allergies: yup.array().label('Allergies'),
+        Transport: yup.string().label('Transport').oneOf(['', 'flight', 'bus', 'train']),
+        Arrival: yup.string().label('Arrival').max(255),
+        Departure: yup.string().label('Departure').max(255),
+      })),
+  })
+
   class Person {
     constructor(template = {}) {
       this.FirstName = ''
@@ -294,5 +337,9 @@ contact information upon request).
   }
 
   .clearfix:after { content:""; clear:both; display:table; }
+
+  :global(.field .message) { font-size:80%; font-style:italic; }
+  :global(.field.error) { color:red; }
+  :global(.field.error input, .field.error select) { box-shadow: 0 0 4px red; }
 
 </style>
