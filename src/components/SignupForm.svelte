@@ -315,33 +315,28 @@ contact information upon request).
 </script>
 
 <style>
-  div.container, div.group { padding:.4em; }
-
-  div.group>h3 {
+  .form { max-width:480px; margin:0 auto; }
+  .container, .group { padding:.4em; }
+  .group>h3 {
     margin: 1.2em 0 .4em;
     font-weight: bold;
     opacity: .6
   }
-  div.group>p { 
+  .group>p { 
     font-size: 85%;
     font-style: italic;
     opacity: .8;
   }
-
   .person {
     border-radius: 5px;
     border: 1px solid lightgray;
     margin: 10px 0;
   }
-  .person.deleted { display:none; }
-
   .person .new { color:darkgray; }
   .person .label {
     width: 100%;
     background: lightgray;
   }
-
-  .form { max-width:480px; margin:0 auto; }
 
   :global(.field .message) { font-size:80%; font-style:italic; }
   :global(.field.error) { color:red; }
