@@ -90,7 +90,7 @@ should not be left in your vehicle due to local wildlife.
 
             <div class="group transport">
               <h3>Transportation</h3>
-              <label for="Transport">How will {personName(i,values)} arrive at Firm Foundation Academy?</label>
+              <label for="Transport">How will {personName(i,values)} travel here?</label>
               <Select name="people[{i}].Transport" options={opts.transport} />
               {#if values.people[i].Transport}
                 <p>
@@ -114,17 +114,24 @@ contact information upon request).
       </div>
     {/if}
   {/each}
-
-  <a bind:this={addPersonLink} href="#person[0]" on:click|preventDefault={(e) => {
-    let p = new Person((values.people ? values.people[0] : {}))
-    let i = values.people.length
-    setValue(`people[${i}]`, p)
-    setValue(`people[${i}].idx`,i)
-  }}>+ person</a>
-
   <div class="clearfix" />
   <div class="container">
-    <button type="submit">Submit</button>
+
+    <button type="button" class="big" bind:this={addPersonLink} 
+      on:click={(e) => {
+        let p = new Person((values.people ? values.people[0] : {}))
+        let i = values.people.length
+        setValue(`people[${i}]`, p)
+        setValue(`people[${i}].idx`,i)
+      }}
+      on:focus={(e) => {
+        for (let i = 0; i < values.people.length; i++) {
+          setValue(`people[${i}].show`, false)
+        }
+      }}
+    >+ person</button>
+
+    <button class="big fab" type="submit">Submit</button>
   </div>
 
   {#if modalVisible}
@@ -314,35 +321,32 @@ contact information upon request).
 
 </script>
 
-<style>
+<style lang="scss">
+  @import "../style/theme.scss";
   .form { max-width:480px; margin:0 auto; }
   .container, .group { padding:.4em; }
   .group>h3 {
-    margin: 1.2em 0 .4em;
+    margin: .6em 0 .4em;
     font-weight: bold;
-    opacity: .6
+    opacity: .6;
+    font-size: 170%;
   }
-  .group>p { 
-    font-size: 85%;
+  .group>p {
     font-style: italic;
     opacity: .8;
   }
   .person {
     border-radius: 5px;
-    border: 1px solid lightgray;
+    border: 1px solid $color-border;
     margin: 10px 0;
   }
-  .person .new { color:darkgray; }
+  .person .new { color: darken($color-border, 30%); }
   .person .label {
+    font-size: 120%;
+    font-variant: small-caps;
+    text-transform: capitalize;
     width: 100%;
-    background: lightgray;
+    background: $color-border;
   }
-
-  :global(.field .message) { font-size:80%; font-style:italic; }
-  :global(.field.error) { color:red; }
-  :global(.field.error input, .field.error select) { box-shadow: 0 0 4px red; }
-  :global(.group>.field>input[type="text"], .group>.field>select) { width:100%; }
-  :global(.options>.field) { display:inline; }
-  :global(.options>label) { display:block; }
 
 </style>
