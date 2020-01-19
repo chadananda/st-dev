@@ -25,8 +25,8 @@
 		<img class="logo_ocean" src="/ocean_assets/favicon/favicon-32x32.png" alt="the world inside a drop" />
 		Ocean 2.0
 	</a>
-	<a href="/about">About</a>
-	<a href="/contact">Contact</a>
+	<a href="/courses">Courses</a>
+	<a href="/blog">Happenings</a>
 	<a href="/articles">Articles</a>
 </nav>
 
