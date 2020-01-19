@@ -16,8 +16,15 @@
 
 {:else}
 
+<div class="main-wrapper">
+
 <Nav {segment}/>
-<main class="main"> <slot></slot> </main>
+
+<main class="main">
+<slot></slot> 
+</main>
+
+</div>
 
 <Footer/>
 
