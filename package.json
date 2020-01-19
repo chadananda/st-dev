@@ -23,7 +23,6 @@
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/runtime": "^7.0.0",
-    "@material-ui/styles": "^4.8.2",
     "autoprefixer": "^9.7.4",
     "fs-sync": "^1.0.6",
     "js-yaml": "^3.13.1",

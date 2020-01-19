@@ -12,6 +12,7 @@
   <Input type="hidden" name="CourseID" value="{CourseID}" />
   <Input type="hidden" name="StartDate" value="{StartDate}" />
   <Input type="hidden" name="Ref" />
+  <Input type="hidden" name="testing" value="true"></Input>
 
   {#each values.people as p,i}
     {#if !values.people[i].deleted}
@@ -34,17 +35,7 @@
               <label>Email address</label>
               <Input name="people[{i}].Email" />
               <label>Phone number</label>
-
-              <div class="field" class:error={touched.people[i].Phone && errors.people[i].Phone}>
-                <input type="text" name="people[{i}].Phone" 
-                  on:keyup={formatPhone} 
-                  on:blur={formatPhone} 
-                  on:change={(e) => setValue(`people[${i}].Phone`, e.target.value)}
-                />
-                  {#if touched.people[i].Phone && errors.people[i].Phone}
-                  <div class="message">A valid phone number is required</div>
-                  {/if}
-              </div>
+              <Input name="people[{i}].Phone" />
             </div>
 
             <!-- HOUSING -->
@@ -143,14 +134,34 @@ contact information upon request).
 
     <button class="big fab" type="submit">Register</button>
   </div>
-
-  {#if modalVisible}
-    <div class="modal">
-      <div id="paypal-buttons"></div>
-    </div>
-  {/if}
+  {JSON.stringify(values)}
 </Form>
 </div>
+
+{#if paypalVisible}
+  <div id="paypal-buttons"></div>
+{/if}
+
+{#if submitVisible}
+  <div class="modal" class:success={submitResponse.success}>
+    {#if submitResponse.success}
+      <h3 class="success">You are registered!</h3>
+      <p>Your registration has been received for the following people:</p>
+      <ul>
+      {#each submitResponse.data.people as p}
+        <li>{p}</li>
+      {/each}
+      </ul>
+      <p>Your reference code is <span style="font-family:monospace; font-weight:bold;">{submitResponse.data.reference}</span>.
+      You should also receive an email with this information.</p>
+    {:else}
+      <h3 class="error">Something went wrong!</h3>
+      <p>We're not sophisticated enough to know exactly what it was,
+      but we hope you'll give us a call to sort things out.</p>
+    {/if}
+    <button type="button" class="center" on:click={() => submitVisible = false}>OK</button>
+  </div>
+{/if}
 
 <svelte:head>
   <script src="https://www.paypal.com/sdk/js?client-id=ARLTZyWHyejtubwFnzlatVehD-WIp7wj-9Kfxfzj9YvPZVCB5e0W8Xe9LXf_we7NZ25OlGN_YxzVgKRr"></script>
@@ -162,6 +173,11 @@ contact information upon request).
   import { slide } from 'svelte/transition'
   import { Form, Input, Select, Choice } from 'sveltejs-forms';
   import * as yup from 'yup';
+
+  let paypalVisible
+
+  let submitVisible
+  let submitResponse = {}
 
   export let CourseID
   export let StartDate
@@ -199,8 +215,8 @@ contact information upon request).
         }),
         Phone: yup.mixed().label('Phone number').when('idx', {
           is: 0,
-          then: yup.string().matches(/(^\+[-\d\.]+$|\(\d{3}\) \d{3}-\d{3}( x\d{1,5})?)/, {message: 'A valid phone number is required'}),
-          otherwise: yup.string().matches(/(^\+[-\d\.]+$|\(\d{3}\) \d{3}-\d{3})/, { excludeEmptyString: true }),
+          then: yup.string().matches(/(^\+[-\d\. ]+$|^\(?\d{3}[-\.\) ]*\d{3}[-\. ]*\d{4}$)/, {message: 'A valid phone number is required'}),
+          otherwise: yup.string().matches(/(^\+[-\d\. ]+$|^\(?\d{3}[-\.\) ]*\d{3}[-\. ]*\d{4}$)/, { excludeEmptyString: true, message: 'This is not a valid phone number.'}),
         }),
         Housing: yup.string().label('Housing').oneOf(['dorm', 'RV']),
         Sex: yup.mixed().label('Dorm gender').when('Housing', {
@@ -297,11 +313,15 @@ contact information upon request).
     .then(r => {
       r.json().then(result => {
         setSubmitting(false)
+        submitResponse = result
+        submitVisible = true
         console.log(result)
       })
     })
     .catch(e => {
       setSubmitting(false)
+      submitResponse = e
+      submitVisible = true
       console.log(e)
     })
   }
@@ -359,6 +379,21 @@ contact information upon request).
 <style lang="scss">
   @import "../style/theme.scss";
   .form { max-width:600px; margin:0 auto; }
+  div.modal {
+    width: 80%;
+    max-width: 560px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $color-bg;
+    border-radius: .5em;
+    box-shadow: 2px 0 20px 8px rgba(126,126,126,.8);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 80%;
+    padding: 2em;
+  }
   .container, .group { padding:.4em; }
   .group>h3 {
     margin: .6em 0 .4em;

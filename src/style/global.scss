@@ -136,6 +136,11 @@ textarea {
 
 button {
   font-weight: bold;
+  padding: .8em 2em;
+  &.center {
+    display: block;
+    margin: 0 auto;
+  }
   &.big {
     font-variant: small-caps;
     font-size: 140%;
