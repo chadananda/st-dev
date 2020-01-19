@@ -18,6 +18,15 @@
     {#if !values.people[i].deleted}
       <div class="person" id="person{i}" transition:slide class:show={values.people[i].show} class:deleted={values.people[i].deleted}>
         <div class="label container" class:show={values.people[i].show} class:new={!values.people[i].FirstName} on:click={() => {setValue(`people[${i}].show`, !values.people[i].show)}}>
+          {#if i>0}
+            <span data-i="{i}" class="button close right" on:click={(e) => {
+              e.preventDefault()
+              e.stopPropagation()
+              let newPeople = [...values.people]
+              newPeople.splice(parseInt(e.target.getAttribute('data-i'),10),1)
+              setValue('people', newPeople)
+            }}>✖️</span>
+          {/if}
           {values.people[i].FirstName || "[new person]"} {values.people[i].LastName}
         </div>
         <Input type="hidden" name="people[{i}].idx" value="{i}" />
