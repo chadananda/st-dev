@@ -89,9 +89,9 @@ input, select, button {
 }
 
 input[type="checkbox"], input[type="radio"] {
-  height: 1px;
-  position: fixed;
-  top: -99px;
+  position: absolute;
+  left: -999px;
+  margin-top: 80px;
 }
 input[type="checkbox"] + label, input[type="radio"] + label {
   font-size: 16px;
@@ -171,6 +171,7 @@ select option {
 }
 
 form {
+  overflow: hidden;
   label {
     font-variant: small-caps;
     font-size: 110%;
