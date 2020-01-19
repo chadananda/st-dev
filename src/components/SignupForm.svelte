@@ -218,7 +218,7 @@ contact information upon request).
           then: yup.string().matches(/(^\+[-\d\. ]+$|^\(?\d{3}[-\.\) ]*\d{3}[-\. ]*\d{4}$)/, {message: 'A valid phone number is required'}),
           otherwise: yup.string().matches(/(^\+[-\d\. ]+$|^\(?\d{3}[-\.\) ]*\d{3}[-\. ]*\d{4}$)/, { excludeEmptyString: true, message: 'This is not a valid phone number.'}),
         }),
-        Housing: yup.string().label('Housing').oneOf(['dorm', 'RV']),
+        Housing: yup.string().label('Housing').oneOf(['dorm','RV','day']),
         Sex: yup.mixed().label('Dorm gender').when('Housing', {
           is: 'dorm',
           then: yup.string().required().oneOf(['M', 'F']),
@@ -330,6 +330,7 @@ contact information upon request).
     housing: [
       { id: "dorm", title: "Dorm" },
       { id: "RV", title: "RV" },
+      { id: "day", title: "Outside / day student"},
     ],
     sex: [
       { id: "M", title: "men" },
