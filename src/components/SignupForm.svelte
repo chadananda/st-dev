@@ -34,7 +34,17 @@
               <label>Email address</label>
               <Input name="people[{i}].Email" />
               <label>Phone number</label>
-              <Input name="people[{i}].Phone" />
+
+              <div class="field" class:error={touched.people[i].Phone && errors.people[i].Phone}>
+                <input type="text" name="people[{i}].Phone" 
+                  on:keyup={formatPhone} 
+                  on:blur={formatPhone} 
+                  on:change={(e) => setValue(`people[${i}].Phone`, e.target.value)}
+                />
+                  {#if touched.people[i].Phone && errors.people[i].Phone}
+                  <div class="message">A valid phone number is required</div>
+                  {/if}
+              </div>
             </div>
 
             <!-- HOUSING -->
@@ -249,6 +259,31 @@ contact information upon request).
   onMount(() => {
     addPersonLink.click()
   })
+
+  let formatPhone = (e) => {
+    let bksp = (e.keyCode == 8 || e.keyCode == 46)
+    if (/^\+/.test(e.target.value)) {
+      e.target.value = e.target.value.replace(/[^-\+\d\. \(\)x]/g,'')
+    }
+    else {
+      let ph = e.target.value.replace(/\D/g,'').substring(0,10)
+      let len = ph.length
+      if(len==0){
+          ph=ph;
+      }else if(len<3){
+          ph='('+ph;
+      }else if(len==3){
+          ph = '('+ph + (bksp ? '' : ') ');
+      }else if(len<6){
+          ph='('+ph.substring(0,3)+') '+ph.substring(3,6);
+      }else if(len==6){
+          ph='('+ph.substring(0,3)+') '+ph.substring(3,6)+ (bksp ? '' : '-');
+      }else{
+          ph='('+ph.substring(0,3)+') '+ph.substring(3,6)+'-'+ph.substring(6,10);
+      }
+      e.target.value = ph;
+    }
+  }
 
   function handleSubmit({ detail: { values, setSubmitting, resetForm } }) {
     
