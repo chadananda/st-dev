@@ -14,7 +14,7 @@ export function get(req, res) {
 
 	if (post) {
 		res.writeHead(200, {
-			// 'Cache-Control': `max-age=${5 * 60 * 1e3}`, // 5 minutes
+			'Cache-Control': `max-age=${5 * 60 * 1e3}`, // 5 minutes
 		})
 		res.end(JSON.stringify(post))
 	}
