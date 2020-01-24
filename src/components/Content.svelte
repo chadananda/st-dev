@@ -1,7 +1,6 @@
 <script>
     export let meta
     export let html
-    export let slug
     meta.title = meta.title || "Untitled"
 </script>
 
@@ -13,7 +12,7 @@
 <h1 class="title">{meta.title}</h1>
 
 <div id="content">
-  {html}
+  {@html html}
   <slot></slot>
 </div>
 
