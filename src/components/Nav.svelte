@@ -1,5 +1,4 @@
 <script>
-	export let segment;
 	import { stores } from '@sapper/app';
 	const { preloading, page, session } = stores();
 </script>
@@ -13,7 +12,7 @@
 
 <nav class:front={$page.path === '/'} >
 	{#if $page.path !== '/'}
-		<header>
+		<header class="not-front">
 			<a href="/">
 				<img class='logo' src="logo_lotus.svg" alt='our logo: a lotus bloom'/>
 				<h1>Sacred Traditions</h1>
@@ -85,7 +84,7 @@
 	nav.front {
 		text-align: center;
 	}
-	nav header {
+	nav header.not-front {
 		position: absolute;
 		left: 1rem;
 		top: .7rem;
