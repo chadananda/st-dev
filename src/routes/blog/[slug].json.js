@@ -5,14 +5,12 @@ let lookup;
 export function get(req, res) {
 	if (!lookup || process.env.NODE_ENV !== 'production') {
 		lookup = new Map();
-		getContent('blog', {sort: 'pubdate', sortDir: 'desc'}).forEach(post => {
+		getContent('blog').forEach(post => {
 			lookup.set(post.meta.slug, post);
 		});
 	}
 
 	let post = lookup.get(req.params.slug);
-	console.log(post)
-	console.log(lookup)
 
 	if (post) {
 		res.writeHead(200, {

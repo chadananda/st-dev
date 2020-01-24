@@ -24,7 +24,6 @@ export default function getContent(filePath = '', opts = {}) {
     .filter(o => path.parse(o.path).ext === '.md')    // only files that are .md
     .map(o => {                                       // parse markdown and json for files
       let f = parse(fs.readFileSync(o.path))
-      console.log(f)
       f.meta = Object.assign({}, f.data)
       f.meta.file = {
         path: o.path,
@@ -32,7 +31,6 @@ export default function getContent(filePath = '', opts = {}) {
         size: o.stats.size
       }
       delete f.orig
-      // delete f.data
       f.meta.title = f.meta.title || path.parse(f.meta.file.path).name.replace(/[-_]/g, ' ')
       f.meta.pubdate = f.meta.pubdate || new Moment(f.meta.file.date, 'YYYY-MM-DD')
       f.html = md.render(f.content)
