@@ -100,9 +100,6 @@
 			vertical-align: bottom;
 		}
 	}
-	img.logo_icon {
-		width: 20px; margin:0; padding: 0; margin-bottom: -8%; padding-right: .3em;
-	}
 	img.logo_ocean {
 		width: 18px; margin:0; padding: 0; margin-bottom: -4%; margin-right: .2em; opacity: .8;
 	}
