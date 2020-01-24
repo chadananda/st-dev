@@ -8,6 +8,8 @@ import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 import sveltePreprocess from 'svelte-preprocess';
 
+const onwarn = (warning, onwarn) => (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) || onwarn(warning);
+
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
@@ -38,7 +40,6 @@ export default {
 			}),
 			resolve(),
 			commonjs(),
-
 			legacy && babel({
 				extensions: ['.js', '.mjs', '.html', '.svelte'],
 				runtimeHelpers: true,
@@ -55,11 +56,11 @@ export default {
 					}]
 				]
 			}),
-
 			!dev && terser({
 				module: true
 			})
 		],
+		onwarn,
 	},
 
 	server: {
@@ -81,6 +82,7 @@ export default {
 		external: Object.keys(pkg.dependencies).concat(
 			require('module').builtinModules || Object.keys(process.binding('natives'))
 		),
+		onwarn,
 	},
 
 	serviceworker: {
