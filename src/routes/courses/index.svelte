@@ -22,7 +22,7 @@
 			<img src="{item.meta.image}" alt="{item.meta.altText || `A photo of ${item.meta.title}.`}" />
 		{/if}
 		{#if item.excerpt}
-			<p>{item.excerpt}</p>
+			{@html item.excerpt}
 		{/if}
 		<div class="clearfix" />
 	{/each}
