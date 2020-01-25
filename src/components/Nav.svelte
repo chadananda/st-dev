@@ -25,7 +25,7 @@
 		Ocean 2.0
 	</a>
 	<a href="/courses">Courses</a>
-	<a href="/blog">Happenings</a>
+	<a href="/blog">Blog</a>
 	<a href="/articles">Articles</a>
 </nav>
 
