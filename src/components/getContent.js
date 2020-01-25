@@ -34,7 +34,7 @@ export default function getContent(filePath = '', opts = {}) {
       f.meta.title = f.meta.title || path.parse(f.meta.file.path).name.replace(/[-_]/g, ' ')
       f.meta.pubdate = f.meta.pubdate || new Moment(f.meta.file.date, 'YYYY-MM-DD')
       f.html = md.render(f.content)
-      f.meta.slug = slugify(f.meta.title, {lower:true, remove: /[*+~.()'"!:@,]/g})
+      f.meta.slug = slugify(path.parse(o.path).name, {lower:true, remove: /[*+~.()'"!:@,]/g})
       return f
     })
     .filter(f => f.meta.pubdate <= now)
