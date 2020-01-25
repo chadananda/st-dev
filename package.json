@@ -23,6 +23,8 @@
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/runtime": "^7.0.0",
+    "@fullcalendar/core": "^4.3.1",
+    "@fullcalendar/daygrid": "^4.3.0",
     "autoprefixer": "^9.7.4",
     "fs-sync": "^1.0.6",
     "gray-matter": "^4.0.2",
