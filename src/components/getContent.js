@@ -44,7 +44,7 @@ export default function getContent(filePath = '', opts = {}) {
         f.content = f.content.replace(f.excerpt + '---', '')            // remove explicit excerpts
       }
       f.excerpt = md.render(f.excerpt)
-      console.log(f.excerpt)
+      f.excerptText = f.excerpt.replace(/<[^>]+?>/g, '')
       f.html = md.render(f.content)
       f.meta.slug = slugify(path.parse(o.path).name, {lower:true, remove: /[*+~.()'"!:@,]/g})
       return f

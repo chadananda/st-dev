@@ -17,7 +17,7 @@
 {#each content as item}
 	<tr>
 		<td>{new Moment(item.meta.pubdate, 'YYYY-MM-DD').format('MMM D')}</td>
-		<td><a href="/blog/{item.meta.slug}">{item.meta.title}</a></td>
+		<td><a href="/blog/{item.meta.slug}" title="{item.excerptText}">{item.meta.title}</a></td>
 	</tr>
 {:else}
    <!-- empty list -->
