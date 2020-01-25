@@ -143,7 +143,6 @@ contact information upon request).
 
     <button class="big fab" type="submit">Register</button>
   </div>
-  {JSON.stringify(values)}
 </Form>
 </div>
 
