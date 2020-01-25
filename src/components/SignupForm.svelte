@@ -182,6 +182,7 @@ contact information upon request).
   import { slide } from 'svelte/transition'
   import { Form, Input, Select, Choice } from 'sveltejs-forms';
   import * as yup from 'yup';
+  import url from './getUrl.js'
 
   let paypalVisible
 
@@ -311,10 +312,6 @@ contact information upon request).
   }
 
   function handleSubmit({ detail: { values, setSubmitting, resetForm } }) {
-    
-    //       https://script.google.com/macros/s/AKfycbwey1mm7ceT_uydbuTN9iEsNVtM6pKK04-bS2Fa3Q/exec
-    //       https://script.google.com/macros/s/AKfycbyUVbn2gNvdJqjGuMnjt7HMxcvevS73m0ZBNYtYCeXGLeIDUT6A/exec
-    let url="https://script.google.com/macros/s/AKfycbwey1mm7ceT_uydbuTN9iEsNVtM6pKK04-bS2Fa3Q/exec"
     fetch(url, {
       method: "POST",
       body: JSON.stringify(Object.assign({}, values, {testing: true})),
