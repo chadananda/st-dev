@@ -11,6 +11,8 @@ export default async function getSessions() {
     if ((localStorage.getItem('sessionCacheTime') || '0') < cacheTime.toString()) {
       let response = await fetch(url).then(r => r.json())
       sessions = response.data.filter(v => v.CourseID).map(v => {
+        v.StartDate = v.StartDate.substring(0,10)
+        v.EndDate = v.EndDate.substring(0,10)
         v.StartDateDisplay = (v.StartDate
           ? new Moment(v.StartDate, 'YYYY-MM-DD').format('MMM D')
           : '')
