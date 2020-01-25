@@ -39,12 +39,12 @@ getSessions().then(sessions => {
 
   {#if course.html}
     {@html course.html}
-  {:else if session.description}
-    <p>{session.description}</p>
+  {:else if session.Description}
+    <p>{session.Description}</p>
   {/if}
 
-  <div class="row"><span>Dates:</span>{session.StartDateDisplay} – {session.EndDateDisplay}</div>
-  <div class="row"><span>Cost:</span>{session.Cost ? `${session.Cost} per person` : ''}</div>
+  <div class="row"><span>Dates:</span> {session.StartDateDisplay} – {session.EndDateDisplay}</div>
+  <div class="row"><span>Cost:</span> {session.Cost ? `$${session.Cost} per person` : ''}</div>
 
   <SignupForm {...session} />
 {/if}
