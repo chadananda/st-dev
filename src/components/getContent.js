@@ -32,19 +32,23 @@ export default function getContent(filePath = '', opts = {}) {
       delete f.orig
       f.meta.title = f.meta.title || path.parse(f.meta.file.path).name.replace(/[-_]/g, ' ')
       f.meta.pubdate = f.meta.pubdate || new Moment(f.meta.file.date, 'YYYY-MM-DD')
-      if (!f.excerpt.length) {
-        f.excerpt = f.content.replace(/^#+ [^\n]+$/gm, '')                // remove headers
-                  .replace(/!\[[^\]\n]+\]\([^\)\n]+\)/gm, '')           // remove images
-                  .replace(/\[([^\]\n]+)\]\([^\)\n]+\)/gm, '$1')        // remove links
-                  .match(/^\s*((?:[\s\S](?!\n\n)){0,240}\b\W?)/m)[1]    // excerpt
-                  .trim() || ''                                         // trim, default to empty
-        if (/[^\.\?!]$/.test(f.excerpt)) f.excerpt += '...'                 // add elipsis to fragments
+      if (!f.excerpt) {
+        // try to get the first paragraph
+        f.excerpt = (f.content.match(/(?:^\n?|\n\n)( {0,3}\w(?:[\s\S](?!\n(?=\n|\s{0,3}(?:[-_\*=] ?){3,})))+\b\W?)/) || [])[1] || ''
+        // if it was successful, excerpt some text
+        if (f.excerpt) {
+          f.excerpt = f.excerpt.replace(/\n+/g, '')                             // remove line breaks
+                               .replace(/!\[[^\]\n]+\]\([^\)\n]+\)/gm, '')      // remove images
+                               .replace(/\[([^\]\n]+)\]\([^\)\n]+\)/gm, '$1')   // remove links
+                               .trim().match(/^.{0,240}\b\W?/m)[0].trim()       // excerpt & trim
+          if (/[^\.\?!]$/.test(f.excerpt)) f.excerpt += '...'                   // add elipsis to fragments
+          f.excerpt = md.render(f.excerpt)
+        }
       }
       else {
-        f.content = f.content.replace(f.excerpt + '---', '')            // remove explicit excerpts
+        f.content = f.content.replace(f.excerpt + '---', '')                // remove explicit excerpts
       }
-      f.excerpt = md.render(f.excerpt)
-      f.excerptText = f.excerpt.replace(/<[^>]+?>/g, '')
+      f.excerptText = f.excerpt.replace(/<[^>]+?>/gm, '')
       f.html = md.render(f.content)
       f.meta.slug = slugify(path.parse(o.path).name, {lower:true, remove: /[*+~.()'"!:@,]/g})
       return f
