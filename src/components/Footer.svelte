@@ -1,29 +1,31 @@
 <footer>
-  <div class="copyright">
-    COPYRIGHT © {year}. ALL RIGHT RESERVED. — <a href='/'>HTTPS://SACRED-TRADITIONS.ORG</a>
-  </div>
-  <div class="footer-links">
-    <a href="/about">About</a>
-    <a href="/contact">Contact</a>
-    <a href="/privacy">Privacy</a>
-  </div>
+    <div class="links">
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="/privacy">Privacy</a>
+    </div>
+    <div class="copyright">
+      <a href='/'>©{year} sacred-traditions.org</a>
+    </div>
 </footer>
-
-
-<style>
-  footer {
-    width: 100%; text-align: center;
-    background-color: #eee;
-    padding: 2em;
-    margin:0;
-    font-size: .75em;
-  }
-  div, .footer-links a {
-    margin: 1em;
-  }
-</style>
 
 
 <script>
   let year = new Date().getFullYear()
 </script>
+
+
+<style>
+
+  footer {
+    display: flex;
+    width: 100%;
+    background-color: rgb(252, 249, 249);
+    padding: 1em; border-radius: 1em; border-top: 2px solid #c2c2cf;
+    margin:0;
+    font-size: .75em; font-weight: bold; color: rgb(169, 169, 169);
+    justify-content: space-between;
+  }
+  div a {margin-right: 1em; text-decoration: none}
+  div a:hover {text-decoration: underline; color: rgb(91, 91, 91)}
+</style>
