@@ -1,35 +1,27 @@
-# sapper-template
+# Sacred Traditions Website
 
-The default [Sapper](https://github.com/sveltejs/sapper) template, with branches for Rollup and webpack. To clone it and get started:
+If you'd like to help with this website, you can do so in several way. First, you can improve the code. To do so, just clone the repository, make some changes and then send in a pull request. To run locally, simply:
 
 ```bash
-# for Rollup
-npx degit sveltejs/sapper-template#rollup my-app
-# for webpack
-npx degit sveltejs/sapper-template#webpack my-app
-cd my-app
-npm install # or yarn!
+git clone
+cd st-dev
+npm install # or yarn, if you like living on the edge!
 npm run dev
 ```
 
 Open up [localhost:3000](http://localhost:3000) and start clicking around.
 
-Consult [sapper.svelte.dev](https://sapper.svelte.dev) for help getting started.
+This is a Svelte/Sapper PWA web application, so for help, consult [sapper.svelte.dev](https://sapper.svelte.dev).
 
 
 ## Structure
 
-Sapper expects to find two directories in the root of your project —  `src` and `static`.
-
-
-### src
-
-The [src](src) directory contains the entry points for your app — `client.js`, `server.js` and (optionally) a `service-worker.js` — along with a `template.html` file and a `routes` directory.
+Sapper expects to find two directories in the root of your project —  `src` and `static`. Static is for public assets and files whice `src` is the actuall application. All content (articles, blog posts, course descriptions) live as MD files in the `src/contents` directory. To add new content, just drop in a MD file and rebuild. Note that each MD file has a YAML header.
 
 
 #### src/routes
 
-This is the heart of your Sapper app. There are two kinds of routes — *pages*, and *server routes*.
+This is the heart of the Sapper app. There are two kinds of routes — *pages*, and *server routes*.
 
 **Pages** are Svelte components written in `.svelte` files. When a user first visits the application, they will be served a server-rendered version of the route in question, plus some JavaScript that 'hydrates' the page and initialises a client-side router. From that point forward, navigating to other pages is handled entirely on the client for a fast, app-like feel. (Sapper will preload and cache the code for these subsequent pages, so that navigation is instantaneous.)
 
@@ -83,7 +75,4 @@ npm install -D @sveltejs/svelte-virtual-list
 ```
 
 
-## Bugs and feedback
 
-Sapper is in early development, and may have the odd rough edge here and there. Please be vocal over on the [Sapper issue tracker](https://github.com/sveltejs/sapper/issues).
-# st-dev
