@@ -1,7 +1,7 @@
 {
   "name": "sacred-traditions",
   "description": "Home of 'Ocean 2.0 Interfaith Reader' and lots of other fun projects...",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "keywords": ["religion", "interfaith", "sacred traditions", "ocean", "ocean reader", "ocean 2.0", "dawn-breakers", "dawn-breakers challenge"],
   "homepage": "https://sacred-traditions.org",
   "license": "CC-BY-2.0",
@@ -11,7 +11,7 @@
     {"name": "Peter Terry", "email": "peterry19@gmail.com", "url": "https://bahaiteachings.org/author/peter-terry"}
   ],
   "scripts": {
-    "dev": "sapper dev",
+    "dev": "sapper dev -p 1844",
     "build": "sapper build --legacy",
     "export": "sapper export --legacy",
     "start": "node __sapper__/build",
