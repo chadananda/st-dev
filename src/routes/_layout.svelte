@@ -5,7 +5,7 @@
 </script>
 
 <style lang="scss" global>
-	@import "./style/global.scss";
+	 @import "./style/global.scss";
 </style>
 
 {#if segment && segment.match(/ocean/g)}
@@ -17,15 +17,11 @@
 {:else}
 
 <div class="main-wrapper">
-
-<Nav {segment}/>
-
-<main class="main">
-<slot></slot> 
-</main>
-
+	<Nav {segment}/>
+	<main class="main">
+			<slot></slot>
+	</main>
 </div>
-
 <Footer/>
 
 {/if}

@@ -1,6 +1,3 @@
-<style>
-</style>
-
 <svelte:head>
 	<title>Sacred Traditions - Interfaith Exploration: sacred-traditions.org</title>
 </svelte:head>
@@ -22,3 +19,10 @@
 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur error dolor incidunt, consequuntur voluptas quod quo ab repudiandae. Voluptatem beatae delectus velit id, minus excepturi est temporibus quaerat quas dolorum?</p>
 
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur mollitia inventore maiores obcaecati omnis, fugiat, eveniet delectus earum enim, placeat dolores cum neque laborum praesentium animi ipsum. Omnis, quisquam ullam!</p>
+
+
+
+
+
+<style>
+</style>

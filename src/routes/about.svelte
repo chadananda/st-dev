@@ -4,7 +4,7 @@
 
 <h1>About Us</h1>
 
-<p>We are a group of friends of various religious traditions interested in sharing experiences
+<p>We are a group of friends of various religious backgrounds interested in sharing experiences
 related to the most important part of our religion — our book. Religion have many varied aspects but
 the part that we share is the fact that our sacred experience is about a book — about words.
 </p>
