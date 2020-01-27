@@ -46,5 +46,5 @@ getSessions().then(sessions => {
   <div class="row"><span>Dates:</span> {session.StartDateDisplay} – {session.EndDateDisplay}</div>
   <div class="row"><span>Cost:</span> {session.Cost ? `$${session.Cost} per person` : ''}</div>
 
-  <SignupForm {...session} />
+  <SignupForm {session} />
 {/if}

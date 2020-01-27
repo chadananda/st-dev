@@ -9,11 +9,6 @@
   let:errors
   let:touched>
 
-  <Input type="hidden" name="CourseID" />
-  <Input type="hidden" name="StartDate" />
-  <Input type="hidden" name="Title" />
-  <Input type="hidden" name="StartDateDisplay" />
-  <Input type="hidden" name="EndDateDisplay" />
   {#if !values.people || !values.people.length}
     <Input type="hidden" name="people" />
   {/if}
@@ -176,11 +171,7 @@ contact information upon request).
 
 <script>
 
-  export let CourseID
-  export let StartDate
-  export let Title
-  export let StartDateDisplay
-  export let EndDateDisplay
+  export let session
 
   import { signupFormSchema, personSchema } from '../schemas'
   import { goto } from '@sapper/app'
@@ -200,12 +191,7 @@ contact information upon request).
 
   let showPerson = 0
 
-  let initialValues = { 
-    CourseID,
-    Title,
-    StartDate,
-    StartDateDisplay,
-    EndDateDisplay,
+  let initialValues = {
     people: $people.length ? [...$people] : [ personSchema.cast({}) ],
   }
 
@@ -242,13 +228,7 @@ contact information upon request).
   function handleSubmit({ detail: { values, setSubmitting, resetForm } }) {
     let newRegistration
     for (let i=0; i<values.people.length; i++) {
-      cart.add(Object.assign({
-        CourseID,
-        Title,
-        StartDate,
-        StartDateDisplay,
-        EndDateDisplay,
-      }, values.people[i]))
+      cart.add(Object.assign({session}, values.people[i]))
       if (values.people[i].remember) {
         people.add(values.people[i])
       }
