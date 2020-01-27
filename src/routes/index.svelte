@@ -4,24 +4,70 @@
 </svelte:head>
 
 
+<h1 class="title"> Fresh News! </h1>
 
-<h1>Lorem ipsum</h1>
-
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia laboriosam repellendus consequatur deleniti, ullam quaerat eligendi tenetur iure neque est. Rem ipsam perferendis dicta facere magni a autem quae minima!</p>
-
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, excepturi facilis possimus consectetur, asperiores at nihil enim veniam repellendus officiis recusandae ratione corporis error dolor iste quis ex! Voluptatum, dignissimos.</p>
-
-<h2>Ipsum dolor</h2>
-
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor aut cum perspiciatis voluptatem, ea necessitatibus animi quaerat fuga accusamus laboriosam, maxime laudantium dolorum, quam dolorem ipsum est mollitia voluptates. Repudiandae?</p>
-
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil dolor numquam eveniet unde sequi dignissimos suscipit magni atque sint magnam velit, reiciendis molestias odio excepturi? Tempora temporibus facilis atque numquam.</p>
-
-<h2>Sit amet</h2>
-
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur error dolor incidunt, consequuntur voluptas quod quo ab repudiandae. Voluptatem beatae delectus velit id, minus excepturi est temporibus quaerat quas dolorum?</p>
-
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur mollitia inventore maiores obcaecati omnis, fugiat, eveniet delectus earum enim, placeat dolores cum neque laborum praesentium animi ipsum. Omnis, quisquam ullam!</p>
+<div class="item news">
+	<h2>Dawn-Breakers Challenge</h2>
+	<img src="/db-challenge/db-chall-jul-2019.jpg" alt="db challenge participants" />
+	<p>Last year we had a blast with a series of in-depth Dawn-Breakers. (Hey, we even got a mention in the ABN).  So, by popular demand, we’re going to do it all over again. And we’re adding a few new programs to the mix. Check out our Summer 2020 retreat calendar:</p>
+	<p>Also, I finally have a good place to put a bunch of downloadable resources. A big thanks to Dropbox for motivating me -- by freezing my account due to too much download traffic.</p>
+	  <p class="list"><a href='/courses/dawnbreakers'>Dawn-Breakers Challenge Retreats 2020</a></p>
+		<img src="/db-challenge/class-study.jpg" alt="db challenge participants" style="width: 250px; transform: rotate(-2deg); margin-top: -5em;"/>
+   <p class="list"><a href='/dawn-breakers-challenge-materials'>Dawn-Breakers Challenge Downloadable Materials</a></p>
+   <p class="list"><a href='/dawn-breakers-resources-additional'>Other DB Resources</a></p>
+			<p class="list"><a href='https://bahaiteachings.org/dawn-breakers-challenge-history-bahai-heroes/' target="_blank">DB-Challenge article on bahai-teachings.org</a></p>
+			<p class="list"><a href='/dawn-breakers-mailinglist'>Signup for Sacred-Retreats Announcement List!</a></p>
+</div>
 
 
 
+<div class="item news">
+	<h2>Ocean 2.0 Interfaith Reader</h2>
+	<img src="/ocean_assets/ocean-db.png" alt="Ocean reading dawn-breakers" style="width: 400px; transform: rotate(-1deg);" />
+	<p>This entire winter has been spent porting Ocean 2.0 to a faster and more lightweight framework. The advantage of this is that I get to keep Ocean in ‘beta’ status for yet another year. ;) </p>
+	  <p class="list"><a href='/courses/dawnbreakers'>Ocean 2.0 App Download Page</a></p>
+   <p class="list"><a href='/ocean'>Ocean Youtube videos</a></p>
+   <p class="list"><a href='/ocean'>Ocean 2.0 Facebook Group</a></p>
+			<p class="list"><a href='/ocean'>Ocean Twitter sharing</a></p>
+</div>
+
+<div class="item news">
+
+	<img src="https://notepad.com/_nuxt/img/77d643c.gif" alt="db challenge participants" style="width: 250px; transform: rotate(2deg); margin-top:0em;" />
+	<h2>Crazy Experiment: Immersion Arabic Language Lab </h2>
+	<p>Also over a busy winter, we've been preparing an experimental Intensive Arabic retreat like no other. The aim is to get students from nearly zero to reading real Arabic literature in just a few days. If you are up for a serious immersion challenge, come and join us this summer! </p>
+	 <p class="list"><a href='/'>Immersion Arabic Boot Camp</a></p>
+		<p class="list"><a href='https://notepad.com/courses/' target="_blank">Online Prep Course</a></p>
+</div>
+
+<style>
+h1.title {
+	margin-left: 1em; text-decoration: underline; margin-bottom: 1em;
+}
+
+.item {
+  padding: 10px; padding-bottom:0;   background: rgb(249, 249, 252);
+  margin: 10px 20px 30px;
+    border-radius: 40px 20px!important;
+    border: 1px solid rgb(228, 228, 228);
+    box-shadow: 2px 2px 5px rgb(225, 225, 225);
+}
+.item h2 {margin-left: .5em;}
+.item p.list {margin-left: 1em; margin-top: 0;}
+.item p.list::before {
+	  content: " "; width: 20px; height: 20px; background: url('/link.svg');
+			background-size: contain;
+}
+
+.item img {
+	 width: 300px; float: right; margin-left: 1em; margin-top:-2em; margin-right: -5em; border: 1px solid rgb(232, 231, 231); padding: 10px; background: white;
+		padding-bottom: 15px;
+		box-shadow: 2px 2px 5px rgb(225, 225, 225);
+		transform: rotate(2deg);
+}
+
+.item.news {
+
+}
+
+</style>
