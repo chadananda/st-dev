@@ -27,7 +27,7 @@
 	<nav class="front">
 			<a href="/ocean"><img class="logo_ocean" src="/ocean_assets/favicon/favicon-32x32.png" alt="the world inside a drop" /> Ocean 2.0</a>
 			<a href="/courses">Courses</a>
-			<a href="/blog">Blog</a>
+			<a href="/blog">News</a>
 			<a href="/articles">Articles</a>
 	</nav>
 
