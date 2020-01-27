@@ -9,7 +9,7 @@
 			</div>
 
 		<div class="navlinks" style="display:flex; justify-content:flex-end; align-items:center;">
-				<a style="margin-right: 2em;" href="/ocean"><img class="logo_ocean" src="/ocean_assets/favicon/favicon-32x32.png" alt="the world inside a drop" /> Ocean 2.0</a>
+				<a style="margin-right: 2em;" href="/ocean"><img class="logo_ocean" src="ocean_assets/images/ocean-logo2.svg" alt="the world inside a drop" /> Ocean 2.0</a>
 				<a style="margin-right: 2em;" href="/courses">Courses</a>
 				<a style="margin-right: 2em;" href="/blog">News</a>
 				<a style="margin-right: 2em;" href="/articles">Articles</a>
@@ -25,7 +25,7 @@
 	</header>
 
 	<nav class="front">
-			<a href="/ocean"><img class="logo_ocean" src="/ocean_assets/favicon/favicon-32x32.png" alt="the world inside a drop" /> Ocean 2.0</a>
+			<a href="/ocean"><img class="logo_ocean" src="/ocean_assets/images/ocean-logo2.svg" alt="the world inside a drop" /> Ocean 2.0</a>
 			<a href="/courses">Courses</a>
 			<a href="/blog">News</a>
 			<a href="/articles">Articles</a>
@@ -119,8 +119,9 @@
 	// 	// }
 	// }
 	img.logo_ocean {
-		width: 18px; margin:0; padding: 0; margin-bottom: -4%; margin-right: .2em; opacity: .8;
+		width: 20px; margin:0; padding: 0; margin-bottom: -4px; margin-right: .2em; opacity: 1;
 	}
+
  @media (max-width: 400px) {
    header h1 { font-size: calc(4vw + 4vh + 2vmin)}
 			header img {width: 100%}
