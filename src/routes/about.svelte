@@ -4,21 +4,28 @@
 
 <h1>About Us</h1>
 
-<p>We are a group of friends of various religious traditions interested in sharing experiences
-related to the most important part of our religion — our book. Religion have many varied aspects but
-the part that we share is the fact that our sacred experience is about a book — about words.
+<p>We are a group of friends of various religious backgrounds interested in sharing experiences
+related to the most important part of our religion — our sacred literature. Religion has many varied aspects but
+the part that we share is the fact that our sacred experience is about the idea of the Word of God -- in all its implications.
 </p>
 
-<p>And not just any words but words which speak to us from a higher reality. Words which change us and
-make us something more, something better. It is the idea that God speaks and that mankind is enobled
-through the study of God's word.
+<p>The Word of God is, in every tradition, a sacred gift. These are words which motivate and change us -- inviting and empowering us to become
+ something more, something better. It is a big idea that God speaks to mankind from age to age and that mankind is enobled
+through the contemplation of God's word.
 </p>
 
-<p>In this modern era, the world's religious traditions are no longer isolated and owned by one continent or
-culture. Rather, the world's great religious literature represents a common heritage of the entire
-human race. The challenge is to find in them threads of eternal truth which bind us all together in
-a wider story.
+<p>In this modern era, the world's religious traditions are no longer isolated by language, culture and geography. Rather, the world's great religious literature represents a common heritage of the entire
+human race. The challenge for us is to find a wider appreciation of this great and ancient conversation between the human race and its creator. In this conversation are the threads of eternal truth which bind us all together into a wider story.
 </p>
+
+<h2> Projects </h2>
+
+<p> In 2019 we hosted a half-dozen seminar retreats at a facility in the Sierra Mountains of Northern California. In 2020 we will do the same and try to expand the program with as many interesting interfaith speakers as possible.</p>
+
+<p>Also in 2019 we launched the free cross-platform app "<a href="/ocean">Ocean 2.0 Interfaith Reader</a>" -- an ebook reader loaded with the world's religious literature with many books audio aligned word-for-word for a delightful read-along experience. The program runs on most platforms including Mac, Windows, Android and iOS (as well as some Linux support)</p>
+<br>
+<center><a href="/ocean"><img src="/ocean_assets/sshot1.png" alt="ocean screenshot" style="max-width:90%; box-shadow: 3px 3px 17px -5px rgba(0,0,0,0.69); " /></a></center>
+
 
 
  <!-- <IconsWrapper :icons="social_links" iconClass="text-center"/> -->

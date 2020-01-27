@@ -1,33 +1,51 @@
+{#if $page.path != '/'}
+
+	<nav style="display:flex; justify-content:space-between; align-items: center;">
+
+			<div class="logo_area" style="display: flex; justify-content:flex-start; align-items:center; cursor: pointer;">
+					<div><a href="/"><img style="height: 40px; margin-left:.5em; margin-top:.5em;" class='logo' src="logo_lotus.svg" alt='our logo: a lotus bloom'/></a></div>
+					<div style="margin-left:.5em; margin-top: -40px; margin-bottom: -50px;">
+					  <a href="/"><img style="width: 200px;" src="sacred-traditions-title.svg" alt='sacred traditions' /></a></div>
+			</div>
+
+		<div class="navlinks" style="display:flex; justify-content:flex-end; align-items:center;">
+				<a style="margin-right: 2em;" href="/ocean"><img class="logo_ocean" src="ocean_assets/images/ocean-logo2.svg" alt="the world inside a drop" /> Ocean 2.0</a>
+				<a style="margin-right: 2em;" href="/courses">Courses</a>
+				<a style="margin-right: 2em;" href="/blog">News</a>
+				<a style="margin-right: 2em;" href="/articles">Articles</a>
+		</div>
+
+	</nav>
+
+{/if}
+{#if $page.path === '/'}
+
+	<header class="front">
+		 <img class='logo' src="logo2.svg" alt='our logo: a lotus bloom'/>
+	</header>
+
+	<nav class="front">
+			<a href="/ocean"><img class="logo_ocean" src="/ocean_assets/images/ocean-logo2.svg" alt="the world inside a drop" /> Ocean 2.0</a>
+			<a href="/courses">Courses</a>
+			<a href="/blog">News</a>
+			<a href="/articles">Articles</a>
+	</nav>
+
+{/if}
+
+
+
+
+
 <script>
 	import { stores } from '@sapper/app';
 	const { preloading, page, session } = stores();
 </script>
 
-{#if $page.path === '/'}
-	<header class="front">
-		<img class='logo' src="logo_lotus.svg" alt='our logo: a lotus bloom'/>
-		<h1>Sacred Traditions</h1>
-	</header>
-{/if}
 
-<nav class:front={$page.path === '/'} >
-	{#if $page.path !== '/'}
-		<header class="not-front">
-			<a href="/">
-				<img class='logo' src="logo_lotus.svg" alt='our logo: a lotus bloom'/>
-				<h1>Sacred Traditions</h1>
-			</a>
-		</header>
-	{/if}
 
-	<a href="/ocean">
-		<img class="logo_ocean" src="/ocean_assets/favicon/favicon-32x32.png" alt="the world inside a drop" />
-		Ocean 2.0
-	</a>
-	<a href="/courses">Courses</a>
-	<a href="/blog">Blog</a>
-	<a href="/articles">Articles</a>
-</nav>
+
+
 
 <style lang="scss">
 	@import "../style/theme.scss";
@@ -35,6 +53,7 @@
 	a {
 		text-decoration: none;
 	}
+
   nav {
 		position: -webkit-sticky; /* Safari */
 		position: sticky !important;
@@ -68,9 +87,9 @@
 		text-align: center;
 		position: static;
 		img.logo {
-			width: 200px;
+			width: 240px;
 			max-width: 50%;
-			margin: 0;
+			margin: 0; margin-bottom: 10px;
 			padding: 0;
 		}
 		h1 {
@@ -84,24 +103,25 @@
 	nav.front {
 		text-align: center;
 	}
-	nav header.not-front {
-		position: absolute;
-		left: 1rem;
-		top: .7rem;
-		z-index: 1;
-		img.logo {
-			width: 44px;
-			display: inline-block;
-		}
-		h1 {
-			font-size: 2rem;
-			display: inline-block;
-			vertical-align: bottom;
-		}
-	}
+	// nav header.not-front {
+	// 	position: absolute;
+	// 	left: 1rem;
+	// 	top: .7rem;
+	// 	z-index: 1;
+	// 	img.logo {
+	// 		width: 44px;
+	// 		display: inline-block;
+	// 	}
+	// 	// h1 {
+	// 	// 	font-size: 2rem;
+	// 	// 	display: inline-block;
+	// 	// 	vertical-align: bottom;
+	// 	// }
+	// }
 	img.logo_ocean {
-		width: 18px; margin:0; padding: 0; margin-bottom: -4%; margin-right: .2em; opacity: .8;
+		width: 20px; margin:0; padding: 0; margin-bottom: -4px; margin-right: .2em; opacity: 1;
 	}
+
  @media (max-width: 400px) {
    header h1 { font-size: calc(4vw + 4vh + 2vmin)}
 			header img {width: 100%}

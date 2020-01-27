@@ -1,9 +1,38 @@
 {
-  "name": "TODO",
-  "description": "TODO",
-  "version": "0.0.1",
+  "name": "sacred-traditions",
+  "description": "Home of 'Ocean 2.0 Interfaith Reader' and lots of other fun projects...",
+  "version": "0.1.7",
+  "keywords": [
+    "religion",
+    "interfaith",
+    "sacred traditions",
+    "ocean",
+    "ocean reader",
+    "ocean 2.0",
+    "dawn-breakers",
+    "dawn-breakers challenge"
+  ],
+  "homepage": "https://sacred-traditions.org",
+  "license": "CC-BY-2.0",
+  "contributors": [
+    {
+      "name": "Chad Jones",
+      "email": "chad@notepad.com",
+      "url": "https://notepad.com"
+    },
+    {
+      "name": "David Hunt",
+      "email": "davidhuntatwork@gmail.com",
+      "url": "https://dnotes.net/"
+    },
+    {
+      "name": "Peter Terry",
+      "email": "peterry19@gmail.com",
+      "url": "https://bahaiteachings.org/author/peter-terry"
+    }
+  ],
   "scripts": {
-    "dev": "sapper dev",
+    "dev": "sapper dev -p 1844 -o",
     "build": "sapper build --legacy",
     "export": "sapper export --legacy",
     "start": "node __sapper__/build",
@@ -12,6 +41,7 @@
     "test": "run-p --race dev cy:run",
     "deploy": "NODE_ENV=production sapper export && push-dir --dir=__sapper__/export --branch=gh-pages --cleanup --verbose"
   },
+  "repository": "git@github.com:chadananda/st-dev.git",
   "dependencies": {
     "compression": "^1.7.1",
     "polka": "^0.5.0",
