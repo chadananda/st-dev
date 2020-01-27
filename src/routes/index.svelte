@@ -1,6 +1,9 @@
 <svelte:head>
 	<title>Sacred Traditions - Interfaith Exploration: sacred-traditions.org</title>
+
 </svelte:head>
+
+
 
 <h1>Lorem ipsum</h1>
 
@@ -22,7 +25,3 @@
 
 
 
-
-
-<style>
-</style>
