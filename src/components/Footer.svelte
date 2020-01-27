@@ -16,7 +16,6 @@
 
 
 <style>
-
   footer {
     display: flex;
     width: 100%;
