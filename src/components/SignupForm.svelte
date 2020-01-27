@@ -232,6 +232,9 @@ contact information upon request).
       if (values.people[i].remember) {
         people.add(values.people[i])
       }
+      else {
+        people.remove(values.people[i])
+      }
     }
     goto('/courses/checkout')
   }
