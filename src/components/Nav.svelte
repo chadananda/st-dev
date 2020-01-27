@@ -20,15 +20,33 @@
 {/if}
 {#if $page.path === '/'}
 
-	<header class="front">
+	<header class="flex justify-center mt-1 mb-3">
 		 <img class='logo' src="logo2.svg" alt='our logo: a lotus bloom'/>
 	</header>
 
-	<nav class="front">
-			<a href="/ocean"><img class="logo_ocean" src="/ocean_assets/images/ocean-logo2.svg" alt="the world inside a drop" /> <span class="bold color-red">Ocean 2.0</span></a>
-			<a href="/courses">Courses</a>
-			<a href="/blog">News</a>
-			<a href="/articles">Articles</a>
+	<nav class="flex justify-center items-center">
+
+		 <a class="block mr-12" href="/ocean">
+			  <img class="w-5 inline -mt-1" src="/ocean_assets/images/ocean-logo2.svg" alt="the world inside a drop" />
+					<span class="">Ocean 2.0</span>
+			</a>
+
+		 <a class="block mr-12" href="/courses">
+			  <img class="w-6 inline -mt-1" src="/retreat.svg" alt="the world inside a drop" />
+					<span class="">Retreats</span>
+			</a>
+
+		 <a class="block mr-12" href="/news">
+			  <img class="w-6 inline -mt-1" src="/news.svg" alt="the world inside a drop" />
+					<span class="">News &amp; Announcments</span>
+			</a>
+
+
+		 <a class="block mr-12" href="/articles">
+			  <img class="w-5 inline -mt-1" src="/thinker.svg" alt="the world inside a drop" />
+					<span class="">Esssays</span>
+			</a>
+
 	</nav>
 
 {/if}
@@ -50,9 +68,9 @@
 <style lang="scss">
 	@import "../style/theme.scss";
 
-	a {
-		text-decoration: none;
-	}
+	// a {
+	// 	text-decoration: none;
+	// }
 
   nav {
 		position: -webkit-sticky; /* Safari */
@@ -60,26 +78,27 @@
 		top: -4px;
 		z-index: 1000;
 		margin-top: -4px;
-		overflow: hidden;
+		// overflow: hidden;
 		border-color: $color-border;
 		box-shadow: 0px 2px 6px 0px rgba(184,191,255,0.49);
 		border-style: solid none;
 		border-width: .125rem;
 		text-align: right;
 		background: $color-bg;
-		>a {
-			font-size: 1rem;
-			padding: 1rem 2rem;
-			transition: all .15s ease-in;
-			opacity: .8;
-			text-decoration: none;
-			display: inline-block;
-			text-align: center;
-			&:hover {
-				background-color: $color-hover;
-				color: $color-bg;
-			}
-		}
+		height: 50px;
+		// >a {
+		// 	font-size: 1rem;
+		// 	padding: 1rem 2rem;
+		// 	transition: all .15s ease-in;
+		// 	opacity: .8;
+		// 	text-decoration: none;
+		// 	display: inline-block;
+		// 	text-align: center;
+		// 	&:hover {
+		// 		background-color: $color-hover;
+		// 		color: $color-bg;
+		// 	}
+		// }
 	}
 
 	header {
@@ -101,7 +120,7 @@
 	}
 
 	nav.front {
-		text-align: center;
+		// text-align: center;
 	}
 	// nav header.not-front {
 	// 	position: absolute;
@@ -122,9 +141,9 @@
 		width: 20px; margin:0; padding: 0; margin-bottom: -4px; margin-right: .2em; opacity: 1;
 	}
 
- @media (max-width: 400px) {
-   header h1 { font-size: calc(4vw + 4vh + 2vmin)}
-			header img {width: 100%}
- }
+ // @media (max-width: 400px) {
+ //   header h1 { font-size: calc(4vw + 4vh + 2vmin)}
+	// 		header img {width: 100%}
+ // }
 
 </style>
