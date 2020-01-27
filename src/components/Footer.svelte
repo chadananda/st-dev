@@ -1,4 +1,4 @@
-<footer>
+<footer style="display: flex; width:100%; ">
     <div class="links">
       <a href="/about">About</a>
       <a href="/contact">Contact</a>
@@ -20,8 +20,8 @@
   footer {
     display: flex;
     width: 100%;
-    background-color: rgb(252, 249, 249);
-    padding: 1em; border-radius: 1em; border-top: 2px solid #c2c2cf;
+    background-color: rgba(252, 249, 249, .5);
+    padding: 1em; border-radius: 1em; border-top: 1.5px solid #dbdbee;
     margin:0;
     font-size: .75em; font-weight: bold; color: rgb(169, 169, 169);
     justify-content: space-between;
