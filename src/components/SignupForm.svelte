@@ -150,13 +150,12 @@ contact information upon request).
 </Form>
 </div>
 
-{#if paypalVisible}
-  <div id="paypal-buttons"></div>
-{/if}
-
 {#if submitVisible}
   <div class="modal" class:success={submitResponse.success}>
-    {#if submitResponse.success}
+    {#if submitResponse === {}}
+      <h3>Registering...</h3>
+      <p>We're waiting for confirmation on your registrations:</p>
+    {:else if submitResponse.success}
       <h3 class="success">You are registered!</h3>
       <p>Your registration has been received for the following people:</p>
       <ul>
@@ -166,7 +165,7 @@ contact information upon request).
       </ul>
       <p>Your reference code is <span style="font-family:monospace; font-weight:bold;">{submitResponse.data.reference}</span>.
       You should also receive an email with this information.</p>
-    {:else}
+    {:else if submitResponse.success === false}
       <h3 class="error">Something went wrong!</h3>
       <p>We're not sophisticated enough to know exactly what it was,
       but we hope you'll give us a call to sort things out.</p>
@@ -175,31 +174,24 @@ contact information upon request).
   </div>
 {/if}
 
-<svelte:head>
-  <script src="https://www.paypal.com/sdk/js?client-id=ARLTZyWHyejtubwFnzlatVehD-WIp7wj-9Kfxfzj9YvPZVCB5e0W8Xe9LXf_we7NZ25OlGN_YxzVgKRr"></script>
-</svelte:head>
-
 <script>
+
+  export let CourseID
+  export let StartDate
 
   import { onMount } from 'svelte'
   import { slide } from 'svelte/transition'
   import { Form, Input, Select, Choice } from 'sveltejs-forms';
   import * as yup from 'yup';
   import url from './getUrl.js'
-
   import Debug from './Debug.svelte'
   let dev = process.env.NODE_ENV === 'development'
-
-  let paypalVisible
 
   let submitVisible
   let submitResponse = {}
 
-  export let CourseID
-  export let StartDate
   let values
 
-  let modalVisible
   let addPersonLink
 
   let initialValues = { 
@@ -319,6 +311,8 @@ contact information upon request).
   }
 
   function handleSubmit({ detail: { values, setSubmitting, resetForm } }) {
+    submitVisible = true
+    setSubmitting(true)
     fetch(url, {
       method: "POST",
       body: JSON.stringify(Object.assign({}, values, {testing: true})),
@@ -327,14 +321,12 @@ contact information upon request).
       r.json().then(result => {
         setSubmitting(false)
         submitResponse = result
-        submitVisible = true
         console.log(result)
       })
     })
     .catch(e => {
       setSubmitting(false)
       submitResponse = e
-      submitVisible = true
       console.log(e)
     })
   }
