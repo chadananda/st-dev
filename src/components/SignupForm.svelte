@@ -45,6 +45,7 @@
               <Input name="people[{i}].Email" />
               <label>Phone number</label>
               <Input name="people[{i}].Phone" />
+              <Choice name="people[{i}].remember" multiple options={[{id:'remember', title: `Remember ${personName(i,values)} in this browser`}]} />
             </div>
 
             <!-- HOUSING -->
@@ -143,6 +144,9 @@ contact information upon request).
 
     <button class="big fab" type="submit">Register</button>
   </div>
+  {#if dev}
+    <Debug variable={values} />
+  {/if}
 </Form>
 </div>
 
@@ -182,6 +186,9 @@ contact information upon request).
   import { Form, Input, Select, Choice } from 'sveltejs-forms';
   import * as yup from 'yup';
   import url from './getUrl.js'
+
+  import Debug from './Debug.svelte'
+  let dev = process.env.NODE_ENV === 'development'
 
   let paypalVisible
 
@@ -262,6 +269,7 @@ contact information upon request).
       this.Transport = template.Transport || ''
       this.Arrival = template.Arrival || ''
       this.Departure = template.Departure || ''
+      this.remember = ['remember']
       this.show = true
       this.deleted = false
       this.opts = {
