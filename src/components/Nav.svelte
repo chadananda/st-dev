@@ -25,7 +25,7 @@
 	</header>
 
 	<nav class="front">
-			<a href="/ocean"><img class="logo_ocean" src="/ocean_assets/images/ocean-logo2.svg" alt="the world inside a drop" /> Ocean 2.0</a>
+			<a href="/ocean"><img class="logo_ocean" src="/ocean_assets/images/ocean-logo2.svg" alt="the world inside a drop" /> <span class="bold color-red">Ocean 2.0</span></a>
 			<a href="/courses">Courses</a>
 			<a href="/blog">News</a>
 			<a href="/articles">Articles</a>
