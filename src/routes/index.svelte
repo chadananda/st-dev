@@ -9,7 +9,7 @@
 <div class="item news">
 	<h2>Dawn-Breakers Challenge</h2>
 	<img src="/db-challenge/db-chall-jul-2019.jpg" alt="db challenge participants" />
-	<p>Last year we had a blast with a series of in-depth Dawn-Breakers. (Hey, we even got a mention in the ABN).  So, by popular demand, we’re going to do it all over again. And we’re adding a few new programs to the mix. Check out our Summer 2020 retreat calendar:</p>
+	<p>Last year we had a blast with a series of in-depth Dawn-Breakers study retreats (we even got a mention in the ABN).  So, by popular demand, we’re going to do it all over again. And we’re adding a few new programs to the mix. Check out our <a href="/courses">Summer 2020 retreat calendar!</a></p>
 	<p>Also, I finally have a good place to put a bunch of downloadable resources. A big thanks to Dropbox for motivating me -- by freezing my account due to too much download traffic.</p>
 	  <p class="list"><a href='/courses/dawnbreakers'>Dawn-Breakers Challenge Retreats 2020</a></p>
 		<img src="/db-challenge/class-study.jpg" alt="db challenge participants" style="width: 250px; transform: rotate(-2deg); margin-top: -5em;"/>
