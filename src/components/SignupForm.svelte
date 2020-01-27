@@ -133,8 +133,10 @@ contact information upon request).
   <div class="container">
 
     <button type="button" class="big" on:click={() => {
-      showPerson = values.people.length
-      setValue('people', [...values.people].push(personSchema.cast({})))
+      let i = values.people.length
+      showPerson = i
+      setValue(`people[${i}]`, personSchema.cast({}))
+      setValue(`people[${i}].idx`, i)
     }}>+ person</button>
 
     <button class="big fab" type="submit">Add to Cart</button>
