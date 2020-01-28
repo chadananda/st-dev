@@ -42,19 +42,16 @@ export const personSchema = yup.object().shape({
 })
 
 export const cartItemSchema = personSchema.shape({
-  CourseID: yup.string().default('').required().max(50),
-  Title: yup.string().default(''),
-  StartDate: yup.string().default('').required().matches(/^\d{4}-\d{2}-\d{2}/),
-  StartDateDisplay: yup.string().default(''),
-  EndDateDisplay: yup.string().default(''),
+  session: yup.object({
+    CourseID: yup.string().default('').required().max(50),
+    Title: yup.string().default(''),
+    StartDate: yup.string().default('').required().matches(/^\d{4}-\d{2}-\d{2}/),
+    StartDateDisplay: yup.string().default(''),
+    EndDateDisplay: yup.string().default(''),
+  })
 })
 
 export const signupFormSchema = yup.object().shape({
-  CourseID: yup.string().default('').required().max(50),
-  Title: yup.string().default(''),
-  StartDate: yup.string().default('').required().matches(/^\d{4}-\d{2}-\d{2}/),
-  StartDateDisplay: yup.string().default(''),
-  EndDateDisplay: yup.string().default(''),
   people: yup.array().min(1).of(personSchema.shape({
     idx: yup.number().default(0),
     Email: yup.string().default('').label('Email').when('idx', {
