@@ -2,14 +2,13 @@
 <html>
 <head>
 	<meta charset='utf-8'>
-	<!-- <meta name='viewport' content='width=device-width,initial-scale=1.0'> -->
 	<meta data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 	<meta name='theme-color' content='#333333'>
 
 	%sapper.base%
 
 	<link rel='stylesheet' href='global.css'>
-	<!-- <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/> -->
+ <link rel="stylesheet" href="index.css" />   <!-- tailwind output -->
 
 	<link rel='manifest' href='manifest.json'>
 	<link rel='icon' type='image/png' href='/favicon.ico'>
@@ -33,6 +32,17 @@
 	     and anything else it needs to hydrate the app and
 	     initialise the router -->
 	%sapper.scripts%
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ["Cabin Sketch"]
+    }
+  });
+</script>
+
 </body>
 </html>
 
