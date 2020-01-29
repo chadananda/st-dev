@@ -4,12 +4,13 @@
 		import Footer from '../components/Footer.svelte'
 
 		var pageTypeClass = 'base'
-		if (segment) {
+		//if (segment) {
 				if (segment.match(/ocean/g)) pageTypeClass = 'ocean'
 				else if (segment.match(/articles/g)) pageTypeClass = 'article'
 				else if (segment.match(/blog/g)) pageTypeClass = 'blog'
 				else if (segment.match(/courses/g)) pageTypeClass = 'course'
-		}
+		//}
+		console.log('_layout segment:', segment, pageTypeClass)
 </script>
 
 <style lang="scss" global>
