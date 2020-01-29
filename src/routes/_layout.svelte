@@ -5,7 +5,7 @@
 
 	 // segment is sometimes undefined for a moment, make it reactive
 		let pageTypeClass
-		$: pageTypeClass = segment && ['ocean','article','blog','course'].indexOf(segment)>-1 ? segment : 'base'
+		$: pageTypeClass = segment && ['ocean','articles','blog','courses'].indexOf(segment)>-1 ? segment : 'base'
 		// console.log('_layout segment:', segment, pageTypeClass) // most enlightening
 </script>
 
@@ -14,7 +14,7 @@
 </style>
 
 {#if segment && segment.match(/ocean/g)}
- 	<main class="{pageTypeClass}">
+ 	<main class="ocean">
 		 	<slot></slot>
 	 </main>
 

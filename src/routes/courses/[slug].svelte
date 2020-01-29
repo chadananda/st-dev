@@ -20,7 +20,8 @@
 </script>
 
 <Content {...content}>
-
 </Content>
+
+<hr class="small" />
 
 <SessionList course={content.meta.id} />

@@ -6,6 +6,8 @@ teachers:
 facebook: https://www.facebook.com/The-Dawn-Breakers-Challenge-329820570524376/
 ---
 
+<img class="full" src="/db-challenge/class-study.jpg" alt="dawn-breakers challenge study class" />
+
 ## Study Retreat, 10 Days: The Dawn-Breakers Challenge 2020
 
 Please join us in Northern California this summer for a fun and intensive 10-day study of “The Dawn-Breakers” together with the primary doctrinal work of the Bahá'í Faith, “The Kitáb-i-Íqán.” As you know, the Guardian challenged us to “master” these books as a rock-foundation for effective teaching. Now that the Bicentennial of the bith of the Báb is upon us, it’s probably about time to get serious about doing just that.
@@ -15,6 +17,8 @@ Together, we will read and discuss every page of the Dawn-Breakers, track every 
 Our outcome goals are clear: participants should know the stories and be able to identify the twenty-six key characters — as well as be able to accompany others in reading these important books once they return home.  As the Guardian promised us, “No one can read The Dawn-Breakers and remain cold and unreceptive.” Studying that book is a powerful spiritual journey — a quickening of the soul. It offers a revitalized Bahá’í identity and the inspiration we so badly need to get through these troubled days.
 
 ### Where will this be held?
+
+<img class="floater" src="/db-challenge/db-chall-jul-2019.jpg" alt="group photo of dawn-breakers challenge 2019 participants">
 
 In the mountains of Northern California, just East of Sacramento, our friends have a beautiful boarding-school facility with a gymnasium and comfortable classrooms. If you are not within driving distance, you can fly into the Sacramento Airport (SMF) or take a train to the Sacramento Amtrak train station. Our community volunteers will pick you up and shuttle you to the school. The school has various accommodation options, so families will usually be able to stay together.
 
