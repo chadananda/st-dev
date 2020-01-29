@@ -2,20 +2,11 @@
   <title>About: Sacred-Traditions.org</title>
 </svelte:head>
 
-<h1>About Us</h1>
+<h1>About Sacred Traditions</h1>
 
-<p>We are a group of friends of various religious backgrounds interested in sharing experiences
-related to the most important part of our religion — our sacred literature. Religion has many varied aspects but
-the part that we share is the fact that our sacred experience is about the idea of the Word of God -- in all its implications.
-</p>
+<p>As the world contracts due to technology, difference between ideas and culture become more and more apparent. A wonderful result has been the many movements towards Interfaith tolerance. But "tolerance" is a bit boring. Or little organization is not so interested in tolerance but ratner "appreciation". "Appreciation" is what you see when you consider the wide popularity of the Muslim / Iranian mystical poet Rumi throughout the West. The truth is that ideas are owned by no-one and everyone. And the reality of every religion is a collection of big ideas. "Tolerance" is to accept that we have different ideas. "Appreciation" is to recognize that there is much universal value in the ideas of others.
 
-<p>The Word of God is, in every tradition, a sacred gift. These are words which motivate and change us -- inviting and empowering us to become
- something more, something better. It is a big idea that God speaks to mankind from age to age and that mankind is enobled
-through the contemplation of God's word.
-</p>
-
-<p>In this modern era, the world's religious traditions are no longer isolated by language, culture and geography. Rather, the world's great religious literature represents a common heritage of the entire
-human race. The challenge for us is to find a wider appreciation of this great and ancient conversation between the human race and its creator. In this conversation are the threads of eternal truth which bind us all together into a wider story.
+<p>In this modern era, the world's religious traditions are no longer isolated by language, culture and geography. Rather, the world's great religious literature represents a common heritage of the entire human race. The challenge for us is to find a wider appreciation of this great and ancient conversation between the human race and its creator. In this conversation are the threads of eternal truth which bind us all together into a wider story.
 </p>
 
 <h2> Projects </h2>

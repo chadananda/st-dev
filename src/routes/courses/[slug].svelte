@@ -15,12 +15,13 @@
 
 <script>
   export let content
-	import Content from '../../components/Content.svelte'
-	import SessionList from '../../components/SessionList.svelte'
+	 import Content from '../../components/Content.svelte'
+	 import SessionList from '../../components/SessionList.svelte'
 </script>
 
 <Content {...content}>
-
 </Content>
+
+<hr class="small" />
 
 <SessionList course={content.meta.id} />

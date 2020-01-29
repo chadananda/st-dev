@@ -3,21 +3,16 @@
 	 import Nav from '../components/Nav.svelte'
 		import Footer from '../components/Footer.svelte'
 
-		var pageTypeClass = 'base'
-		if (segment) {
-				if (segment.match(/ocean/g)) pageTypeClass = 'ocean'
-				else if (segment.match(/articles/g)) pageTypeClass = 'article'
-				else if (segment.match(/blog/g)) pageTypeClass = 'blog'
-				else if (segment.match(/courses/g)) pageTypeClass = 'course'
-		}
+	 // segment is sometimes undefined for a moment, make it reactive
+		let pageTypeClass
+		$: pageTypeClass = segment && ['ocean','articles','blog','courses'].indexOf(segment)>-1 ? segment : 'base'
+		// console.log('_layout segment:', segment, pageTypeClass) // most enlightening
 </script>
 
-<style lang="scss" global>
-	 @import "./style/global.scss";
-</style>
+
 
 {#if segment && segment.match(/ocean/g)}
- 	<main class="{pageTypeClass}">
+ 	<main class="ocean">
 		 	<slot></slot>
 	 </main>
 
@@ -33,4 +28,8 @@
 		<Footer/>
 {/if}
 
+
+<style lang="scss" global>
+	 @import "./style/global.scss";
+</style>
 
