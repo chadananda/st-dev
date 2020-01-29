@@ -7,6 +7,11 @@ facebook: https://www.facebook.com/The-Dawn-Breakers-Challenge-329820570524376/
 image: "/db-challenge/participants-2019-2.jpg#floater_sm"
 ---
 
+Please join us in Northern California this summer for a fun and intensive 10-day study of “The Dawn-Breakers” together with the primary doctrinal work of the Bahá'í Faith, “The Kitáb-i-Íqán.”
+
+
+---
+
 ![dawn-breakers challenge study class](/db-challenge/class-study.jpg#full)
 
 ## 10-Day Study Retreat: The Dawn-Breakers Challenge 2020
@@ -15,6 +20,21 @@ image: "/db-challenge/participants-2019-2.jpg#floater_sm"
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
  Contact Kaathlyn Connor at (530) 777 8275, kaathlyn.connor@gmail.com
 ```
+
+## Dates
+```
+April 6-17
+ May 4-15
+ June 8-19
+ July 6-17
+ August 3-14
+ September 7-18
+ October 5-16
+ November 2-13
+ December 7-18
+```
+
+
 <br>
 
 

@@ -50,7 +50,7 @@ footer { grid-row-start: 2; grid-row-end: 3; }
     letter-spacing: 1.2;
     color: #1c1946d8;
     text-shadow: 2px 2px 4px #ffffff;
-    margin-top: 2em;
+    margin-top: 1em;
   }
   h1 {
     font: 400 40px/1.3 'Cabin Sketch', cursive !important;
@@ -91,11 +91,15 @@ main .courses {
   img.full, img[src*="#full"] {width: 90%; margin-left: auto; margin-right: auto}
   img.floater, img[src*="#floater"] {
       max-width: 40%; float: right; margin-right:-20px;
-      transform: rotate(1deg)
+      transform: rotate(1deg); max-height: 10em;
   }
   img.floater_sm, img[src*="#floater_sm"] {
     max-width: 30%; float: right; margin-right:-20px;
-    transform: rotate(1deg)
+    transform: rotate(1deg); max-height: 10em;
+  }
+  img.floater_sm2, img[src*="#floater_sm2"] {
+    max-width: 30%; float: right; margin-right:-20px;
+    transform: rotate(-1deg); max-height: 10em;
   }
 }
 

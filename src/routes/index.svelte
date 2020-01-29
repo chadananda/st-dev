@@ -59,7 +59,7 @@
 			box-shadow: 2px 2px 5px rgb(225, 225, 225);
 			padding-top:10px; padding-left:10px; padding-bottom: 10px;
 	}
-	.item h2 { font-size: 1.4em; }
+	.item h2 { font-size: 1.4em; margin-top:0; }
 	.item p {margin-bottom: .5em;}
 	.item a {text-decoration: underline; font-weight: bold; opacity: .65; }
  .item a:hover { opacity: 1; }
