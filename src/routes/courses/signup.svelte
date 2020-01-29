@@ -37,8 +37,8 @@
   <p class="error">This session is full.</p>
   {/if}
 
-  {#if course.html}
-    {@html course.html}
+  {#if course.excerpt}
+    {@html course.excerpt}
   {:else if session.Description}
     <p>{session.Description}</p>
   {/if}
