@@ -12,15 +12,15 @@
 </script>
 
 <script>
-export let CourseID
-export let StartDate
-export let course = {}
-let session
-import getSessions from '../../components/getSessions'
-import SignupForm from '../../components/SignupForm.svelte'
-getSessions().then(sessions => {
-  session = sessions.filter(v => (v.CourseID === CourseID && v.StartDate === StartDate))[0] || false
-})
+  export let CourseID
+  export let StartDate
+  export let course = {}
+  let session
+  import getSessions from '../../components/getSessions'
+  import SignupForm from '../../components/SignupForm.svelte'
+  getSessions().then(sessions => {
+    session = sessions.filter(v => (v.CourseID === CourseID && v.StartDate === StartDate))[0] || false
+  })
 </script>
 
 
@@ -31,7 +31,7 @@ getSessions().then(sessions => {
   <h1 class="title">Session signup</h1>
   <p class="error">This session was not found. Return to the <a href="courses">course list</a>.</p>
 {:else}
-  <h1 class="title">Session signup : {session.Title}</h1>
+  <h1 class="title">Session signup: {session.Title}</h1>
 
   {#if session.Total >= session.Capacity}
   <p class="error">This session is full.</p>
@@ -48,3 +48,13 @@ getSessions().then(sessions => {
 
   <SignupForm {session} />
 {/if}
+
+
+
+<style>
+
+
+</style>
+
+
+
