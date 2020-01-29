@@ -221,6 +221,8 @@ module.exports = {
       default: '1',
     },
     fontFamily: {
+      calligraphy: ['Eagle Lake'],
+      circus: ['Rye'],
       sans: [
         '-apple-system',
         'BlinkMacSystemFont',

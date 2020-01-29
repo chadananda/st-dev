@@ -1,7 +1,7 @@
 <h1 class="title">Registration Checkout</h1>
 
 {#each $cart as item,i}
-  <div class="ticket flex flex-col" style="transform: translateX({random(-30,30)}px);">
+  <div class="ticket flex flex-col font-circus" style="transform: translateX({random(-30,30)}px);">
     <div class="text-3xl overflow-hidden" style="line-height:1.25em; max-height:2.5em;">
       <span class="text-base w-8 h-8 leading-loose inline-block text-center cursor-pointer float-right" on:click={(e) => {
         e.preventDefault()
@@ -10,9 +10,9 @@
       }}>✖️</span>
       {item.session.Title}
     </div>
-    <div class="flex-grow">{item.session.StartDateDisplay} – {item.session.EndDateDisplay}</div>
+    <div class="flex-grow text-xl">{item.session.StartDateDisplay} – {item.session.EndDateDisplay}</div>
     <div>Reserved: 
-      <span class="w-3/4 h-16 overflow-hidden text-center inline-block border-b-1 text-3xl" style="font-family: Eagle Lake">
+      <span class="w-3/4 h-12 overflow-hidden text-center inline-block border-b border-black text-3xl font-calligraphy">
         <span class="inline-block">{item.FirstName || ''}</span> <span class="inline-block">{item.LastName || ''}</span>
       </span>
     </div>
@@ -72,21 +72,8 @@
   width: 480px;
   margin: 0 auto .4em;
   padding: .6em 1em;
-  font-family: Rye;
-  font-variant: small-caps;
   >div {
     text-align: center;
-  }
-  span.name-space {
-    width: 70%;
-    height: 50px;
-    overflow: hidden;
-    text-align: center;
-    display: inline-block;
-    border-bottom: 1px solid;
-    font-size: 200%;
-    font-family: "Eagle Lake";
-    font-variant: normal;
   }
 }
 .button.close { background: rgba(0,0,0,.2) }
