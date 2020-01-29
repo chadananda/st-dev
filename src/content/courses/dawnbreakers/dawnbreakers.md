@@ -12,7 +12,7 @@ facebook: https://www.facebook.com/The-Dawn-Breakers-Challenge-329820570524376/
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
- Contact Kaathlyn Connor at (530) 403 2997, kaathlyn.connor@gmail.com
+ Contact Kaathlyn Connor at (530) 777 8275, kaathlyn.connor@gmail.com
 ```
 <br>
 
