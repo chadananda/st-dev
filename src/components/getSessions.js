@@ -20,6 +20,10 @@ export default async function getSessions() {
           ? new Moment(v.EndDate, 'YYYY-MM-DD').format('MMM D')
           : '')
         return v
+      }).sort((a,b) => {
+        if (a.StartDate < b.StartDate) return -1
+        if (a.StartDate > b.StartDate) return 1
+        return a.Title < b.Title ? -1 : 1
       })
       localStorage.setItem('sessions', JSON.stringify(sessions))
       localStorage.setItem('sessionCacheTime', new Date())
