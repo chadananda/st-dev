@@ -1,16 +1,21 @@
 <h1 class="title">Registration Checkout</h1>
 
 {#each $cart as item,i}
-  <div class="ticket">
-    <span class="button close right" on:click={(e) => {
-      e.preventDefault()
-      e.stopPropagation()
-      cart.remove(i)
-    }}>✖️</span>
-    <div class="fit title">{item.session.Title}</div>
-    <div class="fit date">{item.session.StartDateDisplay} – {item.session.EndDateDisplay}</div>
-    <div class="clearfix"/>
-    <div>Reserved: <span class="fit name-space"><span class="name">{item.FirstName || ''}</span> <span class="name">{item.LastName || ''}</span></span></div>
+  <div class="ticket flex flex-col" style="transform: translateX({random(-30,30)}px);">
+    <div class="text-3xl overflow-hidden" style="line-height:1.25em; max-height:2.5em;">
+      <span class="text-base w-8 h-8 leading-loose inline-block text-center cursor-pointer float-right" on:click={(e) => {
+        e.preventDefault()
+        e.stopPropagation()
+        cart.remove(i)
+      }}>✖️</span>
+      {item.session.Title}
+    </div>
+    <div class="flex-grow">{item.session.StartDateDisplay} – {item.session.EndDateDisplay}</div>
+    <div>Reserved: 
+      <span class="w-3/4 h-16 overflow-hidden text-center inline-block border-b-1 text-3xl" style="font-family: Eagle Lake">
+        <span class="inline-block">{item.FirstName || ''}</span> <span class="inline-block">{item.LastName || ''}</span>
+      </span>
+    </div>
   </div>
 {:else}
   <p>Your cart is empty.</p>
@@ -57,27 +62,20 @@
 </script>
 
 <style lang="scss">
-@import "https://fonts.googleapis.com/css?family=Eagle+Lake|Fredericka+the+Great|Rye&display=swap&subset=latin-ext";
+@import "https://fonts.googleapis.com/css?family=Eagle+Lake|Rye&display=swap&subset=latin-ext";
 .ticket {
-  background: radial-gradient(white 30%,tan 35%),radial-gradient(white 30%,tan 35%),linear-gradient(100deg,tan 20%,hsl(34,44,76) 60%,tan 80%);
+  background: radial-gradient(white 30%,tan 35%), radial-gradient(white 30%,tan 35%), linear-gradient(100deg,tan 20%,hsl(34,44,76) 60%,tan 80%);
   background-size: 4% 17%, 4% 17%, auto;
   background-repeat: repeat-y;
   background-position: -2%, 102%;
   height: 180px;
   width: 480px;
-  margin: 0 auto;
+  margin: 0 auto .4em;
   padding: .6em 1em;
   font-family: Rye;
   font-variant: small-caps;
   >div {
     text-align: center;
-  }
-  >.title {
-    font-size: 180%;
-    line-height: 1.2em;
-    height: 1.8em;
-    max-height: 2.4em;
-    overflow: hidden;
   }
   span.name-space {
     width: 70%;
@@ -85,13 +83,10 @@
     overflow: hidden;
     text-align: center;
     display: inline-block;
-    border-bottom: 1px dotted;
-  }
-  span.name {
-    font-family: "Eagle Lake";
+    border-bottom: 1px solid;
     font-size: 200%;
+    font-family: "Eagle Lake";
     font-variant: normal;
-    display: inline-block;
   }
 }
 .button.close { background: rgba(0,0,0,.2) }
