@@ -4,6 +4,7 @@ title: Dawn-Breakers Challenge
 teachers:
   - Chad Jones
 facebook: https://www.facebook.com/The-Dawn-Breakers-Challenge-329820570524376/
+image: "/db-challenge/participants-2019-2.jpg#floater_sm"
 ---
 
 ![dawn-breakers challenge study class](/db-challenge/class-study.jpg#full)

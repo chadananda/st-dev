@@ -9,9 +9,7 @@
 		// console.log('_layout segment:', segment, pageTypeClass) // most enlightening
 </script>
 
-<style lang="scss" global>
-	 @import "./style/global.scss";
-</style>
+
 
 {#if segment && segment.match(/ocean/g)}
  	<main class="ocean">
@@ -30,4 +28,8 @@
 		<Footer/>
 {/if}
 
+
+<style lang="scss" global>
+	 @import "./style/global.scss";
+</style>
 
