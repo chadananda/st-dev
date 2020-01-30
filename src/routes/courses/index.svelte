@@ -17,7 +17,7 @@
 <h1 class="title">2020 Course Catalog</h1>
 
 {#if sessions}
-	<SessionList />
+	<SessionList {sessions} />
 {/if}
 
 {#if content.length}
