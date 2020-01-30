@@ -8,12 +8,17 @@
 
 <script>
 	 export let content
+	 import getSessions from '../../components/getSessions'
 	 import SessionList from '../../components/SessionList.svelte'
+	 let sessions
+	 getSessions().then(data => {sessions=data})
 </script>
 
 <h1 class="title">2020 Course Catalog</h1>
 
-<SessionList course={true} />
+{#if sessions}
+	<SessionList />
+{/if}
 
 {#if content.length}
 	<div class="courses">

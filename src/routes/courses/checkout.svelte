@@ -1,7 +1,7 @@
 <h1 class="title">Registration Checkout</h1>
 
 {#each $cart as item,i}
-  <div class="ticket flex flex-col font-circus" style="transform: translateX({random(-30,30)}px);">
+  <div class="ticket flex flex-col font-circus">
     <div class="text-3xl overflow-hidden" style="line-height:1.25em; max-height:2.5em;">
       <span class="text-base w-8 h-8 leading-loose inline-block text-center cursor-pointer float-right" on:click={(e) => {
         e.preventDefault()
@@ -21,6 +21,12 @@
   <p>Your cart is empty.</p>
 {/each}
 
+{#if otherSessions.length}
+  <h2>Want to stay a little longer?</h2>
+  <p>There are some other things happening right around when you will be here:</p>
+  <SessionList sessions={otherSessions} />
+{/if}
+
 <div id="paypal-buttons" class:hide={!$cart.length}></div>
 
 <svelte:head>
@@ -31,6 +37,35 @@
   import { cart } from '../../store'
   cart.useLocalStorage()
   import url from '../../components/getUrl'
+  import SessionList from '../../components/SessionList.svelte'
+
+  // for adding on sessions around the same time
+  import getSessions from '../../components/getSessions'
+  import Moment from 'moment'
+  let sessions = []
+  let otherSessions = []
+  let today = (new Date()).toISOString().split('T')[0]
+  let startDates = {}, endDates = {}
+  $: for (let i=0; i<$cart.length; i++) {
+    let StartDate = new Moment($cart[i].session.StartDate, 'YYYY-MM-DD')
+    let EndDate = new Moment($cart[i].session.EndDate, 'YYYY-MM-DD')
+    startDates[$cart[i].session.StartDate] = {from: StartDate.format('YYYY-MM-DD'), to: StartDate.subtract(3, 'days').format('YYYY-MM-DD')}
+    endDates[$cart[i].session.EndDate] = {from: EndDate.format('YYYY-MM-DD'), to: EndDate.add(3, 'days').format('YYYY-MM-DD')}
+  }
+  getSessions().then(data => {
+    sessions = data
+  })
+  $: otherSessions = sessions.filter(s => {
+    if (s.startDate < today) return false
+    let yes = false
+    Object.keys(startDates).forEach(k => {
+      if (s.EndDate >= startDates[k].from && s.EndDate <= startDates[k].to) yes = true
+    })
+    Object.keys(endDates).forEach(k => {
+      if (s.StartDate >= endDates[k].from && s.StartDate <= endDates[k].to) yes = true
+    })
+    return yes
+  })
 
   function getRef() {
     let ref = Math.random().toString(36).substring(2,8).toUpperCase()

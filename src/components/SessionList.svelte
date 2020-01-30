@@ -1,11 +1,7 @@
 <script>
-  export let course = ''
-  import getSessions from './getSessions'
+  export let CourseID = ''
+  export let sessions
   let today = (new Date()).toISOString().split('T')[0]
-  let sessions
-  getSessions().then(res => {
-    sessions = res
-  })
 </script>
 
 {#if typeof sessions === 'undefined'}
@@ -19,9 +15,9 @@
       <th class="places">Open Seats</th>
     </tr>
   {#each sessions.filter(v => (
-    course && typeof course === 'string'
-      ? v.CourseID === course
-      : (course || false)
+    CourseID && typeof CourseID === 'string'
+      ? v.CourseID === CourseID
+      : true
   )) as session}
     <tr class="session pb-1 even:bg-gray-200" 
       class:full={session.Total >= session.Capacity} 
