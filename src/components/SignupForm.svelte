@@ -13,19 +13,25 @@
     <Input type="hidden" name="people" />
   {/if}
 
+  {#if sessions.length > 1}
+    <label>Date</label>
+    <Select name="StartDate" options={sessionOptions} />
+    <label>People</label>
+  {:else}
+    <Input type="hidden" name="StartDate" />
+  {/if}
+
   {#each values.people as p,i}
     {#if !values.people[i].deleted}
       <div class="person" id="person{i}" transition:slide>
         <div class="label container" class:show={values.people[i].show} class:new={!values.people[i].FirstName} on:click={() => {showPerson = (showPerson === i ? -1 : i)}}>
-          {#if i>0}
-            <span data-i="{i}" class="button close right" on:click={(e) => {
-              e.preventDefault()
-              e.stopPropagation()
-              let newPeople = [...values.people]
-              newPeople.splice(parseInt(e.target.getAttribute('data-i'),10),1)
-              setValue('people', newPeople)
-            }}>✖️</span>
-          {/if}
+          <span data-i="{i}" class="button close right" on:click={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            let newPeople = [...values.people]
+            newPeople.splice(parseInt(e.target.getAttribute('data-i'),10),1)
+            setValue('people', newPeople)
+          }}>✖️</span>
           {values.people[i].FirstName || "[new person]"} {values.people[i].LastName}
         </div>
         <Input type="hidden" name="people[{i}].idx" />
@@ -36,10 +42,16 @@
 
             <div class="group info">
               <h3>Personal information</h3>
-              <label>First name</label>
-              <Input name="people[{i}].FirstName" />
-              <label>Last name</label>
-              <Input name="people[{i}].LastName" />
+              <div class="sm:flex">
+                <div class="flex-grow">
+                  <label>First name</label>
+                  <Input name="people[{i}].FirstName" />
+                </div>
+                <div class="flex-grow">
+                  <label>Last name</label>
+                  <Input name="people[{i}].LastName" />
+                </div>
+              </div>
               <label>Email address</label>
               <Input name="people[{i}].Email" />
               <label>Phone number</label>
@@ -173,7 +185,9 @@ contact information upon request).
 
 <script>
 
-  export let session
+  export let sessions
+  export let course
+  export let StartDate = ''
 
   import { signupFormSchema, personSchema } from '../schemas'
   import { goto } from '@sapper/app'
@@ -187,6 +201,7 @@ contact information upon request).
   import url from './getUrl.js'
   import Debug from './Debug.svelte'
   let dev = process.env.NODE_ENV !== 'production'
+  let today = (new Date()).toISOString().split('T')[0]
 
   let submitVisible
   let submitResponse = {}
@@ -194,8 +209,17 @@ contact information upon request).
   let showPerson = 0
 
   let initialValues = {
+    StartDate,
     people: $people.length ? [...$people] : [ personSchema.cast({}) ],
   }
+
+  let sessionOptions = sessions.map(s => {
+    return {
+      id: s.StartDate,
+      title: `${s.StartDateDisplay} – ${s.EndDateDisplay}`,
+      disabled: (s.StartDate < today),
+    }
+  })
 
   function personName(i, values) {
     if (values.people && values.people[i]) return (values.people[i].FirstName || 'this person').trim()
@@ -228,17 +252,23 @@ contact information upon request).
   }
 
   function handleSubmit({ detail: { values, setSubmitting, resetForm } }) {
-    let newRegistration
-    for (let i=0; i<values.people.length; i++) {
-      cart.add(Object.assign({session}, values.people[i]))
-      if (values.people[i].remember) {
-        people.add(values.people[i])
+    let session = sessions.filter(s => s.CourseID === course.meta.id && s.StartDate === values.StartDate)[0]
+    if (typeof session !== undefined) {
+      let newRegistration
+      for (let i=0; i<values.people.length; i++) {
+        cart.add(Object.assign({session}, values.people[i]))
+        if (values.people[i].remember) {
+          people.add(values.people[i])
+        }
+        else {
+          people.remove(values.people[i])
+        }
       }
-      else {
-        people.remove(values.people[i])
-      }
+      goto('/courses/checkout')
     }
-    goto('/courses/checkout')
+    else {
+      alert("Please choose a valid date for the session you wish to attend.")
+    }
   }
 
   let opts = {

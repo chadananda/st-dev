@@ -13,6 +13,8 @@
 
 <h1 class="title">2020 Course Catalog</h1>
 
+<SessionList course={true} />
+
 {#if content.length}
 	<div class="courses">
 	{#each content as item}
@@ -31,5 +33,3 @@
 	{/each}
 	</div>
 {/if}
-
-<SessionList course={true} />

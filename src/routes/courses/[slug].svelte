@@ -1,27 +1,32 @@
 <script context="module">
 	export async function preload({ params, query }) {
-		// the `slug` parameter is available because
-		// this file is called [slug].html
 		const res = await this.fetch(`courses/${params.slug}.json`);
-		const data = await res.json();
+		const course = await res.json();
+		const StartDate = ( query.date ? query.date : ( process.browser ? localStorage.getItem('sessionDate') : '' ))
 
 		if (res.status === 200) {
-			return { content: data };
+			return { course, StartDate };
 		} else {
-			this.error(res.status, data.message);
+			this.error(res.status, course.message);
 		}
 	}
 </script>
 
 <script>
-  export let content
-	 import Content from '../../components/Content.svelte'
-	 import SessionList from '../../components/SessionList.svelte'
+	export let course
+	export let StartDate
+	import Content from '../../components/Content.svelte'
+	import SignupForm from '../../components/SignupForm.svelte'
+	import getSessions from '../../components/getSessions'
+	let sessions = []
+	getSessions().then(data => {
+		sessions=data.filter(s => s.CourseID === course.meta.id)
+	}).catch(e => {console.log(e)})
 </script>
 
-<Content {...content}>
+<Content {...course}>
 </Content>
 
-<hr class="small" />
-
-<SessionList course={content.meta.id} />
+{#if sessions.length }
+	<SignupForm {sessions} {course} {StartDate} />
+{/if}

@@ -1,14 +1,12 @@
 <script>
   export let course = ''
   import getSessions from './getSessions'
-  import Moment from 'moment'
+  let today = (new Date()).toISOString().split('T')[0]
   let sessions
   getSessions().then(res => {
     sessions = res
   })
 </script>
-
-<h3>Upcoming Study Retreats</h3>
 
 {#if typeof sessions === 'undefined'}
   <p>Updating list...</p>
@@ -25,14 +23,19 @@
       ? v.CourseID === course
       : (course || false)
   )) as session}
-    <tr class="session pb-1 even:bg-gray-200" class:full={session.Total >= session.Capacity}>
+    <tr class="session pb-1 even:bg-gray-200" 
+      class:full={session.Total >= session.Capacity} 
+      class:closed={session.StartDate < today}
+      class:tentative={!session.Confirmed}>
       <td class="date">{session.StartDateDisplay}</td>
-      <td class="title"><a href="courses/signup?id={session.CourseID}&date={session.StartDate}">{session.Title}</a></td>
+      <td class="title"><a href="courses/{session.CourseID}" on:click={() => localStorage.setItem('sessionDate', session.StartDate)}>
+      {session.Title}
+      {#if !session.Confirmed} (tentative){/if}</a></td>
       <td class="cost">{session.Cost ? `$${session.Cost}` : ''}</td>
       <td class="places">{(session.Capacity - session.Total)} / {session.Capacity}</td>
     </tr>
   {:else}
-    <p>No courses found.</p>
+    <p>No sessions found.</p>
   {/each}
   </table>
 {/if}
@@ -45,8 +48,15 @@
     font-size: 16px;
 
     width: 100%;
-    .full, p {
+    .full, .tentative, p {
       font-style: italic;
+      opacity: .7;
+    }
+    .full, .tentative {
+      font-weight: 100;
+    }
+    .closed {
+      text-decoration: line-through;
       opacity: .7;
     }
     th {

@@ -52,6 +52,7 @@ export const cartItemSchema = personSchema.shape({
 })
 
 export const signupFormSchema = yup.object().shape({
+  StartDate: yup.string().matches(/^\d{4}-\d{2}-\d{2}$/, {message: 'Please choose a valid start date'}),
   people: yup.array().min(1).of(personSchema.shape({
     idx: yup.number().default(0),
     Email: yup.string().default('').label('Email').when('idx', {
