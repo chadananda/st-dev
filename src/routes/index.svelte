@@ -7,7 +7,7 @@
 <h1 class="title"> Fresh New Stuff! </h1>
 
 <div class="item news pr-3 md:pr-32">
-	<h2>The Dawn-Breakers Challenge - 2020</h2>
+	<h2><a href="/courses/dawnbreakers">The Dawn-Breakers Challenge - 2020</a></h2>
 	<img class="floater invisible md:visible" src="/db-challenge/db-chall-jul-2019.jpg" alt="db challenge participants" />
 	<p>Last year we had a blast with a series of in-depth Dawn-Breakers study retreats (we even got a mention in the ABN).  So, by popular demand, we’re going to do it all over again. And we’re adding a few new programs to the mix. Check out our <a href="/courses">Summer 2020 retreat calendar!</a></p>
 	<p>Also, I finally have a good place to put a bunch of downloadable resources. A big thanks to Dropbox for motivating me -- by freezing my account due to too much download traffic.</p>
@@ -24,7 +24,7 @@
 
 
 <div class="item news pr-3 md:pr-32">
-	<h2>Ocean 2.0 Interfaith Reader - updated</h2>
+	<h2><a href="/ocean">Ocean 2.0 Interfaith Reader - updated</a></h2>
 	<img class="floater invisible md:visible" src="/ocean_assets/ocean-db.png" alt="Ocean reading dawn-breakers" style="width: 300px; transform: rotate(-1deg);" />
 	<p>This entire winter has been spent porting Ocean 2.0 to a faster and more lightweight framework. The advantage of this is that I get to keep Ocean in ‘beta’ status for yet another year. ;) </p>
 		<ul>
@@ -37,10 +37,10 @@
 
 <div class="item news pr-3 md:pr-32">
 	<img class="floater invisible md:visible" src="https://notepad.com/_nuxt/img/77d643c.gif" alt="db challenge participants" style="width: 250px; transform: rotate(2deg); margin-top:0em;" />
-	<h2>Immersion Arabic Language Lab - A crazy experiment... </h2>
+	<h2><a href="/courses/arabic-bootcamp"> Immersion Arabic Language Lab - A crazy experiment... </a></h2>
 	<p>Also over a busy winter, we've been preparing an experimental Intensive Arabic retreat like no other. The aim is to get students from nearly zero to reading real Arabic literature in just a few days. If you are up for a serious immersion challenge, come and join us this summer! </p>
 		<ul>
-				<li><a href='/'>Immersion Arabic Boot Camp →</a></li>
+				<li><a href='/courses/arabic-bootcamp'>Immersion Arabic Boot Camp →</a></li>
 				<li><a href='https://notepad.com/courses/' target="_blank">Online Prep Course →</a></li>
 		</ul>
 </div>
@@ -62,6 +62,7 @@
 	.item h2 { font-size: 1.4em; margin-top:0; }
 	.item p {margin-bottom: .5em;}
 	.item a {text-decoration: underline; font-weight: bold; opacity: .65; }
+	.item h2 a {text-decoration: none; color: black; font-weight: bold; opacity: .65; }
  .item a:hover { opacity: 1; }
 	.item ul li { margin-left: 1em; margin-top: 5px;}
 	img.floater {
