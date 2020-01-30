@@ -27,7 +27,7 @@
       class:full={session.Total >= session.Capacity} 
       class:closed={session.StartDate < today}
       class:tentative={!session.Confirmed}>
-      <td class="date">{session.StartDateDisplay}</td>
+      <td class="date">{session.StartDateDisplay} – {session.EndDateDisplay}</td>
       <td class="title"><a href="courses/{session.CourseID}" on:click={() => localStorage.setItem('sessionDate', session.StartDate)}>
       {session.Title}
       {#if !session.Confirmed} (tentative){/if}</a></td>
