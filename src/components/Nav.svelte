@@ -16,10 +16,10 @@
 			  <img class="w-6 inline -mt-1" src="/retreat.svg" alt="the world inside a drop" />
 					<span class="hidden md:inline">Study</span> <span class="hidden sm:inline">Retreats</span>
 			</a>
-		 <a class="block mr-1 md:mr-6 p-2 rounded-full" href="/news">
+		 <!-- <a class="block mr-1 md:mr-6 p-2 rounded-full" href="/news">
 			  <img class="w-6 inline -mt-1" src="/news.svg" alt="the world inside a drop" />
 					<span class="hidden sm:inline">News </span><span class="hidden lg:inline"> &amp; Announcments</span>
-			</a>
+			</a> -->
 		 <a class="block mr-1 p-2 rounded-full" href="/articles">
 			  <img class="w-5 inline -mt-1 opacity-50" src="/thinker.svg" alt="the world inside a drop" />
 					<span class="hidden sm:inline">Essays</span>
@@ -44,10 +44,10 @@
 			  <img class="w-8 pl-1 inline -mt-1" src="/retreat.svg" alt="the world inside a drop" />
 					<span class="hidden lg:inline">Study</span> <span class="hidden sm:inline">Retreats</span>
 			</a>
-		 <a class="block mr-12 p-2 rounded-full" href="/news">
+		 <!-- <a class="block mr-12 p-2 rounded-full" href="/news">
 			  <img class="w-8 pl-1 inline -mt-1" src="/news.svg" alt="the world inside a drop" />
 					<span class="hidden sm:inline">News </span><span class="hidden lg:inline"> &amp; Announcments</span>
-			</a>
+			</a> -->
 		 <a class="block mr-12 p-2 rounded-full" href="/articles">
 			  <img class="w-6 inline -mt-1 opacity-50" src="/thinker.svg" alt="the world inside a drop" />
 					<span class="hidden sm:inline">Essays</span>

@@ -11,7 +11,7 @@
       {item.session.Title}
     </div>
     <div class="flex-grow text-xl">{item.session.StartDateDisplay} – {item.session.EndDateDisplay}</div>
-    <div>Reserved: 
+    <div>Reserved:
       <span class="w-3/4 h-12 overflow-hidden text-center inline-block border-b border-black text-3xl font-calligraphy">
         <span class="inline-block">{item.FirstName || ''}</span> <span class="inline-block">{item.LastName || ''}</span>
       </span>
@@ -76,5 +76,5 @@
     text-align: center;
   }
 }
-.button.close { background: rgba(0,0,0,.2) }
+// .button.close { background: rgba(0,0,0,.2) }
 </style>
