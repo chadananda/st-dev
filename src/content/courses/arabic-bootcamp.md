@@ -5,7 +5,7 @@ teachers:
   - Joshua Hall
   - Chad Jones
 facebook: ""
-image: "/courses/Mishkin-Qalam-lawh-i-Ahmad.jpeg#floater_sm2"
+image: "/courses/Mishkin-Qalam-lawh-i-Ahmad.jpeg#floater_sm"
 ---
 
 Have you ever wanted to learn Arabic but don't have years of time to devote to this very difficult task? What if you could spend a week in an intensive bootcamp and walk away having already read your first novel in Arabic?
