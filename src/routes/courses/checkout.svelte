@@ -23,7 +23,7 @@
 
 {#if otherSessions.length}
   <h2>Want to stay a little longer?</h2>
-  <p>There are some other things happening right around when you will be here:</p>
+  <p>Here are some other programs going on around when you will be here:</p>
   <SessionList sessions={otherSessions} />
 {/if}
 
