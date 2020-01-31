@@ -1,3 +1,5 @@
+<h2>Register for {course.meta.title}</h2>
+
 <div class="form max-w-full mx-auto" style="width:600px;">
 <Form
   initialValues={signupFormSchema.cast({StartDate: StartDate})}
@@ -75,27 +77,27 @@
   </div>
 
   {#if session}
-    <div class="p-4 text-base leading-normal">
+    <div class="p-4 text-lg leading-loose">
       <div class="sm:flex">
-        <div class="sm:flex-grow">{session.StartDateDisplay} – {session.EndDateDisplay}: {session.Title}</div>
+        <div class="sm:flex-grow">{session.StartDateDisplay} – {session.EndDateDisplay} : {session.Title}</div>
         <span class="sm:block">{values.People} x </span>
-        <span class="sm:block flex-none text-right w-12">$&nbsp;{values.Housing === 'dorm' ? session.Cost : session.DayCost}</span>
+        <span class="sm:block flex-none text-right w-16">$&nbsp;{values.Housing === 'dorm' ? session.Cost : session.DayCost}</span>
       </div>
       <div class="sm:flex">
         <span class="sm:flex-grow font-bold text-right">Total: </span>
-        <span class="sm:block font-bold text-right flex-none w-12">$&nbsp;{values.People * (values.Housing === 'dorm' ? session.Cost : session.DayCost)}</span>
+        <span class="sm:block font-bold text-right flex-none w-16">$&nbsp;{values.People * (values.Housing === 'dorm' ? session.Cost : session.DayCost)}</span>
       </div>
       <div class="sm:flex">
         <span class="sm:flex-grow text-right">Registration fee: </span>
-        <span class="sm:block text-right flex-none w-12">-$&nbsp;{values.People * 5}</span>
+        <span class="sm:block text-right flex-none w-16">-$&nbsp;{values.People * 5}</span>
       </div>
       <div class="sm:flex">
         <span class="sm:flex-grow text-right">Due upon arrival: </span>
-        <span class="sm:block text-right flex-none w-12">$&nbsp;{(values.People * (values.Housing === 'dorm' ? session.Cost : session.DayCost)) - (values.People * 5)}</span>
+        <span class="sm:block text-right flex-none w-16">$&nbsp;{(values.People * (values.Housing === 'dorm' ? session.Cost : session.DayCost)) - (values.People * 5)}</span>
       </div>
-      <p>A $5 per person registration fee is payable immediately;
-      the remainder of the full amount is due upon arrival.</p>
     </div>
+    <p>A $5 per person registration fee is payable immediately;
+    the remainder of the full amount is due upon arrival.</p>
   {/if}
 
   <button class="big fab" type="submit" disabled={!session || isSubmitting}>Add to cart</button>
