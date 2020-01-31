@@ -5,7 +5,7 @@
 
 <div class="flex justify-between w-100 main">
 
- <div class="w-50  prev">
+ <div class="w-1/2 prev">
   <div class="image"><a href="/articles/{prev.slug}">
     <img class="" src="/articles/{prev.img}" alt={prev.title} /></a>
   </div>
@@ -15,7 +15,7 @@
   </div>
  </div>
 
- <div class="w-50  next">
+ <div class="w-1/2 next">
   <div class="image"><a href="/articles/{next.slug}">
     <img class="" src="/articles/{next.img}" alt={next.title} /></a>
   </div>
