@@ -1,187 +1,106 @@
-<div class="form">
+<div class="form max-w-full mx-auto" style="width:600px;">
 <Form
-  {initialValues}
+  initialValues={signupFormSchema.cast({StartDate: StartDate})}
   schema={signupFormSchema}
   on:submit={handleSubmit}
   let:isSubmitting
   let:setValue
   let:values
+  let:touchField
   let:errors
   let:touched>
 
-  {#if !values.people || !values.people.length}
-    <Input type="hidden" name="people" />
-  {/if}
-
   {#if sessions.length > 1}
-    <label>Date</label>
-    <Select name="StartDate" options={sessionOptions} />
-    <label>People</label>
-  {:else}
-    <Input type="hidden" name="StartDate" />
+    <div class="field">
+    <label>Session date</label>
+    <select bind:value={StartDate} name="date" class="w-full" on:change={e => setValue('StartDate', e.target.value)} on:blur={e => touchField('StartDate', true)}>
+    
+      <option disabled selected value="" class="italic grey-500">- please select a date -</option>
+      {#each sessionOptions as item}
+        <option disabled={item.disabled ? true : false} value={item.id}>{item.title}</option>
+      {/each}
+    </select>
+    </div>
   {/if}
+  <Input type="hidden" name="StartDate" />
 
-  {#each values.people as p,i}
-    {#if !values.people[i].deleted}
-      <div class="person" id="person{i}" transition:slide>
-        <div class="label container" class:show={values.people[i].show} class:new={!values.people[i].FirstName} on:click={() => {showPerson = (showPerson === i ? -1 : i)}}>
-          <span data-i="{i}" class="button close right" on:click={(e) => {
-            e.preventDefault()
-            e.stopPropagation()
-            let newPeople = [...values.people]
-            newPeople.splice(parseInt(e.target.getAttribute('data-i'),10),1)
-            setValue('people', newPeople)
-          }}>✖️</span>
-          {values.people[i].FirstName || "[new person]"} {values.people[i].LastName}
-        </div>
-        <Input type="hidden" name="people[{i}].idx" />
-        {#if showPerson === i}
-          <div class="inputs container" transition:slide>
+  <label>Name</label>
+  <input type="text" name="firstname" class="w-full" on:change={(e) => {
+    let first = e.target.value.split(' ')
+    let last = ''
+    if (first.length > 1) last = first.splice(first.length, 1)[0]
+    setValue('FirstName', first.join(' ') || '')
+    setValue('LastName', last || '')
+  }} on:blur={e => touchField('FirstName', true)} />
+  <Input type="hidden" name="FirstName" />
+  <Input type="hidden" name="LastName" />
 
-            <!-- INFO -->
+  <label>Email address</label>
+  <input type="email" class="w-full" on:change={e => setValue('Email', e.target.value)} on:blur={e => touchField('Email', true)} />
+  <Input type="hidden" name="Email" />
 
-            <div class="group info">
-              <h3>Personal information</h3>
-              <div class="sm:flex">
-                <div class="flex-grow">
-                  <label>First name</label>
-                  <Input name="people[{i}].FirstName" />
-                </div>
-                <div class="flex-grow">
-                  <label>Last name</label>
-                  <Input name="people[{i}].LastName" />
-                </div>
-              </div>
-              <label>Email address</label>
-              <Input name="people[{i}].Email" />
-              <label>Phone number</label>
-              <Input name="people[{i}].Phone" />
-              <div class="field">
-                <input type="checkbox" id="rememberPerson" name="people[{i}].remember" checked on:change={(e) => {
-                  setValue(`people[${i}].remember`, e.target.checked)
-                }}/>
-                <label for="rememberPerson">Remember {personName(i,values)} in this browser</label>
-              </div>
-            </div>
-
-            <!-- HOUSING -->
-
-            <div class="group housing">
-              <h3>Housing</h3>
-              <p>
-Our facility has dormitories and bathrooms for men and women; for other needs
-please contact us. It is also possible to bring an RV and park
-in the lot. While some of our rooms are fully enclosed, others are open near
-the ceiling. We realize some of our questions can be sensitive in nature, so
-your responses will be shared only on a need to know basis.
-              </p>
-              <label>Housing arrangement</label>
-              <Select name="people[{i}].Housing" options={opts.housing} />
-              {#if values.people[i].Housing === "dorm"}
-                <label>Gender</label>
-                <Choice name="people[{i}].Sex" options={opts.sex} />
-                <label>How deeply does {personName(i,values)} sleep?</label>
-                <Select name="people[{i}].Sleep" options={opts.sleep} />
-                <label>How likely is {personName(i,values)} to snore?</label>
-                <Select name="people[{i}].Snore" options={opts.snore} />
-              {/if}
-            </div>
-
-            <!-- FOOD -->
-
-            <div class="group food">
-              <h3>Food</h3>
-              <p>
-While this section is optional, please keep in mind that due to our location 
-there are no supermarkets close to us. We would appreciate you being as detailed 
-as possible as we strive to create meals and snacks that appeal to all of our 
-participants. We do provide a small refrigerator and cupboard for participant's 
-personal food you might bring with you. The dorm is a food-free zone and consumables 
-should not be left in your vehicle due to local wildlife.
-              </p>
-              <div class="options">
-                <label for="people[{i}].Diet">Diet</label>
-                <Choice name="people[{i}].Diet" options={opts.diet} multiple />
-              </div>
-              <div class="options inline">
-                <label for="people[{i}].Allergies">Allergies</label>
-                <Choice name="people[{i}].Allergies" options={values.people[i].opts.allergies} multiple />
-                <input style="width:95px;" type="text" name="add-allergies" placeholder="more?" on:keydown={(e) => {
-                  let opt = addOpts(e,i,values)
-                  if (opt) setValue(`people[${i}].Allergies`, [...values.people[i].Allergies, opt])
-                }} />
-              </div>
-            </div>
-
-            <!-- TRANSPORT -->
-
-            <div class="group transport">
-              <h3>Transportation</h3>
-              <label for="Transport">How will {personName(i,values)} travel here?</label>
-              <Select name="people[{i}].Transport" options={opts.transport} />
-              {#if values.people[i].Transport}
-                <p>
-If you need transportation to/from Firm Foundation Academy, we will be at
-Sacramento Airport on arrival and departure days at the following times: <br>
-- 9am - 9:45am <br>
-- 3pm - 3:45pm <br>
-If your arrival and departure times do not fit this schedule, there is a local
-shuttle company that you can book through directly with them (we can provide
-contact information upon request).
-                </p>
-                <label for="people[{i}].Arrival">Flight In</label>
-                <Input type="text" name="people[{i}].Arrival" />
-                <label for="people[{i}].Departure">Flight Out</label>
-                <Input type="text" name="people[{i}].Departure" />
-              {/if}
-            </div>
-
-          </div>
-        {/if}
-      </div>
-    {/if}
-  {/each}
-  <div class="clearfix" />
-  <div class="container">
-
-    <button type="button" class="big" on:click={() => {
-      let i = values.people.length
-      showPerson = i
-      setValue(`people[${i}]`, personSchema.cast({}))
-      setValue(`people[${i}].idx`, i)
-    }}>+ person</button>
-
-    <button class="big fab" type="submit">Add to Cart</button>
+  <label>Phone number</label>
+  <div class="field">
+    <input type="tel" class="w-full" on:keyup={formatPhone}
+      on:change={e => setValue('Phone', e.target.value)}
+      on:blur={e => touchField('Phone', true)} />
+    <Input type="hidden" name="Phone" />
   </div>
-  {#if dev}
-    <Debug variable={values} />
+
+  <div class="field clearfix w-full">
+    <label class="w-1/2 inline-block">How many people are in your party?</label>
+    <input class="w-12 inline-block text-right" type="text" value=1
+      on:change={e => setValue('People', e.target.value)}
+      on:blur={e => touchField('People', true)} />
+    <Input type="hidden" name="People" />
+  </div>
+
+  <div class="field clearfix options-chips">
+    <label>Where do you plan to stay?</label>
+    {#each housingOptions as item}
+      <input type="radio" name="housing" id="housing-{item.id}" value="{item.id}"
+        on:click={e => setValue('Housing', e.target.value)} checked={item.id === 'dorm'}
+         on:blur={e => touchField('Housing', true)}>
+      <label for="housing-{item.id}">
+        {item.title}
+        {#if session}
+          (${item.id === 'dorm' ? session.Cost : session.DayCost })
+        {/if}
+      </label>
+    {/each}
+    <Input type="hidden" name="Housing" />
+    {#if values.Housing === 'other'}
+      <p class="color-warning">Please be aware that there are NO hotels in the area; this option is only meant for local students.</p>
+    {/if}
+  </div>
+
+  {#if session}
+    <div class="p-4 text-base leading-normal">
+      <div class="sm:flex">
+        <div class="sm:flex-grow">{session.StartDateDisplay} – {session.EndDateDisplay}: {session.Title}</div>
+        <span class="sm:block">{values.People} x </span>
+        <span class="sm:block flex-none text-right w-12">$&nbsp;{values.Housing === 'dorm' ? session.Cost : session.DayCost}</span>
+      </div>
+      <div class="sm:flex">
+        <span class="sm:flex-grow font-bold text-right">Total: </span>
+        <span class="sm:block font-bold text-right flex-none w-12">$&nbsp;{values.People * (values.Housing === 'dorm' ? session.Cost : session.DayCost)}</span>
+      </div>
+      <div class="sm:flex">
+        <span class="sm:flex-grow text-right">Registration fee: </span>
+        <span class="sm:block text-right flex-none w-12">-$&nbsp;{values.People * 5}</span>
+      </div>
+      <div class="sm:flex">
+        <span class="sm:flex-grow text-right">Due upon arrival: </span>
+        <span class="sm:block text-right flex-none w-12">$&nbsp;{(values.People * (values.Housing === 'dorm' ? session.Cost : session.DayCost)) - (values.People * 5)}</span>
+      </div>
+      <p>A $5 per person registration fee is payable immediately;
+      the remainder of the full amount is due upon arrival.</p>
+    </div>
   {/if}
+
+  <button class="big fab" type="submit" disabled={!session || isSubmitting}>Add to cart</button>
 </Form>
 </div>
-
-{#if submitVisible}
-  <div class="modal" class:success={submitResponse.success}>
-    {#if submitResponse === {}}
-      <h3>Registering...</h3>
-      <p>We're waiting for confirmation on your registrations:</p>
-    {:else if submitResponse.success}
-      <h3 class="success">You are registered!</h3>
-      <p>Your registration has been received for the following people:</p>
-      <ul>
-      {#each submitResponse.data.people as p}
-        <li>{p}</li>
-      {/each}
-      </ul>
-      <p>Your reference code is <span style="font-family:monospace; font-weight:bold;">{submitResponse.data.reference}</span>.
-      You should also receive an email with this information.</p>
-    {:else if submitResponse.success === false}
-      <h3 class="error">Something went wrong!</h3>
-      <p>We're not sophisticated enough to know exactly what it was,
-      but we hope you'll give us a call to sort things out.</p>
-    {/if}
-    <button type="button" class="center" on:click={() => submitVisible = false}>OK</button>
-  </div>
-{/if}
 
 <script>
 
@@ -189,29 +108,18 @@ contact information upon request).
   export let course
   export let StartDate = ''
 
-  import { signupFormSchema, personSchema } from '../schemas'
   import { goto } from '@sapper/app'
-  import { cart, people } from '../store'
+  import { cart } from '../store'
   cart.useLocalStorage()
-  people.useLocalStorage()
-  if (!$people.length) people.add(personSchema.cast({}))
-  import { slide } from 'svelte/transition'
-  import { Form, Input, Select, Choice } from 'sveltejs-forms';
+  import { Form, Input } from 'sveltejs-forms';
   import * as yup from 'yup';
   import url from './getUrl.js'
   import Debug from './Debug.svelte'
   let dev = process.env.NODE_ENV !== 'production'
   let today = (new Date()).toISOString().split('T')[0]
 
-  let submitVisible
-  let submitResponse = {}
-
-  let showPerson = 0
-
-  let initialValues = {
-    StartDate,
-    people: $people.length ? [...$people] : [ personSchema.cast({}) ],
-  }
+  let session
+  $: session = sessions.filter(s => s.CourseID === course.meta.id && s.StartDate === StartDate)[0]
 
   let sessionOptions = sessions.map(s => {
     return {
@@ -220,11 +128,21 @@ contact information upon request).
       disabled: (s.StartDate < today),
     }
   })
+  let housingOptions = [
+    {id: 'dorm', title: 'Our dormitory'},
+    {id: 'RV', title: 'Your own RV'},
+    {id: 'other', title: 'Other'},
+  ];
+  let signupFormSchema = yup.object({
+    StartDate: yup.string().default('').label('Session date').required().oneOf(sessionOptions.filter(s=>!s.disabled).map(s=>s.id)),
+    FirstName: yup.string().default('').label('Name').required().max(255),
+    LastName: yup.string().default('').label('Name').max(255),
+    Email: yup.string().default('').label('Email').required().email(),
+    Phone: yup.string().default('').label('Phone number').matches(/(^\+[-\d\. ]+$|^\(?\d{3}[-\.\) ]*\d{3}[-\. ]*\d{4}$)/, { message: 'A valid phone number is required'}),
+    People: yup.number({message: 'At least one person is required'}).default(1).label('Number of people').min(1).max(40),
+    Housing: yup.string().default('dorm').label('Housing').oneOf(['dorm', 'RV', 'other'])
+  })
 
-  function personName(i, values) {
-    if (values.people && values.people[i]) return (values.people[i].FirstName || 'this person').trim()
-    return 'this person'
-  }
 
   let formatPhone = (e) => {
     let bksp = (e.keyCode == 8 || e.keyCode == 46)
@@ -252,17 +170,10 @@ contact information upon request).
   }
 
   function handleSubmit({ detail: { values, setSubmitting, resetForm } }) {
-    let session = sessions.filter(s => s.CourseID === course.meta.id && s.StartDate === values.StartDate)[0]
     if (typeof session !== undefined) {
       let newRegistration
       for (let i=0; i<values.people.length; i++) {
-        cart.add(Object.assign({session}, values.people[i]))
-        if (values.people[i].remember) {
-          people.add(values.people[i])
-        }
-        else {
-          people.remove(values.people[i])
-        }
+        cart.add(Object.assign({session}, values))
       }
       goto('/courses/checkout')
     }
@@ -271,98 +182,4 @@ contact information upon request).
     }
   }
 
-  let opts = {
-    housing: [
-      { id: "dorm", title: "Dorm" },
-      { id: "RV", title: "RV" },
-      { id: "day", title: "Outside / day student"},
-    ],
-    sex: [
-      { id: "M", title: "men" },
-      { id: "F", title: "women" }
-    ],
-    diet: [
-      { id: "V", title: "vegetarian" },
-      { id: "Vegan", title: "vegan" },
-      { id: "GF", title: "gluten-free" },
-    ],
-    sleep: [
-      { id: "1", title: "1: very light" },
-      { id: "2", title: "2: light" },
-      { id: "3", title: "3: don't know" },
-      { id: "4", title: "4: heavy" },
-      { id: "5", title: "5: very heavy" },
-    ],
-    snore: [
-      { id: "1", title: "1. unlikely" },
-      { id: "2", title: "2. occasionally" },
-      { id: "3", title: "3. don't know" },
-      { id: "4", title: "4. likely" },
-      { id: "5", title: "5. definitely" },
-    ],
-    transport: [
-      { id: "", title: "Drive / I will make arrangements"},
-      { id: "flight", title: "Flight (SMF, Sacramento Airport)" },
-      { id: "train", title: "Train (Sacramento / Auburn)"},
-      { id: "bus", title: "Bus (Sacramento)"},
-    ]
-  }
-
-  function addOpts(e,i,values) {
-    if (e.key === "Enter") {
-      let opt = e.target.name.replace('add-', '')
-      let a = e.target.value
-      values.people[i].opts[opt].push({id: a, title: a})
-      e.target.value = ''
-      e.preventDefault()
-      e.stopPropagation()
-      return a
-    }
-  }
-
 </script>
-
-<style lang="scss">
-  @import "../style/theme.scss";
-  .form { max-width:600px; margin:0 auto; }
-  div.modal {
-    width: 80%;
-    max-width: 560px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: $color-bg;
-    border-radius: .5em;
-    box-shadow: 2px 0 20px 8px rgba(126,126,126,.8);
-    overflow-y: scroll;
-    overflow-x: hidden;
-    max-height: 80%;
-    padding: 2em;
-  }
-  .container, .group { padding:.4em; }
-  .group>h3 {
-    margin: .6em 0 .4em;
-    font-weight: bold;
-    opacity: .6;
-    font-size: 170%;
-  }
-  .group>p {
-    font-style: italic;
-    opacity: .8;
-  }
-  .person {
-    border-radius: 5px;
-    border: 1px solid $color-border;
-    margin: 10px 0;
-  }
-  .person .new { color: darken($color-border, 30%); }
-  .person .label {
-    font-size: 120%;
-    font-variant: small-caps;
-    text-transform: capitalize;
-    width: 100%;
-    background: $color-border;
-  }
-
-</style>

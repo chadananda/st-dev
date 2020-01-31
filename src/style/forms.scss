@@ -1,7 +1,6 @@
+@import './theme.scss';
 
-
-
-input, select, button {
+input, select, button, textarea {
   @include transition(all 200ms ease);
   box-sizing: border-box;
   cursor: pointer;
@@ -32,8 +31,6 @@ input[type="checkbox"] + label, input[type="radio"] + label {
   border: 1px solid $color-border;
   padding: 0.2rem 1rem;
   margin: 5px 0;
-  display: inline-block;
-  user-select: none;
 }
 input[type="checkbox"]:focus + label,
 input[type="radio"]:focus + label {
@@ -42,6 +39,20 @@ input[type="radio"]:focus + label {
 input[type="checkbox"]:checked + label,
 input[type="radio"]:checked + label {
   @include form-selected();
+}
+.options-chips {
+  input[type="checkbox"] + label, input[type="radio"] + label {
+    display: inline-block;
+    user-select: none;
+  }
+}
+input[type="checkbox"][disabled] + label,
+input[type="radio"][disabled] + label,
+option[disabled] {
+  opacity: .7;
+  font-weight: 100;
+  font-style: italic;
+  border: 0;
 }
 
 input[type=text],
@@ -52,14 +63,13 @@ input[type=search],
 input[type=time],
 input[type=url],
 input[type=email],
+input[type=tel],
 textarea {
-  border: 1px solid;
-  border-color: $color-border;
+  cursor: text;
+  border: 1px solid $color-border;
   padding: 7px;
   margin: 0;
-  transition: all 200ms ease;
   outline: none;
-  width: 100%;
   &:hover {
     @include form-hover();
   }
@@ -76,10 +86,10 @@ button {
     font-variant: small-caps;
     font-size: 140%;
     padding: 1em 2em;
-    width: 100%;
     margin: .3em 0;
   }
   &.fab {
+    width: 100%;
     text-transform: uppercase;
     @include form-selected();
   }
@@ -108,7 +118,6 @@ select {
 	font-size: 16px;
 	line-height: 1.3;
 	padding: .6em 1.4em .5em .8em;
-	width: 100%;
 	max-width: 100%;
 	box-sizing: border-box;
   margin: 0;
@@ -126,6 +135,7 @@ select option {
 
 form {
   overflow: hidden;
+  padding: 5px;
   label {
     font-variant: small-caps;
     font-size: 110%;

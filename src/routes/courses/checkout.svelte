@@ -27,7 +27,7 @@
   <SessionList sessions={otherSessions} />
 {/if}
 
-<div id="paypal-buttons" class:hide={!$cart.length}></div>
+<div id="paypal-buttons" class:display-none={!$cart.length}></div>
 
 <svelte:head>
   <script src="https://www.paypal.com/sdk/js?client-id=ARLTZyWHyejtubwFnzlatVehD-WIp7wj-9Kfxfzj9YvPZVCB5e0W8Xe9LXf_we7NZ25OlGN_YxzVgKRr"></script>
@@ -73,8 +73,19 @@
     return ref
   }
 
-  function random(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min)
+  if (process.browser && $cart.length) {
+    paypal.Buttons({
+      createOrder: (data, actions) => {
+        purchase_units: [{
+          amount: {
+            currency_code: 'USD',
+            amount: (5 * $cart.length)
+          },
+          description: `Registration for ${$cart.count}`,
+          
+        }]
+      },
+    }).render('#paypal-buttons')
   }
 
     // fetch(url, {
