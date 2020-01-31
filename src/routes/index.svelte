@@ -13,11 +13,11 @@
 	<p>Also, I finally have a good place to put a bunch of downloadable resources. A big thanks to Dropbox for motivating me -- by freezing my account due to too much download traffic.</p>
 		<img class="floater invisible md:visible" src="/db-challenge/class-study.jpg" alt="db challenge participants" style="width: 200px; transform: rotate(-2deg); margin-top: -2em;"/>
 		<ul>
-				<li><a href='/courses/dawnbreakers'>Dawn-Breakers Challenge Retreats 2020 →</a></li>
-				<li><a href='/dawn-breakers-challenge-materials'>Dawn-Breakers Challenge Downloadable Materials →</a></li>
-				<li><a href='/dawn-breakers-resources-additional'>Other DB Resources →</a></li>
-				<li><a href='https://bahaiteachings.org/dawn-breakers-challenge-history-bahai-heroes/' target="_blank">DB-Challenge article on bahai-teachings.org →</a></li>
-				<li><a href='/dawn-breakers-mailinglist'>Signup for Sacred-Retreats Announcement List! →</a></li>
+				<li><a href='/courses/dawnbreakers'>Dawn-Breakers Challenge Retreats 2020 ⤳ </a></li>
+				<li><a href='/dawn-breakers-challenge-materials'>Dawn-Breakers Challenge Downloadable Materials ⤳ </a></li>
+				<li><a href='/dawn-breakers-resources-additional'>Other DB Resources ⤳ </a></li>
+				<li><a href='https://bahaiteachings.org/dawn-breakers-challenge-history-bahai-heroes/' target="_blank">DB-Challenge article on bahai-teachings.org ⤳ </a></li>
+				<li><a href='/dawn-breakers-mailinglist'>Signup for Sacred-Retreats Announcement List! ⤳ </a></li>
 		</ul>
 </div>
 
@@ -28,10 +28,10 @@
 	<img class="floater invisible md:visible" src="/ocean_assets/ocean-db.png" alt="Ocean reading dawn-breakers" style="width: 300px; transform: rotate(-1deg);" />
 	<p>This entire winter has been spent porting Ocean 2.0 to a faster and more lightweight framework. The advantage of this is that I get to keep Ocean in ‘beta’ status for yet another year. ;) </p>
 		<ul>
-				<li><a href='/courses/dawnbreakers'>Ocean 2.0 App Download Page →</a></li>
-				<li><a href='/ocean'>Ocean Youtube videos →</a></li>
-				<li><a href='/ocean'>Ocean 2.0 Facebook Group →</a></li>
-				<li><a href='/ocean'>Ocean Twitter sharing →</a></li>
+				<li><a href='/courses/dawnbreakers'>Ocean 2.0 App Download Page ⤳ </a></li>
+				<li><a href='/ocean'>Ocean Youtube videos ⤳ </a></li>
+				<li><a href='/ocean'>Ocean 2.0 Facebook Group ⤳ </a></li>
+				<li><a href='/ocean'>Ocean Twitter sharing ⤳ </a></li>
 		</ul>
 </div>
 
@@ -40,8 +40,8 @@
 	<h2><a href="/courses/arabic-bootcamp"> Immersion Arabic Language Lab - A crazy experiment... </a></h2>
 	<p>Also over a busy winter, we've been preparing an experimental Intensive Arabic retreat like no other. The aim is to get students from nearly zero to reading real Arabic literature in just a few days. If you are up for a serious immersion challenge, come and join us this summer! </p>
 		<ul>
-				<li><a href='/courses/arabic-bootcamp'>Immersion Arabic Boot Camp →</a></li>
-				<li><a href='https://notepad.com/courses/' target="_blank">Online Prep Course →</a></li>
+				<li><a href='/courses/arabic-bootcamp'>Immersion Arabic Boot Camp ⤳ </a></li>
+				<li><a href='https://notepad.com/courses/' target="_blank">Online Prep Course ⤳ </a></li>
 		</ul>
 </div>
 
