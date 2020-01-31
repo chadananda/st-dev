@@ -174,14 +174,8 @@
 
   function handleSubmit({ detail: { values, setSubmitting, resetForm } }) {
     if (typeof session !== undefined) {
-      let newRegistration
-      for (let i=0; i<values.people.length; i++) {
-        cart.add(Object.assign({session}, values))
-      }
+      cart.add(Object.assign({session}, values))
       goto('/courses/checkout')
-    }
-    else {
-      alert("Please choose a valid date for the session you wish to attend.")
     }
   }
 
