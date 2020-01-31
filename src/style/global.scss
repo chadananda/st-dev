@@ -42,6 +42,7 @@ main.main {
   // box-sizing: border-box;
   z-index:-1 !important;  // prevents the main content from scrolling over the navbar
 
+
   h1, h2, h3, h4, h5, h6 {
     margin: 0 0 0.5em 0;
     font-weight: 400;
@@ -52,6 +53,7 @@ main.main {
     text-shadow: 2px 2px 4px #ffffff;
     margin-top: 1em;
   }
+  .font-cabin {font-family: "Cabin Sketch", cursive;}
   h1 {
     font: 400 40px/1.3 'Cabin Sketch', cursive !important;
     color: #706cafd8;
