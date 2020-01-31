@@ -9,7 +9,8 @@
 <script>
 	 export let content
 	 import getSessions from '../../components/getSessions'
-	 import SessionList from '../../components/SessionList.svelte'
+		import SessionList from '../../components/SessionList.svelte'
+		import { goto } from '@sapper/app'
 	 let sessions
 	 getSessions().then(data => {sessions=data})
 </script>
@@ -21,15 +22,15 @@
 {/if}
 
 {#if content.length}
+	<hr class="squiggle" />
 	<div class="courses">
 	{#each content as item}
 		<!-- course summary here -->
-		<div class="course_summary">
+		<div class="course_summary m-6" on:click={()=> goto(`/courses/{item.meta.slug}`)}>
 				{#if item.meta.image}
 					<img src="{item.meta.image}" alt="{item.meta.altText || `A photo of ${item.meta.title}.`}" class="floater" />
 				{/if}
 				<h2><a href="/courses/{item.meta.slug}">{item.meta.title}</a></h2>
-
 				{#if item.excerpt}
 						{@html item.excerpt}
 				{/if}
@@ -38,3 +39,15 @@
 	{/each}
 	</div>
 {/if}
+
+
+<style>
+ hr.squiggle {
+		margin: 2em; width: 100%; height: 30px; border:0;
+		background: url("/squiggle.svg"); background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100px;
+		opacity: .75;
+	}
+</style>
+
