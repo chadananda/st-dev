@@ -13,9 +13,9 @@
 	<p>Also, I finally have a good place to put a bunch of downloadable resources. A big thanks to Dropbox for motivating me -- by freezing my account due to too much download traffic.</p>
 		<img class="floater invisible md:visible" src="/db-challenge/class-study.jpg" alt="db challenge participants" style="width: 200px; transform: rotate(-2deg); margin-top: -2em;"/>
 		<ul>
-				<li><a href='/courses/dawnbreakers'>Dawn-Breakers Challenge Retreats 2020 ⤳ </a></li>
+				<li><a href='/courses/dawnbreakers' class="text-lg">Dawn-Breakers Challenge Retreats 2020 ⤳ </a></li>
 				<li><a href='/dawn-breakers-challenge-materials'>Dawn-Breakers Challenge Downloadable Materials ⤳ </a></li>
-				<li><a href='/dawn-breakers-resources-additional'>Other DB Resources ⤳ </a></li>
+				<li><a href='https://www.facebook.com/The-Dawn-Breakers-Challenge-329820570524376/'>Facebook Page ⤳ </a></li>
 				<li><a href='https://bahaiteachings.org/dawn-breakers-challenge-history-bahai-heroes/' target="_blank">DB-Challenge article on bahai-teachings.org ⤳ </a></li>
 				<li><a href='/dawn-breakers-mailinglist'>Signup for Sacred-Retreats Announcement List! ⤳ </a></li>
 		</ul>

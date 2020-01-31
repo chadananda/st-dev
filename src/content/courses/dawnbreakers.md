@@ -12,7 +12,7 @@ Please join us in Northern California this summer for a fun and intensive 10-day
 
 ---
 
-![dawn-breakers challenge study class](/db-challenge/class-study.jpg#full)
+![dawn-breakers challenge study class](/db-challenge/db-banner-2019.jpg#full)
 
 ## 10-Day Study Retreat: The Dawn-Breakers Challenge 2020
 
