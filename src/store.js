@@ -63,5 +63,3 @@ const writableCartItem = (key, startValue) => {
 }
 
 export const cart = writableCartItem('cart', [])
-
-export const people = writableCartItem('people', [])
