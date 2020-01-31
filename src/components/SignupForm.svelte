@@ -8,14 +8,13 @@
   let:isSubmitting
   let:setValue
   let:values
-  let:touchField
   let:errors
   let:touched>
 
   {#if sessions.length > 1}
     <div class="field">
     <label>Session date</label>
-    <select bind:value={StartDate} name="date" class="w-full" on:change={e => setValue('StartDate', e.target.value)} on:blur={e => touchField('StartDate', true)}>
+    <select bind:value={StartDate} name="date" class="w-full" on:blur={e => setValue('StartDate', e.target.value)}>
     
       <option disabled selected value="" class="italic grey-500">- please select a date -</option>
       {#each sessionOptions as item}
@@ -27,33 +26,31 @@
   <Input type="hidden" name="StartDate" />
 
   <label>Name</label>
-  <input type="text" name="firstname" class="w-full" on:change={(e) => {
+  <input type="text" name="firstname" class="w-full" on:blur={(e) => {
     let first = e.target.value.split(' ')
     let last = ''
-    if (first.length > 1) last = first.splice(first.length, 1)[0]
+    if (first.length > 1) last = first.splice(-1, 1)[0]
     setValue('FirstName', first.join(' ') || '')
     setValue('LastName', last || '')
-  }} on:blur={e => touchField('FirstName', true)} />
+  }} />
   <Input type="hidden" name="FirstName" />
   <Input type="hidden" name="LastName" />
 
   <label>Email address</label>
-  <input type="email" class="w-full" on:change={e => setValue('Email', e.target.value)} on:blur={e => touchField('Email', true)} />
+  <input type="email" class="w-full" on:blur={e => setValue('Email', e.target.value)} />
   <Input type="hidden" name="Email" />
 
   <label>Phone number</label>
   <div class="field">
     <input type="tel" class="w-full" on:keyup={formatPhone}
-      on:change={e => setValue('Phone', e.target.value)}
-      on:blur={e => touchField('Phone', true)} />
+      on:blur={e => setValue('Phone', e.target.value)} />
     <Input type="hidden" name="Phone" />
   </div>
 
   <div class="field clearfix w-full">
     <label class="w-1/2 inline-block">How many people are in your party?</label>
     <input class="w-12 inline-block text-right" type="text" value=1
-      on:change={e => setValue('People', e.target.value)}
-      on:blur={e => touchField('People', true)} />
+      on:blur={e => setValue('People', e.target.value)} />
     <Input type="hidden" name="People" />
   </div>
 
@@ -61,8 +58,7 @@
     <label>Where do you plan to stay?</label>
     {#each housingOptions as item}
       <input type="radio" name="housing" id="housing-{item.id}" value="{item.id}"
-        on:click={e => setValue('Housing', e.target.value)} checked={item.id === 'dorm'}
-         on:blur={e => touchField('Housing', true)}>
+        on:click={e => setValue('Housing', e.target.value)} checked={item.id === 'dorm'} >
       <label for="housing-{item.id}">
         {item.title}
         {#if session}
@@ -87,9 +83,10 @@
         <span class="sm:flex-grow font-bold text-right">Total: </span>
         <span class="sm:block font-bold text-right flex-none w-16">$&nbsp;{values.People * (values.Housing === 'dorm' ? session.Cost : session.DayCost)}</span>
       </div>
+      <hr>
       <div class="sm:flex">
-        <span class="sm:flex-grow text-right">Registration fee: </span>
-        <span class="sm:block text-right flex-none w-16">-$&nbsp;{values.People * 5}</span>
+        <span class="sm:flex-grow text-right">Registration fee due now: </span>
+        <span class="sm:block text-right flex-none w-16">$&nbsp;{values.People * 5}</span>
       </div>
       <div class="sm:flex">
         <span class="sm:flex-grow text-right">Due upon arrival: </span>
@@ -101,6 +98,9 @@
   {/if}
 
   <button class="big fab" type="submit" disabled={!session || isSubmitting}>Add to cart</button>
+  {#if dev}
+    <Debug variable={values} />
+  {/if}
 </Form>
 </div>
 
@@ -130,6 +130,7 @@
       disabled: (s.StartDate < today),
     }
   })
+  if (sessionOptions.length===1) StartDate = sessionOptions[0].id
   let housingOptions = [
     {id: 'dorm', title: 'Our dormitory'},
     {id: 'RV', title: 'Your own RV'},
