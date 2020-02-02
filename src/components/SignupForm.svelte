@@ -14,7 +14,10 @@
   {#if sessions.length > 1}
     <div class="field">
     <label>Session date</label>
-    <select bind:value={StartDate} name="date" class="w-full" on:blur={e => setValue('StartDate', e.target.value)}>
+    <select bind:value={StartDate} name="date" class="w-full" on:blur={e => {
+      setValue('StartDate', e.target.value)
+      updateTotal(values.Housing, values.People)
+    }}>
     
       <option disabled selected value="" class="italic grey-500">- please select a date -</option>
       {#each sessionOptions as item}
@@ -50,7 +53,10 @@
   <div class="field clearfix w-full">
     <label class="w-1/2 inline-block">How many people are in your party?</label>
     <input class="w-12 inline-block text-right" type="text" value=1
-      on:blur={e => setValue('People', e.target.value)} />
+      on:blur={e => {
+        setValue('People', e.target.value)
+        updateTotal(values.Housing, values.People)
+      }} />
     <Input type="hidden" name="People" />
   </div>
 
@@ -58,7 +64,10 @@
     <label>Where do you plan to stay?</label>
     {#each housingOptions as item}
       <input type="radio" name="housing" id="housing-{item.id}" value="{item.id}"
-        on:click={e => setValue('Housing', e.target.value)} checked={item.id === 'dorm'} >
+        on:click={e => {
+          setValue('Housing', e.target.value)
+          updateTotal(values.Housing, values.People)
+        }} checked={item.id === 'dorm'} >
       <label for="housing-{item.id}">
         {item.title}
         {#if session}
@@ -81,20 +90,12 @@
       </div>
       <div class="sm:flex">
         <span class="sm:flex-grow font-bold text-right">Total: </span>
-        <span class="sm:block font-bold text-right flex-none w-16">$&nbsp;{values.People * (values.Housing === 'dorm' ? session.Cost : session.DayCost)}</span>
+        <span class="sm:block font-bold text-right flex-none w-16">$&nbsp;{totals.fullAmount}</span>
       </div>
       <hr>
-      <div class="sm:flex">
-        <span class="sm:flex-grow text-right">Registration fee due now: </span>
-        <span class="sm:block text-right flex-none w-16">$&nbsp;{values.People * 5}</span>
-      </div>
-      <div class="sm:flex">
-        <span class="sm:flex-grow text-right">Due upon arrival: </span>
-        <span class="sm:block text-right flex-none w-16">$&nbsp;{(values.People * (values.Housing === 'dorm' ? session.Cost : session.DayCost)) - (values.People * 5)}</span>
-      </div>
     </div>
-    <p>A $5 per person registration fee is payable immediately;
-    the remainder of the full amount is due upon arrival.</p>
+    <p>A $5 per person registration fee (${totals.registrationAmount}) is payable immediately;
+    the remainder may be paid now or upon arrival.</p>
   {/if}
 
   <button class="big fab" type="submit" disabled={!session || isSubmitting}>Add to cart</button>
@@ -122,6 +123,17 @@
 
   let session
   $: session = sessions.filter(s => s.CourseID === course.meta.id && s.StartDate === StartDate)[0]
+
+  let totals = {
+    fullAmount: 0,
+    registrationAmount: 0,
+  }
+  function updateTotal(housing, people) {
+    if (session) {
+      totals.fullAmount = (housing === 'dorm' ? session.Cost : session.DayCost) * people
+      totals.registrationAmount = 5 * people
+    }
+  }
 
   let sessionOptions = sessions.map(s => {
     return {
@@ -174,7 +186,7 @@
 
   function handleSubmit({ detail: { values, setSubmitting, resetForm } }) {
     if (typeof session !== undefined) {
-      cart.add(Object.assign({session}, values))
+      cart.add(Object.assign(totals, {session}, values))
       goto('/courses/checkout')
     }
   }
