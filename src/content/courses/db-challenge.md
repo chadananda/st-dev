@@ -1,5 +1,5 @@
 ---
-id: dawnbreakers
+id: db-challenge
 title: Dawn-Breakers Challenge
 teachers:
   - Chad Jones
