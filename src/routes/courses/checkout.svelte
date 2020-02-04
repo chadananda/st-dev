@@ -145,7 +145,7 @@
               body: JSON.stringify(Object.assign({}, {items: $cart, orderID: data.orderID, Ref: ref, testing: dev}))
             })
             .then(r => {
-              // cart.set([])
+              cart.set([])
               r.json().then(result => {
                 console.log(result)
                 submitResponse = result
