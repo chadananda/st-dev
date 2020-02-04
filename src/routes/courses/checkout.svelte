@@ -1,5 +1,6 @@
 <h1 class="title">Registration Checkout</h1>
 
+{#if !submitVisible}
 {#each $cart as item,i}
   <span class="ticket flex flex-col font-circus">
     <span class="text-3xl text-center overflow-hidden" style="line-height:1.25em; max-height:2.5em;">
@@ -17,14 +18,10 @@
       </span>
     </span>
   </span>
+
 {:else}
   <p>Your cart is empty.</p>
 {/each}
-
-<div class="my-16 mx-auto" style="width:400px;">
-    <script src="https://www.paypal.com/sdk/js?client-id=ARLTZyWHyejtubwFnzlatVehD-WIp7wj-9Kfxfzj9YvPZVCB5e0W8Xe9LXf_we7NZ25OlGN_YxzVgKRr&currency=USD"></script>
-    <div id="paypal-buttons"></div>
-</div>
 
 {#if otherSessions.length}
   <h2>Want to stay a little longer?</h2>
@@ -32,31 +29,33 @@
   <SessionList sessions={otherSessions} />
 {/if}
 
-
-{#if submitVisible}
-  <div class="fixed inset-0 z-50 overflow-auto bg-smoke-light flex" on:click={() => submitVisible = false}>
-  <div class="relative p-8 bg-white w-full max-w-md m-auto flex-col flex" class:success={submitResponse.success}>
-    {#if !submitResponse}
-      <h3>Registering</h3>
-      <p>We're waiting for confirmation on your registration....</p>
-    {:else if submitResponse.success}
-      <h3 class="success">You are registered!</h3>
-      <p>Your registration has been received for the following people:</p>
-      <ul>
-      {#each submitResponse.data.people as p}
-        <li>{p}</li>
-      {/each}
-      </ul>
-      <p>Your reference code is <span style="font-family:monospace; font-weight:bold;">{submitResponse.data.reference}</span>.
-      You should also receive an email with this information.</p>
-    {:else if submitResponse.success === false}
-      <h3 class="error">Something went wrong!</h3>
-      <p>Please give us a call to sort things out.</p>
-    {/if}
-    <button type="button" class="center" on:click={() => submitVisible = false}>OK</button>
-  </div>
-  </div>
+{:else}
+  {#if !submitResponse}
+    <h3>Registering</h3>
+    <p>We're waiting for confirmation on your registration....</p>
+  {:else if submitResponse.success}
+    <h3 class="success">You are registered!</h3>
+    <p>Your registration has been received for the following courses:</p>
+    <ul>
+    {#each submitResponse.data.items as text}
+      <li>{text}</li>
+    {/each}
+    </ul>
+    <p>Your reference code is <span style="font-family:monospace; font-weight:bold;">{submitResponse.data.reference}</span>.
+    You should also receive an email with this information.</p>
+  {:else if submitResponse.success === false}
+    <h3 class="error">Something went wrong!</h3>
+    <p>Please give us a call to sort things out.</p>
+  {/if}
 {/if}
+
+<div>
+    <script src="https://www.paypal.com/sdk/js?client-id=ARLTZyWHyejtubwFnzlatVehD-WIp7wj-9Kfxfzj9YvPZVCB5e0W8Xe9LXf_we7NZ25OlGN_YxzVgKRr&currency=USD"></script>
+</div>
+<div class="my-16 mx-auto" class:hidden={submitVisible} style="width:400px;">
+    <div id="paypal-buttons"></div>
+</div>
+
 
 
 <svelte:head>
@@ -85,11 +84,12 @@
   let submitVisible = false
   let total
   function getTotal(amount = 'registration') {
-    return $cart.reduce((t, v) => {
+    let newLineItems = []
+    total = $cart.reduce((t, v) => {
       return t + (amount === 'registration' ? v.registrationAmount : v.fullAmount)
     },0)
   }
-  $: total = getTotal(payAmount)
+  $: getTotal(payAmount)
   $: for (let i=0; i<$cart.length; i++) {
     let StartDate = new Moment($cart[i].session.StartDate, 'YYYY-MM-DD')
     let EndDate = new Moment($cart[i].session.EndDate, 'YYYY-MM-DD')
@@ -118,38 +118,47 @@
   }
 
   onMount(() => {
-    total = getTotal(payAmount)
-    paypal.Buttons({
-      createOrder: (data, actions) => {
-        return actions.order.create({
-          purchase_units: [{
-            amount: {
-              value: total
-            },
-            custom_id: `${ref}:${$cart[0].Email}`,
-            invoice_id: ref,
-          }]
-        })
-      },
-      onApprove: (data, actions) => {
-        submitVisible = true
-        actions.order.capture().then((details) => {
-          fetch(url, {
-            method: "POST",
-            body: JSON.stringify(Object.assign({}, $cart, {Ref: ref, testing: dev}))
+    console.log($cart)
+    if ($cart.length) {
+      getTotal(payAmount)
+      paypal.Buttons({
+        createOrder: (data, actions) => {
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: total
+              },
+              custom_id: `${ref}:${$cart[0].Email}`,
+              invoice_id: ref,
+            }]
           })
-          .then(r => {
-            r.json().then(result => {
-              submitResponse = result
+        },
+        onApprove: (data, actions) => {
+          submitVisible = true
+          actions.order.capture().then((details) => {
+            console.log(details)
+            fetch(url, {
+              method: "POST",
+              headers: {
+                'Content-Type': 'text/plain'
+              },
+              body: JSON.stringify(Object.assign({}, {items: $cart, orderID: data.orderID, Ref: ref, testing: dev}))
+            })
+            .then(r => {
+              // cart.set([])
+              r.json().then(result => {
+                console.log(result)
+                submitResponse = result
+              })
             })
           })
-        })
-        .catch(e => {
-          submitResponse = e
-          console.error(e)
-        })
-      }
-    }).render('#paypal-buttons');
+          .catch(e => {
+            submitResponse = e
+            console.error(e)
+          })
+        }
+      }).render('#paypal-buttons');
+    }
   })
 
 </script>
