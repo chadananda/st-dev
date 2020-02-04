@@ -11,7 +11,7 @@
     "test": "run-p --race dev cy:run",
     "deploy": "NODE_ENV=production sapper export && push-dir --dir=__sapper__/export --branch=gh-pages --cleanup --verbose",
     "watch:tailwind": "postcss static/tailwind.css -o static/index.css -w",
-    "build:tailwind": "NODE_ENV=production postcss static/tailwind.css -o static/index.css" ,
+    "build:tailwind": "NODE_ENV=production postcss static/tailwind.css -o static/index.css",
     "build": "npm run build:tailwind && sapper build --legacy"
   },
   "repository": "git@github.com:chadananda/st-dev.git",

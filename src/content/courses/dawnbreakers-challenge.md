@@ -18,7 +18,7 @@ Please join us in Northern California this summer for a fun and intensive 10-day
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
- Contact Kaathlyn Connor at (530) 777 8275, kaathlyn.connor@gmail.com
+ Contact Kaathlyn Connor at (530) 777 8275, operations@firm-foundation.org
 ```
 
 ## Dates

@@ -2,7 +2,7 @@
 	export function preload({ params, query }) {
 		return this.fetch(`courses.json`).then(r => r.json()).then(content => {
 			return { content }
-		});
+		})
 	}
 </script>
 
