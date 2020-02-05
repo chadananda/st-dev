@@ -1,6 +1,6 @@
 ---
 id: saiedi-writings-bab
-title: The Writings and The Worldview of the Báb
+title: "The Writings and the Worldview of the Báb"
 teachers:
   - Nader Saiedi
 facebook: ""

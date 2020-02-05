@@ -7,7 +7,7 @@ facebook: https://www.facebook.com/The-Dawn-Breakers-Challenge-329820570524376/
 image: "/db-challenge/participants-2019-2.jpg#floater_sm"
 ---
 
-Please join us in Northern California this summer for a fun and intensive 10-day study of “The Dawn-Breakers” together with the primary doctrinal work of the Bahá'í Faith, “The Kitáb-i-Íqán.”
+Please join us in Northern California in 2020 for a fun and intensive 10-day study of “The Dawn-Breakers” together with the primary doctrinal work of the Bahá'í Faith, “The Kitáb-i-Íqán.”
 
 ---
 
@@ -37,7 +37,7 @@ April 6-17
 <br>
 
 
-Please join us in Northern California this summer for a fun and intensive 10-day study of “The Dawn-Breakers” together with the primary doctrinal work of the Bahá'í Faith, “The Kitáb-i-Íqán.” As you know, the Guardian challenged us to *“master”* these books as a rock-foundation for effective teaching. Now that the Bicentennial of the bith of the Báb is upon us, it’s probably about time to get serious about doing just that.
+Please join us in Northern California for a fun and intensive 10-day study of “The Dawn-Breakers” together with the primary doctrinal work of the Bahá'í Faith, “The Kitáb-i-Íqán.” As you know, the Guardian challenged us to *“master”* these books as a rock-foundation for effective teaching. Now that the Bicentennial of the bith of the Báb is upon us, it’s probably about time to get serious about doing just that.
 
 Together, we will read and discuss every page of the Dawn-Breakers, track every character, map every city and essentially rise to the Guardian’s challenge that we *“...master and digest the facts recorded therein...”* It’s going to be a lot of work and a lot of fun.
 
@@ -73,9 +73,9 @@ Whatever your current plans are this summer, we hope you will change them and jo
 
 
 ![bring Ocean 2.0](/db-challenge/bayan-db-challenge.jpg#floater)
-### What to Bring? (books, light clothes, shampoo)
+### What to Bring? (computer, books, light clothes, shampoo)
 
-Every student should bring their own copy of the Dawn-Breakers or a tablet or laptop computer with [Ocean 2.0 Reader installed →](/ocean). Pens, pencils, notepads, bedding, towels, food etc. are supplied. We have plenty of laundry facilities as well. You may want to bring a swimsuit for occasional outings to the nearby river.
+Every student should bring their own copy of the Dawn-Breakers or a tablet or laptop computer with [Ocean 2.0 Reader installed →](/ocean). Pens, pencils, notepads, bedding, towels, food etc. are supplied. We have plenty of laundry facilities as well. The mountain air can be a bit cooler than one might expect for California, so prehaps bring some layered clothes. You may want to bring a swimsuit for occasional outings to the nearby river.
 
 ### How much? ($320, about $30/day.)
 

@@ -20,18 +20,15 @@ The Kitáb-i-Aqdas ranks among the formost treasures of Bahá’u’lláh's vast
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
  Contact Kaathlyn Connor at (530) 777 8275, operations@firm-foundation.org
- Arrive: Friday evening, the 3rd of April for dinner and orientation
- Depart: Monday morning, the 6th of April after dawn-prayers and breakfast
+ Arrive: Friday evening, the 22nd of May for dinner and orientation
+ Depart: Monday morning, the 25th of May after dawn-prayers and breakfast
 ```
 
 <br>
 
 ![temple front](/courses/nabil-fares.jpg#floater2)
 
-Thousands of people every day visit Mashriqu’l-Adhkárs around the world, many just as tourists but many others with profound spiritual questions. A handful of guides is involved in anwering questions and stimulating curiosity in the souls these seekers. Is it possible to be more effective in this field of service?
-
-
-Steve Sarowitz is the producer of "The Gate" and a long time volunteer teacher at Mashriqu’l-Adhkárs in many countries.
+ The Kitáb-i-Aqdas ranks among the formost treasures of Bahá’u’lláh's vast revelation. It “stands out, by virtue of the principles it inculcates, the administrative institutions it ordains and the function with which it invests the appointed Successor of its Author, unique and incomparable among the world’s sacred Scriptures.”
 
 
 

@@ -31,11 +31,11 @@ Have you ever wanted to learn Arabic but don't have years of time to devote to t
 
 Sound impossible? Well, it's not going to be a walk in the park. Learning and using a lot of new vocabulary is an essentially painful process. Your head will definitely hurt. But, if done correctly, your pain will exactly match your gain.
 
-Here's the plan. A couple weeks before the course, you will master a set of flashcards whcih will provide the most common words as well as phrase containing the most common grammatical constructs.
+Here's the plan. A couple weeks before the course, you will master a set of flashcards which will provide the most common words as well as phrase containing the most common grammatical constructs.
 
 Then, for ten days, we will spend one hour practicing some core texts privately, then two hours discussing those core texts in a workshop. Then another six hours of immersion read-along of Arabic adventure stories.
 
-The core texts for this course are some of the most amazing tablets of Bahá'u'lláh such as the "Tablet of Ahmad", the short and long healing prayers, the short and long Obligatory prayers etc. Our guest teacher, Joshua Hall, will lead us through those tablets exploring key terminology and highlighting helpful grammatical prinicples.
+The core texts for this course are some of the most amazing tablets of Bahá'u'lláh such as the "Tablet of Ahmad", the short and long healing prayers, the short and long Obligatory prayers etc. Our guest teacher, Joshua Hall, will lead us through those tablets exploring key terminology and highlighting helpful grammatical principles.
 
 
 ![library of arabic books](/courses/library-sshot.png#floater)

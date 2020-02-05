@@ -9,7 +9,7 @@ image: "/courses/todd-lawson_sm.jpg#floater_sm2"
 
 Join us for a wonderful weekend retreat with reknowned professor Todd Lawson who will be speaking about his recent book "Being Human".
 
-Being Human seeks to reconcile many contradictions and demonstrate how Baha’i teachings point the way toward peace and the reconciliation of all world religions.
+"Being Human" seeks to harmonize many contradictions and demonstrate how Baha'i teachings point the way toward peace and the reconciliation of all world religions.
 
 ---
 

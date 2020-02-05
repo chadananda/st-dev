@@ -29,7 +29,7 @@ Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
 
 Thousands of people every day visit Mashriqu’l-Adhkárs around the world, many just as tourists but many others with profound spiritual questions. A handful of guides are involved in answering questions and stimulating curiosity in the souls these seekers. Is it possible to be more effective in this field of service?
 
-Steve Sarowitz is the producer of "The Gate" and a long time volunteer teacher at Mashriqu’l-Adhkárs in many countries.
+Steve Sarowitz is the producer of "The Gate: Dawn of the Baha'i Faith" and a long time volunteer teacher at Mashriqu’l-Adhkárs in many countries.
 
 
 
