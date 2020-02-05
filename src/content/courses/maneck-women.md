@@ -1,10 +1,10 @@
 ---
 id: maneck-women
-title: "Women and Islám"
+title: "Women in Islám"
 teachers:
   - Susan Maneck
 facebook: ""
-image: "/courses/susan-maneck.jpg#floater_sm2"
+image: "/courses/susan-maneck.jpg#floater_sm"
 ---
 
 ‘Abdu’l-Bahá in America recounts the journey of ‘Abdu’l-Bahá, the eldest son of Bahá’u’lláh and appointed head of the Bahá’í Faith after his father's passing, across much of the United States in 1912. His exhausting yet exhilarating 239-day trek from coast to coast took him to fifty cities and towns, where he delivered up to four talks a day -- about four hundred total -- to approximately 93,000 people on Bahá’u’lláh’s message of the oneness of humanity and the principles of universal peace.
