@@ -1,18 +1,19 @@
 <script context="module">
-	export function preload({ params, query }) {
-		return this.fetch(`courses.json`).then(r => r.json()).then(content => {
-			return { content }
-		})
+	import getSessions from '../../components/getSessions'
+	export async function preload({ params, query }) {
+		const content = await this.fetch(`courses.json`).then(r => r.json())
+		const sessions = await getSessions()
+    return { content, sessions, noSerialize: () => {} };
 	}
 </script>
 
 <script>
-	 export let content
-	 import getSessions from '../../components/getSessions'
-		import SessionList from '../../components/SessionList.svelte'
-		import { goto } from '@sapper/app'
-	 let sessions
-	 getSessions().then(data => {sessions=data})
+	export let content
+	export let sessions
+	export let noSerialize
+	noSerialize()
+	import SessionList from '../../components/SessionList.svelte'
+	import { goto } from '@sapper/app'
 </script>
 
 <h1 class="title">2020 Course Catalog</h1>

@@ -28,6 +28,7 @@
   <p>Here are some other programs going on around when you will be here:</p>
   <SessionList sessions={otherSessions} />
 {/if}
+<Debug variable={otherSessions} />
 
 {:else}
   {#if !submitResponse}
@@ -66,15 +67,13 @@
 <script>
   import { cart } from '../../store'
   cart.useLocalStorage()
+  import Debug from '../../components/Debug.svelte'
   import url from '../../components/getUrl'
   import SessionList from '../../components/SessionList.svelte'
 
   // for adding on sessions around the same time
-  import getSessions from '../../components/getSessions'
-  import Moment from 'moment'
   import { onMount } from 'svelte'
   let dev = process.env.NODE_ENV !== 'production'
-  let sessions = []
   let otherSessions = []
   let today = (new Date()).toISOString().split('T')[0]
   let startDates = {}, endDates = {}
@@ -90,26 +89,13 @@
     },0)
   }
   $: getTotal(payAmount)
-  $: for (let i=0; i<$cart.length; i++) {
-    let StartDate = new Moment($cart[i].session.StartDate, 'YYYY-MM-DD')
-    let EndDate = new Moment($cart[i].session.EndDate, 'YYYY-MM-DD')
-    startDates[$cart[i].session.StartDate] = {from: StartDate.format('YYYY-MM-DD'), to: StartDate.subtract(3, 'days').format('YYYY-MM-DD')}
-    endDates[$cart[i].session.EndDate] = {from: EndDate.format('YYYY-MM-DD'), to: EndDate.add(3, 'days').format('YYYY-MM-DD')}
+  $: cartKeys = $cart.map(s => s.session.Key)
+  $: {
+    otherSessions = $cart.reduce((acc, cur) => {
+    return acc.concat((cur.session.prev || []).filter(s => s.StartDate >= today && cartKeys.indexOf(s.Key) === -1))
+              .concat((cur.session.next || []).filter(s => s.StartDate >= today && cartKeys.indexOf(s.Key) === -1))
+    }, [])
   }
-  getSessions().then(data => {
-    sessions = data
-  })
-  $: otherSessions = sessions.filter(s => {
-    if (s.startDate < today) return false
-    let yes = false
-    Object.keys(startDates).forEach(k => {
-      if (s.EndDate >= startDates[k].from && s.EndDate <= startDates[k].to) yes = true
-    })
-    Object.keys(endDates).forEach(k => {
-      if (s.StartDate >= endDates[k].from && s.StartDate <= endDates[k].to) yes = true
-    })
-    return yes
-  })
 
   function getRef() {
     let ref = Math.random().toString(36).substring(2,8).toUpperCase()
@@ -118,7 +104,6 @@
   }
 
   onMount(() => {
-    console.log($cart)
     if ($cart.length) {
       getTotal(payAmount)
       paypal.Buttons({
@@ -136,7 +121,6 @@
         onApprove: (data, actions) => {
           submitVisible = true
           actions.order.capture().then((details) => {
-            console.log(details)
             fetch(url, {
               method: "POST",
               headers: {
@@ -147,7 +131,6 @@
             .then(r => {
               cart.set([])
               r.json().then(result => {
-                console.log(result)
                 submitResponse = result
               })
             })

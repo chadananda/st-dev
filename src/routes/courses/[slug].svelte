@@ -1,11 +1,13 @@
 <script context="module">
+	import getSessions from '../../components/getSessions'
 	export async function preload({ params, query }) {
-		const res = await this.fetch(`courses/${params.slug}.json`);
-		const course = await res.json();
+		const courseJson = await this.fetch(`courses/${params.slug}.json`);
+		const course = await courseJson.json();
 		const StartDate = ( query.date ? query.date : ( process.browser ? localStorage.getItem('sessionDate') : '' ))
+		const sessions = await getSessions().then(sessions => {return sessions.filter(s => s.CourseID === course.meta.id)})
 
-		if (res.status === 200) {
-			return { course, StartDate };
+		if (courseJson.status === 200) {
+			return { course, StartDate, sessions, noSerialize: () => {} };
 		} else {
 			this.error(res.status, course.message);
 		}
@@ -15,18 +17,14 @@
 <script>
 	export let course
 	export let StartDate
+	export let sessions
+	export let noSerialize
+	noSerialize()
 	import Content from '../../components/Content.svelte'
 	import SignupForm from '../../components/SignupForm.svelte'
-	import getSessions from '../../components/getSessions'
-	let sessions = []
-	getSessions().then(data => {
-		sessions=data.filter(s => s.CourseID === course.meta.id)
-	}).catch(e => {console.log(e)})
 </script>
 
 <Content {...course}>
 </Content>
 
-{#if sessions.length }
-	<SignupForm {sessions} {course} {StartDate} />
-{/if}
+<SignupForm {sessions} {course} {StartDate} />
