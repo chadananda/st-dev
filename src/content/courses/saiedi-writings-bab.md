@@ -1,37 +1,35 @@
 ---
-id: topical-overview-aqdas
-title: Topical Overview of the Kitáb-i-Aqdas
+id: saiedi-writings-bab
+title: The Writings and The Worldview of the Báb
 teachers:
-  - Nabil Fares
-  - Azadeh Mohandessi-Fares
+  - Nader Saiedi
 facebook: ""
-image: "/courses/azadeh-fares.jpg#floater_sm"
+image: "/courses/nader-saiedi-nar.jpg#floater_sm"
 ---
 
-The Kitáb-i-Aqdas ranks among the formost treasures of Bahá’u’lláh's vast revelation. It “stands out, by virtue of the principles it inculcates, the administrative institutions it ordains and the function with which it invests the appointed Successor of its Author, unique and incomparable among the world’s sacred Scriptures.”
+Taking an interdisciplinary approach, Nader Saiedi examines the Báb’s major works in multifaceted context, explaining the unique theological system, mystical world view, and interpretive principles they embody as well as the rhetorical and symbolic uses of language through which the Báb radically transforms traditional concepts.
 
 ---
 
 
-![temple](/courses/azadeh-fares-wide.jpg#full)
+![nader saiedi](/courses/nader-saiedi-wide.jpg#full)
 
 ## A 2-Day Weekend Study Retreat
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
  Contact Kaathlyn Connor at (530) 777 8275, operations@firm-foundation.org
- Arrive: Friday evening, the 3rd of April for dinner and orientation
- Depart: Monday morning, the 6th of April after dawn-prayers and breakfast
+ Arrive: Friday evening, the 18th of September for dinner and orientation
+ Depart: Monday morning, the 21st of September after dawn-prayers and breakfast
 ```
 
 <br>
 
-![temple front](/courses/nabil-fares.jpg#floater2)
+![book: gate of the heart](/courses/gate-heart.jpg#floater2)
 
-Thousands of people every day visit Mashriqu’l-Adhkárs around the world, many just as tourists but many others with profound spiritual questions. A handful of guides is involved in anwering questions and stimulating curiosity in the souls these seekers. Is it possible to be more effective in this field of service?
+Taking an interdisciplinary approach, Nader Saiedi examines the Báb’s major works in multifaceted context, explaining the unique theological system, mystical world view, and interpretive principles they embody as well as the rhetorical and symbolic uses of language through which the Báb radically transforms traditional concepts. Arguing that the Bábí movement went far beyond an attempt at an Islamic Reformation, the author explores controversial issues and offers conclusions that will compel a re-evaluation of some prevalent assumptions about the Báb’s station, claims, and laws.
 
-
-Steve Sarowitz is the producer of "The Gate" and a long time volunteer teacher at Mashriqu’l-Adhkárs in many countries.
+Nader Saiedi’s meticulous and insightful analysis identifies the key themes, terms, and concepts that characterize each stage of the Báb’s writings, unlocking the code of the Báb’s mystical lexicon. Gate of the Heart is a subtle and profound textual study and an essential resource for anyone wishing to understand the theological foundations of the Bahá’í religion and the Báb’s significance in religious history.
 
 
 
@@ -42,7 +40,7 @@ In the mountains of Northern California, just East of Sacramento, our friends ha
 
 
 
-![software with tablet of ahmad](/courses/aqdas.jpg#floater2)
+![the Bab's haykal](/courses/haykal-Bab-wide.gif#floater2)
 ### Who should attend? (ages 15+)
 
 Given the pace and difficulty of material, only adults and youth 15 or older. Minors will need to be accompanied by a parent or a designated guardian. We will not be splitting out into groups so all participants should be mature enough to sustain a solid day of reading together.

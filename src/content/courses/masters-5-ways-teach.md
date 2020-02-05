@@ -39,6 +39,8 @@ The class will be presented by David and Teresa Langness – David will focus on
 In his work for the past eight years with the world's largest Baha'i website--www.BahaiTeachings.org – David has written and edited more than five thousand essays that  have introduced millions of seekers to the Faith. In her work over the past 25 years with Full-Circle Learning – www.fullcirclelearning.org –Teresa Langness has taught the unifying principles of the Faith to millions around the world with her Baha'i-inspired educational curriculum, now being taught in thousands of schools in 34 nations.
 
 
+
+![software with tablet of ahmad](/courses/david-langness.jpg#floater2)
 ### This Unique Weekend Exploration will Include
 
 - A deep study of the essential "first obligation" of every Baha'i to teach the Faith, and of the writings of Baha'u'llah and Abdu'l-Baha on teaching
@@ -68,8 +70,6 @@ You'll come away from this program with new ideas, new information and new inspi
 In the mountains of Northern California, just East of Sacramento, our friends have a beautiful boarding-school facility with a gymnasium and comfortable classrooms. If you are not within driving distance, you can fly into the Sacramento Airport (SMF) or take a train to the Sacramento Amtrak train station. Our community volunteers will pick you up and shuttle you to the school. The school has various accommodation options, so families will usually be able to stay together.
 
 
-
-![software with tablet of ahmad](/courses/david-langness.jpg#floater2)
 ### Who should attend? (ages 15+)
 
 Given the pace and difficulty of material, only adults and youth 15 or older. Minors will need to be accompanied by a parent or a designated guardian. We will not be splitting out into groups so all participants should be mature enough to sustain a solid day of reading together.

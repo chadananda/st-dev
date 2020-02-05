@@ -19,12 +19,14 @@
       ? v.CourseID === CourseID
       : true
   )) as session}
-    <tr class="session pb-1 even:bg-gray-200" 
-      class:full={session.Total >= session.Capacity} 
+    <tr class="session pb-1 even:bg-gray-200"
+      class:full={session.Total >= session.Capacity}
       class:closed={session.StartDate < today}
       class:tentative={!session.Confirmed}>
       <td class="date">{session.StartDateDisplay} – {session.EndDateDisplay}</td>
-      <td class="title"><a href="courses/{session.CourseID}" on:click={() => localStorage.setItem('sessionDate', session.StartDate)}>
+      <td class="title"><a href="courses/{session.CourseID}" on:click={() => {
+        if (window && localStorage) localStorage.setItem('sessionDate', session.StartDate)
+      }}>
       {session.Title}
       {#if !session.Confirmed} (tentative){/if}</a></td>
       <td class="cost">{session.Cost ? `$${session.Cost}` : ''}</td>
