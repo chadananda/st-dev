@@ -1,9 +1,9 @@
 import url from './getUrl'
-let sessions = []
-let cacheMinutes = 15
-let adjacentDays = 3
+const cacheMinutes = 15
+const adjacentDays = 3
 
 async function doGet() {
+  let sessions = []
   let response = await fetch(url).then(r => r.json())
   if (!response.data) throw new Error('No database connection.')
   sessions = response.data.filter(v => v.CourseID)
@@ -17,7 +17,7 @@ async function doGet() {
     v.EndDate = v.EndDate.substring(0,10)
     return v
   })
-  .map((v,i) => {
+  sessions = sessions.map((v,i) => {
     let x
     v.next = []
     v.prev = []
@@ -39,19 +39,21 @@ async function doGet() {
   })
   localStorage.setItem('sessions', JSON.stringify(sessions))
   localStorage.setItem('sessionCacheTime', new Date())
+  return sessions
 }
 
 export default async function getSessions(update = false) {
+  let sessions = []
   if (process.browser) {
     if (update) {
-      await doGet()
+      sessions = await doGet()
       return sessions
     }
     sessions = JSON.parse(localStorage.getItem('sessions') || '[]');
     let cacheTime = new Date()
     cacheTime.setMinutes(cacheTime.getMinutes() - cacheMinutes)
     if ((localStorage.getItem('sessionCacheTime') || '0') < cacheTime.toString()) {
-      await doGet()
+      sessions = await doGet()
     }
   }
   return sessions
