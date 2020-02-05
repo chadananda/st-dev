@@ -12,7 +12,7 @@ image: "/courses/rob-stockman-tall.jpeg#floater_sm2"
 ---
 
 
-![nader saiedi](/courses/rob-stockman-wide.jpeg#full)
+![robert stockman](/courses/rob-stockman-wide.jpeg#full)
 
 ## A 2-Day Weekend Study Retreat
 
@@ -25,7 +25,7 @@ Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
 
 <br>
 
-![book: gate of the heart](/courses/cover-abd-america.jpg#floater2)
+![book: abdu'l-baha in america](/courses/cover-abd-america.jpg#floater2)
 
 
 ‘Abdu’l-Bahá in America recounts the journey of ‘Abdu’l-Bahá, the eldest son of Bahá’u’lláh and appointed head of the Bahá’í Faith after his father's passing, across much of the United States in 1912. His exhausting yet exhilarating 239-day trek from coast to coast took him to fifty cities and towns, where he delivered up to four talks a day -- about four hundred total -- to approximately 93,000 people on Bahá’u’lláh’s message of the oneness of humanity and the principles of universal peace. This historic visit to the United States planted the seeds that would take root and germinate into the present-day American Bahá’í community.
