@@ -2,7 +2,7 @@
 id: topical-overview-aqdas
 title: Topical Overview of the Kitáb-i-Aqdas
 teachers:
-  - M. Nabil Fares
+  - Nabil Fares
   - Azadeh Mohandessi-Fares
 facebook: ""
 image: "/courses/azadeh-fares.jpg#floater_sm"

@@ -28,9 +28,10 @@
 		<!-- course summary here -->
 		<div class="course_summary m-6" on:click={()=> goto(`/courses/{item.meta.slug}`)}>
 				{#if item.meta.image}
-					<img src="{item.meta.image}" alt="{item.meta.altText || `A photo of ${item.meta.title}.`}" class="floater" />
+					<img src="{item.meta.image}" alt="{item.meta.altText || `${item.meta.title}`}" class="floater" />
 				{/if}
 				<h2><a href="/courses/{item.meta.slug}">{item.meta.title}</a></h2>
+				<h5 class="teacher"> ~ {item.meta.teachers.join(', ')} </h5>
 				{#if item.excerpt}
 						{@html item.excerpt}
 				{/if}
@@ -48,6 +49,9 @@
 		background-position: center;
 		background-size: 100px;
 		opacity: .75;
+	}
+	.courses .teacher {
+		 margin-top: -10px; margin-left: .25em; color: gray; font-style: italic;
 	}
 </style>
 

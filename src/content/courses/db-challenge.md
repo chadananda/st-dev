@@ -1,6 +1,6 @@
 ---
 id: db-challenge
-title: Dawn-Breakers Challenge
+title: Dawn-Breakers Challenge ~ 9 Events in 2020
 teachers:
   - Chad Jones
 facebook: https://www.facebook.com/The-Dawn-Breakers-Challenge-329820570524376/
