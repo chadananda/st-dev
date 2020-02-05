@@ -1,26 +1,9 @@
 import { writable } from 'svelte/store'
 
-export const getItemID = (item) => {
-  return [
-    item.CourseID || '',
-    item.StartDate || '',
-    (item.FirstName || '').trim(),
-    (item.LastName || '').trim(),
-  ].filter(v=>v).join(':')
-}
-
 export const getItemIndex = (arr, item) => {
   if (typeof item === 'number') return item
   for (let i=0; i < arr.length; i++) {
-
-    if (item.cartAppID === arr[i].cartAppID &&
-        item.FirstName === arr[i].FirstName) return i
-
-    if (arr[i].FirstName === item.FirstName    // where FirstName is equal
-        && (arr[i].LastName === item.LastName  // and LastName is equal
-          || !arr[i].LastName)                 //     or empty
-    ) return i
-
+    if (item.session.Key === arr[i].session.Key) return i
   }
   return false
 }
@@ -34,7 +17,6 @@ const writableCartItem = (key, startValue) => {
     update,
     add: (item) => update(existing => {
       let i = getItemIndex(existing, item)
-      item.cartAppID = getItemID(item)
       if (i !== false) {
         existing.splice(i,1,item)
       }
