@@ -1,18 +1,20 @@
 ---
-id: temple-guiding
-title: Effective Mashriqu’l-Adhkár Teaching
+id: being-human
+title: "Being Human: Bahá’í Perspective on Islam, Modernity, and Peace"
 teachers:
-  - Steve Sarowitz
+  - Todd Lawson
 facebook: ""
-image: "/courses/steve-sarowitz.jpg#floater_sm2"
+image: "/courses/todd-lawson_sm.jpg#floater_sm2"
 ---
 
-Thousands of people every day visit Mashriqu’l-Adhkárs around the world, many just as tourists but many others with profound spiritual questions. A handful of guides is involved in anwering questions and stimulating curiosity in the souls these seekers. Is it possible to be more effective in this field of service? Steve Sarowitz is the producer of "The Gate" and a long time volunteer teacher at Mashriqu’l-Adhkárs in many countries.
+Join us for a wonderful weekend retreat with reknowned professor Todd Lawson who will be speaking about his recent book "Being Human".
+
+Being Human seeks to reconcile many contradictions and demonstrate how Baha’i teachings point the way toward peace and the reconciliation of all world religions.
 
 ---
 
 
-![temple](/courses/temple-chile-exterior-pool.png#full)
+![temple](/courses/todd-lawson-wide.jpg#full)
 
 ## 2-Day Weekend Study Retreat
 
@@ -25,12 +27,13 @@ Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
 
 <br>
 
-![temple front](/courses/temple-chile.png#floater2)
+![temple front](/courses/Being-Human-Front-Cover.jpg#floater2)
 
-Thousands of people every day visit Mashriqu’l-Adhkárs around the world, many just as tourists but many others with profound spiritual questions. A handful of guides is involved in anwering questions and stimulating curiosity in the souls these seekers. Is it possible to be more effective in this field of service?
+Join us for a wonderful weekend retreat with reknowned professor Todd Lawson who will be speaking about his recent book "Being Human".
 
+Being Human seeks to reconcile many contradictions and demonstrate how Baha’i teachings point the way toward peace and the reconciliation of all world religions. It explains the deep connection between the Baha’i Faith and Islam, and how this relationship is one among many in what must remain the continuing, and perhaps endless, attempts to mine the Baha’i scriptures for all their inexhaustible implications.
 
-Steve Sarowitz is the producer of "The Gate" and a long time volunteer teacher at Mashriqu’l-Adhkárs in many countries.
+Todd Lawson is Emeritus Professor of Islamic Thought at the University of Toronto.
 
 
 
@@ -41,7 +44,7 @@ In the mountains of Northern California, just East of Sacramento, our friends ha
 
 
 
-![software with tablet of ahmad](/courses/temple-wilmette-interior.png#floater2)
+![software with tablet of ahmad](/db-challenge/participants.jpg#floater2)
 ### When?
 
 This program is a one-time special event over the weekend of April 3-6
@@ -59,7 +62,7 @@ Given the pace and difficulty of material, only adults and youth 15 or older. Mi
 Every student should bring their tablet or laptop computer. Materials, pencils, notepads, bedding, towels, food etc. are supplied. We have plenty of laundry facilities as well. You may want to bring a swimsuit for occasional outings to the nearby river.
 
 
-![library of arabic books](/courses/temple-chile-interior.png#floater)
+![library of arabic books](/courses/school-field.jpg#floater)
 
 ### How much? ($110, about $30/day.)
 

@@ -15,11 +15,13 @@ Have you ever wanted to learn Arabic but don't have years of time to devote to t
 
 ![intensive arabic immersion program](/courses/sop-sshot.png#full)
 
-## 5-Day Study Retreat: Intensive Literary Arabic
+## 6-Day Study Retreat: Intensive Literary Arabic
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
  Contact Kaathlyn Connor at (530) 777 8275, operations@firm-foundation.org
+ Arrive: Friday evening, the 15th of May for dinner and orientation
+ Depart: Friday morning, the 22th of May after dawn-prayers and breakfast
 ```
 <br>
 

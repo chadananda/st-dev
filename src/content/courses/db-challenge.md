@@ -9,7 +9,6 @@ image: "/db-challenge/participants-2019-2.jpg#floater_sm"
 
 Please join us in Northern California this summer for a fun and intensive 10-day study of “The Dawn-Breakers” together with the primary doctrinal work of the Bahá'í Faith, “The Kitáb-i-Íqán.”
 
-
 ---
 
 ![dawn-breakers challenge study class](/db-challenge/db-banner-2019.jpg#full)

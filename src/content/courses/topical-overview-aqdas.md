@@ -15,12 +15,15 @@ The Kitáb-i-Aqdas ranks among the formost treasures of Bahá’u’lláh's vast
 
 ![temple](/courses/azadeh-fares-wide.jpg#full)
 
-## A 3-Day Weekend Study Retreat
+## A 2-Day Weekend Study Retreat
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
  Contact Kaathlyn Connor at (530) 777 8275, operations@firm-foundation.org
+ Arrive: Friday evening, the 3rd of April for dinner and orientation
+ Depart: Monday morning, the 6th of April after dawn-prayers and breakfast
 ```
+
 <br>
 
 ![temple front](/courses/nabil-fares.jpg#floater2)

@@ -15,12 +15,15 @@ As a folow-up to the intensive Arabic program in May, this late-summer intensive
 
 ![intensive persian immersion program](/courses/sop-sshot.png#full)
 
-## 5-Day Study Retreat: Intensive Literary Persian
+## 6-Day Study Retreat: Intensive Literary Persian
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
  Contact Kaathlyn Connor at (530) 777 8275, operations@firm-foundation.org
+ Arrive: Monday evening, the 17th of Aug for dinner and orientation
+ Depart: Monday morning, the 24th of Aug after dawn-prayers and breakfast
 ```
+
 <br>
 
 ![school front](/courses/school-front2.jpg#floater2)
