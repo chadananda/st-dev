@@ -1,20 +1,21 @@
 ---
-id: temple-guiding
-title: Effective Mashriqu’l-Adhkár Teaching
+id: topical-overview-aqdas
+title: Topical Overview of the Kitáb-i-Aqdas
 teachers:
-  - Steve Sarowitz
+  - M. Nabil Fares
+  - Azadeh Mohandessi-Fares
 facebook: ""
-image: "/courses/steve-sarowitz.jpg#floater_sm2"
+image: "/courses/azadeh-fares.jpg#floater_sm"
 ---
 
-Thousands of people every day visit Mashriqu’l-Adhkárs around the world, many just as tourists but many others with profound spiritual questions. A handful of guides is involved in anwering questions and stimulating curiosity in the souls these seekers. Is it possible to be more effective in this field of service? Steve Sarowitz is the producer of "The Gate" and a long time volunteer teacher at Mashriqu’l-Adhkárs in many countries.
+The Kitáb-i-Aqdas ranks among the formost treasures of Bahá’u’lláh's vast revelation. It “stands out, by virtue of the principles it inculcates, the administrative institutions it ordains and the function with which it invests the appointed Successor of its Author, unique and incomparable among the world’s sacred Scriptures.”
 
 ---
 
 
-![temple](/courses/temple-chile-exterior-pool.png#full)
+![temple](/courses/azadeh-fares-wide.jpg#full)
 
-## 2-Day Weekend Study Retreat
+## A 2-Day Weekend Study Retreat
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
@@ -25,7 +26,7 @@ Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
 
 <br>
 
-![temple front](/courses/temple-chile.png#floater2)
+![temple front](/courses/nabil-fares.jpg#floater2)
 
 Thousands of people every day visit Mashriqu’l-Adhkárs around the world, many just as tourists but many others with profound spiritual questions. A handful of guides is involved in anwering questions and stimulating curiosity in the souls these seekers. Is it possible to be more effective in this field of service?
 
@@ -41,7 +42,7 @@ In the mountains of Northern California, just East of Sacramento, our friends ha
 
 
 
-![software with tablet of ahmad](/courses/temple-wilmette-interior.png#floater2)
+![software with tablet of ahmad](/courses/aqdas.jpg#floater2)
 ### Who should attend? (ages 15+)
 
 Given the pace and difficulty of material, only adults and youth 15 or older. Minors will need to be accompanied by a parent or a designated guardian. We will not be splitting out into groups so all participants should be mature enough to sustain a solid day of reading together.
@@ -53,7 +54,7 @@ Given the pace and difficulty of material, only adults and youth 15 or older. Mi
 Every student should bring their tablet or laptop computer. Materials, pencils, notepads, bedding, towels, food etc. are supplied. We have plenty of laundry facilities as well. You may want to bring a swimsuit for occasional outings to the nearby river.
 
 
-![library of arabic books](/courses/temple-chile-interior.png#floater)
+![participants](/db-challenge/db-banner-2019.jpg#floater)
 
 ### How much? ($110, about $30/day.)
 

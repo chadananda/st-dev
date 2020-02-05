@@ -1,5 +1,5 @@
 ---
-id: dawnbreakers
+id: db-challenge
 title: Dawn-Breakers Challenge
 teachers:
   - Chad Jones
@@ -9,7 +9,6 @@ image: "/db-challenge/participants-2019-2.jpg#floater_sm"
 
 Please join us in Northern California this summer for a fun and intensive 10-day study of “The Dawn-Breakers” together with the primary doctrinal work of the Bahá'í Faith, “The Kitáb-i-Íqán.”
 
-
 ---
 
 ![dawn-breakers challenge study class](/db-challenge/db-banner-2019.jpg#full)
@@ -18,7 +17,7 @@ Please join us in Northern California this summer for a fun and intensive 10-day
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
- Contact Kaathlyn Connor at (530) 777 8275, kaathlyn.connor@gmail.com
+ Contact Kaathlyn Connor at (530) 777 8275, operations@firm-foundation.org
 ```
 
 ## Dates
@@ -55,7 +54,7 @@ In the mountains of Northern California, just East of Sacramento, our friends ha
 
 ### When?
 
-Every month in 2020, beginning with April. We know everyone has different schedules and commitments, so we thought, “Let’s just keep repeating every month, all year! Surely anyone who really wants to attend can find some month that works.”
+Early every month in 2020 -- beginning with April. We know everyone has different schedules and commitments, so we thought, “Let’s just keep repeating every month, all year! Surely anyone who really wants to attend can find some month that works.”
 
 
 
