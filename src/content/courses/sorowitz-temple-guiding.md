@@ -1,5 +1,5 @@
 ---
-id: temple-guiding
+id: sorowitz-temple-guiding
 title: Effective Mashriqu’l-Adhkár Teaching
 teachers:
   - Steve Sarowitz
@@ -27,8 +27,7 @@ Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
 
 ![temple front](/courses/temple-chile.png#floater2)
 
-Thousands of people every day visit Mashriqu’l-Adhkárs around the world, many just as tourists but many others with profound spiritual questions. A handful of guides is involved in anwering questions and stimulating curiosity in the souls these seekers. Is it possible to be more effective in this field of service?
-
+Thousands of people every day visit Mashriqu’l-Adhkárs around the world, many just as tourists but many others with profound spiritual questions. A handful of guides are involved in answering questions and stimulating curiosity in the souls these seekers. Is it possible to be more effective in this field of service?
 
 Steve Sarowitz is the producer of "The Gate" and a long time volunteer teacher at Mashriqu’l-Adhkárs in many countries.
 

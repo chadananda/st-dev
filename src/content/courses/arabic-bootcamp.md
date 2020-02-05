@@ -1,6 +1,6 @@
 ---
 id: arabic-bootcamp
-title: Immersion Arabic Bootcamp
+title:  Arabic Bootcamp
 teachers:
   - Joshua Hall
   - Chad Jones

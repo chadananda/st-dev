@@ -1,5 +1,5 @@
 ---
-id: being-human
+id: lawson-being-human
 title: "Being Human: Bahá’í Perspective on Islam, Modernity, and Peace"
 teachers:
   - Todd Lawson
@@ -16,7 +16,7 @@ Being Human seeks to reconcile many contradictions and demonstrate how Baha’i 
 
 ![temple](/courses/todd-lawson-wide.jpg#full)
 
-## 2-Day Weekend Study Retreat
+## 2-Day Mid-week Study Retreat
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960

@@ -1,6 +1,6 @@
 ---
 id: farsi-bootcamp
-title: Immersion Persian Bootcamp
+title: Immersion Persian
 teachers:
   - Joshua Hall
   - Chad Jones

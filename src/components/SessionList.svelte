@@ -25,7 +25,7 @@
       class:tentative={!session.Confirmed}>
       <td class="date">{session.StartDateDisplay} – {session.EndDateDisplay}</td>
       <td class="title"><a href="courses/{session.CourseID}" on:click={() => {
-        if (window && localStorage) localStorage.setItem('sessionDate', session.StartDate)
+        if (typeof window !== 'undefined') localStorage.setItem('sessionDate', session.StartDate)
       }}>
       {session.Title}
       {#if !session.Confirmed} (tentative){/if}</a></td>

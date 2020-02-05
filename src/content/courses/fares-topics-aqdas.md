@@ -1,5 +1,5 @@
 ---
-id: topical-overview-aqdas
+id: fares-topics-aqdas
 title: Topical Overview of the Kitáb-i-Aqdas
 teachers:
   - Nabil Fares
