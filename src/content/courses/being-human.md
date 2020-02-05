@@ -33,7 +33,7 @@ Join us for a wonderful weekend retreat with reknowned professor Todd Lawson who
 
 Being Human seeks to reconcile many contradictions and demonstrate how Baha’i teachings point the way toward peace and the reconciliation of all world religions. It explains the deep connection between the Baha’i Faith and Islam, and how this relationship is one among many in what must remain the continuing, and perhaps endless, attempts to mine the Baha’i scriptures for all their inexhaustible implications.
 
-Todd Lawson is Emeritus Professor of Islamic Thought at the University of Toronto.
+Todd Lawson is Emeritus Professor of Islamic Thought at the University of Toronto. You can find a copy of his book here: [Being Human, by Todd Lawson ⤳](https://www.kalimatpress.com/product/being-human/)
 
 
 
