@@ -26,12 +26,12 @@
 	<div class="courses">
 	{#each content as item}
 		<!-- course summary here -->
-		<div class="course_summary m-6" on:click={()=> goto(`/courses/{item.meta.slug}`)}>
+		<div class="course_summary m-6" on:click={()=> goto(`/courses/${item.meta.slug}`)}>
 				{#if item.meta.image}
 					<img src="{item.meta.image}" alt="{item.meta.altText || `${item.meta.title}`}" class="floater" />
 				{/if}
 				<h2><a href="/courses/{item.meta.slug}">{item.meta.title}</a></h2>
-				<h5 class="teacher"> ~ {item.meta.teachers.join(', ')} </h5>
+				<h4 class="teacher"> ~ {item.meta.teachers.join(', ')} </h4>
 				{#if item.excerpt}
 						{@html item.excerpt}
 				{/if}
