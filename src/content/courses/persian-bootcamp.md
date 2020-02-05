@@ -39,13 +39,6 @@ In the mountains of Northern California, just East of Sacramento, our friends ha
 
 
 ![software with tablet of ahmad](/courses/ahmad-sshot.png#floater2)
-### When?
-
-This program is a one-time special event. We may never repeat. The dates are August 15-22
-
-
-
-
 ### Who should attend? (ages 15-112)
 
 Given the pace and difficulty of material, only adults and youth 15 or older. Minors will need to be accompanied by a parent or a designated guardian. We will not be splitting out into groups so all participants should be mature enough to sustain a solid day of reading together.

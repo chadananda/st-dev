@@ -54,7 +54,7 @@ In the mountains of Northern California, just East of Sacramento, our friends ha
 
 ### When?
 
-Every month in 2020, beginning with April. We know everyone has different schedules and commitments, so we thought, “Let’s just keep repeating every month, all year! Surely anyone who really wants to attend can find some month that works.”
+Early every month in 2020 -- beginning with April. We know everyone has different schedules and commitments, so we thought, “Let’s just keep repeating every month, all year! Surely anyone who really wants to attend can find some month that works.”
 
 
 
