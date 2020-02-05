@@ -1,6 +1,6 @@
 import getContent from '../../components/getContent'
 
-const c = getContent('blog', {sort: 'pubdate', sortDir: 'desc'})
+const c = getContent('blog', {sort: 'pubdate', sortDir: 'desc', index: true})
 
 export function get(req, res) {
 	res.writeHead(200, {

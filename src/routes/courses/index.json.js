@@ -1,6 +1,6 @@
 import getContent from '../../components/getContent'
 
-const c = getContent('courses')
+const c = getContent('courses', {metaOnly: true})
 
 export function get(req, res) {
 	res.writeHead(200, {

@@ -13,6 +13,7 @@ const now = new Moment(new Date(), 'YYYY-MM-DD')
 
 export default function getContent(filePath = '', opts = {}) {
   let options = {
+    index: false,
     extensions: ['md'] || opts.md,
     sort: 'title',
     sortDir: ['desc','d',-1].indexOf(opts.sortDir || '') !== -1 ? -1 : 1,
@@ -48,9 +49,13 @@ export default function getContent(filePath = '', opts = {}) {
       else {
         f.content = f.content.replace(f.excerpt + '---', '')                // remove explicit excerpts
       }
+
+      if (options.index) delete f.content
+      else f.html = md.render(f.content)
+
       f.excerptText = f.excerpt.replace(/<[^>]+?>/gm, '')
-      f.html = md.render(f.content)
       f.meta.slug = slugify(path.parse(o.path).name, {lower:true, remove: /[*+~.()'"!:@,]/g})
+      f.meta.id = f.meta.slug
       return f
     })
     .filter(f => f.meta.pubdate <= now)
