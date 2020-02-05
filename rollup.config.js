@@ -1,6 +1,7 @@
-import resolve from 'rollup-plugin-node-resolve';
-import replace from 'rollup-plugin-replace';
-import commonjs from 'rollup-plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
+import replace from '@rollup/plugin-replace';
+import commonjs from '@rollup/plugin-commonjs';
+import json from '@rollup/plugin-json';
 import svelte from 'rollup-plugin-svelte';
 import babel from 'rollup-plugin-babel';
 import { terser } from 'rollup-plugin-terser';
@@ -39,6 +40,7 @@ export default {
 				emitCss: true
 			}),
 			resolve(),
+			json(),
 			commonjs(),
 			legacy && babel({
 				extensions: ['.js', '.mjs', '.html', '.svelte'],
@@ -77,6 +79,7 @@ export default {
 				dev
 			}),
 			resolve(),
+			json(),
 			commonjs()
 		],
 		external: Object.keys(pkg.dependencies).concat(
@@ -90,6 +93,7 @@ export default {
 		output: config.serviceworker.output(),
 		plugins: [
 			resolve(),
+			json(),
 			replace({
 				'process.browser': true,
 				'process.env.NODE_ENV': JSON.stringify(mode)
