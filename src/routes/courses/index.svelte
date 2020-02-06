@@ -26,6 +26,11 @@
 	<hr class="squiggle" />
 	<div class="courses">
 	{#each content as item}
+  <!--
+
+    TODO: be able to gray out or remove any programs that are PAST, TENTATIVE or FULL
+
+		-->
 		<!-- course summary here -->
 		<div class="course_summary m-6" on:click={()=> goto(`/courses/${item.meta.slug}`)}>
 				{#if item.meta.image}

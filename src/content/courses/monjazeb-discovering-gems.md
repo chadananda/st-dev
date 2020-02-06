@@ -2,7 +2,7 @@
 id: monjazeb-discovering-gems
 title: "Discovering the Hidden Gems beneath the Ocean of Bahá’u’lláh’s Revelation"
 teachers:
-  - Robert Stockman
+  - Shahrokh Monjazeb
 facebook: ""
 image: "/courses/shahrokh-nar.jpg#floater_sm2"
 ---
