@@ -28,7 +28,7 @@
   <p>Here are some other programs going on around when you will be here:</p>
   <SessionList sessions={otherSessions} />
 {/if}
-<Debug variable={otherSessions} />
+<Debug variable={$cart} />
 
 {:else}
   {#if !submitResponse}

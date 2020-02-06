@@ -1,23 +1,11 @@
 <h2>Register for {course.meta.title}</h2>
 
-<div class="form max-w-full mx-auto" style="width:600px;">
-<Form
-  initialValues={signupFormSchema.cast({StartDate: StartDate})}
-  schema={signupFormSchema}
-  on:submit={handleSubmit}
-  let:isSubmitting
-  let:setValue
-  let:values
-  let:errors
-  let:touched>
+<form class="form max-w-full mx-auto" style="width:600px;" on:submit={handleSubmit}>
 
   {#if sessions.length > 1}
     <div class="field">
     <label>Session date</label>
-    <select bind:value={StartDate} name="date" class="w-full" on:blur={e => {
-      setValue('StartDate', e.target.value)
-      updateTotal(values.Housing, values.People)
-    }}>
+    <select name="StartDate" bind:value={values.StartDate} class="w-full" >
     
       <option disabled selected value="" class="italic grey-500">- please select a date -</option>
       {#each sessionOptions as item}
@@ -26,62 +14,50 @@
     </select>
     </div>
   {/if}
-  <Input type="hidden" name="StartDate" />
 
-  <label>Name</label>
-  <input type="text" name="firstname" class="w-full" on:blur={(e) => {
-    let first = e.target.value.split(' ')
-    let last = ''
-    if (first.length > 1) last = first.splice(-1, 1)[0]
-    setValue('FirstName', first.join(' ') || '')
-    setValue('LastName', last || '')
-  }} />
-  <Input type="hidden" name="FirstName" />
-  <Input type="hidden" name="LastName" />
-
-  <label>Email address</label>
-  <input type="email" class="w-full" on:blur={e => setValue('Email', e.target.value)} />
-  <Input type="hidden" name="Email" />
-
-  <label>Phone number</label>
   <div class="field">
-    <input type="tel" class="w-full" on:keyup={formatPhone}
-      on:blur={e => setValue('Phone', e.target.value)} />
-    <Input type="hidden" name="Phone" />
+    <label>Name</label>
+    <input type="text" name="FullName" bind:value={values.FullName} autocomplete="name" class="w-full" on:change={(e) => {
+      let first = e.target.value.split(' ')
+      let last = ''
+      if (first.length > 1) last = first.splice(-1, 1)[0]
+      values.FirstName = first.join(' ') || ''
+      values.LastName = last || ''
+    }} />
+  </div>
+
+  <div class="field">
+    <label>Email address</label>
+    <input type="email" name="Email" bind:value={values.Email} autocomplete="email" class="w-full" />
+  </div>
+
+  <div class="field">
+    <label>Phone number</label>
+    <input type="tel" name="Phone" bind:value={values.Phone} autocomplete="tel" class="w-full" on:keyup={formatPhone} />
   </div>
 
   <div class="field clearfix w-full">
     <label class="w-1/2 inline-block">How many people are in your party?</label>
-    <input class="w-12 inline-block text-right" type="text" value=1
-      on:blur={e => {
-        setValue('People', e.target.value)
-        updateTotal(values.Housing, values.People)
-      }} />
-    <Input type="hidden" name="People" />
+    <input class="w-12 inline-block text-right" type="text" name="People" bind:value={values.People} />
   </div>
 
   <div class="field clearfix options-chips">
     <label>Where do you plan to stay?</label>
     {#each housingOptions as item}
-      <input type="radio" name="housing" id="housing-{item.id}" value="{item.id}"
-        on:click={e => {
-          setValue('Housing', e.target.value)
-          updateTotal(values.Housing, values.People)
-        }} checked={item.id === 'dorm'} >
-      <label for="housing-{item.id}">
+      <input type="radio" bind:group={values.Housing} name="Housing" id="Housing-{item.id}" value="{item.id}" checked={item.id === 'dorm'} >
+      <label for="Housing-{item.id}">
         {item.title}
-        {#if session}
+        {#if session && session.CourseID}
           (${item.id === 'dorm' ? session.Cost : session.DayCost })
         {/if}
       </label>
     {/each}
-    <Input type="hidden" name="Housing" />
     {#if values.Housing === 'other'}
       <p class="color-warning">Please be aware that there are NO hotels in the area; this option is only meant for local students.</p>
     {/if}
   </div>
 
-  {#if session}
+  {#if session && session.CourseID}
     <div class="p-4 text-lg leading-loose">
       <div class="sm:flex">
         <div class="sm:flex-grow">{session.StartDateDisplay} – {session.EndDateDisplay} : {session.Title}</div>
@@ -98,12 +74,12 @@
     the remainder may be paid now or upon arrival.</p>
   {/if}
 
-  <button class="big fab" type="submit" disabled={!session || isSubmitting}>Add to cart</button>
-  {#if dev}
-    <Debug variable={values} />
-  {/if}
-</Form>
-</div>
+  <button class="big fab" type="submit" disabled={!session}>Add to cart</button>
+</form>
+
+{#if dev}
+  <Debug variable={{values, session}} />
+{/if}
 
 <script>
 
@@ -111,30 +87,51 @@
   export let course
   export let StartDate = ''
 
-  import { goto } from '@sapper/app'
+  // initialize cart
   import { cart } from '../store'
   cart.useLocalStorage()
-  import { Form, Input } from 'sveltejs-forms';
-  import * as yup from 'yup';
-  import url from './getUrl.js'
+  let values = {
+    StartDate: StartDate,
+    FullName: '',
+    FirstName: '',
+    LastName: '',
+    Email: '',
+    Phone: '',
+    People: 1,
+    Housing: 'dorm',
+  }
+
+  // onMount: set form values based on cart item
+  import { onMount } from 'svelte'
+  onMount(() => {
+    if ($cart.length) values = Object.assign(values, {
+      FullName: $cart[0].FullName || `${$cart[0].FirstName} ${$cart[0].LastName}` || '',
+      FirstName: $cart[0].FirstName || '',
+      LastName: $cart[0].LastName || '',
+      Email: $cart[0].Email || '',
+      Phone: $cart[0].Phone || '',
+      People: $cart[0].People || 1,
+      Housing: $cart[0].Housing || 'dorm',
+    })
+  })
+
+  // Elements for debugging and development
   import Debug from './Debug.svelte'
   let dev = process.env.NODE_ENV !== 'production'
+
+  // Calculate session based on form value
+  let session = {}
+  $: session = (sessions.filter(s => s.CourseID === course.meta.id && s.StartDate === values.StartDate)[0]) || {}
+
+  // Calculate totals
+  let totals = { fullAmount:0, registrationAmount:0 }
+  $: totals = Object.assign({}, {
+    fullAmount: ((values.Housing === 'dorm') ? session.Cost || 0 : session.DayCost || 0) * values.People || 1,
+    registrationAmount: 5 * values.People || 1,
+  })
+
+  // Get selectable session options
   let today = (new Date()).toISOString().split('T')[0]
-
-  let session
-  $: session = sessions.filter(s => s.CourseID === course.meta.id && s.StartDate === StartDate)[0]
-
-  let totals = {
-    fullAmount: 0,
-    registrationAmount: 0,
-  }
-  function updateTotal(housing, people) {
-    if (session) {
-      totals.fullAmount = (housing === 'dorm' ? session.Cost : session.DayCost) * people
-      totals.registrationAmount = 5 * people
-    }
-  }
-
   let sessionOptions = sessions.map(s => {
     return {
       id: s.StartDate,
@@ -142,23 +139,28 @@
       disabled: (s.StartDate < today),
     }
   })
-  if (sessionOptions.length===1) StartDate = sessionOptions[0].id
+  if (sessionOptions.length===1) values.StartDate = sessionOptions[0].id
+
+  // Get selectable housing options
   let housingOptions = [
     {id: 'dorm', title: 'Our dormitory'},
     {id: 'RV', title: 'Your own RV'},
     {id: 'other', title: 'Other'},
   ];
-  let signupFormSchema = yup.object({
-    StartDate: yup.string().default('').label('Session date').required().oneOf(sessionOptions.filter(s=>!s.disabled).map(s=>s.id)),
-    FirstName: yup.string().default('').label('Name').required().max(255),
-    LastName: yup.string().default('').label('Name').max(255),
-    Email: yup.string().default('').label('Email').required().email(),
-    Phone: yup.string().default('').label('Phone number').matches(/(^\+[-\d\. ]+$|^\(?\d{3}[-\.\) ]*\d{3}[-\. ]*\d{4}$)/, { message: 'A valid phone number is required'}),
-    People: yup.number({message: 'At least one person is required'}).default(1).label('Number of people').min(1).max(40),
-    Housing: yup.string().default('dorm').label('Housing').oneOf(['dorm', 'RV', 'other'])
+
+  // Form validation
+  import {object, string, number} from 'yup';
+  let schema = object({
+    StartDate: string().default('').label('Session date').required().oneOf(sessionOptions.filter(s=>!s.disabled).map(s=>s.id)),
+    FirstName: string().default('').label('Name').required().max(255),
+    LastName: string().default('').label('Name').max(255),
+    Email: string().default('').label('Email').required().email(),
+    Phone: string().default('').label('Phone number').matches(/(^\+[-\d\. ]+$|^\(?\d{3}[-\.\) ]*\d{3}[-\. ]*\d{4}$)/, { message: 'A valid phone number is required'}),
+    People: number({message: 'At least one person is required'}).default(1).label('Number of people').min(1).max(40),
+    Housing: string().default('dorm').label('Housing').oneOf(['dorm', 'RV', 'other'])
   })
 
-
+  // Phone field typing helper
   let formatPhone = (e) => {
     let bksp = (e.keyCode == 8 || e.keyCode == 46)
     if (/^\+/.test(e.target.value)) {
@@ -184,8 +186,11 @@
     }
   }
 
-  function handleSubmit({ detail: { values, setSubmitting, resetForm } }) {
-    if (typeof session !== undefined) {
+  // Form submit
+  import url from './getUrl'
+  import { goto } from '@sapper/app'
+  function handleSubmit() {
+    if (session) {
       cart.add(Object.assign(totals, {session}, values))
       goto('/courses/checkout')
     }
