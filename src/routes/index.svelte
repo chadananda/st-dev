@@ -7,7 +7,7 @@
 <h1 class="title"> Fresh New Stuff! </h1>
 
 <div class="item news pr-3 md:pr-32">
-	<h2><a href="/courses/dawnbreakers">The Dawn-Breakers Challenge - 2020</a></h2>
+	<h2><a href="/courses/db-challenge">The Dawn-Breakers Challenge - 2020</a></h2>
 	<img class="floater invisible md:visible" src="/db-challenge/db-chall-jul-2019.jpg" alt="db challenge participants" />
 	<p>Last year we had a blast with a series of in-depth Dawn-Breakers study retreats (we even got a mention in the ABN).  So, by popular demand, we’re going to do it all over again. And we’re adding a few new programs to the mix. Check out our <a href="/courses">Summer 2020 retreat calendar!</a></p>
 	<p>Also, I finally have a good place to put a bunch of downloadable resources. A big thanks to Dropbox for motivating me -- by freezing my account due to too much download traffic.</p>
@@ -17,7 +17,7 @@
 				<!-- <li><a href='/dawn-breakers-challenge-materials'>Dawn-Breakers Challenge Downloadable Materials ⤳ </a></li> -->
 				<li><a href='https://www.facebook.com/The-Dawn-Breakers-Challenge-329820570524376/'>Facebook Page ⤳ </a></li>
 				<li><a href='https://bahaiteachings.org/dawn-breakers-challenge-history-bahai-heroes/' target="_blank">DB-Challenge article on bahai-teachings.org ⤳ </a></li>
-				<li><a href='/dawn-breakers-mailinglist'>Signup for Sacred-Retreats Announcement List! ⤳ </a></li>
+				<!-- <li><a href='/dawn-breakers-mailinglist'>Signup for Sacred-Retreats Announcement List! ⤳ </a></li> -->
 		</ul>
 </div>
 

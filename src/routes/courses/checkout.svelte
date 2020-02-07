@@ -34,6 +34,7 @@
   {#if !submitResponse}
     <h3>Registering</h3>
     <p>We're waiting for confirmation on your registration....</p>
+
   {:else if submitResponse.success}
     <h3 class="success">You are registered!</h3>
     <p>Your registration has been received for the following courses:</p>
@@ -44,15 +45,18 @@
     </ul>
     <p>Your reference code is <span style="font-family:monospace; font-weight:bold;">{submitResponse.data.reference}</span>.
     You should also receive an email with this information.</p>
+
   {:else if submitResponse.success === false}
     <h3 class="error">Something went wrong!</h3>
     <p>Please give us a call to sort things out.</p>
+
   {/if}
 {/if}
 
 <div>
     <script src="https://www.paypal.com/sdk/js?client-id=ARLTZyWHyejtubwFnzlatVehD-WIp7wj-9Kfxfzj9YvPZVCB5e0W8Xe9LXf_we7NZ25OlGN_YxzVgKRr&currency=USD"></script>
 </div>
+
 <div class="my-16 mx-auto" class:hidden={submitVisible} style="width:400px;">
     <div id="paypal-buttons"></div>
 </div>
