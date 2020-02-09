@@ -12,7 +12,7 @@ Shahrokh Monjazeb will explore some of the less known yet important Works of Bah
 ---
 
 
-![shahrokh monjazeb](/courses/shahrokh-wide.jpeg#full)
+![shahrokh monjazeb](/courses/shahrokh-wide.jpg#full)
 
 ## A 2-Day Weekend Study Retreat
 
