@@ -22,7 +22,7 @@
 			</a> -->
 		 <a class="block mr-1 p-2 rounded-full" href="/articles">
 			  <img class="w-5 inline -mt-1 opacity-50" src="/thinker.svg" alt="the world inside a drop" />
-					<span class="hidden sm:inline">Essays</span>
+					<span class="hidden md:inline">Interfaith </span> <span class="hidden sm:inline">Essays</span>
 			</a>
 		</div>
 	</nav>
@@ -50,7 +50,7 @@
 			</a> -->
 		 <a class="block mr-12 p-2 rounded-full" href="/articles">
 			  <img class="w-6 inline -mt-1 opacity-50" src="/thinker.svg" alt="the world inside a drop" />
-					<span class="hidden sm:inline">Essays</span>
+					<span class="hidden md:inline">Interfaith </span> <span class="hidden sm:inline">Essays</span>
 			</a>
 	</nav>
 

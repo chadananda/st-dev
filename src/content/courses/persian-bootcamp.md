@@ -1,5 +1,5 @@
 ---
-id: farsi-bootcamp
+id: persian-bootcamp
 title: Immersion Persian
 teachers:
   - Joshua Hall
