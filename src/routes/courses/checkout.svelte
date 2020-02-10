@@ -124,6 +124,9 @@
         },
         onApprove: (data, actions) => {
           submitVisible = true
+          // NOTE: Errors from the Google Apps script are often returned in strange ways,
+          // e.g. a CORS error in the browser console, but the last request contains an HTML
+          // error report, which triggers the CORS error.
           actions.order.capture().then((details) => {
             fetch(url, {
               method: "POST",
