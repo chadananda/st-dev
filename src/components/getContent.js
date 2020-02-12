@@ -8,8 +8,7 @@ const md = require('markdown-it')('commonmark', {
   xhtmlOut: true,
 })
 const slugify = require('slugify')
-const Moment = require('moment')
-const now = new Moment(new Date(), 'YYYY-MM-DD')
+const now = (new Date()).toISOString().split('T')[0]
 
 export default function getContent(filePath = '', opts = {}) {
   let options = {
@@ -32,7 +31,8 @@ export default function getContent(filePath = '', opts = {}) {
       }
       delete f.orig
       f.meta.title = f.meta.title || path.parse(f.meta.file.path).name.replace(/[-_]/g, ' ')
-      f.meta.pubdate = f.meta.pubdate || new Moment(f.meta.file.date, 'YYYY-MM-DD')
+      f.meta.pubdate = f.meta.pubdate || f.meta.file.date.toISOString().split('T')[0]
+
       if (!f.excerpt) {
         // try to get the first paragraph
         f.excerpt = (f.content.match(/(?:^\n?|\n\n)( {0,3}\w(?:[\s\S](?!\n(?=\n|\s{0,3}(?:[-_\*=] ?){3,})))+\b\W?)/) || [])[1] || ''
