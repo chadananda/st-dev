@@ -8,6 +8,12 @@
 			</div>
   <!-- content page nav links  -->
 		<div class="flex justify-end align-center mt-1">
+			{#if $cart.length}
+				<a href="/courses/checkout" class="block mr-1 md:mr-6 rounded-full relative" style="width:40px">
+					<img class="w-8" style="opacity:.5; margin-top:8px;" src="https://upload.wikimedia.org/wikipedia/commons/0/00/Shopping_cart_font_awesome.svg" alt="Shopping cart FontAwesome">
+					<span class="cartcount">{$cart.length}</span>
+				</a>
+			{/if}
 		 <a class="block mr-1 md:mr-6 p-2 rounded-full" href="/ocean">
 			  <img class="w-5 inline -mt-1" src="/ocean_assets/images/ocean-logo2.svg" alt="the world inside a drop" />
 					<span class="hidden sm:inline">Ocean </span><span class="hidden md:inline"> 2.0 </span><span class="hidden lg:inline"> Reader</span>
@@ -63,6 +69,8 @@
 <script>
 	 import { stores } from '@sapper/app';
 	 const { preloading, page, session } = stores();
+	 import { cart } from '../store'
+	 cart.useLocalStorage()
 </script>
 
 
@@ -81,5 +89,18 @@
 	}
 	nav a:hover {
 		 background-color: #d4d0ed;
+	}
+	.cartcount {
+		font-family: Georgia, 'Times New Roman', serif;
+		position: absolute;
+		top: 3px;
+		right: 8px;
+		height: 22px;
+		width: 22px;
+		background: #eef;
+		text-align: center;
+		border-radius: 22px;
+		border: 1px solid gray;
+		line-height: 18px;
 	}
 </style>
