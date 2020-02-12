@@ -76,7 +76,7 @@
 <svelte:head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <script src="https://www.paypal.com/sdk/js?client-id=ARLTZyWHyejtubwFnzlatVehD-WIp7wj-9Kfxfzj9YvPZVCB5e0W8Xe9LXf_we7NZ25OlGN_YxzVgKRr&currency=USD" on:load={paypalLoaded}></script>
+    <script src="https://www.paypal.com/sdk/js?client-id={paypalClientID}&currency=USD" on:load={paypalLoaded}></script>
 </svelte:head>
 
 <script>
@@ -89,6 +89,7 @@
   // for adding on sessions around the same time
   import { onMount } from 'svelte'
   let dev = process.env.NODE_ENV !== 'production'
+  let paypalClientID = dev ? 'ARLTZyWHyejtubwFnzlatVehD-WIp7wj-9Kfxfzj9YvPZVCB5e0W8Xe9LXf_we7NZ25OlGN_YxzVgKRr' : ''
   let otherSessions = []
   let today = (new Date()).toISOString().split('T')[0]
   let startDates = {}, endDates = {}
