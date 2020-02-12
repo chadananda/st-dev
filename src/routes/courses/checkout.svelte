@@ -67,10 +67,6 @@
   {/if}
 {/if}
 
-<div>
-    <script src="https://www.paypal.com/sdk/js?client-id=ARLTZyWHyejtubwFnzlatVehD-WIp7wj-9Kfxfzj9YvPZVCB5e0W8Xe9LXf_we7NZ25OlGN_YxzVgKRr&currency=USD"></script>
-</div>
-
 <div class="my-16 mx-auto" class:hidden={submitVisible} style="width:400px;">
   <div id="paypal-buttons"></div>
 </div>
@@ -80,6 +76,7 @@
 <svelte:head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://www.paypal.com/sdk/js?client-id=ARLTZyWHyejtubwFnzlatVehD-WIp7wj-9Kfxfzj9YvPZVCB5e0W8Xe9LXf_we7NZ25OlGN_YxzVgKRr&currency=USD" on:load={paypalLoaded}></script>
 </svelte:head>
 
 <script>
@@ -101,6 +98,7 @@
   let submitVisible = false
   let checkoutVisible = false
   let createOrder, onApprove
+  let mounted, paypalReady
   let total
   $: total = $cart.reduce((t, v) => {
     return t + (payAmount === 'registration' ? v.registrationAmount : v.fullAmount)
@@ -156,10 +154,20 @@
   }
 
   onMount(() => {
+    mounted = true
+    if (paypalReady) showButtons()
+  })
+
+  function paypalLoaded() {
+    paypalReady = true
+    if (mounted) showButtons()
+  }
+
+  let showButtons = () => {
     if ($cart.length) {
       paypal.Buttons({createOrder,onApprove}).render('#paypal-buttons');
     }
-  })
+  }
 
 </script>
 
