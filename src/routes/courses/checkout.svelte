@@ -89,7 +89,7 @@
   // for adding on sessions around the same time
   import { onMount } from 'svelte'
   let dev = process.env.NODE_ENV !== 'production'
-  let paypalClientID = dev ? 'ARLTZyWHyejtubwFnzlatVehD-WIp7wj-9Kfxfzj9YvPZVCB5e0W8Xe9LXf_we7NZ25OlGN_YxzVgKRr' : ''
+  let paypalClientID = dev ? 'ARLTZyWHyejtubwFnzlatVehD-WIp7wj-9Kfxfzj9YvPZVCB5e0W8Xe9LXf_we7NZ25OlGN_YxzVgKRr' : 'AYVAppj2cBz8YPu78mjYViSz1ylHuIwJIQea8_qa1LvJyFkcSWWgqB71wXmcWBjKHjllxhf9OlxMxASN'
   let otherSessions = []
   let today = (new Date()).toISOString().split('T')[0]
   let startDates = {}, endDates = {}
