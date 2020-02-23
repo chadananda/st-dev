@@ -4,7 +4,7 @@ title: "New Atheism and Seeing with the Eye of God"
 teachers:
   - Michael Sours Rohani
 facebook: ""
-image: "/courses/sours-tall.jpg#floater_sm2"
+image: "/courses/sours-tall.jpg#floater_sm"
 ---
 
 Michael Sours will be presenting on the strange assumptions which rise from a distinctly Christian "New Atheism" and the implications of Baha'u'llah's assertion of two distinct types of knowledge from the Kitáb-i-Íqán.
