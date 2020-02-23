@@ -4,15 +4,15 @@ title: "The Tablets to The Hague"
 teachers:
   - Dr Sima Quddusi
 facebook: ""
-image: "/courses/sours-tall.jpg#floater_sm2"
+image: "/courses/dr-quddusi.png#floater_sm"
 ---
 
-Dr Sima Quddusi will present on the Tablets to The Hague sent by 'Abdu'l-Baha (1919, 1920)
+Dr Sima Quddusi will present on the Tablets to The Hague sent by 'Abdu'l-Baha (1919, 1920). These two letters of ‘Abdu’l-Bahá were written in response to letters addressed to Him by the Executive Committee of the Central Organization for a Durable Peace. These letters include a summation of the Bahá’í social teachings and a rebuttal to materalistic theories of progress, for example by asserting that man must unite spritiutally before political peace is possible, and that man must solve the economic problem voluntarily, rather than through the force of coercive law.
 
 ---
 
 
-![Michael Sours](/courses/sours-wide.jpg#full)
+![dr quddusi](/courses/dr-quddusi-wide.png#full)
 
 ## A 2-Day Weekend Study Retreat
 
@@ -25,18 +25,25 @@ Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
 
 <br>
 
-![book cover](/courses/sours-without-syllable.jpg#floater2)
+![the hauge](/courses/hauge-convention.jpg#floater2)
 
-Dr Sima Quddusi will present on the Tablets to The Hague sent by 'Abdu'l-Baha (1919, 1920)
+Dr Sima Quddusi will present on the Tablets to The Hague sent by Abdu’l-Bahá (1919, 1920). These two letters of ‘Abdu’l-Bahá were written in response to letters addressed to Him by the Executive Committee of the Central Organization for a Durable Peace.
+
+These important tablets include a summation of the Bahá’í social teachings and a rebuttal to materalistic theories of progress, for example by asserting that man must unite spritiutally before political peace is possible, and that man must solve the economic problem voluntarily, rather than through the force of coercive law.
 
 
-###  Dr. Sours is the author of numerous books exploring Interfaith topics and Bilical teachings
+  + **[First Tablet to The Hague - 17 December 1919  ⤳](https://www.bahai.org/library/authoritative-texts/abdul-baha/tablets-hague-abdul-baha/2#381373700)**
 
-  + **[Understanding Biblical Evidence](https://www.amazon.com/Understanding-Biblical-Evidence-Preparing-Christian/dp/1851680187/ref=sr_1_1?keywords=michael+sours&qid=1582476572&sr=8-1)** Preparing for a Bahá'í and Christian Dialog, the first volume of a three-volume study programme designed to help Bahá'ís familiarize themselves with the Bible and Christian beliefs.)
+  > > *And among the teachings of Bahá’u’lláh is that although material civilization is one of the means for the progress of the world of mankind, yet until it becomes combined with Divine civilization, the desired result, which is the felicity of mankind, will not be attained.*
 
-  + **[The Prophecies of Jesus](https://www.amazon.com/Prophecies-Jesus-Michael-Sours/dp/185168025X/ref=sr_1_2?keywords=michael+sours&qid=1582476821&sr=8-2)** In the 19th century, many Christians throughout the western world expected the fulfilment of Jesus's promise to return. The widespread expectation culminated in "The Great Disappointment" of 1844.
+  > > *And among the teachings of Bahá’u’lláh is voluntary sharing of one’s property with others among mankind. This voluntary sharing is greater than equality, and consists in this, that man should not prefer himself to others, but rather should sacrifice his life and property for others. But this should not be introduced by coercion so that it becomes a law and man is compelled to follow it. Nay, rather, man should voluntarily and of his own choice sacrifice his property and life for others, and spend willingly for the poor, just as is done in Persia among the Bahá’ís.*
 
-  + **[Without Syllable or Sound](https://www.amazon.com/Without-Syllable-Sound-Worlds-Scriptures/dp/1890688061/ref=sr_1_8?keywords=michael+sours&qid=1582476821&sr=8-8)** This volume explores the Holy Scriptures of the world's great religions--Buddhism, Hinduism, Christianity, Judaism and Islam. In this book, Michael Sours argues for the need for all believers to affirm the validity and importance of all of the world's sacred scriptures.
+
+  + **[Second Tablet to The Hague - 1 July 1920  ⤳](https://www.bahai.org/library/authoritative-texts/abdul-baha/tablets-hague-abdul-baha/3#738038819)**
+
+
+  > > *This last terrible war hath clearly proven that humanity cannot withstand the effects of modern instruments of warfare. The future can in no wise be compared to the past, for earlier weapons and armaments had but a feeble effect, whilst modern ones can, in a brief span of time, strike at the very roots of the world of humanity and surpass the limits of its endurance.*
+
 
 
 ---
@@ -50,7 +57,7 @@ In the mountains of Northern California, just East of Sacramento, our friends ha
 
 
 
-![book cover](/courses/sours-prophecies-jesus.jpg#floater2)
+![the hauge](/courses/the-hauge.jpg#floater2)
 ### Who should attend? (ages 15+)
 
 Given the pace and difficulty of material, only adults and youth 15 or older. Minors will need to be accompanied by a parent or a designated guardian. We will not be splitting out into groups so all participants should be mature enough to sustain a solid day of reading together.
