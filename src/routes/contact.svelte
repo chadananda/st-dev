@@ -4,9 +4,9 @@
 
 
 
-<h1 class="entry-title">Contact</h1>
+<h1 class=" mb-0 pb-0">Contact</h1>
 
-<ContactForm/>
+<ContactForm />
 
 <script>
   import ContactForm from '../components/ContactForm.svelte'
