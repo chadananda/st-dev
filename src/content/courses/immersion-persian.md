@@ -28,7 +28,7 @@ Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
 
 ![school front](/courses/school-front2.jpg#floater2)
 
-As a folow-up to the intensive Arabic program in May, this late-summer intensive Farsi program will use the same format to plunge the participants into literary Persian. As with the Arabic bootcamp, the mornings will be spent studying key tablets in Farsi (the Íqán, Seven Valleys etc.) while the afternoons will be spent immsersed in Farsi adventure stories to absorbe vocabulary and grammar naturally.
+As a follow-up to the intensive Arabic program in May, this late-summer intensive Farsi program will use the same format to plunge the participants into literary Persian. As with the Arabic bootcamp, the mornings will be spent studying key tablets in Farsi (the Íqán, Seven Valleys etc.) while the afternoons will be spent immsersed in Farsi adventure stories to absorbe vocabulary and grammar naturally.
 
 As with the Arabic program, participants will receive a preparation program a couple weeks before the course, this will help you master a set of the most common words and model phrases containing the most common grammatical constructs.
 
