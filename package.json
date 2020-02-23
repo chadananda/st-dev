@@ -1,7 +1,7 @@
 {
   "name": "sacred-traditions",
   "description": "Home of 'Ocean 2.0 Interfaith Reader' and lots of other fun projects...",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "scripts": {
     "dev": "sapper dev -p 1844 -o",
     "export": "NODE_ENV=production sapper export --concurrent 1 --entry '/jsonlinks /'",
