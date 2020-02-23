@@ -7,7 +7,7 @@ facebook: ""
 image: "/courses/habib-tall.png#floater_sm"
 ---
 
-The Kitáb-i-Aqdas ranks among the formost treasures of Bahá’u’lláh’s vast revelation. It “stands out, by virtue of the principles it inculcates, the administrative institutions it ordains and the function with which it invests the appointed Successor of its Author, unique and incomparable among the world’s sacred Scriptures.”
+As He lay confined within the walls of the castle, He devoted His time to the composition of the **Persian Bayán**, the most weighty, the most illuminating and comprehensive of all His works. In it He laid down the laws and precepts of His Dispensation, plainly and emphatically announced the advent of a subsequent Revelation, and persistently urged His followers to seek and find “Him whom God would make manifest,” warning them lest they allow the mysteries and allusions in the Bayán to interfere with their recognition of His Cause.
 
 ---
 
