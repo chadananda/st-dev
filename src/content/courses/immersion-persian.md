@@ -8,7 +8,7 @@ facebook: ""
 image: "/courses/bahaullah-writings.png#floater_sm2"
 ---
 
-As a folow-up to the intensive Arabic program in May, this late-summer intensive Farsi program will use the same format to plunge the participants into literary Persian. As with the Arabic bootcamp, the mornings will be spent studying key tablets in Farsi (the Íqán, Seven Valleys etc.) while the afternoons will be spent immsersed in Farsi adventure stories to absorbe vocabulary and grammar naturally.
+As a follow-up to the intensive Arabic program in May, this late-summer intensive Farsi program will use the same format to plunge the participants into literary Persian. As with the Arabic bootcamp, the mornings will be spent studying key tablets in Farsi (the Íqán, Seven Valleys etc.) while the afternoons will be spent immsersed in Farsi adventure stories to absorbe vocabulary and grammar naturally.
 
 ---
 

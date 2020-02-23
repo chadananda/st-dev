@@ -19,20 +19,16 @@ Shahrokh Monjazeb will explore some of the less known yet important Works of Bah
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
  Contact Kaathlyn Connor at (530) 777 8275, operations@firm-foundation.org
- Arrive: Friday evening, the 18th of September for dinner and orientation
- Depart: Monday morning, the 21st of September after dawn-prayers and breakfast
+ Arrive: Friday evening, the 1st of May for dinner and orientation
+ Depart: Monday morning, the 4th of May after dawn-prayers and breakfast
 ```
 
 <br>
 
 ![book: baha'u'llah](/courses/shahrokh-cover-bahaullah.jpg#floater2)
 
+Shahrokh is a frequent presenter on a taking a deeper dive into the revealed Bahá'í literature. This weekend he will be sharing some very specific disoveries and facilitating student discovery of their own connection with this sacred literature.
 
-‘Abdu’l-Bahá in America recounts the journey of ‘Abdu’l-Bahá, the eldest son of Bahá’u’lláh and appointed head of the Bahá’í Faith after his father's passing, across much of the United States in 1912. His exhausting yet exhilarating 239-day trek from coast to coast took him to fifty cities and towns, where he delivered up to four talks a day -- about four hundred total -- to approximately 93,000 people on Bahá’u’lláh’s message of the oneness of humanity and the principles of universal peace. This historic visit to the United States planted the seeds that would take root and germinate into the present-day American Bahá’í community.
-
-Robert H. Stockman obtained his Master's degree and doctorate in Religious Studies from Harvard University, where he specialized in history of religion in the United States. He is the author of The Bahá’í Faith in America, volumes 1 and 2, which cover Bahá’í events in the United States from 1892 to 1900 and 1901 to 1912 respectively; Thornton Chase: The First American Bahá’í; various articles and book reviews on Bahá’í history and theology published in a number of journals, including The Journal of Bahá’í Studies, Bahá’í Studies Review, World Order, Iranian Studies, Nova Religio, and Religion; and numerous encyclopedia articles on the Bahá’í Faith, including articles in the Bahá’í Encyclopedia. He has lectured on Bahá’í topics across the United States and in Europe, Russia, Ukraine, and Israel, and is a frequent contributor to Bahá’í panels at the American Academy of Religion.
-
-He has been an instructor of religious studies at DePaul University in Chicago since 1990, where he teaches world religions, religion in the United States, and Islam. He has been Director of the Wilmette Institute since 2000. He has served on the editorial boards of the Bahá’í Encyclopedia Project, Journal of Bahá’í Studies, and World Order magazine. He lives with his wife and two children in South Bend, Indiana. He is currently working on a book, Abdu'l-Baha in America, is under contract to write an introductory book on the Bahá’í Faith, and is researching two other books.
 
 
 
