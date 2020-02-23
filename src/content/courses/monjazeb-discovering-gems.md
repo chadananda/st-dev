@@ -29,8 +29,7 @@ Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
 
 Shahrokh is a frequent presenter on a taking a deeper dive into the revealed Bahá'í literature. This weekend he will be sharing some very specific disoveries and facilitating student discovery of their own connection with this sacred literature.
 
-
-
+Together we will explore and study some of the less known yet important Works of Bahá'u'lláh from the three major periods of His Ministry.
 
 
 ![school front](/courses/school-front2.jpg#floater)
