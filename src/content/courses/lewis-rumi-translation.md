@@ -19,8 +19,8 @@ Frank Lewis will be presenting on poetry from Arabic and Persian poets.
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
  Contact Kaathlyn Connor at (530) 777 8275, operations@firm-foundation.org
- Arrive: Friday evening, the 22nd of May for dinner and orientation
- Depart: Monday morning, the 25th of May after dawn-prayers and breakfast
+ Arrive: Friday evening, the 19th of June for dinner and orientation
+ Depart: Monday morning, the 22nd of June after dawn-prayers and breakfast
 ```
 
 <br>

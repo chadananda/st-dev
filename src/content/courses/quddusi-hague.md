@@ -1,13 +1,13 @@
 ---
-id: rohani-new-atheism
-title: "New Atheism and Seeing with the Eye of God"
+id: quddusi-hague
+title: "The Tablets to The Hague"
 teachers:
-  - Michael Sours Rohani
+  - Dr Sima Quddusi
 facebook: ""
 image: "/courses/sours-tall.jpg#floater_sm2"
 ---
 
-Michael Sours will be presenting on the strange assumptions which rise from a distinctly Christian "New Atheism" and the implications of Baha'u'llah's assertion of two distinct types of knowledge from the Kitáb-i-Íqán.
+Dr Sima Quddusi will present on the Tablets to The Hague sent by 'Abdu'l-Baha (1919, 1920)
 
 ---
 
@@ -19,15 +19,15 @@ Michael Sours will be presenting on the strange assumptions which rise from a di
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
  Contact Kaathlyn Connor at (530) 777 8275, operations@firm-foundation.org
- Arrive: Friday evening, the 31st of July for dinner and orientation
- Depart: Monday morning, the 3rd of August after dawn-prayers and breakfast
+ Arrive: Friday evening, the 3rd of July for dinner and orientation
+ Depart: Monday morning, the 6th of July after dawn-prayers and breakfast
 ```
 
 <br>
 
 ![book cover](/courses/sours-without-syllable.jpg#floater2)
 
-Michael Sours will be presenting on the strange assumptions which rise from a distinctly Christian "New Atheism" and the implications of Baha'u'llah's assertion of two distinct types of knowledge from the Kitáb-i-Íqán.
+Dr Sima Quddusi will present on the Tablets to The Hague sent by 'Abdu'l-Baha (1919, 1920)
 
 
 ###  Dr. Sours is the author of numerous books exploring Interfaith topics and Bilical teachings

@@ -19,8 +19,8 @@ The Kitáb-i-Aqdas ranks among the formost treasures of Bahá’u’lláh’s va
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
  Contact Kaathlyn Connor at (530) 777 8275, operations@firm-foundation.org
- Arrive: Friday evening, the 22nd of May for dinner and orientation
- Depart: Monday morning, the 25th of May after dawn-prayers and breakfast
+ Arrive: Friday evening, the 14th of August for dinner and orientation
+ Depart: Monday morning, the 17th of August after dawn-prayers and breakfast
 ```
 
 <br>
