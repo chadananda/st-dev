@@ -35,13 +35,15 @@ Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
 
 Steven Kolins will present on Wikis and the genealogy of Bahá’ís and their communities.
 
-The global infrustructure for sharing information has just gone through a profound and unprecedented lurch forward. In our pockets we carry a thousand times the information of the Library of Alexandria. And yet in our minds, we are years behind the present in our awareness of opportunities right in front of us. ![book: gods plan](/courses/book-face-of-god.jpg#floater)
+The global infrustructure for sharing information has just gone through a profound and unprecedented lurch forward. In our pockets we carry a thousand times the information of the Library of Alexandria. And yet in our minds, we are years behind the present in our awareness of opportunities right in front of us.
 
 Steven Kolins is a scholar on the Faith published in various wikis that require citations using genealogical-type records and Bahá’í sources on the histories of communities and individuals. From the results of such work he’s also contributed to publications like Bahá’í Faith and African American History, ed Loni Bramson, through Dr. Christopher Buck’s work, and Louis Venters’ The History of the Bahá’í Faith in South Carolina, and other pending publications on Sarah Farmer, the Knoblochs, Howard Colby Ives, and others.
 
 Across three sessions Steven will survey the existing content of Bahá’í-related content on various wikis, look at some of the history of this genre, at the developing databases of sources  available for such work, surprise finds, and a workshop about developing your own content.
 
 
+
+![book: gods plan](/courses/book-face-of-god.jpg#floater)
 ## John Hatcher
 
  John Hatcher will also be presenting this weekend, on a suprise topic which hopefully has something to do with the poetry of Tahirih.
@@ -77,3 +79,5 @@ Every student should bring their tablet or laptop computer. Materials, pencils, 
 We're working hard to keep costs as low as possible — and so far that seems to come to about $30 per day for room, board and materials. Our costs are reduced because of the generosity of the community and some very dedicated volunteers. If you need any help getting to Sacramento, let us know and we’ll do whatever we can to get you here. If you’re driving and have extra room for a ride share, let us know.
 
 <br><br><br><br>
+
+
