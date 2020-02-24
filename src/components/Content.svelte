@@ -1,18 +1,17 @@
 <script>
-    export let meta
-    export let html
-    meta.title = meta.title || "Untitled"
+    export let content
+    content.meta.title = content.meta.title || "Untitled"
 </script>
 
 <svelte:head>
-	 <title>{meta.title} | 𝑺𝒂𝒄𝒓𝒆𝒅-𝑻𝒓𝒂𝒅𝒊𝒕𝒊𝒐𝒏𝒔.𝒐𝒓𝒈</title>
+	 <title>{content.meta.title} | 𝑺𝒂𝒄𝒓𝒆𝒅-𝑻𝒓𝒂𝒅𝒊𝒕𝒊𝒐𝒏𝒔.𝒐𝒓𝒈</title>
 </svelte:head>
 
 
-<h1 class="title">{meta.title}</h1>
+<h1 class="title">{content.meta.title}</h1>
 
 <div id="content">
-  {@html html}
+  {@html content.html}
   <slot></slot>
 </div>
 
