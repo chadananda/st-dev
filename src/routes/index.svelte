@@ -21,6 +21,28 @@
 		</ul>
 </div>
 
+<div class="item news pr-3 md:pr-32">
+	<h2><a href="/courses">Spiritual Weekend Retreats</a></h2>
+	<img class="floater invisible md:visible" src="/courses/weekend-catalog.png" alt="" style="width: 350px; transform: rotate(1deg);" />
+	<p>We've lined up a fantastic array of speakers for weekend study programs, including
+	<a href="/courses/lawson-being-human">Todd Lawson</a>,
+	<a href="/courses/kolins-hatcher-information">John Hatcher</a>,
+	<a href="/courses/riazati-persian-bayan">Habib Riazati</a>,
+	<a href="/courses/saiedi-writings-bab">Nader Saiedi</a>,
+
+	<a href="/courses/fares-topics-aqdas">Nabil and Azadeh Fares</a>,
+	<a href="/courses/sorowitz-temple-guiding">Steve Sarowitz</a>,
+	<a href="/courses/langness-masters-teaching">David and Teresa Langness</a>,
+
+	<a href="/courses/maneck-women">Susan Maneck</a>,
+	<a href="/courses/rohani-new-atheism">Michael (Sours) Rouhani</a>,
+	<a href="/courses/kolins-hatcher-information">Steven Kolins</a>,
+
+	<a href="/courses/lewis-rumi-translation">Franklin Lewis</a>,
+	<a href="/courses/quddusi-hague">Sima Quddusi</a> and
+	<a href="/courses/stockman-abd-visit">Robert Stockman</a>. </p>
+
+</div>
 
 
 <div class="item news pr-3 md:pr-32">

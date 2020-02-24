@@ -17,8 +17,8 @@ The global infrustructure for sharing information has just gone through a profou
 
 
 
-![book: gods plan](/courses/book-hatcher-gods-plan.jpg#floater2)
-## A 2-Day Weekend Study Retreat
+
+## A 2-Day Weekend Study Retreat Starring both Steve Kolins and John Hatcher
 
 
 ```
@@ -30,14 +30,16 @@ Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
 
 <br>
 
+![kolins](/courses/steve-kolins-wide.jpg#floater2)
+## Steven Kolins
 
-
-
+Steven Kolins will present on Wikis and the genealogy of Baha'is and their communities.
 
 The global infrustructure for sharing information has just gone through a profound and unprecedented lurch forward. In our pockets we carry a thousand times the information of the Library of Alexandria. And yet in our minds, we are years behind the present in our awareness of opportunities right in front of us.![book: gods plan](/courses/book-face-of-god.jpg#floater)
 
+## John Hatcher
 
-Steven Kolins will present on Wikis and the genealogy of Baha'is and their communities. John Hatcher will also be presenting this weekend on his own exciting topic.
+ John Hatcher will also be presenting this weekend, on a suprise topic which hopefully has something to do with the poetry of Tahirih.
 
 
 
