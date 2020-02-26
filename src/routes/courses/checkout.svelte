@@ -94,7 +94,7 @@
   let today = (new Date()).toISOString().split('T')[0]
   let startDates = {}, endDates = {}
   let Ref = getRef()
-  let payAmount = 'registration'
+  let payAmount = 'full'
   let submitResponse = false
   let submitVisible = false
   let checkoutVisible = false

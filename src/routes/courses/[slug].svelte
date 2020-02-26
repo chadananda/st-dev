@@ -20,11 +20,14 @@
 	export let sessions
 	export let noSerialize
 	noSerialize()
+	let displaySessions = sessions.filter(o => o.Confirmed)
 	import Content from '../../components/Content.svelte'
 	import SignupForm from '../../components/SignupForm.svelte'
 </script>
 
-<Content {...course}>
+<Content content={course}>
 </Content>
 
-<SignupForm {sessions} {course} {StartDate} />
+{#if displaySessions.length}
+<SignupForm sessions={displaySessions} {course} {StartDate} />
+{/if}
