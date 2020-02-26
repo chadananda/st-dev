@@ -5,6 +5,10 @@ const adjacentDays = 3
 async function doGet() {
   let sessions = []
   let response = await fetch(url).then(r => r.json())
+  let courselist = await fetch('/courses.json').then(r => r.json()).then(r => r.reduce((a,c) => {
+    if (a.indexOf(c.meta.id) === -1) a.push(c.meta.id)
+    return a
+  }, []))
   if (!response.data) throw new Error('No database connection.')
   sessions = response.data.filter(v => v.CourseID)
   .sort((a,b) => {
@@ -15,6 +19,13 @@ async function doGet() {
   .map(v => {
     v.StartDate = v.StartDate.substring(0,10)
     v.EndDate = v.EndDate.substring(0,10)
+    v.href = '/courses/'
+    if (courselist.indexOf(v.CourseID) === -1) v.href += `detail?date=${v.StartDate}&id=`
+    v.href += v.CourseID
+    v.meta = {
+      id: v.CourseID,
+      title: v.Title
+    }
     return v
   })
   sessions = sessions.map((v,i) => {
