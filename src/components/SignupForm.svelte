@@ -1,4 +1,4 @@
-<h2>Register for {course.meta.title}</h2>
+<h2>Registration</h2>
 
 <form class="form max-w-full mx-auto" style="width:600px;" on:submit|preventDefault|stopPropagation={handleSubmit} on:blur={validateForm} >
 

@@ -18,4 +18,4 @@
   import Content from '../../components/Content.svelte'
 </script>
 
-<Content {...content} />
+<Content {content} />
