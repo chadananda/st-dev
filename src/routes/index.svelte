@@ -38,9 +38,15 @@
 	<a href="/courses/rohani-new-atheism">Michael (Sours) Rouhani</a>,
 	<a href="/courses/kolins-hatcher-information">Steven Kolins</a>,
 
+	<a href="/courses/mclean-shoghi-effendi">Jack McLean</a>,
 	<a href="/courses/lewis-rumi-translation">Franklin Lewis</a>,
 	<a href="/courses/quddusi-hague">Sima Quddusi</a> and
 	<a href="/courses/stockman-abd-visit">Robert Stockman</a>. </p>
+
+
+	<ul>
+		<li><a href='/courses/' class="text-lg">See the entire 2020 Calendar ⤳ </a></li>
+	</ul>
 
 </div>
 
