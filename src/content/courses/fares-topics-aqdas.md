@@ -5,7 +5,7 @@ teachers:
   - Nabil Fares
   - Azadeh Mohandessi-Fares
 facebook: ""
-image: "/courses/azadeh-fares.jpg#floater_sm"
+image: "/courses/azadeh-fares.jpg#floater_sm2"
 ---
 
 The Kitáb-i-Aqdas ranks among the formost treasures of Bahá’u’lláh's vast revelation. It “stands out, by virtue of the principles it inculcates, the administrative institutions it ordains and the function with which it invests the appointed Successor of its Author, unique and incomparable among the world’s sacred Scriptures.”

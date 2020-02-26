@@ -21,8 +21,8 @@ Join us for a wonderful weekend retreat with reknowned professor Todd Lawson who
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
  Contact Kaathlyn Connor at (530) 777 8275, operations@firm-foundation.org
- Arrive: Friday evening, the 3rd of April for dinner and orientation
- Depart: Monday morning, the 6th of April after dawn-prayers and breakfast
+ Arrive: Friday evening, the 19th of April for dinner and orientation
+ Depart: Monday morning, the 22nd of April after dawn-prayers and breakfast
 ```
 
 <br>

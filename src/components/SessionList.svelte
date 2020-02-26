@@ -33,7 +33,7 @@
       <td class="places hidden sm:table-cell">{(session.Capacity - session.Total)} / {session.Capacity}</td>
     </tr>
   {:else}
-    <p>No sessions found.</p>
+    <p>Loading sessions...</p>
   {/each}
   </table>
 {/if}

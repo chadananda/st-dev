@@ -19,8 +19,8 @@ image: "/courses/rob-stockman-tall.jpeg#floater_sm2"
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
  Contact Kaathlyn Connor at (530) 777 8275, operations@firm-foundation.org
- Arrive: Friday evening, the 18th of September for dinner and orientation
- Depart: Monday morning, the 21st of September after dawn-prayers and breakfast
+ Arrive: Friday evening, the 4th of December for dinner and orientation
+ Depart: Monday morning, the 7th of December after dawn-prayers and breakfast
 ```
 
 <br>

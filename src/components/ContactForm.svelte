@@ -26,29 +26,30 @@
 </form> -->
 
 
-  <form class="measure center" action="https://formspree.io/chad@sacred-traditions.org" method="POST">
-    <fieldset id="sign_up" class="ba b--transparent ph0 mh0">
+  <form class="" action="https://formspree.io/chad@sacred-traditions.org" method="POST">
 
-      <div class="mt3 namefield">
-        <label class="db fw6 lh-copy f6" for="name">Name</label>
-        <input class="text pa2 input-reset ba bg-transparent w-100" type="" name="name">
+    <fieldset id="sign_up" class="w-full sm:w-2/3 md:w-1/2">
+
+      <div class="">
+        <label class="" for="name">Name</label>
+        <input class="w-full border rounded-lg shadow h-12 p-2" type="" name="name" placeholder="Name">
       </div>
 
-      <div class="mt3 email">
-        <label class="db fw6 lh-copy f6" for="email">Email</label>
-        <input class="text pa2 input-reset ba bg-transparent w-100" type="email" name="email">
+      <div class="">
+        <label class="" for="email">Email</label>
+        <input class="w-full border rounded-lg shadow h-12 p-2" type="email" name="email" placeholder="email">
       </div>
 
-      <div class="mt3 message">
-        <label class="db fw6 lh-copy f6" for="message" id="message-desc">Message</label>
-        <textarea id="message" name="message" aria-describedby="message-desc" rows="10"
-           class="text db border-box hover-black w-100 measure ba b--black-20 pa2 br2 mb2" ></textarea>
+      <div class="">
+        <label class="" for="message" id="message-desc">Message</label>
+        <textarea id="message" name="message" aria-describedby="message-desc" rows="5"
+           class="w-full border rounded-lg shadow p-2" ></textarea>
       </div>
 
     </fieldset>
 
-    <div class="submit">
-      <input class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Send">
+    <div class="w-full mt-2 flex">
+      <input class="justify-end items-end border-lg p-4 bg-green-500 shadow" type="submit" value="Send">
     </div>
 
   </form>
@@ -61,8 +62,8 @@
 
   /* input.text { padding: 8px;;} */
 
-  input.text {overflow: hidden;}
-  .namefield input {width: 95%}
+  /* input.text {overflow: hidden;}
+  .namefield input {width: 95%} */
 
 
 </style>

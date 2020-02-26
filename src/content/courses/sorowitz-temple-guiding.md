@@ -4,7 +4,7 @@ title: Effective Mashriqu’l-Adhkár Teaching
 teachers:
   - Steve Sarowitz
 facebook: ""
-image: "/courses/steve-sarowitz.jpg#floater_sm2"
+image: "/courses/steve-sarowitz.jpg#floater_sm"
 ---
 
 Thousands of people every day visit Mashriqu’l-Adhkárs around the world, many just as tourists but many others with profound spiritual questions. A handful of guides is involved in anwering questions and stimulating curiosity in the souls these seekers. Is it possible to be more effective in this field of service? Steve Sarowitz is the producer of "The Gate" and a long time volunteer teacher at Mashriqu’l-Adhkárs in many countries.
