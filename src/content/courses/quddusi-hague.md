@@ -14,7 +14,7 @@ Dr Sima Quddusi will present on the Tablets to The Hague sent by 'Abdu'l-Baha (1
 
 ![dr quddusi](/courses/dr-quddusi-wide.png#full)
 
-## A 2-Day Weekend Study Retreat
+## A Weekend Study Retreat
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
@@ -71,7 +71,7 @@ Every student should bring their tablet or laptop computer. Materials, pencils, 
 
 ![participants](/db-challenge/db-banner-2019.jpg#floater)
 
-### How much? ($110, about $30/day.)
+### How much? ($110)
 
 We're working hard to keep costs as low as possible — and so far that seems to come to about $30 per day for room, board and materials. Our costs are reduced because of the generosity of the community and some very dedicated volunteers. If you need any help getting to Sacramento, let us know and we’ll do whatever we can to get you here. If you’re driving and have extra room for a ride share, let us know.
 

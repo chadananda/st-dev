@@ -18,7 +18,7 @@ The global infrustructure for sharing information has just gone through a profou
 
 
 
-## A 2-Day Weekend Study Retreat Starring both Steve Kolins and John Hatcher
+## A Weekend Study Retreat Starring both Steve Kolins and John Hatcher
 
 
 ```
@@ -74,7 +74,7 @@ Every student should bring their tablet or laptop computer. Materials, pencils, 
 
 ![participants](/db-challenge/db-banner-2019.jpg#floater)
 
-### How much? ($110, about $30/day.)
+### How much? ($110)
 
 We're working hard to keep costs as low as possible — and so far that seems to come to about $30 per day for room, board and materials. Our costs are reduced because of the generosity of the community and some very dedicated volunteers. If you need any help getting to Sacramento, let us know and we’ll do whatever we can to get you here. If you’re driving and have extra room for a ride share, let us know.
 

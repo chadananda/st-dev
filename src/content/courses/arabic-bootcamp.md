@@ -57,7 +57,7 @@ Given the pace and difficulty of material, only adults and youth 15 or older. Mi
 
 Every student should bring their tablet or laptop computer. Materials, pencils, notepads, bedding, towels, food etc. are supplied. We have plenty of laundry facilities as well. You may want to bring a swimsuit for occasional outings to the nearby river.
 
-### How much? ($150, about $30/day.)
+### How much? ($150)
 
 We're working hard to keep costs as low as possible — and so far that seems to come to about $30 per day for room, board and materials. Our costs are reduced because of the generosity of the community and some very dedicated volunteers. If you need any help getting to Sacramento, let us know and we’ll do whatever we can to get you here. If you’re driving and have extra room for a ride share, let us know.
 

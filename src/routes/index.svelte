@@ -9,8 +9,8 @@
 <div class="item news pr-3 md:pr-32">
 	<h2><a href="/courses/db-challenge">The Dawn-Breakers Challenge - 2020</a></h2>
 	<img class="floater invisible md:visible" src="/db-challenge/db-chall-jul-2019.jpg" alt="db challenge participants" />
-	<p>Last year we had a blast with a series of in-depth Dawn-Breakers study retreats (we even got a mention in the ABN).  So, by popular demand, we’re going to do it all over again. And we’re adding a few new programs to the mix. Check out our <a href="/courses">Summer 2020 retreat calendar!</a></p>
-	<p>Also, I finally have a good place to put a bunch of downloadable resources. A big thanks to Dropbox for motivating me -- by freezing my account due to too much download traffic.</p>
+	<p>Last year we had a blast with a series of in-depth Dawn-Breakers study retreats.  So, by popular demand, we’re going to do it all over again. And we’re adding a few new programs to the mix. Check out our <a href="/courses"> 2020 retreat calendar!</a></p>
+	<!-- <p>Also, I finally have a good place to put a bunch of downloadable resources. A big thanks to Dropbox for motivating me -- by freezing my account due to too much download traffic.</p> -->
 		<img class="floater invisible md:visible" src="/db-challenge/class-study.jpg" alt="db challenge participants" style="width: 200px; transform: rotate(-2deg); margin-top: -2em;"/>
 		<ul>
 				<li><a href='/courses/db-challenge' class="text-lg">Dawn-Breakers Challenge Retreats 2020 ⤳ </a></li>

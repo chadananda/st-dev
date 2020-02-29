@@ -36,8 +36,9 @@ April 6-17
 
 <br>
 
+![db](/courses/db-sun.jpg#floater)
 
-Please join us in Northern California for a fun and intensive 10-day study of “The Dawn-Breakers” together with the primary doctrinal work of the Bahá'í Faith, “The Kitáb-i-Íqán.” As you know, the Guardian challenged us to *“master”* these books as a rock-foundation for effective teaching. Now that the Bicentennial of the bith of the Báb is upon us, it’s probably about time to get serious about doing just that.
+Please join us in Northern California for a fun and intensive 10-day study of “The Dawn-Breakers” together with the primary doctrinal work of the Bahá'í Faith, “The Kitáb-i-Íqán.” As you know, the Guardian challenged us to *“master”* these books as a rock-foundation for effective teaching. Now that we have all enjoyed celebrating the Bicentennial of the birth of the Báb, it’s probably about time we get serious about doing that.
 
 Together, we will read and discuss every page of the Dawn-Breakers, track every character, map every city and essentially rise to the Guardian’s challenge that we *“...master and digest the facts recorded therein...”* It’s going to be a lot of work and a lot of fun.
 
@@ -77,7 +78,7 @@ Whatever your current plans are this summer, we hope you will change them and jo
 
 Every student should bring their own copy of the Dawn-Breakers or a tablet or laptop computer with [Ocean 2.0 Reader installed →](/ocean). Pens, pencils, notepads, bedding, towels, food etc. are supplied. We have plenty of laundry facilities as well. The mountain air can be a bit cooler than one might expect for California, so prehaps bring some layered clothes. You may want to bring a swimsuit for occasional outings to the nearby river.
 
-### How much? ($320, about $30/day.)
+### How much? ($320)
 
 We're working hard to keep costs as low as possible — and so far that seems to come to about $30 per day for room, board and materials. Our costs are reduced because of the generosity of the community and some very dedicated volunteers. If you need any help getting to Sacramento, let us know and we’ll do whatever we can to get you here. If you’re driving and have extra room for a ride share, let us know.
 
