@@ -7,7 +7,7 @@ facebook: ""
 image: "/courses/todd-lawson_sm.jpg#floater_sm2"
 ---
 
-Join us for a wonderful weekend retreat with reknowned professor Todd Lawson who will be speaking about his recent book "Being Human".
+Join us for a wonderful 3-day retreat with reknowned professor Todd Lawson who will be speaking about his recent book "Being Human".
 
 "Being Human" seeks to harmonize many contradictions and demonstrate how Baha'i teachings point the way toward peace and the reconciliation of all world religions.
 
@@ -29,7 +29,7 @@ Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
 
 ![temple front](/courses/Being-Human-Front-Cover.jpg#floater2)
 
-Join us for a wonderful weekend retreat with reknowned professor Todd Lawson who will be speaking about his recent book "Being Human".
+Join us for a wonderful 3-day retreat with reknowned professor Todd Lawson who will be speaking about his recent book "Being Human".
 
 Being Human seeks to reconcile many contradictions and demonstrate how Baha’i teachings point the way toward peace and the reconciliation of all world religions. It explains the deep connection between the Baha’i Faith and Islam, and how this relationship is one among many in what must remain the continuing, and perhaps endless, attempts to mine the Baha’i scriptures for all their inexhaustible implications.
 
