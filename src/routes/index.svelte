@@ -96,7 +96,7 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 	<li class="italic"> Memorials of the Faithful </li>
 	<li class="italic"> Paris Talks  </li>
 	<li class="italic"> Prayers and Meditations </li>
-	<li class="italic"> Selections from the Writings of Bahá’u’lláh </li>
+	<li class="italic"> Selections from the Writings of the Báb </li>
 	<li class="italic"> Some Answered Questions  </li>
 	<li class="italic"> The Advent of Divine Justice </li>
 	<li class="italic"> The Secret of Divine Civilization </li>
@@ -122,8 +122,6 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 	<h4><a href='/courses/arabic-bootcamp'>Intensive 5-Day Arabic Boot Camp ⤳ </a></h4>
 
 </div>
-
-
 
 
 
