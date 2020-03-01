@@ -10,7 +10,7 @@
  <img class="floater invisible md:visible" src="/courses/db-sun.jpg" alt="db challenge participants" style="width: 250px; transform: rotate(-1deg); margin-top: -2em; margin-left:-6em;" />
 	<h2><a href="/courses/db-challenge">The Dawn-Breakers Challenge - 2020</a></h2>
 	<img class="floater invisible md:visible" src="/db-challenge/db-chall-jul-2019.jpg" alt="db challenge participants" style="margin-top:1.5em; margin-left:1em; margin-bottom: 1em;" />
-	<p>Last year we had a wonderful adventure with a series in-depth Dawn-Breakers study retreats.  And, by popular demand, we’re going to do it all over again. And we’re also adding a few new programs to the mix.  </p>
+	<p>Last year we had a wonderful adventure with a series of in-depth Dawn-Breakers study retreats.  And, by popular demand, we’re going to do it all over again. And we’re also adding a few new programs to the mix.  </p>
 
 	<p>Reading the entire book together in a single sweep is a profound sprititual experience.  </p>
 
