@@ -19,8 +19,8 @@ Shahrokh Monjazeb will explore some of the less known yet important Works of Bah
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
  Contact Kaathlyn Connor at (530) 777 8275, operations@firm-foundation.org
- Arrive: Friday evening, the 1st of May for dinner and orientation
- Depart: Monday morning, the 4th of May after dawn-prayers and breakfast
+ Arrive: Friday evening, the 29th of May for dinner and orientation
+ Depart: Monday morning, the 1st of June after dawn-prayers and breakfast
 ```
 
 <br>
