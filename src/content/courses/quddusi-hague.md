@@ -29,7 +29,7 @@ Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
 
 Dr Sima Quddusi will present on the Tablets to The Hague sent by Abdu’l-Bahá (1919, 1920). These two letters of ‘Abdu’l-Bahá were written in response to letters addressed to Him by the Executive Committee of the Central Organization for a Durable Peace.
 
-These important tablets include a summation of the Bahá’í social teachings and a rebuttal to materalistic theories of progress, for example by asserting that man must unite spritiutally before political peace is possible, and that man must solve the economic problem voluntarily, rather than through the force of coercive law.
+These important tablets include a summation of the Bahá’í social teachings and a rebuttal of materalistic theories of progress, for example by asserting that man must unite spritually before political peace is achievable, and that man must solve the economic problem voluntarily, rather than through the force of coercive law.
 
 
   + **[First Tablet to The Hague - 17 December 1919  ⤳](https://www.bahai.org/library/authoritative-texts/abdul-baha/tablets-hague-abdul-baha/2#381373700)**
@@ -73,6 +73,8 @@ Every student should bring their tablet or laptop computer. Materials, pencils, 
 
 ### How much? ($110)
 
-We're working hard to keep costs as low as possible — and so far that seems to come to about $30 per day for room, board and materials. Our costs are reduced because of the generosity of the community and some very dedicated volunteers. If you need any help getting to Sacramento, let us know and we’ll do whatever we can to get you here. If you’re driving and have extra room for a ride share, let us know.
+We’re working hard to keep costs as low as possible — and so far that seems to come to about $30 per day for room, board and materials. This program includes three nights lodging and eight meals. As well as transportation to and from the airport, if you are arriving by plane.
+
+Our costs are reduced because of the generosity of the community and some very dedicated volunteers. If you need any help getting to Sacramento, let us know and we’ll do whatever we can to get you here. If you’re driving and have extra room for a ride share, let us know.
 
 <br><br><br><br>

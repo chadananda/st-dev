@@ -8,14 +8,14 @@ facebook: ""
 image: "/courses/azadeh-fares.jpg#floater_sm2"
 ---
 
-The Kitáb-i-Aqdas ranks among the formost treasures of Bahá’u’lláh's vast revelation. It “stands out, by virtue of the principles it inculcates, the administrative institutions it ordains and the function with which it invests the appointed Successor of its Author, unique and incomparable among the world’s sacred Scriptures.”
+The Kitáb-i-Aqdas ranks among the formost treasures of Bahá’u’lláh's vast revelation. It “stands out, by virtue of the principles it inculcates, the administrative institutions it ordains and the function with which it invests the appointed Successor of its Author, unique and incomparable among the world’s sacred Scriptures.” Nabil is a native speaker in Arabic, and Azadeh is a native speaker in Persian. They have been working together in English for decades, sharing the wonders of The Kitáb-i-Aqdas.
 
 ---
 
 
 ![temple](/courses/azadeh-fares-wide.jpg#full)
 
-## A Weekend Study Retreat
+## A Weekend Study Retreat with Nabil and Azadeh Fares
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
@@ -28,7 +28,9 @@ Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
 
 ![temple front](/courses/nabil-fares.jpg#floater2)
 
- The Kitáb-i-Aqdas ranks among the formost treasures of Bahá’u’lláh's vast revelation. It “stands out, by virtue of the principles it inculcates, the administrative institutions it ordains and the function with which it invests the appointed Successor of its Author, unique and incomparable among the world’s sacred Scriptures.”
+The Kitáb-i-Aqdas ranks among the formost treasures of Bahá’u’lláh's vast revelation. It “stands out, by virtue of the principles it inculcates, the administrative institutions it ordains and the function with which it invests the appointed Successor of its Author, unique and incomparable among the world’s sacred Scriptures.”
+
+Nabil is a native speaker in Arabic, and Azadeh is a native speaker in Persian. They have been working together in English for decades in sharing the wonders of The Kitáb-i-Aqdas.
 
 
 
@@ -55,6 +57,8 @@ Every student should bring their tablet or laptop computer. Materials, pencils, 
 
 ### How much? ($110)
 
-We're working hard to keep costs as low as possible — and so far that seems to come to about $30 per day for room, board and materials. Our costs are reduced because of the generosity of the community and some very dedicated volunteers. If you need any help getting to Sacramento, let us know and we’ll do whatever we can to get you here. If you’re driving and have extra room for a ride share, let us know.
+We’re working hard to keep costs as low as possible — and so far that seems to come to about $30 per day for room, board and materials. This program includes three nights lodging and eight meals. As well as transportation to and from the airport, if you are arriving by plane.
+
+Our costs are reduced because of the generosity of the community and some very dedicated volunteers. If you need any help getting to Sacramento, let us know and we’ll do whatever we can to get you here. If you’re driving and have extra room for a ride share, let us know.
 
 <br><br><br><br>

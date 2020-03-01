@@ -7,14 +7,14 @@ facebook: ""
 image: "/courses/frank-lewis-tall.png#floater_sm2"
 ---
 
-Frank Lewis will be presenting on poetry from Arabic and Persian poets.
+Franklin Lewis will be presenting on poetry from Arabic and Persian poets. Frank is an Associate Professor of Persian Language and Literature, and Chair of the Department of Near Eastern Languages and Civilizations at the University of Chicago with affiliations to the Center for Middle Eastern Studies at the University of Chicago. He teaches classes on Persian language and literature, Islamic thought, Sufism, Baha'i Studies, translation studies, and Middle Eastern cinema.
 
 ---
 
 
 ![frank lewis](/courses/frank-lewis-wide.png#full)
 
-## A Weekend Study Retreat
+## A Weekend Study Retreat with Frank Lewis
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
@@ -26,6 +26,8 @@ Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
 <br>
 
 ![statue of rumi](/courses/rumi-statue.jpg#floater2)
+
+Franklin D. Lewis will be presenting on poetry from Arabic and Persian poets. Frank is an Associate Professor of Persian Language and Literature, and Chair of the Department of Near Eastern Languages and Civilizations at the University of Chicago with affiliations to the Center for Middle Eastern Studies at the University of Chicago. He teaches classes on Persian language and literature, Islamic thought, Sufism, Baha'i Studies, translation studies, and Middle Eastern cinema.
 
 
 ### And of divine wisdom and heavenly counsel, [Rúmí says]:
@@ -74,6 +76,8 @@ Every student should bring their tablet or laptop computer. Materials, pencils, 
 
 ### How much? ($110)
 
-We're working hard to keep costs as low as possible — and so far that seems to come to about $30 per day for room, board and materials. Our costs are reduced because of the generosity of the community and some very dedicated volunteers. If you need any help getting to Sacramento, let us know and we’ll do whatever we can to get you here. If you’re driving and have extra room for a ride share, let us know.
+We’re working hard to keep costs as low as possible — and so far that seems to come to about $30 per day for room, board and materials. This program includes three nights lodging and eight meals. As well as transportation to and from the airport, if you are arriving by plane.
+
+Our costs are reduced because of the generosity of the community and some very dedicated volunteers. If you need any help getting to Sacramento, let us know and we’ll do whatever we can to get you here. If you’re driving and have extra room for a ride share, let us know.
 
 <br><br><br><br>

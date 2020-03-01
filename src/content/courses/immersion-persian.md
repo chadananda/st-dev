@@ -8,7 +8,7 @@ facebook: ""
 image: "/courses/bahaullah-writings.png#floater_sm2"
 ---
 
-As a follow-up to the intensive Arabic program in May, this late-summer intensive Farsi program will use the same format to plunge the participants into literary Persian. As with the Arabic bootcamp, the mornings will be spent studying key tablets in Farsi (the Íqán, Seven Valleys etc.) while the afternoons will be spent immsersed in Farsi adventure stories to absorbe vocabulary and grammar naturally.
+As a follow-up to the intensive Arabic program in May, this late-summer intensive Farsi program will use the same format to plunge the participants into literary Persian. As with the Arabic bootcamp, the mornings will be spent studying key tablets in Farsi (the Íqán, Seven Valleys etc.) while the afternoons will be spent immsersed in Farsi adventure stories to absorb vocabulary and grammar naturally.
 
 ---
 
@@ -53,6 +53,8 @@ Every student should bring their tablet or laptop computer. Materials, pencils, 
 
 ### How much? ($150)
 
-We're working hard to keep costs as low as possible — and so far that seems to come to about $30 per day for room, board and materials. Our costs are reduced because of the generosity of the community and some very dedicated volunteers. If you need any help getting to Sacramento, let us know and we’ll do whatever we can to get you here. If you’re driving and have extra room for a ride share, let us know.
+We’re working hard to keep costs as low as possible. This program includes six nights lodging and seventeen meals - as well as transportation to and from the airport, if you are arriving by plane.
+
+Our costs are reduced because of the generosity of the community and some very dedicated volunteers. If you need any help getting to Sacramento, let us know and we’ll do whatever we can to get you here. If you’re driving and have extra room for a ride share, let us know.
 
 <br><br><br><br>

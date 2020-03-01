@@ -15,7 +15,7 @@ A Celestial Burning - the Writings of Shoghi Effendi. Jack will explore themes o
 
 ![jack mclean](/courses/mclean-wide.jpg#full)
 
-## A Weekend Study Retreat
+## A Weekend Study Retreat with Jack Mclean
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
@@ -26,8 +26,8 @@ Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
 
 <br>
 
-![temple front](/courses/mclean_books.jpg#floater2)
 
+![mclean books](/courses/mclean_books.jpg#floater2)
 
 A Celestial Burning is the winner of the Association for Baha'i Studies, North America's Book Award 2013 for distinguished scholarship.
 
@@ -46,8 +46,7 @@ This book will serve to inform not only scholars but also all those teachers, ad
 In the mountains of Northern California, just East of Sacramento, our friends have a beautiful boarding-school facility with a gymnasium and comfortable classrooms. If you are not within driving distance, you can fly into the Sacramento Airport (SMF) or take a train to the Sacramento Amtrak train station. Our community volunteers will pick you up and shuttle you to the school. The school has various accommodation options, so families will usually be able to stay together.
 
 
-
-![closeup of haykal](/courses/haykal-close.png#floater2)
+![one book](/courses/mclean-cover.png#floater)
 ### Who should attend? (ages 15+)
 
 Given the pace and difficulty of material, only adults and youth 15 or older. Minors will need to be accompanied by a parent or a designated guardian. We will not be splitting out into groups so all participants should be mature enough to sustain a solid day of reading together.
@@ -59,10 +58,12 @@ Given the pace and difficulty of material, only adults and youth 15 or older. Mi
 Every student should bring their tablet or laptop computer. Materials, pencils, notepads, bedding, towels, food etc. are supplied. We have plenty of laundry facilities as well. You may want to bring a swimsuit for occasional outings to the nearby river.
 
 
-![participants](/db-challenge/db-banner-2019.jpg#floater)
+![participants](/db-challenge/db-banner-2019.jpg#floater2)
 
 ### How much? ($110)
 
-We're working hard to keep costs as low as possible — and so far that seems to come to about $30 per day for room, board and materials. Our costs are reduced because of the generosity of the community and some very dedicated volunteers. If you need any help getting to Sacramento, let us know and we’ll do whatever we can to get you here. If you’re driving and have extra room for a ride share, let us know.
+We’re working hard to keep costs as low as possible — and so far that seems to come to about $30 per day for room, board and materials. This program includes three nights lodging and eight meals. As well as transportation to and from the airport, if you are arriving by plane.
+
+Our costs are reduced because of the generosity of the community and some very dedicated volunteers. If you need any help getting to Sacramento, let us know and we’ll do whatever we can to get you here. If you’re driving and have extra room for a ride share, let us know.
 
 <br><br><br><br>

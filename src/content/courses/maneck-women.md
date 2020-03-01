@@ -7,7 +7,7 @@ facebook: ""
 image: "/courses/susan-maneck.jpg#floater_sm"
 ---
 
-Susan is an expert in near-eastern history and will be presenting on a very challenging topic: the role of women in Zoroastrianism and Islam. The patriarchal nature of the period makes it especially challenging to isolate the specific influence of great women so this will be an illuminating opportunity for particiants.
+Susan is an expert in near-eastern history and will be presenting on a very challenging topic: “The role of women in Zoroastrianism and Islam”. The patriarchal nature of the period makes it especially challenging to isolate the specific influence of great women so this will be an illuminating opportunity for particiants.
 
 
 ---
@@ -15,7 +15,7 @@ Susan is an expert in near-eastern history and will be presenting on a very chal
 
 ![nader saiedi](/courses/susan-maneck-wd.jpg#full)
 
-## A Weekend Study Retreat
+## A Weekend Study Retreat with Susan Maneck
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
@@ -25,6 +25,12 @@ Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
 ```
 
 <br>
+
+
+Dr. Susan Maneck is an Associate Professor in the History and Philosophy Department at Jackson State University where she teaches courses in Middle East and South Asian History, World Civilization, and Comparative Religion. She is a reknowned contributor to Bahá’í academic journals and scholarly forums.
+
+“The role of women in Zoroastrianism and Islam” is an especially timely topic. The patriarchal nature of the period makes it especially challenging to isolate the specific influence of great women so this will be an illuminating opportunity for particiants.
+
 
 
 
@@ -51,6 +57,8 @@ Every student should bring their tablet or laptop computer. Materials, pencils, 
 
 ### How much? ($110)
 
-We're working hard to keep costs as low as possible — and so far that seems to come to about $30 per day for room, board and materials. Our costs are reduced because of the generosity of the community and some very dedicated volunteers. If you need any help getting to Sacramento, let us know and we’ll do whatever we can to get you here. If you’re driving and have extra room for a ride share, let us know.
+We’re working hard to keep costs as low as possible — and so far that seems to come to about $30 per day for room, board and materials. This program includes three nights lodging and eight meals. As well as transportation to and from the airport, if you are arriving by plane.
+
+Our costs are reduced because of the generosity of the community and some very dedicated volunteers. If you need any help getting to Sacramento, let us know and we’ll do whatever we can to get you here. If you’re driving and have extra room for a ride share, let us know.
 
 <br><br><br><br>
