@@ -115,7 +115,7 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 	<img class="floater invisible md:visible" src="https://notepad.com/_nuxt/img/77d643c.gif" alt="db challenge participants" style="width: 250px; transform: rotate(2deg); margin-top:0em;" />
 	<h2><a href="/courses/arabic-bootcamp"> Literary Arabic Bootcamp - A crazy experiment... </a></h2>
 
-	<p>It’s been a busy winter. We’ve been preparing a really fun experimental Intensive Arabic retreat. The aim is to get students from nearly zero to daily reading of real Arabic literature - and in just 6 days (7 nights, 23 meals). This program will be appropriate for beginner and intermediate students - as the core daily work will be self-paced. </p>
+	<p>It’s been a busy winter. We’ve been preparing a really fun experimental Intensive Arabic retreat. The aim is to get students from nearly zero to daily reading of real Arabic literature -  in just 6 days. This program will be appropriate for beginner and intermediate students - as the core daily work will be self-paced. </p>
 
 	<p>If you are up for a serious immersion challenge, come and join us this summer! </p>
 
