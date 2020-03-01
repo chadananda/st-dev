@@ -25,7 +25,7 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 				<li><a href='/courses/db-challenge' class="text-lg">Dawn-Breakers Challenge Retreats 2020 ⤳ </a></li>
 				<li class="italic text-gray-700"> also...</li>
 				<!-- <li><a href='/dawn-breakers-challenge-materials'>Dawn-Breakers Challenge Downloadable Materials ⤳ </a></li> -->
-				<li><a href='https://www.facebook.com/The-Dawn-Breakers-Challenge-329820570524376/'>Dawn-Breakers Challenge Facebook Page ⤳ </a>  </li>
+				<li><a href='https://www.facebook.com/The-Dawn-Breakers-Challenge-329820570524376/' target="_blank">Dawn-Breakers Challenge Facebook Page ⤳ </a>  </li>
 				<li><a href='https://bahaiteachings.org/dawn-breakers-challenge-history-bahai-heroes/' target="_blank">Dawn-Breakers Article on bahai-teachings.org ⤳ </a></li>
     <li><a href='https://www.facebook.com/groups/249605919395780/' target="_blank">Sacred Traditions Facebook Group ⤳ </a></li>
 				<!-- <li><a href='/dawn-breakers-mailinglist'>Signup for Sacred-Retreats Announcement List! ⤳ </a></li> -->
@@ -52,7 +52,6 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 	<a href="/courses/mclean-shoghi-effendi">Jack McLean</a>,
 	<a href="/courses/saiedi-writings-bab">Nader Saiedi</a>,
 	<a href="/courses/maneck-women">Susan Maneck</a>,
-	<a href="/courses/kolins-hatcher-information">John Hatcher</a>,
 	<a href="/courses/kolins-hatcher-information">Steven Kolins</a>,
 	<a href="/courses/langness-masters-teaching">David and Teresa Langness</a> and
 	<a href="/courses/stockman-abd-visit">Robert Stockman</a>.  </p>
