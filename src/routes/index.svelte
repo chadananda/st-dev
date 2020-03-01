@@ -7,70 +7,121 @@
 <h1 class="title"> Fresh New Stuff! </h1>
 
 <div class="item news pr-3 md:pr-32">
+ <img class="floater invisible md:visible" src="/courses/db-sun.jpg" alt="db challenge participants" style="width: 250px; transform: rotate(-1deg); margin-top: -2em; margin-left:-6em;" />
 	<h2><a href="/courses/db-challenge">The Dawn-Breakers Challenge - 2020</a></h2>
-	<img class="floater invisible md:visible" src="/db-challenge/db-chall-jul-2019.jpg" alt="db challenge participants" />
-	<p>Last year we had a blast with a series of in-depth Dawn-Breakers study retreats.  So, by popular demand, we’re going to do it all over again. And we’re adding a few new programs to the mix. Check out our <a href="/courses"> 2020 retreat calendar!</a></p>
+	<img class="floater invisible md:visible" src="/db-challenge/db-chall-jul-2019.jpg" alt="db challenge participants" style="margin-top:1.5em; margin-left:1em; margin-bottom: 1em;" />
+	<p>Last year we had a wonderful adventure with a series in-depth Dawn-Breakers study retreats.  And, by popular demand, we’re going to do it all over again. And we’re also adding a few new programs to the mix.  </p>
+
+	<p>Reading the entire book together in a single sweep is a profound sprititual experience.  </p>
+
+ <p class="italic text-gray-800" style="margin-left: 1em;">
+Nabíl’s narrative is not merely a narrative; it is a book of meditation. It does not only teach. It actually inspires and incites to action.... It quickens and stimulates our dormant energies and makes us soar on a higher plane.
+</p>
+
+		<img class="floater invisible md:visible" src="/db-challenge/class-study.jpg" alt="db challenge participants" style="width: 280px; transform: rotate(-2deg); margin-top:-5em; margin-left:1em;"/>
 	<!-- <p>Also, I finally have a good place to put a bunch of downloadable resources. A big thanks to Dropbox for motivating me -- by freezing my account due to too much download traffic.</p> -->
-		<img class="floater invisible md:visible" src="/db-challenge/class-study.jpg" alt="db challenge participants" style="width: 200px; transform: rotate(-2deg); margin-top: -2em;"/>
+
 		<ul>
 				<li><a href='/courses/db-challenge' class="text-lg">Dawn-Breakers Challenge Retreats 2020 ⤳ </a></li>
+				<li class="italic text-gray-700"> also...</li>
 				<!-- <li><a href='/dawn-breakers-challenge-materials'>Dawn-Breakers Challenge Downloadable Materials ⤳ </a></li> -->
-				<li><a href='https://www.facebook.com/The-Dawn-Breakers-Challenge-329820570524376/'>Facebook Page ⤳ </a></li>
-				<li><a href='https://bahaiteachings.org/dawn-breakers-challenge-history-bahai-heroes/' target="_blank">DB-Challenge article on bahai-teachings.org ⤳ </a></li>
+				<li><a href='https://www.facebook.com/The-Dawn-Breakers-Challenge-329820570524376/'>Dawn-Breakers Challenge Facebook Page ⤳ </a>  </li>
+				<li><a href='https://bahaiteachings.org/dawn-breakers-challenge-history-bahai-heroes/' target="_blank">Dawn-Breakers Article on bahai-teachings.org ⤳ </a></li>
+    <li><a href='https://www.facebook.com/groups/249605919395780/' target="_blank">Sacred Traditions Facebook Group ⤳ </a></li>
 				<!-- <li><a href='/dawn-breakers-mailinglist'>Signup for Sacred-Retreats Announcement List! ⤳ </a></li> -->
 		</ul>
+
 </div>
 
 <div class="item news pr-3 md:pr-32">
 	<h2><a href="/courses">Spiritual Weekend Retreats</a></h2>
-	<img class="floater invisible md:visible" src="/courses/weekend-catalog.png" alt="" style="width: 350px; transform: rotate(1deg);" />
-	<p>We've lined up a fantastic array of speakers for weekend study programs, including
-	<a href="/courses/lawson-being-human">Todd Lawson</a>,
-	<a href="/courses/kolins-hatcher-information">John Hatcher</a>,
-	<a href="/courses/riazati-persian-bayan">Habib Riazati</a>,
-	<a href="/courses/saiedi-writings-bab">Nader Saiedi</a>,
+	<img class="floater invisible md:visible" src="/courses/weekend-catalog.png" alt="" style="width: 300px; transform: rotate(1deg); margin-top:-2em;" />
 
-	<a href="/courses/fares-topics-aqdas">Nabil and Azadeh Fares</a>,
+	<p>We’ve lined up a fantastic array of speakers for weekend study programs - each of whom demonstrates God's brilliant gift of genius in their particular areas of exptertise. </p>
+
+<p>
 	<a href="/courses/sorowitz-temple-guiding">Steve Sarowitz</a>,
-	<a href="/courses/langness-masters-teaching">David and Teresa Langness</a>,
-
-	<a href="/courses/maneck-women">Susan Maneck</a>,
-	<a href="/courses/rohani-new-atheism">Michael (Sours) Rouhani</a>,
-	<a href="/courses/kolins-hatcher-information">Steven Kolins</a>,
-
-	<a href="/courses/mclean-shoghi-effendi">Jack McLean</a>,
+	<a href="/courses/lawson-being-human">Todd Lawson</a>,
+ <a href="/courses/courses/monjazeb-discovering-gems">Shahrokh Monjazeb</a>,
+ <a href="/courses/arabic-bootcamp">Joshua Hall</a>,
+	<a href="/courses/fares-topics-aqdas">Nabil and Azadeh Fares</a>,
 	<a href="/courses/lewis-rumi-translation">Franklin Lewis</a>,
-	<a href="/courses/quddusi-hague">Sima Quddusi</a> and
-	<a href="/courses/stockman-abd-visit">Robert Stockman</a>. </p>
+	<a href="/courses/quddusi-hague">Sima Quddusi</a>,
+	<a href="/courses/rohani-new-atheism">Michael (Sours) Rouhani</a>,
+	<a href="/courses/riazati-persian-bayan">Habib Riazati</a>,
+	<a href="/courses/mclean-shoghi-effendi">Jack McLean</a>,
+	<a href="/courses/saiedi-writings-bab">Nader Saiedi</a>,
+	<a href="/courses/maneck-women">Susan Maneck</a>,
+	<a href="/courses/kolins-hatcher-information">John Hatcher</a>,
+	<a href="/courses/kolins-hatcher-information">Steven Kolins</a>,
+	<a href="/courses/langness-masters-teaching">David and Teresa Langness</a> and
+	<a href="/courses/stockman-abd-visit">Robert Stockman</a>.  </p>
 
-
-	<ul>
-		<li><a href='/courses/' class="text-lg">See the entire 2020 Calendar ⤳ </a></li>
-	</ul>
+	<h4><a href='/courses/' class="text-lg">See the entire 2020 Calendar ⤳ </a></h4>
 
 </div>
 
 
 <div class="item news pr-3 md:pr-32">
-	<h2><a href="/ocean">Ocean 2.0 Interfaith Reader - updated</a></h2>
-	<img class="floater invisible md:visible" src="/ocean_assets/ocean-db.png" alt="Ocean reading dawn-breakers" style="width: 300px; transform: rotate(-1deg);" />
-	<p>This entire winter has been spent porting Ocean 2.0 to a faster and more lightweight framework. The advantage of this is that I get to keep Ocean in ‘beta’ status for yet another year. ;) </p>
-		<ul>
-				<li><a href='/ocean'>Ocean 2.0 App Download Page ⤳ </a></li>
-				<!-- <li><a href='/ocean'>Ocean Youtube videos ⤳ </a></li>
-				<li><a href='/ocean'>Ocean 2.0 Facebook Group ⤳ </a></li>
-				<li><a href='/ocean'>Ocean Twitter sharing ⤳ </a></li> -->
-		</ul>
+	<h2><a href="/ocean">Ocean 2.0 Interfaith Reader - Updates</a></h2>
+	<h4 class="-mt-1"> Lots of freshly-narrated and word-aligned books </h4>
+
+	<img class="floater invisible md:visible" src="/ocean_assets/images/sshot_pickthall.png" alt="Ocean reading dawn-breakers" style="width: 300px; transform: rotate(-1deg);" />
+	<!-- <p>This entire winter has been spent porting Ocean 2.0 to a faster and more lightweight framework. The advantage of this is that I get to keep Ocean in ‘beta’ status for yet another year. ;) </p> -->
+
+ <p>We’ve been busy all winter fixing mis-reads, adding new books, narrating and aligning audio. No one will ever believe how difficult it is to audio-align a book. Nearly every single word must be manually checked and adjusted. ;)  Some of the books with completed narration now include:</p>
+
+<ul>
+	<li> Christian/Judaic: <i>The King James Bible</i> (all books)  </li>
+	<li> Islam: <i>Pickthall's Qur'an</i>, <i>Confessions of Ghazzali</i> </li>
+	<li> <i>The Tao Te Ching</i> </li>
+	<li> Buddhism: <i>The Dhammapada</i>, <i>The Diamond Sutra</i>, <i>The Gateless Gate</i>, <i>The Heart Sutra</i> </li>
+	<li> <i>The Confucian Analects</i> </li>
+	<li> Hinduism: <i>The Bhagavad-Gita</i>, <i>Songs of Kabir</i></li>
+</ul>
+
+
+
+
+
+<h4>Our Bahá’í Collection now includes the following narrated books:</h4>
+<img class="floater invisible md:visible" src="/ocean_assets/images/library_sshot.png" alt="Ocean library" style="width: 300px; transform: rotate(1deg); margin-top:0em;" />
+
+<ol>
+	<li class="italic"> The Dawn-Breakers </li>
+	<li class="italic"> God Passes By </li>
+	<li class="italic"> A Traveler’s Narrative </li>
+	<li class="italic"> Days of Remembrance </li>
+	<li class="italic"> Compilation on Deepening </li>
+	<li class="italic"> Gleanings from the Writings of Bahá’u’lláh </li>
+	<li class="italic"> Memorials of the Faithful </li>
+	<li class="italic"> Paris Talks  </li>
+	<li class="italic"> Prayers and Meditations </li>
+	<li class="italic"> Selections from the Writings of Bahá’u’lláh </li>
+	<li class="italic"> Some Answered Questions  </li>
+	<li class="italic"> The Advent of Divine Justice </li>
+	<li class="italic"> The Secret of Divine Civilization </li>
+	<li class="italic"> Will and Testament of ‘Abdu’l-Bahá </li>
+</ol>
+
+
+<h4 class="center"><a href='/ocean'> Download Page for Ocean 2.0 Interfaith Reader ⤳ </a></h4>
+			<!-- <li><a href='/ocean'>Ocean Youtube videos ⤳ </a></li>
+			<li><a href='/ocean'>Ocean 2.0 Facebook Group ⤳ </a></li>
+			<li><a href='/ocean'>Ocean Twitter sharing ⤳ </a></li> -->
+
 </div>
 
 <div class="item news pr-3 md:pr-32">
 	<img class="floater invisible md:visible" src="https://notepad.com/_nuxt/img/77d643c.gif" alt="db challenge participants" style="width: 250px; transform: rotate(2deg); margin-top:0em;" />
 	<h2><a href="/courses/arabic-bootcamp"> Literary Arabic Bootcamp - A crazy experiment... </a></h2>
-	<p>Also over a busy winter, we've been preparing an experimental Intensive Arabic retreat like no other. The aim is to get students from nearly zero to reading real Arabic literature in just a few days. If you are up for a serious immersion challenge, come and join us this summer! </p>
-		<ul>
-				<li><a href='/courses/arabic-bootcamp'>Immersion Arabic Boot Camp ⤳ </a></li>
-				<!-- <li><a href='https://notepad.com/courses/' target="_blank">Online Prep Course ⤳ </a></li> -->
-		</ul>
+
+	<p>It’s been a busy winter. We’ve been preparing a really fun experimental Intensive Arabic retreat. The aim is to get students from nearly zero to daily reading of real Arabic literature - and in just 5 days. This program will be appropriate for beginner and intermediate students - as the core daily work will be self-paced. </p>
+
+	<p>If you are up for a serious immersion challenge, come and join us this summer! </p>
+
+	<h4><a href='/courses/arabic-bootcamp'>Intensive 5-Day Arabic Boot Camp ⤳ </a></h4>
+
 </div>
 
 
