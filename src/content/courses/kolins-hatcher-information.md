@@ -3,7 +3,6 @@ id: kolins-hatcher-information
 title: "An Explosion of Information"
 teachers:
   - Steven Kolins
-  - John Hatcher
 facebook: ""
 image: "/courses/steve-kolins.png#floater_sm"
 ---

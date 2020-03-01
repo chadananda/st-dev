@@ -35,7 +35,7 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 
 <div class="item news pr-3 md:pr-32">
 	<h2><a href="/courses">Spiritual Weekend Retreats</a></h2>
-	<img class="floater invisible md:visible" src="/courses/weekend-catalog.png" alt="" style="width: 300px; transform: rotate(1deg); margin-top:-2em;" />
+	<img class="floater invisible md:visible" src="/courses/weekend-catalog.png" alt="" style="width: 200px; transform: rotate(1deg); margin-top:-2.5em;" />
 
 	<p>We’ve lined up a fantastic array of speakers for weekend study programs - each of whom demonstrates God's brilliant gift of genius in their particular areas of exptertise. </p>
 
