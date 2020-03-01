@@ -14,7 +14,7 @@ image: "/courses/rob-stockman-tall.jpeg#floater_sm2"
 
 ![robert stockman](/courses/rob-stockman-wide.jpeg#full)
 
-## A Weekend Study Retreat
+## A Weekend Study Retreat with Robert Stockman
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960

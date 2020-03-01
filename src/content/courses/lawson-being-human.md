@@ -16,7 +16,7 @@ Join us for a wonderful 3-day retreat with reknowned professor Todd Lawson who w
 
 ![temple](/courses/todd-lawson-wide.jpg#full)
 
-## Mid-week Study Retreat
+## Mid-week Study Retreat with Todd Lawson
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960

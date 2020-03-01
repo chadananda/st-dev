@@ -16,7 +16,7 @@ Abdu’l-Bahá devoted his entire life to teaching the Faith. He said: "O that I
 
 ![temple](/courses/abdul-baha-young-wide.jpg#full)
 
-## Weekend Study Retreat
+## Weekend Study Retreat with Teresa and David Langness
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960

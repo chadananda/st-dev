@@ -14,7 +14,7 @@ Taking an interdisciplinary approach, Nader Saiedi examines the Báb’s major w
 
 ![nader saiedi](/courses/nader-saiedi-wide.jpg#full)
 
-## A Weekend Study Retreat
+## A Weekend Study Retreat with Nader Saiedi
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960

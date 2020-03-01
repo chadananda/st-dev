@@ -7,14 +7,14 @@ facebook: ""
 image: "/courses/sours-tall.jpg#floater_sm"
 ---
 
-Michael Sours will be presenting on the strange assumptions which rise from a distinctly Christian "New Atheism" and the implications of Baha'u'llah's assertion of two distinct types of knowledge from the Kitáb-i-Íqán.
+Michael (Sours) Rohani will be presenting on the strange assumptions which rise from a distinctly Christian "New Atheism" and the implications of Baha'u'llah's assertion of two distinct types of knowledge from the Kitáb-i-Íqán.
 
 ---
 
 
 ![Michael Sours](/courses/sours-wide.jpg#full)
 
-## A Weekend Study Retreat
+## A Weekend Study Retreat with Michael (Sours) Rohani
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
@@ -27,7 +27,7 @@ Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
 
 ![book cover](/courses/sours-without-syllable.jpg#floater2)
 
-Michael Sours will be presenting on the strange assumptions which rise from a distinctly Christian "New Atheism" and the implications of Baha'u'llah's assertion of two distinct types of knowledge from the Kitáb-i-Íqán.
+Michael will be presenting on the strange assumptions which rise from a distinctly Christian "New Atheism" and the implications of Baha'u'llah's assertion of two distinct types of knowledge from the Kitáb-i-Íqán.
 
 
 ###  Dr. Sours is the author of numerous books exploring Interfaith topics and Bilical teachings

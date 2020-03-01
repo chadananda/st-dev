@@ -14,7 +14,7 @@ Shahrokh Monjazeb will explore some of the less known yet important Works of Bah
 
 ![shahrokh monjazeb](/courses/shahrokh-wide.jpg#full)
 
-## A Weekend Study Retreat
+## A Weekend Study Retreat with Shahrokh Monjazeb
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960

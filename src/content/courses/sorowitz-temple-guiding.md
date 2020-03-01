@@ -14,7 +14,7 @@ Thousands of people every day visit Mashriqu’l-Adhkárs around the world, many
 
 ![temple](/courses/temple-chile-exterior-pool.png#full)
 
-## A Weekend Study Retreat
+## A Weekend Study Retreat with Steve Sorowitz
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960

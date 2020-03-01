@@ -14,7 +14,7 @@ Dr Sima Quddusi will present on the Tablets to The Hague sent by 'Abdu'l-Baha (1
 
 ![dr quddusi](/courses/dr-quddusi-wide.png#full)
 
-## A Weekend Study Retreat
+## A Weekend Study Retreat with Sina Quddusi
 
 ```
 Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
