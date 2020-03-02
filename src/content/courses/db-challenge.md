@@ -80,6 +80,8 @@ Every student should bring their own copy of the Dawn-Breakers or a tablet or la
 
 ### How much? ($320)
 
-We're working hard to keep costs as low as possible — and so far that seems to come to about $30 per day for room, board and materials. Our costs are reduced because of the generosity of the community and some very dedicated volunteers. If you need any help getting to Sacramento, let us know and we’ll do whatever we can to get you here. If you’re driving and have extra room for a ride share, let us know.
+We're working hard to keep costs as low as possible — and so far that seems to come to about $30 per day for room, board and materials. This program includes eleven nights and 32 meals plus lots and lots of coffee.
+
+Our costs are reduced because of the generosity of the community and some very dedicated volunteers. If you need any help getting here, just let us know. We’ll do whatever we can to find a way. If you’re driving and have extra room for a ride share, let us know.
 
 <br><br><br><br>

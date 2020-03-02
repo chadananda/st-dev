@@ -55,6 +55,6 @@ Every student should bring their tablet or laptop computer. Materials, pencils, 
 
 We’re working hard to keep costs as low as possible. This program includes seven nights lodging and twenty-three meals - as well as transportation to and from the airport, if you are arriving by plane.
 
-Our costs are reduced because of the generosity of the community and some very dedicated volunteers. If you need any help getting to Sacramento, let us know and we’ll do whatever we can to get you here. If you’re driving and have extra room for a ride share, let us know.
+Our costs are reduced because of the generosity of the community and some very dedicated volunteers. If you need any help getting here, just let us know. We’ll do whatever we can to find a way. If you’re driving and have extra room for a ride share, let us know.
 
 <br><br><br><br>

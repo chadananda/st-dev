@@ -12,7 +12,7 @@
 	<img class="floater invisible md:visible" src="/db-challenge/db-chall-jul-2019.jpg" alt="db challenge participants" style="margin-top:1.5em; margin-left:1em; margin-bottom: 1em;" />
 	<p>Last year we had a wonderful adventure with a series of in-depth Dawn-Breakers study retreats.  And, by popular demand, we’re going to do it all over again. And we’re also adding a few new programs to the mix.  </p>
 
-	<p>Reading the entire book together in a single sweep is a profound sprititual experience.  </p>
+	<p>Reading the entire book together in a single sweep is a profound spiritual experience.  </p>
 
  <p class="italic text-gray-800" style="margin-left: 1em;">
 Nabíl’s narrative is not merely a narrative; it is a book of meditation. It does not only teach. It actually inspires and incites to action.... It quickens and stimulates our dormant energies and makes us soar on a higher plane.
@@ -112,7 +112,7 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 </div>
 
 <div class="item news pr-3 md:pr-32">
-	<img class="floater invisible md:visible" src="https://notepad.com/_nuxt/img/77d643c.gif" alt="db challenge participants" style="width: 250px; transform: rotate(2deg); margin-top:0em;" />
+	<img class="floater invisible md:visible" src="https://notepad.com/_nuxt/img/77d643c.gif" alt="db challenge participants" style="width: 250px; transform: rotate(-2deg); margin-top:0em; filter: brightness(.6) contrast(5);" />
 	<h2><a href="/courses/arabic-bootcamp"> Literary Arabic Bootcamp - A crazy experiment... </a></h2>
 
 	<p>It’s been a busy winter. We’ve been preparing a really fun experimental Intensive Arabic retreat. The aim is to get students from nearly zero to daily reading of real Arabic literature -  in just 6 days. This program will be appropriate for beginner and intermediate students - as the core daily work will be self-paced. </p>
