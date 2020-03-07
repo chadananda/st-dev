@@ -12,7 +12,7 @@
       <th class="date">Date</th>
       <th class="title">Course</th>
       <th class="cost hidden sm:table-cell">Cost</th>
-      <th class="places hidden sm:table-cell">Open Seats</th>
+      <!-- <th class="places hidden sm:table-cell">Open Seats</th> -->
     </tr>
   {#each sessions.filter(v => (
     CourseID && typeof CourseID === 'string'
@@ -30,7 +30,7 @@
       {session.Title}
       {#if !session.Confirmed} (tentative){/if}</a></td>
       <td class="cost hidden sm:table-cell">{session.Cost ? `$${session.Cost}` : ''}</td>
-      <td class="places hidden sm:table-cell">{(session.Capacity - session.Total)} / {session.Capacity}</td>
+      <!-- <td class="places hidden sm:table-cell">{(session.Capacity - session.Total)} / {session.Capacity}</td> -->
     </tr>
   {:else}
     <p>Loading sessions...</p>
