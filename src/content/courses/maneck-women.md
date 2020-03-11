@@ -7,7 +7,7 @@ facebook: ""
 image: "/courses/susan-maneck.jpg#floater_sm"
 ---
 
-Susan is an expert in near-eastern history and will be presenting on a very challenging topic: “The role of women in Zoroastrianism and Islam”. The patriarchal nature of the period makes it especially challenging to isolate the specific influence of great women so this will be an illuminating opportunity for particiants.
+Susan is an expert in near-eastern history and will be presenting on a very challenging topic: “The role of women in Zoroastrianism and Islam”. The patriarchal nature of the period makes it especially challenging to isolate the specific influence of great women so this will be an illuminating opportunity for participants.
 
 
 ---
@@ -29,8 +29,7 @@ Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
 
 Dr. Susan Maneck is an Associate Professor in the History and Philosophy Department at Jackson State University where she teaches courses in Middle East and South Asian History, World Civilization, and Comparative Religion. She is a reknowned contributor to Bahá’í academic journals and scholarly forums.
 
-“The role of women in Zoroastrianism and Islam” is an especially timely topic. The patriarchal nature of the period makes it especially challenging to isolate the specific influence of great women so this will be an illuminating opportunity for particiants.
-
+“The role of women in Zoroastrianism and Islam” is an especially timely topic. The patriarchal nature of the period makes it especially challenging to isolate the specific influence of great women so this will be an illuminating opportunity for participants.
 
 
 
