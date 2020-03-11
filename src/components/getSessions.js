@@ -19,13 +19,13 @@ async function doGet() {
   .map(v => {
     v.StartDate = v.StartDate.substring(0,10)
     v.EndDate = v.EndDate.substring(0,10)
-    v.href = '/courses/'
-    if (courselist.indexOf(v.CourseID) === -1) v.href += `detail?date=${v.StartDate}&id=`
-    v.href += v.CourseID
     v.meta = {
       id: v.CourseID,
       title: v.Title
     }
+    v.meta.href = '/courses/'
+    if (courselist.indexOf(v.CourseID) === -1) v.meta.href += `detail?date=${v.StartDate}&id=`
+    v.meta.href += v.CourseID
     return v
   })
   sessions = sessions.map((v,i) => {

@@ -13,6 +13,7 @@ const now = (new Date()).toISOString().split('T')[0]
 export default function getContent(filePath = '', opts = {}) {
   let options = {
     index: false,
+    path: opts.path || filePath,
     extensions: ['md'] || opts.md,
     sort: 'title',
     sortDir: ['desc','d',-1].indexOf(opts.sortDir || '') !== -1 ? -1 : 1,
@@ -23,7 +24,7 @@ export default function getContent(filePath = '', opts = {}) {
     .filter(o => path.parse(o.path).ext === '.md')    // only files that are .md
     .map(o => {                                       // parse markdown and json for files
       let f = matter.read(o.path, { excerpt:true })
-      f.meta = Object.assign({}, f.data)
+      f.meta = Object.assign({image: {}, schema: {}}, f.data)
       f.meta.file = {
         path: o.path,
         date: o.stats.ctime,
@@ -53,9 +54,11 @@ export default function getContent(filePath = '', opts = {}) {
       if (options.index) delete f.content
       else f.html = md.render(f.content)
 
-      f.excerptText = f.excerpt.replace(/<[^>]+?>/gm, '')
+      if (!f.meta.description) f.meta.description = f.excerpt.replace(/<[^>]+?>/gm, '').replace(/\n/gm, ' ').trim()
       f.meta.slug = slugify(path.parse(o.path).name, {lower:true, remove: /[*+~.()'"!:@,]/g})
       f.meta.id = f.meta.slug
+      f.meta.href = `/${options.path}/${f.meta.id}`
+      if (f.meta.image && typeof f.meta.image === 'string') f.meta.image = { src: f.meta.image, alt: f.meta.title }
       return f
     })
     .filter(f => f.meta.pubdate <= now)

@@ -16,7 +16,7 @@
 {#each content as item}
 	<tr>
 		<td>{(new Date(item.meta.pubdate)).toLocaleDateString('en-US', {month: "short", day: "numeric"})}</td>
-		<td><a href="/blog/{item.meta.slug}" title="{item.excerptText}">{item.meta.title}</a></td>
+		<td><a href="/blog/{item.meta.slug}" title="{item.meta.description}">{item.meta.title}</a></td>
 	</tr>
 {:else}
    <!-- empty list -->

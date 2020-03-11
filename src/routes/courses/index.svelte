@@ -32,14 +32,14 @@
 
 		-->
 		<!-- course summary here -->
-		<div class="course_summary m-6" on:click={()=> goto(`/courses/${item.meta.slug}`)}>
+		<div itemscope itemtype="http://schema.org/Course" class="course_summary m-6" on:click={()=> goto(item.meta.href)}>
 				{#if item.meta.image}
-					<img src="{item.meta.image}" alt="{item.meta.altText || `${item.meta.title}`}" class="floater" />
+					<img itemprop="image" src="{item.meta.image.src}" alt="{item.meta.image.alt || item.meta.title}" class="floater" />
 				{/if}
-				<h2><a href="/courses/{item.meta.slug}">{item.meta.title}</a></h2>
+				<a itemprop="mainEntityOfPage" rel="prefetch" href="{item.meta.href}"><h2 itemprop="name">{item.meta.title}</h2></a>
 				<h4 class="teacher"> ~ {item.meta.teachers.join(', ')} </h4>
 				{#if item.excerpt}
-						{@html item.excerpt}
+					<div itemprop="abstract">{@html item.excerpt}</div>
 				{/if}
 		</div>
 		<div class="clearfix" />
