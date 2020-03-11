@@ -4,6 +4,7 @@
   "version": "0.1.12",
   "scripts": {
     "dev": "sapper dev -p 1844 -o",
+    "serve": "lt -h http://serverless.social -p 1844 -o",
     "export": "NODE_ENV=production sapper export --concurrent 1 --entry '/jsonlinks /'",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
@@ -67,6 +68,7 @@
     "gray-matter": "^4.0.2",
     "js-yaml": "^3.13.1",
     "klaw-sync": "^6.0.0",
+    "localtunnel": "^2.0.0",
     "markdown-it": "^8.4.2",
     "markdown-it-attrs": "^2.4.0",
     "markdown-it-emoji": "^1.4.0",
