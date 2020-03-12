@@ -4,16 +4,18 @@ title: "The Writings of Shoghi Effendi"
 teachers:
   - Jack McLean
 facebook: ""
-image: "/courses/mclean.jpg#floater_sm"
+image: "/courses/mclean.jpg"
+hero:
+  src: /courses/mclean-wide.jpg
+  alt: Jack McLean sitting and reading in front of a bookshelf
+schema:
+  type: Course
 ---
 
 A Celestial Burning - the Writings of Shoghi Effendi. Jack will explore themes of his award-winning book on Shoghi Effendi. Including Shoghi Effendi's view of providential history as divine drama, his effective use of rhetoric, his views on morality and spirituality, his understanding of the emerging world order as a modern-day apocalypse, and it analyzes the style and patterns that emerge from his epistolary prose.
 
 
 ---
-
-
-![jack mclean](/courses/mclean-wide.jpg#full)
 
 ## A Weekend Study Retreat with Jack Mclean
 

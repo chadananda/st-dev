@@ -4,15 +4,17 @@ title: "The Tablets to The Hague"
 teachers:
   - Dr Sima Quddusi
 facebook: ""
-image: "/courses/dr-quddusi.png#floater_sm"
+image: "/courses/dr-quddusi.png"
+hero:
+  src: /courses/dr-quddusi-wide.png
+  alt: an informal photo of Dr. Sima Quddusi, a woman with a warm smile
+schema:
+  type: Course
 ---
 
 Dr Sima Quddusi will present on the Tablets to The Hague sent by 'Abdu'l-Baha (1919, 1920). These two letters of ‘Abdu’l-Bahá were written in response to letters addressed to Him by the Executive Committee of the Central Organization for a Durable Peace. These letters include a summation of the Bahá’í social teachings and a rebuttal to materalistic theories of progress, for example by asserting that man must unite spritiutally before political peace is possible, and that man must solve the economic problem voluntarily, rather than through the force of coercive law.
 
 ---
-
-
-![dr quddusi](/courses/dr-quddusi-wide.png#full)
 
 ## A Weekend Study Retreat with Sima Quddusi
 

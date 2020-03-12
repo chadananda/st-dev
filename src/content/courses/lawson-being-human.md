@@ -4,7 +4,12 @@ title: "Being Human: Bahá’í Perspective on Islam, Modernity, and Peace"
 teachers:
   - Todd Lawson
 facebook: ""
-image: "/courses/todd-lawson_sm.jpg#floater_sm2"
+image: "/courses/todd-lawson_sm.jpg"
+hero:
+  src: /courses/todd-lawson-wide.jpg
+  alt: Todd Lawson speaking at a podium
+schema:
+  type: Course
 ---
 
 Join us for a wonderful 3-day retreat with reknowned professor Todd Lawson who will be speaking about his recent book "Being Human".
@@ -12,9 +17,6 @@ Join us for a wonderful 3-day retreat with reknowned professor Todd Lawson who w
 "Being Human" seeks to harmonize many contradictions and demonstrate how Baha'i teachings point the way toward peace and the reconciliation of all world religions.
 
 ---
-
-
-![temple](/courses/todd-lawson-wide.jpg#full)
 
 ## Mid-week Study Retreat with Todd Lawson
 

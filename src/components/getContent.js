@@ -59,6 +59,8 @@ export default function getContent(filePath = '', opts = {}) {
       f.meta.id = f.meta.slug
       f.meta.href = `/${options.path}/${f.meta.id}`
       if (f.meta.image && typeof f.meta.image === 'string') f.meta.image = { src: f.meta.image, alt: f.meta.title }
+      if (!f.meta.hero) f.meta.hero = f.meta.image
+      else if (typeof f.meta.hero === 'string') f.meta.hero = { src: f.meta.hero, alt: f.meta.title }
       return f
     })
     .filter(f => f.meta.pubdate <= now)

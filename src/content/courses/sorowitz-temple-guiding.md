@@ -4,15 +4,17 @@ title: Effective Mashriqu’l-Adhkár Teaching
 teachers:
   - Steve Sarowitz
 facebook: ""
-image: "/courses/steve-sarowitz.jpg#floater_sm"
+image: "/courses/steve-sarowitz.jpg"
+hero:
+  src: /courses/temple-chile-exterior-pool.png
+  alt: a perfectly still pool of water reflects the Bahá’í Temple in Santiago Chile, an beautiful building of soft white alabaster in the shape of flower petals or sails
+schema:
+  type: Course
 ---
 
 Thousands of people every day visit Mashriqu’l-Adhkárs around the world, many just as tourists but many others with profound spiritual questions. A handful of guides is involved in anwering questions and stimulating curiosity in the souls these seekers. “Teaching in the Mashriqu’l-Adhkár” has broad applications for teaching anywhere in the world. Steve Sarowitz is the producer of the feature-length film, “The Gate: Dawn of the Bahá’í Faith”
 
 ---
-
-
-![temple](/courses/temple-chile-exterior-pool.png#full)
 
 ## A Weekend Study Retreat with Steve Sarowitz
 

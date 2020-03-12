@@ -5,15 +5,17 @@ teachers:
   - Nabil Fares
   - Azadeh Mohandessi-Fares
 facebook: ""
-image: "/courses/azadeh-fares.jpg#floater_sm2"
+image: "/courses/azadeh-fares.jpg"
+hero:
+  src: /courses/azadeh-fares-wide.jpg
+  alt: Azadeh Fares smiles warmly in a cafe
+schema:
+  type: Course
 ---
 
 The Kitáb-i-Aqdas ranks among the formost treasures of Bahá’u’lláh's vast revelation. It “stands out, by virtue of the principles it inculcates, the administrative institutions it ordains and the function with which it invests the appointed Successor of its Author, unique and incomparable among the world’s sacred Scriptures.” Nabil is a native speaker in Arabic, and Azadeh is a native speaker in Persian. They have been working together in English for decades, sharing the wonders of The Kitáb-i-Aqdas.
 
 ---
-
-
-![temple](/courses/azadeh-fares-wide.jpg#full)
 
 ## A Weekend Study Retreat with Nabil and Azadeh Fares
 

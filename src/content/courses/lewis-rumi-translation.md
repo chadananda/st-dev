@@ -4,15 +4,17 @@ title: "Arabic and Persian Poetry: Ibn al-Faríd, Rúmí, and Bahá’u’lláh"
 teachers:
   - Frank Lewis
 facebook: ""
-image: "/courses/frank-lewis-tall.png#floater_sm2"
+image: "/courses/frank-lewis-tall.png"
+hero:
+  src: /courses/frank-lewis-wide.png
+  alt: Frank Lewis standing in a bright garden
+schema:
+  type: Course
 ---
 
 Franklin Lewis will be presenting on poetry from Arabic and Persian poets. Frank is an Associate Professor of Persian Language and Literature, and Chair of the Department of Near Eastern Languages and Civilizations at the University of Chicago with affiliations to the Center for Middle Eastern Studies at the University of Chicago. He teaches classes on Persian language and literature, Islamic thought, Sufism, Baha'i Studies, translation studies, and Middle Eastern cinema.
 
 ---
-
-
-![frank lewis](/courses/frank-lewis-wide.png#full)
 
 ## A Weekend Study Retreat with Frank Lewis
 

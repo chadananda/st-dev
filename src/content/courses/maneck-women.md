@@ -4,16 +4,18 @@ title: "Women in Zoroastrianism and Islam"
 teachers:
   - Susan Maneck
 facebook: ""
-image: "/courses/susan-maneck.jpg#floater_sm"
+image: "/courses/susan-maneck.jpg"
+hero:
+  src: /courses/susan-maneck-wd.jpg
+  alt: Susan Maneck speaking on a stage
+schema:
+  type: Course
 ---
 
 Susan is an expert in near-eastern history and will be presenting on a very challenging topic: “The role of women in Zoroastrianism and Islam”. The patriarchal nature of the period makes it especially challenging to isolate the specific influence of great women so this will be an illuminating opportunity for participants.
 
 
 ---
-
-
-![nader saiedi](/courses/susan-maneck-wd.jpg#full)
 
 ## A Weekend Study Retreat with Susan Maneck
 

@@ -4,15 +4,17 @@ title: "Persian Bayán, Panj-Sha’n and Kitáb-i-Íqán"
 teachers:
   - Habib Riazati
 facebook: ""
-image: "/courses/habib-tall.png#floater_sm"
+image: "/courses/habib-tall.png"
+hero:
+  src: /courses/habib-wide.png
+  alt: Habib Riazati speaking at a lectern and gestering animatedly with both hands
+schema:
+  type: Course
 ---
 
 As He lay confined within the walls of the castle, He devoted His time to the composition of the **Persian Bayán**, the most weighty, the most illuminating and comprehensive of all His works. In it He laid down the laws and precepts of His Dispensation, plainly and emphatically announced the advent of a subsequent Revelation, and persistently urged His followers to seek and find “Him whom God would make manifest,” warning them lest they allow the mysteries and allusions in the Bayán to interfere with their recognition of His Cause.
 
 ---
-
-
-![temple](/courses/habib-wide.png#full)
 
 ## A Weekend Study Retreat with Habib Riazati
 

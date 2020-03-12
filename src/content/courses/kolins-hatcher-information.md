@@ -4,15 +4,17 @@ title: "An Explosion of Information"
 teachers:
   - Steven Kolins
 facebook: ""
-image: "/courses/steve-kolins.png#floater_sm"
+image: "/courses/steve-kolins.png"
+hero:
+  src: /courses/steve-kolins-wide.jpg
+  alt: close photo of Steve Kolins
+schema:
+  type: Course
 ---
 
 The global infrustructure for sharing information has just gone through a profound and unprecedented lurch forward. In our pockets we carry a thousand times the information of the Library of Alexandria. And yet in our minds, we are years behind the present in our awareness of opportunities right in front of us.
 
 ---
-
-![steve kolins](/courses/steve-kolins-wide.jpg#full)
-
 
 ## A Weekend Study Retreat with Steve Kolins
 

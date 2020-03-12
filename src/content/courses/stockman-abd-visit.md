@@ -4,15 +4,17 @@ title: "‘Abdu’l-Bahá’s visit to North America"
 teachers:
   - Robert Stockman
 facebook: ""
-image: "/courses/rob-stockman-tall.jpeg#floater_sm2"
+image: "/courses/rob-stockman-tall.jpeg"
+hero:
+  src: /courses/rob-stockman-wide.jpeg
+  alt: Robert Stockman participates in a table discussion
+schema:
+  type: Course
 ---
 
 ‘Abdu’l-Bahá in America recounts the journey of ‘Abdu’l-Bahá, the eldest son of Bahá’u’lláh and appointed head of the Bahá’í Faith after his father's passing, across much of the United States in 1912. His exhausting yet exhilarating 239-day trek from coast to coast took him to fifty cities and towns, where he delivered up to four talks a day -- about four hundred total -- to approximately 93,000 people on Bahá’u’lláh’s message of the oneness of humanity and the principles of universal peace.
 
 ---
-
-
-![robert stockman](/courses/rob-stockman-wide.jpeg#full)
 
 ## A Weekend Study Retreat with Robert Stockman
 

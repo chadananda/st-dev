@@ -5,16 +5,18 @@ teachers:
   - Teresa Langness
   - David Langness
 facebook: ""
-image: "/courses/teresa-langness.jpg#floater_sm2"
+image: "/courses/teresa-langness.jpg"
+hero:
+  src: /courses/abdul-baha-young-wide.jpg
+  alt: ‘Abdu’l-Bahá, as a young man, seated in a chair for an official portrait
+schema:
+  type: Course
 ---
 
 
 Abdu’l-Bahá devoted his entire life to teaching the Faith. He said: "O that I could travel, even though on foot and in the utmost poverty, to these regions, and, raising the call of "Ya Baha'u'l-Abha" in cities, villages, mountains, deserts and oceans, promote the divine teachings! This, alas, I cannot do. How intensely I deplore it! Please God, ye may achieve it."
 
 ---
-
-
-![temple](/courses/abdul-baha-young-wide.jpg#full)
 
 ## Weekend Study Retreat with Teresa and David Langness
 

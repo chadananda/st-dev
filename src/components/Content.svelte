@@ -33,8 +33,8 @@
 <div itemscope itemtype="https://schema.org/{content.meta[content.meta.schema.type] || content.meta.schema.type || 'Thing'}" id="content">
   <h1 itemprop="name" class="title">{content.meta.title}</h1>
 
-  {#if content.meta.image && content.meta.image.src}
-    <img itemprop="image" src="{content.meta.image.src}#full" alt="{content.meta.image.alt || content.meta.title || ''}" title="{content.meta.image.title || ''}" />
+  {#if content.meta.hero && content.meta.hero.src}
+    <img itemprop="image" src="{content.meta.hero.src}#full" alt="{content.meta.hero.alt || content.meta.title || ''}" title="{content.meta.hero.title || ''}" />
   {/if}
 
   <slot></slot>

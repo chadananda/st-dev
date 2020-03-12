@@ -4,15 +4,17 @@ title: "Discovering the Hidden Gems beneath the Ocean of Bahá’u’lláh’s R
 teachers:
   - Shahrokh Monjazeb
 facebook: ""
-image: "/courses/shahrokh-nar.jpg#floater_sm2"
+image: "/courses/shahrokh-nar.jpg"
+hero:
+  src: /courses/shahrokh-wide.jpg
+  alt: Shahrokh Monjazeb, a man with a short black beard and energetic eyes, giving a talk
+schema:
+  type: Course
 ---
 
 Shahrokh Monjazeb will explore some of the less known yet important Works of Bahá'u'lláh from the three major periods of His Ministry.
 
 ---
-
-
-![shahrokh monjazeb](/courses/shahrokh-wide.jpg#full)
 
 ## A Weekend Study Retreat with Shahrokh Monjazeb
 

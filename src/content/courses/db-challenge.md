@@ -4,13 +4,12 @@ title: Dawn-Breakers Challenge ~ 9 Events in 2020
 teachers:
   - Chad Jones
 facebook: https://www.facebook.com/The-Dawn-Breakers-Challenge-329820570524376/
-image: 
+image: /db-challenge/participants-2019-2.jpg
+hero:
   src: /db-challenge/db-banner-2019.jpg
   alt: Dawn-Breakers Challenge study class
 schema:
   type: Course
-  ogImage: /db-challenge/participants-2019-2.jpg
-  twitterImage: /db-challenge/participants-2019-2.jpg
 ---
 
 Please join us in Northern California in 2020 for a fun and intensive 10-day study of “The Dawn-Breakers” together with the primary doctrinal work of the Bahá'í Faith, “The Kitáb-i-Íqán.”

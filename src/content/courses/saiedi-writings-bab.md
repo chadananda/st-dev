@@ -4,15 +4,17 @@ title: "The Writings and the Worldview of the Báb"
 teachers:
   - Nader Saiedi
 facebook: ""
-image: "/courses/nader-saiedi-nar.jpg#floater_sm"
+image: "/courses/nader-saiedi-nar.jpg"
+hero:
+  src: /courses/nader-saiedi-wide.jpg
+  alt: Nader Saiedi talks at a lectern where boquets of flowers are arranged
+schema:
+  type: Course
 ---
 
 Taking an interdisciplinary approach, Nader Saiedi examines the Báb’s major works in multifaceted context, explaining the unique theological system, mystical world view, and interpretive principles they embody as well as the rhetorical and symbolic uses of language through which the Báb radically transforms traditional concepts.
 
 ---
-
-
-![nader saiedi](/courses/nader-saiedi-wide.jpg#full)
 
 ## A Weekend Study Retreat with Nader Saiedi
 
