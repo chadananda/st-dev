@@ -25,8 +25,8 @@ Retreat Address: 1999 Ridge Rd, North San Juan, CA 95960
 
 ## Dates
 ```
-April 6-17
- May 4-15
+~April 6-17~  Cancelled due to COVID-19
+ ~May 4-15~   Cancelled due to COVID-19
  June 8-19
  July 6-17
  August 3-14
