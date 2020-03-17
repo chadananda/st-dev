@@ -24,7 +24,7 @@
       class:closed={session.StartDate < today}
       class:tentative={!session.Confirmed}>
       <td class="date">{session.StartDateDisplay} – {session.EndDateDisplay}</td>
-      <td class="title"><a href="{session.meta.href || session.href}" on:click={() => {
+      <td class="title"><a href="{(session.meta || {}).href || session.href}" on:click={() => {
         if (typeof window !== 'undefined') localStorage.setItem('sessionDate', session.StartDate)
       }}>
       {session.Title}

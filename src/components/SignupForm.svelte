@@ -130,7 +130,7 @@
 
   // Calculate session based on form value
   let session = {}
-  $: session = (sessions.filter(s => s.CourseID === course.meta.id && s.StartDate === values.StartDate)[0]) || {}
+  $: session = (sessions.filter(s => s.CourseID === (course.meta || {}).id && s.StartDate === values.StartDate)[0]) || {}
 
   // Calculate totals
   let totals = { fullAmount:0, registrationAmount:0 }
