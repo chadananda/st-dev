@@ -16,15 +16,18 @@
 </script>
 
 {#if webinars.archive}
-	 <!-- content here -->
-	 {#each webinars.archive as item}
-		  <!-- content here -->
+	<!-- content here -->
+	{#each webinars.archive as item}
+			<!-- content here -->
 			<Video {item} />
-	 {:else}
-		  <!-- empty list -->
+	{:else}
+			<!-- empty list -->
 			empty list: webinars.archive
-	 {/each}
+	{/each}
 {:else}
-	 <!-- else content here -->
-	no webinars.archive
+	<!-- else content here -->
+	{#each Array(24) as item}
+		<!-- content here -->
+		<Video item={false} />
+	{/each}
 {/if}
