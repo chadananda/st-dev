@@ -66,8 +66,8 @@ export default async function getWebinars(update = false) {
 
 async function doGet() {
   let webinars = {
-    calendar: await fetch(url(1)).then(r => r.json()).then(r => r.feed.entry.slice(1).map(o => transformItem(o, 'webinar')).filter(o=>o)),
-    archive: await fetch(url(2)).then(r => r.json()).then(r => r.feed.entry.slice(1).map(o => transformItem(o)).filter(o=>o))
+    calendar: await fetch(url(1)).then(r => r.json()).then(r => r.feed.entry.map(o => transformItem(o, 'webinar')).filter(o=>o)),
+    archive: await fetch(url(2)).then(r => r.json()).then(r => r.feed.entry.map(o => transformItem(o)).filter(o=>o))
   }
   localStorage.setItem('webinars', JSON.stringify(webinars))
   localStorage.setItem('webinarsCacheTime', new Date())
