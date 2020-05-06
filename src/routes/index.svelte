@@ -8,11 +8,11 @@
 
 <div class="item news pr-3 md:pr-32">
  <img class="floater invisible md:visible" src="/courses/db-sun.jpg" alt="db challenge participants" style="width: 250px; transform: rotate(-1deg); margin-top: -2em; margin-left:-6em;" />
-	<h2><a href="/courses/db-challenge">The Dawn-Breakers Challenge - 2020</a></h2>
+	<h2><a href="/courses/db-challenge">The Dawn-Breakers Challenge - 2021</a></h2>
 	<img class="floater invisible md:visible" src="/db-challenge/db-chall-jul-2019.jpg" alt="db challenge participants" style="margin-top:1.5em; margin-left:1em; margin-bottom: 1em;" />
-	<p>Last year we had a wonderful adventure with a series of in-depth Dawn-Breakers study retreats.  And, by popular demand, we’re going to do it all over again. And we’re also adding a few new programs to the mix.  </p>
+	<p>Last year we had a wonderful adventure with a series of in-depth Dawn-Breakers study retreats.  And, by popular demand, we’re going to do it all over again. <b><i>But, according Covid-19, not this year!! </i></b>	  </p>
 
-	<p>Reading the entire book together in a single sweep is a profound spiritual experience.  </p>
+	<p>So if you're especially stir-crazy, take a minute to sign up, in advance, for an adventure study retreat in 2021. </p>
 
  <p class="italic text-gray-800" style="margin-left: 1em;">
 Nabíl’s narrative is not merely a narrative; it is a book of meditation. It does not only teach. It actually inspires and incites to action.... It quickens and stimulates our dormant energies and makes us soar on a higher plane.
@@ -22,7 +22,7 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 	<!-- <p>Also, I finally have a good place to put a bunch of downloadable resources. A big thanks to Dropbox for motivating me -- by freezing my account due to too much download traffic.</p> -->
 
 		<ul>
-				<li><a href='/courses/db-challenge' class="text-lg">Dawn-Breakers Challenge Retreats 2020 ⤳ </a></li>
+				<li><a href='/courses/db-challenge' class="text-lg">Dawn-Breakers Challenge Retreats 2021 ⤳ </a></li>
 				<li class="italic text-gray-700"> also...</li>
 				<!-- <li><a href='/dawn-breakers-challenge-materials'>Dawn-Breakers Challenge Downloadable Materials ⤳ </a></li> -->
 				<li><a href='https://www.facebook.com/The-Dawn-Breakers-Challenge-329820570524376/' target="_blank">Dawn-Breakers Challenge Facebook Page ⤳ </a>  </li>
@@ -33,7 +33,7 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 
 </div>
 
-<div class="item news pr-3 md:pr-32">
+<!-- <div class="item news pr-3 md:pr-32">
 	<h2><a href="/courses">Spiritual <i>Weekend</i> Retreats!</a></h2>
 	<img class="floater invisible md:visible" src="/courses/weekend-catalog.png" alt="" style="width: 200px; transform: rotate(1deg); margin-top:-2.5em;" />
 
@@ -58,7 +58,7 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 
 	<h4><a href='/courses/' class="text-lg">See the entire 2020 Calendar ⤳ </a></h4>
 
-</div>
+</div> -->
 
 
 <div class="item news pr-3 md:pr-32">
@@ -111,7 +111,7 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 
 </div>
 
-<div class="item news pr-3 md:pr-32">
+<!-- <div class="item news pr-3 md:pr-32">
 	<img class="floater invisible md:visible" src="/sshot-readalong.gif" alt="db challenge participants" style="width: 250px; transform: rotate(-2deg); margin-top:0em; filter: brightness(.6) contrast(5);" />
 	<h2><a href="/courses/arabic-bootcamp"> Literary Arabic Bootcamp - A crazy experiment... </a></h2>
 
@@ -121,7 +121,7 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 
 	<h4><a href='/courses/arabic-bootcamp'>Intensive 5-Day Arabic Boot Camp ⤳ </a></h4>
 
-</div>
+</div> -->
 
 
 
