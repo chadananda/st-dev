@@ -10,24 +10,36 @@
 	export let webinars = []
 	export let noSerialize
 	noSerialize()
-	import Video from '../../components/Video.svelte'
+	import Media from '../../components/Media.svelte'
 	import Debug from '../../components/Debug.svelte'
-	console.log(webinars)
 </script>
 
-{#if webinars.archive}
-	<!-- content here -->
-	{#each webinars.archive as item}
-			<!-- content here -->
-			<Video {item} />
-	{:else}
-			<!-- empty list -->
-			empty list: webinars.archive
+{#if !webinars.calendar || webinars.calendar.length === 0}
+	{#each Array(24) as item}
+		<Media item={false} />
 	{/each}
 {:else}
-	<!-- else content here -->
+	<h2 class="section">Webinars / Online Courses</h2>
+	{#each webinars.calendar as item}
+		<Media {item}>
+
+		</Media>
+	{/each}
+{/if}
+
+{#if !webinars.archive || webinars.archive.length === 0}
 	{#each Array(24) as item}
-		<!-- content here -->
-		<Video item={false} />
+		<Media item={false} />
+	{/each}
+{:else}
+	<h2 class="section">Media Archive</h2>
+	{#each webinars.archive as item}
+			<Media {item}>
+				<div class="flex">
+					<div class="provider flex-initial">{item.meta.provider}</div> &nbsp;·&nbsp;
+					<div class="count flex-initial">{item.meta.count} videos</div>
+					<div class="duration flex-auto text-right" itemprop="duration" value="{item.meta.duration}">{item.meta.hours}</div>
+				</div>
+			</Media>
 	{/each}
 {/if}

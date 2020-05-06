@@ -66,8 +66,8 @@ export default async function getWebinars(update = false) {
 
 async function doGet() {
   let webinars = {
-    calendar: await fetch(url(1)).then(r => r.json()).then(r => r.feed.entry.slice(1).map(o => transformItem(o, 'webinar'))),
-    archive: await fetch(url(2)).then(r => r.json()).then(r => r.feed.entry.slice(1).map(o => transformItem(o)))
+    calendar: await fetch(url(1)).then(r => r.json()).then(r => r.feed.entry.slice(1).map(o => transformItem(o, 'webinar')).filter(o=>o)),
+    archive: await fetch(url(2)).then(r => r.json()).then(r => r.feed.entry.slice(1).map(o => transformItem(o)).filter(o=>o))
   }
   localStorage.setItem('webinars', JSON.stringify(webinars))
   localStorage.setItem('webinarsCacheTime', new Date())
@@ -94,7 +94,9 @@ function plural(items, one, many) {
 function transformItem(o, type) {
   let tz = o.gsx$timezone && o.gsx$timezone.$t ? o.gsx$timezone.$t : 'UTC'
   type = type || (o.gsx$resource ? o.gsx$resource.$t : 'video')
-  let meta = { type }
+  let schema = { type: schemaOrgTypes[type] || 'Thing'}
+  if (type === 'playlist') schema['ogType'] = 'video'
+  let meta = { type, schema }
 
   Object.keys(o).filter(k => k.indexOf('$') > -1).forEach(k => {
     let name = k.slice(4).replace(/url$/, 'URL')
@@ -115,10 +117,43 @@ function transformItem(o, type) {
 
   if (typeof meta.count === 'number') meta.displayCount = plural(meta.count, meta.type, meta.type.trim() + 's')
 
-  meta.hero = {
+  meta.image = {
     src: meta.imageURL,
     alt: `${plural(meta.presenters || [], 'presenting', 'presenting')} ${meta.title}`
   }
-  return { meta }
+  meta.href = meta.href || meta.link || meta.eventURL || meta.titleURL || false
+
+  if (!meta.title || !meta.href) return false
+
+  return Object.assign({ meta }, {
+    title: meta.title,
+    snippet: meta.description,
+    image: meta.image,
+    html: escapeHtml(meta.description).replace().split(/\n*/).map(t => t.trim().length ? `<p>${t}</p>` : '').join('\n'),
+  })
 }
 
+const schemaOrgTypes = {
+  'audio': 'AudioObject',
+  'podcast': 'CreativeWorkSeries', // TODO
+  'video': 'VideoObject',
+  'playlist': 'CreativeWorkSeries', // TODO
+  'webinar': 'Course',
+}
+
+function escapeHtml (string) {
+  return String(string).replace(/[&<>"'`=\/]/g, function fromEntityMap (s) {
+    return entityMap[s];
+  });
+}
+
+const entityMap = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#39;',
+  '/': '&#x2F;',
+  '`': '&#x60;',
+  '=': '&#x3D;'
+};
