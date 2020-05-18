@@ -1,6 +1,7 @@
 const sheetID = '1nlsYAMLxbLdaf1gBJGgyMze4AvKfaws4zQbqEBi4iYw'
 const cacheMinutes = 15
 import spacetime from 'spacetime'
+spacetime.extend({ical: s => s.format('iso').replace(/^(\d+)-(\d+)-/, '$1$2').replace(/[:\.]/, '')})
 
 // const mediaTemplateMeta = {
 //   proivder: '',
@@ -102,12 +103,8 @@ constructor(o, type) {
   Object.keys(o).filter(k => k.indexOf('$') > -1).forEach(k => {
     let name = k.slice(4).replace(/url$/, 'URL')
     let v = o[k]['$t']
-    if (v.match(/^\d{4}-\d{2}-\d{2}(?:T[-0-9\.:]+Z)?$/)) v = DateTime.fromISO(v, { zone: tz }).toUTC()
-    else if (v.match(/^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), \d+ (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{4}/)) {
-      v = DateTime.fromRFC2822(v + ' GMT', { setZone: true }).toObject()
-      v.zone = tz
-      v = DateTime.fromObject(v).toUTC()
-    }
+    if (v.match(/^\d{4}-?\d{2}-?\d{2}T?(?:[-0-9\.:]+Z?)?$/)) v = spacetime(v, tz).goto('UTC')
+    else if (v.match(/^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), \d+ (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{4}/)) v = spacetime(v, tz).goto('UTC')
     else if (v.match(/^[\d,]+(?:\.\d+)?$/)) v = parseFloat(v)
     else if (k.match(/(?:categories|presenters|tags)$/)) v = v.split(/, ?/)
     this.meta[name] = v
@@ -120,33 +117,15 @@ constructor(o, type) {
   if (typeof this.meta.date === 'string' && this.meta.date_2)  this.meta.date = this.meta.date_2
 
   if (this.meta.starttime && this.meta.timestamp) {
-    let eventUID = ``
+    // format the VEVENT in vCalendar format
     this.meta.vevent = `BEGIN:VEVENT
-UID:${this.meta.timestamp.toISO({format:'basic'})}@sacred-traditions.org
-DTSTAMP:${this.meta.timestamp.toISO({format:'basic'})}
-DTSTART:${this.meta.starttime.toISO({format:'basic'})}`
-    if (this.meta.endtime) this.meta.vevent += `\nDTEND:${this.meta.endtime ? this.meta.endtime.toISO({format:'basic'}) : this.meta.starttime.toISO({format:'basic'})}`
-    if (this.meta.rrule) this.meta.vevent += `\nRRULE:${this.meta.rrule.replace(/^RRULE:/, '')}`
+UID:${this.meta.timestamp.ical()}@sacred-traditions.org
+DTSTAMP:${this.meta.timestamp.ical()}
+DTSTART:${this.meta.starttime.ical()}`
+    if (this.meta.endtime) this.meta.vevent += `\nDTEND:${this.meta.endtime.ical()}`
+    if (this.meta.weekly) this.meta.vevent += `\nRRULE:FREQ=WEEKLY`
     this.meta.vevent += `\nEND:VEVENT`
     this.meta.vevent = this.meta.vevent.replace(/\.\d{3}Z/gm, 'Z')
-    this.meta.icalEvent = ical.parseICS(this.meta.vevent)
-    Object.keys(this.meta.icalEvent).forEach(k => { this.meta.icalEvent = this.meta.icalEvent[k]; return; })
-    console.log(this.meta.icalEvent)
-    if (this.meta.icalEvent.rrule && typeof this.meta.icalEvent.rrule !== 'string') {
-      this.meta.instances = this.meta.icalEvent.rrule.between(now, nextYear)
-      if (this.meta.instances.length) {
-        this.meta.date = DateTime.fromISO(this.meta.instances[0])
-      }
-    }
-    else {
-      if (this.meta.starttime > now) {
-        this.meta.date = this.meta.starttime
-      }
-    }
-    if (!this.meta.date) {
-      this.status = false
-      return this
-    }
   }
 
   this.meta.image = {
