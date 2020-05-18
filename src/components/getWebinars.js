@@ -1,9 +1,6 @@
 const sheetID = '1nlsYAMLxbLdaf1gBJGgyMze4AvKfaws4zQbqEBi4iYw'
 const cacheMinutes = 15
-import { DateTime } from 'luxon'
-import ical from 'ical'
-const now = new Date()
-const nextYear = new Date().setYear(now.getFullYear() + 1)
+import spacetime from 'spacetime'
 
 // const mediaTemplateMeta = {
 //   proivder: '',
@@ -166,9 +163,10 @@ DTSTART:${this.meta.starttime.toISO({format:'basic'})}`
 }
 
 Media.prototype.plural = function(prop, one, many) {
-  val = this[prop] || this.meta[prop] || false
-  if (val === false) return ''
-  return parseInt(val) === 1 ? `1 ${one}` : `${val} ${many}`
+  if (typeof this[prop] !== 'undefined') val = this[prop]
+  else if (typeof this.meta[prop] !== 'undefined') val = this.meta[prop]
+  else return ''
+  return plural(val, one, many)
 }
 
 const schemaOrgTypes = {
