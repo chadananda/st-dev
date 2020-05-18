@@ -1,6 +1,9 @@
 const sheetID = '1nlsYAMLxbLdaf1gBJGgyMze4AvKfaws4zQbqEBi4iYw'
 const cacheMinutes = 15
-import spacetime from 'spacetime'
+import { DateTime } from 'luxon'
+import ical from 'ical'
+const now = new Date()
+const nextYear = new Date().setYear(now.getFullYear() + 1)
 
 // const mediaTemplateMeta = {
 //   proivder: '',
@@ -66,8 +69,8 @@ export default async function getWebinars(update = false) {
 
 async function doGet() {
   let webinars = {
-    calendar: await fetch(url(1)).then(r => r.json()).then(r => r.feed.entry.map(o => transformItem(o, 'webinar')).filter(o=>o)),
-    archive: await fetch(url(2)).then(r => r.json()).then(r => r.feed.entry.map(o => transformItem(o)).filter(o=>o))
+    calendar: await fetch(url(1)).then(r => r.json()).then(r => r.feed.entry.map(o => new Media(o, 'webinar')).filter(o=>o.status)),
+    archive: await fetch(url(2)).then(r => r.json()).then(r => r.feed.entry.map(o => new Media(o)).filter(o=>o.status))
   }
   localStorage.setItem('webinars', JSON.stringify(webinars))
   localStorage.setItem('webinarsCacheTime', new Date())
@@ -91,46 +94,81 @@ function plural(items, one, many) {
   return `${items.join(', ').replace(/^(.+, )(.+)$/, '$1and $2')} ${many}`
 }
 
-function transformItem(o, type) {
+class Media {
+constructor(o, type) {
   let tz = o.gsx$timezone && o.gsx$timezone.$t ? o.gsx$timezone.$t : 'UTC'
   type = type || (o.gsx$resource ? o.gsx$resource.$t : 'video')
   let schema = { type: schemaOrgTypes[type] || 'Thing'}
   if (type === 'playlist') schema['ogType'] = 'video'
-  let meta = { type, schema }
+  this.meta = { type, schema }
 
   Object.keys(o).filter(k => k.indexOf('$') > -1).forEach(k => {
     let name = k.slice(4).replace(/url$/, 'URL')
     let v = o[k]['$t']
-    if (v.match(/^\d{4}-\d{2}-\d{2}(?:T[-0-9\.:]+Z)?$/)) v = spacetime(v, tz)
+    if (v.match(/^\d{4}-\d{2}-\d{2}(?:T[-0-9\.:]+Z)?$/)) v = DateTime.fromISO(v, { zone: tz }).toUTC()
+    else if (v.match(/^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), \d+ (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{4}/)) {
+      v = DateTime.fromRFC2822(v + ' GMT', { setZone: true }).toObject()
+      v.zone = tz
+      v = DateTime.fromObject(v).toUTC()
+    }
     else if (v.match(/^[\d,]+(?:\.\d+)?$/)) v = parseFloat(v)
     else if (k.match(/(?:categories|presenters|tags)$/)) v = v.split(/, ?/)
-    meta[name] = v
+    this.meta[name] = v
   })
+  this.meta.href = this.meta.href || this.meta.link || this.meta.eventURL || this.meta.titleURL || false
 
-  if (typeof meta.date === 'string') {
-    meta.displayDate = meta.date
-    meta.date = meta.date_2
+  if (!this.meta.title || !this.meta.href) return this
+  this.status = true
+
+  if (typeof this.meta.date === 'string' && this.meta.date_2)  this.meta.date = this.meta.date_2
+
+  if (this.meta.starttime && this.meta.timestamp) {
+    let eventUID = ``
+    this.meta.vevent = `BEGIN:VEVENT
+UID:${this.meta.timestamp.toISO({format:'basic'})}@sacred-traditions.org
+DTSTAMP:${this.meta.timestamp.toISO({format:'basic'})}
+DTSTART:${this.meta.starttime.toISO({format:'basic'})}`
+    if (this.meta.endtime) this.meta.vevent += `\nDTEND:${this.meta.endtime ? this.meta.endtime.toISO({format:'basic'}) : this.meta.starttime.toISO({format:'basic'})}`
+    if (this.meta.rrule) this.meta.vevent += `\nRRULE:${this.meta.rrule.replace(/^RRULE:/, '')}`
+    this.meta.vevent += `\nEND:VEVENT`
+    this.meta.vevent = this.meta.vevent.replace(/\.\d{3}Z/gm, 'Z')
+    this.meta.icalEvent = ical.parseICS(this.meta.vevent)
+    Object.keys(this.meta.icalEvent).forEach(k => { this.meta.icalEvent = this.meta.icalEvent[k]; return; })
+    console.log(this.meta.icalEvent)
+    if (this.meta.icalEvent.rrule && typeof this.meta.icalEvent.rrule !== 'string') {
+      this.meta.instances = this.meta.icalEvent.rrule.between(now, nextYear)
+      if (this.meta.instances.length) {
+        this.meta.date = DateTime.fromISO(this.meta.instances[0])
+      }
+    }
+    else {
+      if (this.meta.starttime > now) {
+        this.meta.date = this.meta.starttime
+      }
+    }
+    if (!this.meta.date) {
+      this.status = false
+      return this
+    }
   }
-  else if (meta.date) {
-    meta.displayDate = meta.date.format('nice')
+
+  this.meta.image = {
+    src: this.meta.imageURL,
+    alt: `${plural(this.meta.presenters || [], 'presenting', 'presenting')} ${this.meta.title}`
   }
 
-  if (typeof meta.count === 'number') meta.displayCount = plural(meta.count, meta.type, meta.type.trim() + 's')
+  this.title = this.meta.title
+  this.snippet = this.meta.description
+  this.image = this.meta.image
+  this.html = escapeHtml(this.meta.description).split(/\n+/).map(t => t.trim().length ? `<p>${t}</p>` : '').join('\n')
+  return this
+}
+}
 
-  meta.image = {
-    src: meta.imageURL,
-    alt: `${plural(meta.presenters || [], 'presenting', 'presenting')} ${meta.title}`
-  }
-  meta.href = meta.href || meta.link || meta.eventURL || meta.titleURL || false
-
-  if (!meta.title || !meta.href) return false
-
-  return Object.assign({ meta }, {
-    title: meta.title,
-    snippet: meta.description,
-    image: meta.image,
-    html: escapeHtml(meta.description).replace().split(/\n*/).map(t => t.trim().length ? `<p>${t}</p>` : '').join('\n'),
-  })
+Media.prototype.plural = function(prop, one, many) {
+  val = this[prop] || this.meta[prop] || false
+  if (val === false) return ''
+  return parseInt(val) === 1 ? `1 ${one}` : `${val} ${many}`
 }
 
 const schemaOrgTypes = {
