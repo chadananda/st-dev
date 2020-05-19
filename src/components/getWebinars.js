@@ -94,6 +94,7 @@ function plural(items, one, many) {
 
 class Media {
 constructor(o, type) {
+  if (!o.gsx$published) return this
   let tz = o.gsx$timezone && o.gsx$timezone.$t ? o.gsx$timezone.$t : 'UTC'
   type = type || (o.gsx$resource ? o.gsx$resource.$t : 'video')
   let schema = { type: schemaOrgTypes[type] || 'Thing'}
