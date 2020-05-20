@@ -2,7 +2,7 @@
 export let item = {}
 export let display = 'card'
 let imageWidth, imageHeight
-$: imageHeight = Math.round(imageWidth * .6)
+$: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
 </script>
 
 {#if !item}
@@ -59,6 +59,7 @@ $: imageHeight = Math.round(imageWidth * .6)
   }
   .image {
     width: 100%;
+    height: 60%;
     overflow: hidden;
     background: #ddd;
     display: flex;
