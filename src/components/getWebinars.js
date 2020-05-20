@@ -1,7 +1,9 @@
 const sheetID = '1nlsYAMLxbLdaf1gBJGgyMze4AvKfaws4zQbqEBi4iYw'
 const cacheMinutes = 15
 import spacetime from 'spacetime'
-spacetime.extend({ical: s => s.format('iso').replace(/^(\d+)-(\d+)-/, '$1$2').replace(/[:\.]/, '')})
+spacetime.extend({ical: function() { 
+  return this.format('iso').replace(/^(\d+)-(\d+)-/, '$1$2').replace(/[:\.]/, '')
+}})
 
 // const mediaTemplateMeta = {
 //   proivder: '',
@@ -66,9 +68,29 @@ export default async function getWebinars(update = false) {
 }
 
 async function doGet() {
+  let calendar = {
+    single: [],
+    Mon: [],
+    Tue: [],
+    Wed: [],
+    Thu: [],
+    Fri: [],
+    Sat: [],
+    Sun: [],
+  }
+  await fetch(url(1)).then(r => r.json()).then(r => r.feed.entry.map(o => new Media(o, 'webinar')).filter(o=>o.status).forEach(e => {
+    e.day = e.meta.starttime.format('day-short')
+    if (!e.meta.weekly) {
+      e.date = e.meta.starttime.goto('UTC')
+      calendar['single'].push(e)
+    }
+    else {
+      calendar[e.day].push(e)
+    }
+  }))
   let webinars = {
-    calendar: await fetch(url(1)).then(r => r.json()).then(r => r.feed.entry.map(o => new Media(o, 'webinar')).filter(o=>o.status)),
-    archive: await fetch(url(2)).then(r => r.json()).then(r => r.feed.entry.map(o => new Media(o)).filter(o=>o.status))
+    archive: await fetch(url(2)).then(r => r.json()).then(r => r.feed.entry.map(o => new Media(o)).filter(o=>o.status)),
+    calendar
   }
   localStorage.setItem('webinars', JSON.stringify(webinars))
   localStorage.setItem('webinarsCacheTime', new Date())
