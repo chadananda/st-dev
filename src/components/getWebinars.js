@@ -127,7 +127,7 @@ constructor(o, type) {
     let name = k.slice(4).replace(/url$/, 'URL')
     let v = o[k]['$t']
     if (v.match(/^\d{4}-?\d{2}-?\d{2}T?(?:[-0-9\.:]+Z?)?$/)) v = spacetime(v, tz).goto('UTC')
-    else if (v.match(/^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), \d+ (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{4}/)) v = spacetime(v, tz).goto('UTC')
+    else if (v.match(/^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d+, \d{4}/)) v = spacetime(v, tz).goto('UTC')
     else if (v.match(/^[\d,]+(?:\.\d+)?$/)) v = parseFloat(v)
     else if (k.match(/(?:categories|presenters|tags)$/)) v = v.split(/, ?/)
     this.meta[name] = v
