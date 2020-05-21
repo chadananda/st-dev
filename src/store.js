@@ -1,4 +1,6 @@
 import { writable } from 'svelte/store'
+import { readablePersistantUpdating } from './persistant'
+import { getWebinars, webinarsEmpty, initLocalWebinars } from './components/getWebinars'
 
 export const getItemIndex = (arr, item) => {
   if (typeof item === 'number') return item
@@ -45,3 +47,5 @@ const writableCartItem = (key, startValue) => {
 }
 
 export const cart = writableCartItem('cart', [])
+
+export const webinars = readablePersistantUpdating('webinars', webinarsEmpty, getWebinars, 3600, initLocalWebinars)

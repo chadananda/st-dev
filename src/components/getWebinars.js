@@ -5,6 +5,8 @@ spacetime.extend({ical: function() {
   return this.format('iso').replace(/^(\d+)-(\d+)-/, '$1$2').replace(/[:\.]/, '')
 }})
 
+export const webinarsEmpty = { calendar: [], archive: [] }
+
 // const mediaTemplateMeta = {
 //   proivder: '',
 //   resource: '',
@@ -50,50 +52,19 @@ spacetime.extend({ical: function() {
 //   rrule: 'rrule for use with rrule.js',
 // }
 
-export default async function getWebinars(update = false) {
-  let webinars = []
+export async function getWebinars(update = false) {
+  let webinars = webinarsEmpty
   if (process.browser) {
-    if (update) {
-      webinars = await doGet()
-      return webinars
-    }
-    webinars = JSON.parse(localStorage.getItem('webinars') || '{}');
-    let cacheTime = new Date()
-    cacheTime.setMinutes(cacheTime.getMinutes() - cacheMinutes)
-    if ((localStorage.getItem('webinarsCacheTime') || '0') < cacheTime.toString()) {
-      webinars = await doGet()
-    }
+    webinars = await doGet()
   }
   return webinars
 }
 
 async function doGet() {
-  let calendar = {
-    single: [],
-    Mon: [],
-    Tue: [],
-    Wed: [],
-    Thu: [],
-    Fri: [],
-    Sat: [],
-    Sun: [],
-  }
-  await fetch(url(1)).then(r => r.json()).then(r => r.feed.entry.map(o => new Media(o, 'webinar')).filter(o=>o.status).forEach(e => {
-    e.day = e.meta.starttime.format('day-short')
-    if (!e.meta.weekly) {
-      e.date = e.meta.starttime.goto('UTC')
-      calendar['single'].push(e)
-    }
-    else {
-      calendar[e.day].push(e)
-    }
-  }))
   let webinars = {
+    calendar: await fetch(url(1)).then(r => r.json()).then(r => r.feed.entry.map(o => new Media(o, 'webinar')).filter(o=>o.status)),
     archive: await fetch(url(2)).then(r => r.json()).then(r => r.feed.entry.map(o => new Media(o)).filter(o=>o.status)),
-    calendar
   }
-  localStorage.setItem('webinars', JSON.stringify(webinars))
-  localStorage.setItem('webinarsCacheTime', new Date())
   return webinars
 }
 
@@ -127,7 +98,7 @@ constructor(o, type) {
     let name = k.slice(4).replace(/url$/, 'URL')
     let v = o[k]['$t']
     if (v.match(/^\d{4}-?\d{2}-?\d{2}T?(?:[-0-9\.:]+Z?)?$/)) v = spacetime(v, tz).goto('UTC')
-    else if (v.match(/^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d+, \d{4}/)) v = spacetime(v, tz).goto('UTC')
+    else if (v.match(/^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d+, \d{4}/)) v = spacetime(v, tz)
     else if (v.match(/^[\d,]+(?:\.\d+)?$/)) v = parseFloat(v)
     else if (k.match(/(?:categories|presenters|tags)$/)) v = v.split(/, ?/)
     this.meta[name] = v
@@ -195,3 +166,22 @@ const entityMap = {
   '`': '&#x60;',
   '=': '&#x3D;'
 };
+
+export function initLocalWebinars(data) {
+  if (!data || !data.calendar || !data.archive) {
+    return data
+  }
+  data.calendar.forEach(m => initMedia(m))
+  data.archive.forEach(m => initMedia(m))
+  return data
+}
+
+function initMedia(m) {
+  let prop
+  for (prop in m) {
+    if (m[prop].hasOwnProperty('epoch') && m[prop].hasOwnProperty('tz')) m[prop] = spacetime(m[prop])
+  }
+  for (prop in m.meta) {
+    if (m.meta[prop].hasOwnProperty('epoch') && m.meta[prop].hasOwnProperty('tz')) m.meta[prop] = spacetime(m.meta[prop])
+  }
+}

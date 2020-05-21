@@ -1,39 +1,16 @@
-<script context="module">
-	import getWebinars from '../../components/getWebinars'
-	export async function preload({ params, query }) {
-		const webinars = await getWebinars()
-		return { webinars, noSerialize: () => {} } // noSerialize avoids Sapper caching the returned object for webinars
-	}
-</script>
-
 <script>
-	export let webinars = []
-	export let noSerialize
-	noSerialize()
+	import { webinars } from '../../store'
 	import Media from '../../components/Media.svelte'
 	import Debug from '../../components/Debug.svelte'
 </script>
 
-{#if !webinars.calendar || webinars.calendar.length === 0}
-	{#each Array(24) as item}
-		<Media item={false} />
-	{/each}
-{:else}
-	<h2 class="section">Webinars / Online Courses</h2>
-	{#each webinars.calendar as item}
-		<Media {item}>
-
-		</Media>
-	{/each}
-{/if}
-
-{#if !webinars.archive || webinars.archive.length === 0}
+{#if !$webinars.archive || $webinars.archive.length === 0}
 	{#each Array(24) as item}
 		<Media item={false} />
 	{/each}
 {:else}
 	<h2 class="section">Media Archive</h2>
-	{#each webinars.archive as item}
+	{#each $webinars.archive as item}
 			<Media {item}>
 				<div class="flex">
 					<div class="provider flex-initial">{item.meta.provider}</div> &nbsp;·&nbsp;
