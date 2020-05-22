@@ -9,30 +9,30 @@
   <!-- content page nav links  -->
 		<div class="flex justify-end align-center mt-1">
 
-			{#if $cart.length}
-				<a href="/courses/checkout" class="block mr-1 md:mr-6 rounded-full relative" style="width:40px">
-					<img class="w-8" style="opacity:.5; margin-top:8px;" src="https://upload.wikimedia.org/wikipedia/commons/0/00/Shopping_cart_font_awesome.svg" alt="Shopping cart FontAwesome">
-					<span class="cartcount">{$cart.length}</span>
-				</a>
-			{/if}
+		{#if $cart.length}
+			<a href="/courses/checkout" class="block mr-1 md:mr-6 rounded-full relative" style="width:40px">
+				<img class="w-8" style="opacity:.5; margin-top:8px;" src="https://upload.wikimedia.org/wikipedia/commons/0/00/Shopping_cart_font_awesome.svg" alt="Shopping cart FontAwesome">
+				<span class="cartcount">{$cart.length}</span>
+			</a>
+		{/if}
 
 
-		 <a class="block mr-1 md:mr-6 p-2 rounded-full" href="/ocean">
+		 <a class="block mr-1 md:mr-6 lg:mr-10 p-2 rounded-full" href="/ocean">
 			  <img class="w-5 inline -mt-1" src="/ocean_assets/images/ocean-logo2.svg" alt="Ocean 2.0 Reader" />
 					<span class="hidden sm:inline">Ocean </span><span class="hidden md:inline"> 2.0 </span><span class="hidden lg:inline"> Reader</span>
 			</a>
 
-		 <a class="block mr-1 md:mr-6 p-2 rounded-full" href="/webinars">
+		 <a class="block mr-1 md:mr-2 lg:mr-10 p-2 rounded-full" href="/webinars/calendar">
 			  <img class="w-6 inline -mt-1" src="/webinar.svg" alt="upcoming webinars" />
 		 	 <span class="hidden sm:inline"> Webinars</span>
 			</a>
 
-			<a class="block mr-1 p-2 rounded-full" href="/videos">
+			<a class="block mr-1 p-2 lg:mr-10 rounded-full" href="/webinars">
 			  <img class="w-5 inline -mt-1 opacity-75" src="/ed-video.svg" alt="educational media" />
 					<span class="hidden lg:inline">Educational </span> <span class="hidden sm:inline">Videos</span>
 			</a>
 
-		 <a class="block mr-1 md:mr-6 p-2 rounded-full" href="/courses">
+		 <a class="block mr-1 md:mr-6 lg:mr-10 p-2 rounded-full" href="/courses">
 			  <img class="w-6 inline -mt-1" src="/retreat.svg" alt="the world inside a drop" />
 				<span class="hidden lg:inline">2021</span>	<span class="hidden md:inline"> Study</span> <span class="hidden sm:inline">Retreats</span>
 			</a>
@@ -81,12 +81,12 @@
 					<span class="hidden md:inline">Interfaith </span> <span class="hidden sm:inline">Essays</span>
 			</a> -->
 
-			 <a class="block mr-1 md:mr-2 p-2 rounded-full" href="/webinars">
+			 <a class="block mr-1 md:mr-2 p-2 rounded-full" href="/webinars/calendar">
 			  <img class="w-6 inline -mt-1" src="/webinar.svg" alt="upcoming webinars" />
 		 	 <span class="hidden sm:inline"> Webinars</span>
 			</a>
 
-			<a class="block mr-1 p-2 rounded-full" href="/videos">
+			<a class="block mr-1 p-2 rounded-full" href="/webinars">
 			  <img class="w-5 inline -mt-1 opacity-75" src="/ed-video.svg" alt="educational media" />
 					<span class="hidden lg:inline">Educational </span> <span class="hidden sm:inline">Videos</span>
 			</a>

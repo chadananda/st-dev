@@ -7,7 +7,7 @@ $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
 
 {#if !item}
    <!-- content here -->
-  <div class="card">
+  <div class="card ">
     <div class="image" bind:clientWidth={imageWidth} />
   </div>
 {:else if display === 'page'}
@@ -17,11 +17,11 @@ $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
       <h1 class="title" itemprop="name">{item.title}</h1>
     </slot>
     <slot name="header"></slot>
-    <div class="image" class:empty={!item.image || !item.image.src} bind:clientWidth={imageWidth} style="height:{imageHeight}px">
-      {#if item.image}
+    <!-- <div class="image" class:empty={!item.image || !item.image.src} bind:clientWidth={imageWidth} style="height:{imageHeight}px">
+      {#if item.image && false}
         <img itemprop="image" src="{item.image.src}#full" alt="{item.image.alt || item.title || ''}" title="{item.image.title || ''}" />
       {/if}
-    </div>
+    </div> -->
     <slot></slot>
     <div class="description" itemprop="abstract">{@html item.html}</div>
     <slot name="footer"></slot>
@@ -29,7 +29,8 @@ $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
 
 {:else}
    <!-- else content here -->
-  <div class="card" itemscope itemtype="https://schema.org/{item.meta[item.meta.schema.type] || item.meta.schema.type || 'Thing'}">
+  <div class="card relative m-2 p-1 rounded-lg shadow-lg overflow-hidden" itemscope
+    itemtype="https://schema.org/{item.meta[item.meta.schema.type] || item.meta.schema.type || 'Thing'}">
     <slot name="header"></slot>
     <div class="image" class:empty={!item.image || !item.image.src} bind:clientWidth={imageWidth} style="height:{imageHeight}px">
       {#if item.image}
@@ -54,8 +55,13 @@ $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
 
 <style>
   .card {
-    width: 280px;
-    height: 254px;
+    width: 180px;
+    height: auto;
+    min-height: 100px;
+    border: 1px solid rgba(204, 204, 204, 0.507);
+    box-shadow:1px 1px 5px 0px rgba(0,0,0,0.25);
+    background-color: white;
+    margin: .5em;
   }
   .image {
     width: 100%;
