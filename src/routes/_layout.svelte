@@ -26,7 +26,7 @@
 	 </main>
 
 
-{:else if segment.match(/webinar/)}
+{:else if segment && segment.match(/webinar/)}
 		<div class="relative z-0">
 			<Nav class="" {segment}/>
 			<main class="relative"><slot></slot></main>
