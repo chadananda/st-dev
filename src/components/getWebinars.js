@@ -131,11 +131,13 @@ DTSTART:${this.meta.starttime.ical()}`
   this.snippet = this.meta.description
   this.image = this.meta.image
   this.html = escapeHtml(this.meta.description).split(/\n+/).map(t => t.trim().length ? `<p>${t}</p>` : '').join('\n')
+  this.meta.filtertext = [this.title, this.meta.presenters.join(' | '), this.meta.categories.join(' | '), this.meta.tags.join(' | ')].join(' | ').normalize('NFD').replace(/['"‘’“”\u0300-\u036f]/g, '').toLowerCase()
   return this
 }
 }
 
 Media.prototype.plural = function(prop, one, many) {
+  let val
   if (typeof this[prop] !== 'undefined') val = this[prop]
   else if (typeof this.meta[prop] !== 'undefined') val = this.meta[prop]
   else return ''

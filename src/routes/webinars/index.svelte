@@ -2,12 +2,17 @@
 	import { webinars } from '../../store'
 	import Media from '../../components/Media.svelte'
 	import Debug from '../../components/Debug.svelte'
+
+	let search = ''
+	let items = []
+	$: items = $webinars.archive.filter(o => o.meta.filtertext.match(search.normalize('NFD').replace(/['"‘’“”\u0300-\u036f]/g, '').toLowerCase()))
+
 </script>
 
  <div class="navcontainer">
 		<div class="medianav">
-					<h2 class="filter-label">Media Archive</h2>
-					<input type="search" class="filter" placeholder="filter by title or author" />
+			<h2 class="filter-label">Media Archive</h2>
+			<input type="search" class="filter" placeholder="filter by title or author" bind:value={search} />
 		</div>
 	</div>
 
@@ -17,7 +22,7 @@
 				<Media item={false} />
 			{/each}
 		{:else}
-			{#each $webinars.archive as item}
+			{#each items as item}
 				<Media {item}>
 					<div class="flex">
 						<div class="provider flex-initial">{item.meta.provider}</div> &nbsp;·&nbsp;
