@@ -16,7 +16,7 @@
 	import { goto } from '@sapper/app'
 </script>
 
-<h1 class="title">2020 Course Catalog</h1>
+<h1 class="title">2021 Course Catalog</h1>
 
 {#if sessions}
 	 <SessionList {sessions} />
