@@ -3,7 +3,6 @@
 	import Media from '../../components/Media.svelte'
 	import Debug from '../../components/Debug.svelte'
 
-
 $: items =  $webinars.archive  // initial value of reactive list
 
 // debounce for rebuilding reactive list
@@ -24,6 +23,7 @@ const debounce = userString => {
 			<h2 class="filter-label">Media Archive </h2>
    <input type="search" class="filter" placeholder="filter title or author"
 						on:input={ ({ target: { value } }) => debounce(value) } />
+			<img class="reply" alt="add a resource" src="/reply.svg" />
 		</div>
 	</div>
 
@@ -69,9 +69,4 @@ div.navcontainer {
   width: 30%; min-width: 200px;
 		margin-top: 2px; margin-bottom: 2px;
 }
-/* .mediastuff {
-	 z-index: 0;
-} */
-
-
 </style>
