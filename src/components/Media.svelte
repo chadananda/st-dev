@@ -1,13 +1,14 @@
 <script>
 export let item = {}
 export let display = 'card'
+export let searchtext
 let imageWidth, imageHeight
 $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
 </script>
 
 {#if !item}
    <!-- content here -->
-  <div class="card ">
+  <div class="card " data-category="">
     <div class="image" bind:clientWidth={imageWidth} />
   </div>
 {:else if display === 'page'}
@@ -29,7 +30,7 @@ $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
 
 {:else}
    <!-- else content here -->
-  <div class="card relative m-2 p-1 rounded-lg shadow-lg overflow-hidden" itemscope
+  <div class="card relative m-2 p-1 rounded-lg shadow-lg overflow-hidden" data-category="{searchtext}" itemscope
     itemtype="https://schema.org/{item.meta[item.meta.schema.type] || item.meta.schema.type || 'Thing'}">
     <slot name="header"></slot>
     <div class="image" class:empty={!item.image || !item.image.src} bind:clientWidth={imageWidth} style="height:{imageHeight}px">

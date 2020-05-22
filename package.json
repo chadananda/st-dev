@@ -67,6 +67,7 @@
     "@rollup/plugin-node-resolve": "^7.1.1",
     "@rollup/plugin-replace": "^2.3.1",
     "autoprefixer": "^9.7.4",
+    "filterizr": "^2.2.4",
     "fs-sync": "^1.0.6",
     "gray-matter": "^4.0.2",
     "js-yaml": "^3.13.1",

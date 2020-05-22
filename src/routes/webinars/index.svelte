@@ -2,23 +2,32 @@
 	import { webinars } from '../../store'
 	import Media from '../../components/Media.svelte'
 	import Debug from '../../components/Debug.svelte'
+	import { onMount } from 'svelte'
+	let filterizr
+
+	onMount(async() => {
+		const { default:Filterizr } = await import('filterizr')
+		filterizr = new Filterizr('.mediastuff', {
+			gridItemsSelector: '.card'
+		})
+	})
 </script>
 
  <div class="navcontainer">
 		<div class="medianav">
 					<h2 class="filter-label">Media Archive</h2>
-					<input type="search" class="filter" placeholder="filter by title or author" />
+					<input type="search" class="filter" placeholder="filter by title or author" data-search />
 		</div>
 	</div>
 
-	<div class="mediastuff relative flex flex-wrap w-full justify-center">
+	<div class="mediastuff relative flex flex-wrap w-full">
 		{#if !$webinars.archive || $webinars.archive.length === 0}
 			{#each Array(24) as item}
 				<Media item={false} />
 			{/each}
 		{:else}
 			{#each $webinars.archive as item}
-				<Media {item}>
+				<Media {item} searchtext="{item.meta.title} {item.meta.presenters} {item.meta.categories} {item.meta.tags}">
 					<div class="flex">
 						<div class="provider flex-initial">{item.meta.provider}</div> &nbsp;·&nbsp;
 						<div class="count flex-initial">{item.meta.count} videos</div>
