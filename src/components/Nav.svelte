@@ -22,13 +22,13 @@
 					<span class="hidden sm:inline">Ocean </span><span class="hidden md:inline"> 2.0 </span><span class="hidden lg:inline"> Reader</span>
 			</a>
 
-		 <a class="block mr-1 md:mr-6 p-2 rounded-full" href="/courses">
+		 <a class="block mr-1 md:mr-6 p-2 rounded-full" href="/webinars">
 			  <img class="w-6 inline -mt-1" src="/webinar.svg" alt="upcoming webinars" />
 		 	 <span class="hidden sm:inline"> Webinars</span>
 			</a>
 
-			<a class="block mr-1 p-2 rounded-full" href="/articles">
-			  <img class="w-5 inline -mt-1 opacity-75" src="/ed-video.svg" alt="the world inside a drop" />
+			<a class="block mr-1 p-2 rounded-full" href="/videos">
+			  <img class="w-5 inline -mt-1 opacity-75" src="/ed-video.svg" alt="educational media" />
 					<span class="hidden lg:inline">Educational </span> <span class="hidden sm:inline">Videos</span>
 			</a>
 
@@ -66,22 +66,36 @@
 	</header>
  <!-- Home page Nav links -->
 	<nav class="flex justify-center items-center sticky bg-white">
-		 <a class="block mr-12 p-2 rounded-full" href="/ocean">
+
+		 <a class="block mr-10 p-2 rounded-full" href="/ocean">
 			  <img class="w-5 inline -mt-1" src="/ocean_assets/images/ocean-logo2.svg" alt="the world inside a drop" />
-					<span class="hidden sm:inline">Ocean </span><span class="hidden md:inline"> 2.0 </span><span class="hidden lg:inline"> Interfaith Reader</span>
+					<span class="hidden sm:inline">Ocean </span><span class="hidden md:inline"> 2.0 </span><span class="hidden lg:inline">  Reader</span>
 			</a>
-		 <a class="block mr-12 p-2 rounded-full" href="/courses">
-			  <img class="w-8 pl-1 inline -mt-1" src="/retreat.svg" alt="the world inside a drop" />
-					<span class="hidden lg:inline">Study</span> <span class="hidden sm:inline">Retreats</span>
-			</a>
+
 		 <!-- <a class="block mr-12 p-2 rounded-full" href="/news">
 			  <img class="w-8 pl-1 inline -mt-1" src="/news.svg" alt="the world inside a drop" />
 					<span class="hidden sm:inline">News </span><span class="hidden lg:inline"> &amp; Announcments</span>
 			</a> -->
-		 <a class="block mr-12 p-2 rounded-full" href="/articles">
+		 <!-- <a class="block mr-12 p-2 rounded-full" href="/articles">
 			  <img class="w-6 inline -mt-1 opacity-50" src="/thinker.svg" alt="the world inside a drop" />
 					<span class="hidden md:inline">Interfaith </span> <span class="hidden sm:inline">Essays</span>
+			</a> -->
+
+			 <a class="block mr-1 md:mr-2 p-2 rounded-full" href="/webinars">
+			  <img class="w-6 inline -mt-1" src="/webinar.svg" alt="upcoming webinars" />
+		 	 <span class="hidden sm:inline"> Webinars</span>
 			</a>
+
+			<a class="block mr-1 p-2 rounded-full" href="/videos">
+			  <img class="w-5 inline -mt-1 opacity-75" src="/ed-video.svg" alt="educational media" />
+					<span class="hidden lg:inline">Educational </span> <span class="hidden sm:inline">Videos</span>
+			</a>
+
+		 <a class="block mr-6 p-2 rounded-full" href="/courses">
+			  <img class="w-8 pl-1 inline -mt-1" src="/retreat.svg" alt="the world inside a drop" />
+					<span class="hidden lg:inline">Study</span> <span class="hidden sm:inline">Retreats</span>
+			</a>
+
 	</nav>
 
 {/if}
