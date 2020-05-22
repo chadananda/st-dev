@@ -102,5 +102,4 @@ $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
     background-size: 180px;
     opacity: .8;
   }
-  /* .card.loading .image {display: none;} */
 </style>
