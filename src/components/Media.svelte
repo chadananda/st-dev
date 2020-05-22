@@ -7,8 +7,8 @@ $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
 
 {#if !item}
    <!-- content here -->
-  <div class="card ">
-    <div class="image" bind:clientWidth={imageWidth} />
+  <div class="card loading">
+    <!-- <div class="image" bind:clientWidth={imageWidth} /> -->
   </div>
 {:else if display === 'page'}
   <!-- TODO: page headers for metadata -->
@@ -17,11 +17,11 @@ $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
       <h1 class="title" itemprop="name">{item.title}</h1>
     </slot>
     <slot name="header"></slot>
-    <!-- <div class="image" class:empty={!item.image || !item.image.src} bind:clientWidth={imageWidth} style="height:{imageHeight}px">
+    <div class="image" class:empty={!item.image || !item.image.src} bind:clientWidth={imageWidth} style="height:{imageHeight}px">
       {#if item.image && false}
         <img itemprop="image" src="{item.image.src}#full" alt="{item.image.alt || item.title || ''}" title="{item.image.title || ''}" />
       {/if}
-    </div> -->
+    </div>
     <slot></slot>
     <div class="description" itemprop="abstract">{@html item.html}</div>
     <slot name="footer"></slot>
@@ -57,7 +57,7 @@ $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
   .card {
     width: 180px;
     height: auto;
-    min-height: 100px;
+    min-height: 150px;
     border: 1px solid rgba(204, 204, 204, 0.507);
     box-shadow:1px 1px 5px 0px rgba(0,0,0,0.25);
     background-color: white;
@@ -94,4 +94,13 @@ $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
     max-height: 1.1em;
     overflow: hidden;
   }
+  .card.loading {
+    position: relative;
+    background-image: url('/loader.gif');
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-size: 180px;
+    opacity: .8;
+  }
+  /* .card.loading .image {display: none;} */
 </style>
