@@ -21,9 +21,11 @@ const debounce = userString => {
  <div class="navcontainer">
 		<div class="medianav">
 			<h2 class="filter-label">Media Archive </h2>
-   <input type="search" class="filter" placeholder="filter title or author"
-						on:input={ ({ target: { value } }) => debounce(value) } />
-			<img class="reply" alt="add a resource" src="/reply.svg" />
+			<!-- <div> -->
+					<input type="search" class="filter" placeholder="filter title or author"
+								on:input={ ({ target: { value } }) => debounce(value) } />
+					<!-- <img class="reply w-5" alt="add a resource" src="/reply.svg" /> -->
+			<!-- </div> -->
 		</div>
 	</div>
 
