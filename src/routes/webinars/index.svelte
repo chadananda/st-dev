@@ -5,7 +5,8 @@
 
 	let search = ''
 	let items = []
-	$: items = $webinars.archive.filter(o => o.meta.filtertext.match(search.normalize('NFD').replace(/['"‘’“”\u0300-\u036f]/g, '').toLowerCase()))
+	$: filterstr = search.normalize('NFD').replace(/['"‘’“”\u0300-\u036f]/g, '').toLowerCase()
+	$: items = $webinars.archive.filter(o => o.meta.filtertext.match(filterstr))
 
 </script>
 
@@ -59,7 +60,8 @@ div.navcontainer {
 		margin-top: -2px;
 }
 .filter {
-  width: 30%
+  width: 30%;
+		margin-top: 2px; margin-bottom: 2px;
 }
 .mediastuff {
 	 z-index: 0;

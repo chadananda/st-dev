@@ -29,7 +29,7 @@
 
 			<a class="block mr-1 p-2 lg:mr-10 rounded-full" href="/webinars">
 			  <img class="w-5 inline -mt-1 opacity-75" src="/ed-video.svg" alt="educational media" />
-					<span class="hidden lg:inline">Educational </span> <span class="hidden sm:inline">Videos</span>
+					<span class="hidden lg:inline">Media </span> <span class="hidden sm:inline">Archive</span>
 			</a>
 
 		 <a class="block mr-1 md:mr-6 lg:mr-10 p-2 rounded-full" href="/courses">
@@ -88,7 +88,7 @@
 
 			<a class="block mr-1 p-2 rounded-full" href="/webinars">
 			  <img class="w-5 inline -mt-1 opacity-75" src="/ed-video.svg" alt="educational media" />
-					<span class="hidden lg:inline">Educational </span> <span class="hidden sm:inline">Videos</span>
+					<span class="hidden lg:inline">Media </span> <span class="hidden sm:inline">Archive</span>
 			</a>
 
 		 <a class="block mr-6 p-2 rounded-full" href="/courses">
