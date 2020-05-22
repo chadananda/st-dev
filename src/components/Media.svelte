@@ -7,8 +7,13 @@ $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
 
 {#if !item}
    <!-- content here -->
-  <div class="card ">
-    <div class="image" bind:clientWidth={imageWidth} />
+  <div class="card">
+    <div class="image empty" bind:clientWidth={imageWidth} />
+    <div class="details">
+      <h3 class="title empty"> </h3>
+      <div class="empty w-1/3 mt-1 h-3" />
+      <div class="empty w-1/2 mt-1 h-3" />
+    </div>
   </div>
 {:else if display === 'page'}
   <!-- TODO: page headers for metadata -->
@@ -29,7 +34,7 @@ $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
 
 {:else}
    <!-- else content here -->
-  <div class="card relative m-2 p-1 rounded-lg shadow-lg overflow-hidden" itemscope
+  <div class="card" itemscope
     itemtype="https://schema.org/{item.meta[item.meta.schema.type] || item.meta.schema.type || 'Thing'}">
     <slot name="header"></slot>
     <div class="image" class:empty={!item.image || !item.image.src} bind:clientWidth={imageWidth} style="height:{imageHeight}px">
@@ -55,22 +60,22 @@ $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
 
 <style>
   .card {
-    width: 180px;
-    height: auto;
-    min-height: 100px;
-    border: 1px solid rgba(204, 204, 204, 0.507);
-    box-shadow:1px 1px 5px 0px rgba(0,0,0,0.25);
+    width: 280px;
+    height: 254px;
     background-color: white;
     margin: .5em;
   }
   .image {
     width: 100%;
-    height: 60%;
+    height: 168px;
     overflow: hidden;
     background: #ddd;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .empty {
+    background: #ddd
   }
   .image.empty {
     padding:20px;
