@@ -4,12 +4,6 @@
 	import Debug from '../../components/Debug.svelte'
 </script>
 
-{#if !$webinars.archive || $webinars.archive.length === 0}
-	{#each Array(24) as item}
-		<Media item={false} />
-	{/each}
-{:else}
-
  <div class="navcontainer">
 		<div class="medianav">
 					<h2 class="filter-label">Media Archive</h2>
@@ -18,7 +12,12 @@
 	</div>
 
 	<div class="mediastuff relative flex flex-wrap w-full justify-center">
-		{#each $webinars.archive as item}
+		{#if !$webinars.archive || $webinars.archive.length === 0}
+			{#each Array(24) as item}
+				<Media item={false} />
+			{/each}
+		{:else}
+			{#each $webinars.archive as item}
 				<Media {item}>
 					<div class="flex">
 						<div class="provider flex-initial">{item.meta.provider}</div> &nbsp;·&nbsp;
@@ -26,9 +25,9 @@
 						<div class="duration flex-auto text-right" itemprop="duration" value="{item.meta.duration}">{item.meta.hours}</div>
 					</div>
 				</Media>
-		{/each}
+			{/each}
+		{/if}
 	</div>
-{/if}
 
 
 <style>
