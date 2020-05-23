@@ -62,8 +62,7 @@ $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
     width: 180px;
     height: auto;
     min-height: 150px;
-    border: 1px solid rgba(204, 204, 204, 0.507);
-    box-shadow:1px 1px 5px 0px rgba(0,0,0,0.25);
+    box-shadow:1px 1px 8px 0px rgba(0,0,0,0.15);
     background-color: white;
     margin: .5em;
   }

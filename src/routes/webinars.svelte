@@ -37,9 +37,11 @@
 
 	<div class="navcontainer">
 		<div class="medianav flex">
-			<h2 class="filter-label flex-grow">Webinars / Online Courses</h2>
-			<select class="flex-none" bind:value={dayFilter}>
-				<option value="">show all days</option>
+
+			<h2 class="filter-label flex-grow">Webinars / Talks</h2>
+
+			<select class="filter2 flex-none w-64" bind:value={dayFilter}>
+				<option value="">all</option>
 				<option value="Mon">Monday</option>
 				<option value="Tue">Tuesday</option>
 				<option value="Wed">Wednesday</option>
@@ -47,8 +49,10 @@
 				<option value="Fri">Friday</option>
 				<option value="Sat">Saturday</option>
 				<option value="Sun">Sunday</option>
-			</select>
-			<input type="search" class="w-1/3 flex-none" placeholder="filter by title or author" bind:value={search} />
+			</select> &nbsp; &nbsp;
+
+			<input type="search" class="filter w-1/3 flex-none" placeholder="filter by title or author" bind:value={search} />
+
 		</div>
 	</div>
 
@@ -78,18 +82,25 @@ div.navcontainer {
 		border-radius: 10px;
 		border: 1px solid rgba(204, 204, 204, 0.507);
   box-shadow:1px 1px 5px 0px rgba(0,0,0,0.25);
-		background-color: white;
+		background: rgb(247, 245, 252);
   justify-content: space-between;
 		display: flex;
 		padding: 2px;
 		padding-left: 5px; padding-right: 5px;
 }
 .filter-label {
-		font-family: "Cabin Sketch";
-		font-size: 2em;
-		margin-top: -2px;
+		font-family: "Cabin Sketch"; font-size: 2em;
+		margin-top: -2px; color: rgb(77, 77, 124);
 }
 .filter {
-  width: 30%
+  width: 30%; min-width: 200px;
+		margin-top: 2px; margin-bottom: 2px;
+}
+.filter2 {
+	 width: 15%; min-width: 100px;
+		margin-top: 2px; margin-bottom: 2px;
+		padding:0; padding-left:8px;
+		font-size: 90%;
+		/* padding:0; */
 }
 </style>

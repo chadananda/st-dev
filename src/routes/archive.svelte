@@ -4,37 +4,29 @@
 </svelte:head>
 
 <script>
-// import Modal from 'svelte-simple-modal'
+
+// video player popup
 import VideoPopup from '../components/Popup_video.svelte'
 import { getContext } from 'svelte'
 const { open } = getContext('simple-modal')
 const showPopup = (item) => {
-  // console.log('hit popup request', item.meta.href)
   open(VideoPopup, { item }, {
 			 styleWindow: {
-							background: 'rgba(200,200,200, 0.96)',
-							padding: '0',
-							'border-radius': '5px',
-							width: '80%',
-							overflow: 'hidden',
+						background: 'rgba(200,200,200, 0.96)', padding: '0', 	'border-radius': '5px', width: '80%', overflow: 'hidden',
 				},
-				styleContent: {
-						padding: '0',
-						margin: '0'
-				},
+				styleContent: { padding: '0', margin: '0' },
 				closeButton: false,
-
-
 		})
 }
 
-
+// archive items, youtube videos
 import { webinars } from '../store'
 import Media from '../components/Media.svelte'
+
 import Debug from '../components/Debug.svelte'
 
-
-$: items =  $webinars.archive  // initial value of reactive list
+// initial value of reactive list
+$: items =  $webinars.archive
 
 // debounce for rebuilding reactive list
 let timer
