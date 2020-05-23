@@ -1,5 +1,5 @@
 <script>
-	import { webinars } from '../../store'
+	import { webinars } from '../store'
 	let items = []
 	let endOfDay, ii, day
 
@@ -30,7 +30,7 @@
 		return a
 	}, []).sort((a,b) => a.date.isAfter(b.date) ? 1 : -1)
 
-	import Media from '../../components/Media.svelte'
+	import Media from '../components/Media.svelte'
 	import SvelteInfiniteScroll from 'svelte-infinite-scroll'
 
 </script>

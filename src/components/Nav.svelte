@@ -22,12 +22,12 @@
 					<span class="hidden sm:inline">Ocean </span><span class="hidden md:inline"> 2.0 </span><span class="hidden lg:inline"> Reader</span>
 			</a>
 
-		 <a class="block mr-1 md:mr-2 lg:mr-10 p-2 rounded-full" href="/webinars/calendar">
+		 <a class="block mr-1 md:mr-2 lg:mr-10 p-2 rounded-full" href="/webinars">
 			  <img class="w-6 inline -mt-1" src="/webinar.svg" alt="upcoming webinars" />
 		 	 <span class="hidden sm:inline"> Webinars</span>
 			</a>
 
-			<a class="block mr-1 p-2 lg:mr-10 rounded-full" href="/webinars">
+			<a class="block mr-1 p-2 lg:mr-10 rounded-full" href="/archive">
 			  <img class="w-5 inline -mt-1 opacity-75" src="/ed-video.svg" alt="educational media" />
 					<span class="hidden lg:inline">Media </span> <span class="hidden sm:inline">Archive</span>
 			</a>
@@ -81,12 +81,12 @@
 					<span class="hidden md:inline">Interfaith </span> <span class="hidden sm:inline">Essays</span>
 			</a> -->
 
-			 <a class="block mr-1 md:mr-2 p-2 rounded-full" href="/webinars/calendar">
+			 <a class="block mr-1 md:mr-2 p-2 rounded-full" href="/webinars">
 			  <img class="w-6 inline -mt-1" src="/webinar.svg" alt="upcoming webinars" />
 		 	 <span class="hidden sm:inline"> Webinars</span>
 			</a>
 
-			<a class="block mr-1 p-2 rounded-full" href="/webinars">
+			<a class="block mr-1 p-2 rounded-full" href="/archive">
 			  <img class="w-5 inline -mt-1 opacity-75" src="/ed-video.svg" alt="educational media" />
 					<span class="hidden lg:inline">Media </span> <span class="hidden sm:inline">Archive</span>
 			</a>
