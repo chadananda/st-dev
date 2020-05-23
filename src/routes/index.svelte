@@ -1,4 +1,4 @@
-<svelte:head>
+ <svelte:head>
 	<title>Sacred Traditions - Interfaith Exploration: sacred-traditions.org</title>
 
 </svelte:head>

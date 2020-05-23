@@ -3,6 +3,8 @@
 	 import Nav from '../components/Nav.svelte'
 		import Footer from '../components/Footer.svelte'
 
+  import Modal from 'svelte-simple-modal'
+
 
 // import { page } from '@sapper/app'
 // const  {slug} = $page.params
@@ -29,7 +31,7 @@
 {:else if segment && segment.match(/webinar/)}
 		<div class="relative z-0">
 			<Nav class="" {segment}/>
-			<main class="relative"><slot></slot></main>
+			<Modal><main class="relative"><slot></slot></main></Modal>
 		</div>
 		<div class="absolute top-0 right-0 text-gray-400 text-xs mr-0 pr-1"><span class="sm:hidden">xs</span>
 				<span class="hidden sm:inline md:hidden">sm</span><span class="hidden md:inline lg:hidden">md</span>

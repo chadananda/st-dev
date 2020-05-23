@@ -3,13 +3,13 @@ export let item = {}
 export let display = 'card'
 let imageWidth, imageHeight
 $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
+
 </script>
 
 {#if !item}
-   <!-- content here -->
-  <div class="card loading">
-    <!-- <div class="image" bind:clientWidth={imageWidth} /> -->
-  </div>
+   <!-- placeholder content here -->
+  <div class="card loading"  > <!-- <div class="image" bind:clientWidth={imageWidth} /> --> </div>
+
 {:else if display === 'page'}
   <!-- TODO: page headers for metadata -->
   <div itemscope itemtype="https://schema.org/{item.meta[item.meta.schema.type] || item.meta.schema.type || 'Thing'}" class="media">
@@ -29,12 +29,14 @@ $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
 
 {:else}
    <!-- else content here -->
-  <div class="card relative m-2 p-1 rounded-lg shadow-lg overflow-hidden" itemscope
+  <div class="card relative m-2 p-1 rounded-lg shadow-lg overflow-hidden cursor-pointer" itemscope
     itemtype="https://schema.org/{item.meta[item.meta.schema.type] || item.meta.schema.type || 'Thing'}">
     <slot name="header"></slot>
     <div class="image" class:empty={!item.image || !item.image.src} bind:clientWidth={imageWidth} style="height:{imageHeight}px">
       {#if item.image}
-        <a href="{item.meta.href}"><img itemprop="image" src="{item.image.src}#full" alt="{item.image.alt || item.title || ''}" title="{item.image.title || ''}" /></a>
+        <!-- <a href="{item.meta.href}"> -->
+        <img itemprop="image" src="{item.image.src}#full" alt="{item.image.alt || item.title || ''}" title="{item.image.title || ''}" />
+        <!-- </a> -->
       {/if}
     </div>
     <div class="details">
@@ -43,7 +45,9 @@ $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
           {#if item.meta.videoQuality === 'HD'}
             <span itemprop="videoQuality" class="hd">HD</span>
           {/if}
-          <a href="{item.meta.href}">{item.title}</a>
+          <!-- <a href="{item.meta.href}"> -->
+          {item.title}
+          <!-- </a> -->
         </h3>
   			<span class="presenters">{item.meta.presenters}</span>
       </slot>
@@ -79,6 +83,10 @@ $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
     padding: 5px 9px;
     font-size: .7rem;
     color: gray;
+    height: 70px;
+    /* background: rgb(195, 247, 195); */
+    display: flex;
+    flex-direction: column;
   }
   h3.title {
     margin: 0;

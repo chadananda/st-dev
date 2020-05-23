@@ -1,7 +1,38 @@
+<svelte:head>
+		<script src="https://cdn.plyr.io/3.6.2/plyr.js"></script>
+		<link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
+</svelte:head>
+
 <script>
-	import { webinars } from '../../store'
-	import Media from '../../components/Media.svelte'
-	import Debug from '../../components/Debug.svelte'
+// import Modal from 'svelte-simple-modal'
+import VideoPopup from '../../components/Popup_video.svelte'
+import { getContext } from 'svelte'
+const { open } = getContext('simple-modal')
+const showPopup = (item) => {
+  // console.log('hit popup request', item.meta.href)
+  open(VideoPopup, { item }, {
+			 styleWindow: {
+							background: 'rgba(200,200,200, 0.96)',
+							padding: '0',
+							'border-radius': '5px',
+							width: '80%',
+							overflow: 'hidden',
+				},
+				styleContent: {
+						padding: '0',
+						margin: '0'
+				},
+				closeButton: false,
+
+
+		})
+}
+
+
+import { webinars } from '../../store'
+import Media from '../../components/Media.svelte'
+import Debug from '../../components/Debug.svelte'
+
 
 $: items =  $webinars.archive  // initial value of reactive list
 
@@ -36,22 +67,30 @@ const debounce = userString => {
 			{/each}
 		{:else}
 			{#each items as item}
-				<Media {item}>
-					<div class="flex">
-						<div class="provider flex-initial">{item.meta.provider}</div> &nbsp;·&nbsp;
-						<div class="count flex-initial">{item.meta.count} videos</div>
-						<div class="duration flex-auto text-right" itemprop="duration" value="{item.meta.duration}">{item.meta.hours}</div>
-					</div>
-				</Media>
+			 <div on:click={showPopup(item)}>
+				  <Media {item}>
+								<div class="thisone flex flex-auto align-text-bottom" style="margin-top: auto">
+										<div class="provider flex-initial">{item.meta.provider}</div> &nbsp;·&nbsp;
+										<div class="count flex-initial">{item.meta.count} {item.meta.count===1 ? 'video' : 'videos'}</div>
+										<div class="duration flex-auto text-right" itemprop="duration" value="{item.meta.duration}">{item.meta.hours}</div>
+								</div>
+			  	</Media>
+				</div>
 			{/each}
 		{/if}
 	</div>
 
 
+
+
+
+
+
+
 <style>
 
 div.navcontainer {
-	 position: sticky; top:46px; z-index: 2000;
+	 position: sticky; top:46px; z-index: 100;
 		width: 100%; height: 4em;	padding: 5px; background: white;
 }
 .medianav {
@@ -70,5 +109,10 @@ div.navcontainer {
 .filter {
   width: 30%; min-width: 200px;
 		margin-top: 2px; margin-bottom: 2px;
+}
+.thisone {
+		flex-basis: grow;
+		align-items: flex-end;
+		margin-bottom: -2px;
 }
 </style>
