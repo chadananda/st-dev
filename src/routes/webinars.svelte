@@ -118,7 +118,8 @@
 			</select> &nbsp; &nbsp; -->
 
 		<select class="filter2 flex-none w-64" bind:value={category}>
-				<option value="">all</option>
+				<option value="">All</option>
+    <option value="---" disabled>---</option>
 				<option value="Mon">Baha'i</option>
 				<option value="Tue">Christian</option>
 				<option value="Wed">Hindu</option>
@@ -134,26 +135,27 @@
 		</div>
 	</div>
 
- <div class="mediastuff relative flex flex-col w-full justify-center">
+ <div class="mediastuff relative flex flex-col w-9/12 justify-center">
 		{#if !weeklyEvents}
 			{#each Array(24) as item}
 				<Media item={false} />
 			{/each}
 		{:else}
 			{#each weeklyEvents as week}
-			 <div class="weekheader pl-8 text-center h-12">
-						<img src="/calendar.svg" class="w-6 inline -mt-3" alt="calendar" /> &nbsp;
+			 <div class="weekheader">
+						<img src="/calendar.svg" class="inline" alt="calendar" />
 						<h2 class="text-gray-700 inline text-lg pl-6">
 						{spacetime(week.week).format('{month} {date-ordinal}')} - {spacetime(week.week).add(6, 'day').format('{month-short} {date-ordinal}')}</h2>
 				</div>
-				<ul class="ml-5">
+				<ul class="weeklist ml-5">
     {#each week.events as item}
-      <li class="item">{item.date.format('nice-day')}: {item.event.meta.presenters[0]} : {item.event.meta.title}</li>
-
-				<!-- <SvelteInfiniteScroll threshold={100} on:loadmore={() => {endDate = endDate.add(1, 'month')}} /> -->
+      <li class="item">
+						  <b>{item.date.format('{day} {month-short} {date-ordinal}, {time}')}</b>
+						  {item.event.meta.presenters[0]}, <i>{item.event.meta.title}</i>
+							</li>
     {/each}
 				</ul>
-				<br><br>
+				<SvelteInfiniteScroll threshold={100} on:loadmore={() => {endDate = endDate.add(1, 'month')}} />
 			{/each}
 		{/if}
 	</div>
@@ -177,6 +179,19 @@
 
 
 <style>
+		.mediastuff {
+			 width: 70%; margin-left:auto; margin-right: auto;
+		}
+  .weekheader{
+				width: auto; margin-left: 3em; margin-right: 3em; position: relative;
+				height: 3em;   margin-top: 1em;
+		}
+		.weekheader img {  margin-right: 1em; width: 3em; opacity:.75;}
+		.weeklist { margin-left: 7.5em; margin-bottom: 2em; }
+		.weeklist li { line-height: 1em; padding:4px; width:auto; border-radius: 5px;  }
+		.weeklist li:nth-child(1) { background-color: rgb(237, 233, 250); }
+		.weeklist li:nth-child(2) { padding-top: 5px; padding-bottom:5px; }
+
 	div.navcontainer {
 			width: 100%; height: 4em; z-index: 2000;
 			position: sticky; top:46px; background: white;
