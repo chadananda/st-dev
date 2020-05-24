@@ -41,7 +41,7 @@
 			filteredPrograms.forEach(e => {
 					if (!e.meta.weekly && e.meta.starttime.isBetween(startDate, endDate)) result.push({date: e.meta.starttime, event: e})
 					else  if (e.meta.weekly) {
-							let time = e.meta.starttime
+							let time = spacetime(e.meta.starttime)
 							while (time.isBefore(endDate)) {
 								if (time.isBetween(startDate, endDate)) result.push({date: time, event: e}) // in case we're in the middle of a set
 								time = time.add(1, 'week')
@@ -189,8 +189,8 @@
 		.weekheader img {  margin-right: 1em; width: 3em; opacity:.75;}
 		.weeklist { margin-left: 7.5em; margin-bottom: 2em; }
 		.weeklist li { line-height: 1em; padding:4px; width:auto; border-radius: 5px;  }
-		.weeklist li:nth-child(1) { background-color: rgb(237, 233, 250); }
-		.weeklist li:nth-child(2) { padding-top: 5px; padding-bottom:5px; }
+		.weeklist li:nth-child(odd) { background-color: rgb(237, 233, 250); }
+		.weeklist li:nth-child(even) { padding-top:8px; padding-bottom:8px; }
 
 	div.navcontainer {
 			width: 100%; height: 4em; z-index: 2000;

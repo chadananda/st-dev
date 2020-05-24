@@ -1,7 +1,7 @@
 const sheetID = '1nlsYAMLxbLdaf1gBJGgyMze4AvKfaws4zQbqEBi4iYw'
 const cacheMinutes = 15
 import spacetime from 'spacetime'
-spacetime.extend({ical: function() { 
+spacetime.extend({ical: function() {
   return this.format('iso').replace(/^(\d+)-(\d+)-/, '$1$2').replace(/[:\.]/, '')
 }})
 
@@ -73,9 +73,9 @@ function url(n) { return `https://spreadsheets.google.com/feeds/list/${sheetID}/
 /**
  * Simple plural formatter for either a number or an array of strings, e.g.:
  *   "1 video", "2 videos", "Chad and David present"
- * @param {mixed} items 
- * @param {string} one 
- * @param {string} many 
+ * @param {mixed} items
+ * @param {string} one
+ * @param {string} many
  */
 function plural(items, one, many) {
   if (typeof items === 'number') return `${items} ${items === 1 ? one : many}`
@@ -110,17 +110,19 @@ constructor(o, type) {
 
   if (typeof this.meta.date === 'string' && this.meta.date_2)  this.meta.date = this.meta.date_2
 
-  if (this.meta.starttime && this.meta.timestamp) {
-    // format the VEVENT in vCalendar format
-    this.meta.vevent = `BEGIN:VEVENT
-UID:${this.meta.timestamp.ical()}@sacred-traditions.org
-DTSTAMP:${this.meta.timestamp.ical()}
-DTSTART:${this.meta.starttime.ical()}`
-    if (this.meta.endtime) this.meta.vevent += `\nDTEND:${this.meta.endtime.ical()}`
-    if (this.meta.weekly) this.meta.vevent += `\nRRULE:FREQ=WEEKLY`
-    this.meta.vevent += `\nEND:VEVENT`
-    this.meta.vevent = this.meta.vevent.replace(/\.\d{3}Z/gm, 'Z')
-  }
+// FIX PLEASE: this is causing blocking errors
+
+//   if (this.meta.starttime && this.meta.timestamp) {
+//     // format the VEVENT in vCalendar format
+//     this.meta.vevent = `BEGIN:VEVENT
+// UID:${spacetime(this.meta.timestamp).ical()}@sacred-traditions.org
+// DTSTAMP:${spacetime(this.meta.timestamp).ical()}
+// DTSTART:${spacetime(this.meta.starttime).ical()}`
+//     if (this.meta.endtime) this.meta.vevent += `\nDTEND:${timestamp(this.meta.endtime).ical()}`
+//     if (this.meta.weekly) this.meta.vevent += `\nRRULE:FREQ=WEEKLY`
+//     this.meta.vevent += `\nEND:VEVENT`
+//     this.meta.vevent = this.meta.vevent.replace(/\.\d{3}Z/gm, 'Z')
+//   }
 
   this.meta.image = {
     src: this.meta.imageURL,
