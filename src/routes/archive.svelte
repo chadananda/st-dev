@@ -23,7 +23,7 @@ const showPopup = (item) => {
 import { webinars } from '../store'
 import Media from '../components/Media.svelte'
 
-import Debug from '../components/Debug.svelte'
+// import Debug from '../components/Debug.svelte'
 
 // initial value of reactive list
 $: items =  $webinars.archive
