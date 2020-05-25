@@ -1,5 +1,4 @@
 const sheetID = '1nlsYAMLxbLdaf1gBJGgyMze4AvKfaws4zQbqEBi4iYw'
-const cacheMinutes = 15
 import spacetime from 'spacetime'
 spacetime.extend({ical: function() {
   return this.format('iso').replace(/^(\d+)-(\d+)-/, '$1$2').replace(/[:\.]/, '')
@@ -88,7 +87,7 @@ function plural(items, one, many) {
 
 class Media {
 constructor(o, type) {
-  if (!o.gsx$published) return this
+  if (!o.gsx$published || o.gsx$published.match(/[Nn][Oo]/)) return this
   let tz = o.gsx$timezone ? informal.find(o.gsx$timezone.$t) : 'UTC'
   type = type || (o.gsx$resource ? o.gsx$resource.$t : 'video')
   let schema = { type: schemaOrgTypes[type] || 'Thing'}
