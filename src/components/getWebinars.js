@@ -87,7 +87,7 @@ function plural(items, one, many) {
 
 class Media {
 constructor(o, type) {
-  if (!o.gsx$published || o.gsx$published.match(/[Nn][Oo]/)) return this
+  if (!o.gsx$published || !/[Nn][Oo]/.test(o.gsx$published.$t)) return this
   let tz = o.gsx$timezone ? informal.find(o.gsx$timezone.$t) : 'UTC'
   type = type || (o.gsx$resource ? o.gsx$resource.$t : 'video')
   let schema = { type: schemaOrgTypes[type] || 'Thing'}
