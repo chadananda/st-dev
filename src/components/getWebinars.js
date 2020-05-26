@@ -103,7 +103,7 @@ constructor(o, type) {
     else if (k.match(/(?:categories|presenters|tags)$/)) v = v.split(/, ?/)
     this.meta[name] = v
   })
-  this.meta.href = this.meta.href || this.meta.link || this.meta.eventURL || this.meta.titleURL || false
+  this.meta.href = this.meta.href || this.meta.link || this.meta.URL || this.meta.eventURL || this.meta.titleURL || false
 
   if (!this.meta.title || !this.meta.href) return this // PUBLISH?
   this.status = true
