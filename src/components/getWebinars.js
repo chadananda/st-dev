@@ -87,7 +87,7 @@ function plural(items, one, many) {
 
 class Media {
 constructor(o, type) {
-  if (!o.gsx$published || !/[Nn][Oo]/.test(o.gsx$published.$t)) return this
+  if (!o.gsx$published || /[Nn][Oo]/.test(o.gsx$published.$t)) return this // PUBLISH?
   let tz = o.gsx$timezone ? informal.find(o.gsx$timezone.$t) : 'UTC'
   type = type || (o.gsx$resource ? o.gsx$resource.$t : 'video')
   let schema = { type: schemaOrgTypes[type] || 'Thing'}
@@ -105,7 +105,7 @@ constructor(o, type) {
   })
   this.meta.href = this.meta.href || this.meta.link || this.meta.eventURL || this.meta.titleURL || false
 
-  if (!this.meta.title || !this.meta.href) return this
+  if (!this.meta.title || !this.meta.href) return this // PUBLISH?
   this.status = true
 
   if (typeof this.meta.date === 'string' && this.meta.date_2)  this.meta.date = this.meta.date_2
