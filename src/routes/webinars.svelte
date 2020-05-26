@@ -150,7 +150,7 @@
 				<ul class="weeklist ml-5">
     {#each week.events as item}
       <li class="item">
-						  <b>{item.date.format('{day} {month-short} {date-ordinal}, {time}')}</b>
+						  <b>{item.date.goto(tz).format('{day} {month-short} {date-ordinal}, {time}')}</b>
 						  {item.event.meta.presenters[0]}, <i>{item.event.meta.title}</i>
 							</li>
     {/each}
