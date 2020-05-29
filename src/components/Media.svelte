@@ -57,7 +57,7 @@ $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
   </div>
 {/if}
 
-<style>
+<!-- <style>
   .card {
     width: 180px;
     height: auto;
@@ -65,6 +65,9 @@ $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
     box-shadow:1px 1px 8px 0px rgba(0,0,0,0.15);
     background-color: white;
     margin: .5em;
+  }
+  .card:hover {
+    box-shadow:1px 1px 8px 0px rgba(0,0,0,0.45);
   }
   .image {
     width: 100%;
@@ -109,4 +112,4 @@ $: if (imageWidth) imageHeight = Math.round(imageWidth * .6)
     background-size: 180px;
     opacity: .8;
   }
-</style>
+</style> -->
