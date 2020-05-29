@@ -61,7 +61,7 @@ function getYoutubeVideoID(url) {
  <div class="navcontainer">
 		<div class="medianav flex">
 
-			<h2 class="filter-label flex-grow">Media Archive </h2>
+			<h2 class="filter-label flex-grow">Talks of the Spirit</h2>
 
 			<select class="filter2 flex-none w-64" bind:value={category}>
 					<option value="">All</option>
