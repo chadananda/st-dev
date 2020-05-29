@@ -17,7 +17,7 @@
 		{/if}
 
 
-		 <a class="block mr-1 md:mr-4 lg:mr-10 p-2 rounded-full" href="/ocean">
+		 <a class="block mr-1 md:mr-4 lg:mr-8 p-2 rounded-full" href="/ocean">
 			  <img class="w-5 inline -mt-1" src="/ocean_assets/images/ocean-logo2.svg" alt="Ocean 2.0 Reader" />
 					<span class="hidden sm:inline">Ocean </span><span class="hidden md:inline"> 2.0 </span><span class="hidden lg:inline"> Reader</span>
 			</a>
@@ -67,7 +67,7 @@
  <!-- Home page Nav links -->
 	<nav class="flex justify-center items-center sticky bg-white">
 
-		 <a class="block mr-10 p-2 rounded-full" href="/ocean">
+		 <a class="block mr-8 p-2 rounded-full" href="/ocean">
 			  <img class="w-5 inline -mt-1" src="/ocean_assets/images/ocean-logo2.svg" alt="the world inside a drop" />
 					<span class="hidden sm:inline">Ocean </span><span class="hidden md:inline"> 2.0 </span><span class="hidden lg:inline">  Reader</span>
 			</a>
@@ -83,9 +83,9 @@
 		 	 <span class="hidden sm:inline"> Webinars</span>
 			</a> -->
 
-			<a class="block mr-1 p-2 rounded-full" href="/archive">
+			<a class="block mr-5 p-2 rounded-full" href="/archive">
 			  <img class="w-5 inline -mt-1 opacity-75" src="/ed-video.svg" alt="educational media" />
-					<span class="hidden lg:inline">Talks </span> <span class="hidden sm:inline">Archive</span>
+					<span class="hidden sm:inline">Talks </span> <span class="hidden md:inline">Archive</span>
 			</a>
 
 		 <a class="block mr-6 p-2 rounded-full" href="/courses">
