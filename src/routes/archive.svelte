@@ -100,7 +100,7 @@ function getYoutubeVideoID(url) {
 														{/if}
 												</div>
 												<div class="details">
-														<div name="title" itemprop="name" class="title"> {item.title} </div>
+														<div name="title" itemprop="name" class="title" class:short="{item.title.length<30}"> {item.title} </div>
 														<div class="cardbottom">
 																<div class="presenter">{item.meta.presenters}</div>
 																<!-- <div class="count">{item.meta.count} {item.meta.count===1 ? 'video' : 'videos'}</div> -->
@@ -255,8 +255,15 @@ function getYoutubeVideoID(url) {
     overflow: hidden;
     font-size: .75rem;
     /* font-family: arial, sans-serif; */
-    color: black;
-  }
+				color: rgb(65, 53, 82);
+				text-align: center;
+		}
+		.title.short {
+				font-size: .95rem;
+				/* color: purple; */
+				padding-top: 3px;
+				/* padding-left: 5px; */
+		}
   /* .presenters {
     line-height: 1em;
     max-height: 1em;
