@@ -4,7 +4,7 @@
 </svelte:head>
 
 <script>
-import VisibilityGuard from '../components/VisibilityGuard.svelte' // does not render until item is almost visible
+// import VisibilityGuard from '../components/VisibilityGuard.svelte' // does not render until item is almost visible
 
 // video player popup
 import VideoPopup from '../components/Popup_video.svelte'
@@ -91,28 +91,21 @@ function getYoutubeVideoID(url) {
 			 <div on:click={showPopup(item)} class="media">
 				  <!-- <VisibilityGuard let:hasBeenVisible> -->
 						  <!-- {#if hasBeenVisible} -->
-										<div class="card relative m-2 p-1 rounded-lg shadow-lg overflow-hidden cursor-pointer" itemscope
+										<div class="card" itemscope
 												itemtype="https://schema.org/{item.meta[item.meta.schema.type] || item.meta.schema.type || 'Thing'}">
-												<slot name="header"></slot>
+												<!-- <slot name="header"></slot> -->
 												<div class="image" class:empty={!item.image || !item.image.src}>
 														{#if item.image}
 														  <div class="vidimg" style="background-image: url({item.image.src.replace(/hqdefault/, 'mqdefault')})" />
 														{/if}
 												</div>
 												<div class="details">
-														<div name="title">
-																<h3 itemprop="name" class="title">
-																		{#if item.meta.videoQuality === 'HD'}
-																				<span itemprop="videoQuality" class="hd">HD</span>
-																		{/if}
-																		{item.title}
-																</h3>
-												   	<span class="presenters">{item.meta.presenters}</span>
-														</div>
-														<div class="cardbottom flex flex-auto align-text-bottom" style="margin-top: auto">
-																<div class="provider flex-initial">{item.meta.provider}</div> &nbsp;·&nbsp;
-																<div class="count flex-initial">{item.meta.count} {item.meta.count===1 ? 'video' : 'videos'}</div>
-																<div class="duration flex-auto text-right" itemprop="duration" value="{item.meta.duration}">{item.meta.hours}</div>
+														<div name="title" itemprop="name" class="title"> {item.title} </div>
+														<div class="cardbottom">
+																<div class="presenter">{item.meta.presenters}</div>
+																<!-- <div class="count">{item.meta.count} {item.meta.count===1 ? 'video' : 'videos'}</div> -->
+																<div class="duration" itemprop="duration" value="{item.meta.duration}">
+																{`${item.meta.hours}`.split(':').slice(0,2).join(':')}</div>
 														</div>
 												</div>
 										</div>
@@ -133,7 +126,7 @@ function getYoutubeVideoID(url) {
 
 
 <style>
-	div.navcontainer {
+	.navcontainer {
 			position: sticky; top:46px; z-index: 100;
 			width: 100%; height: 4em;	padding: 5px; background: white;
 	}
@@ -163,44 +156,62 @@ function getYoutubeVideoID(url) {
 			font-size: 90%;
 			/* padding:0; */
 	}
-	.cardbottom {
-			flex-basis: grow;
-			align-items: flex-end;
-			margin-bottom: -2px;
+
+
+
+ .media {
+			position: relative;
+			/* margin: 20px; */
 	}
-
-
-
 
  .card {
     width: 180px;
-    height: auto;
+    height: 150px;
     min-height: 150px;
     box-shadow:1px 1px 8px 0px rgba(0,0,0,0.15);
     background-color: white;
 				margin: .5em;
 				transition: box-shadow 0.4s ease-in-out;
-  }
-  .card:hover {
-    box-shadow:1px 1px 8px 0px rgba(0,0,0,0.75);
-  }
+				position: relative; overflow: hidden;
+				border-radius: 5px;
+				font-family: 'Cabin Sketch';
+				padding-top: 10px;
+ }
+ .card:hover {
+		 cursor: pointer;
+   box-shadow:4px 4px 5px 0px rgba(0,0,0,0.75);
+	}
+
+.card:before {
+	 z-index:100;
+	 content:""; height:2px; position:absolute; left:0; right:0;
+		clip-path: polygon(0% 0%, 5% 100%, 10% 0%, 15% 100%, 20% 0%, 25% 100%, 30% 0%, 35% 100%, 40% 0%, 45% 100%, 50% 0%, 55% 100%, 60% 0%, 65% 100%, 70% 0%, 75% 100%, 80% 0%, 85% 100%, 90% 0%, 95% 100%, 100% 0%);
+		background-color: #eee; top: 0;
+}
+
+
+
+
+
+
   .image {
     width: 100%;
-    height: 60%;
+    height: 100px;
     overflow: hidden;
     background: #ddd;
     display: flex;
     align-items: center;
-    justify-content: center;
+				justify-content: center;
+				margin-top:-10px;
   }
   .image.empty {
     padding:20px;
 		}
 		.vidimg{
 			 display: inline-block;
-    height: 98px;
+    height: 100px;
 				width: 180px;
-				background-position: -5px -3px;
+				background-position: -5px -1px;
 				background-repeat: no-repeat;
 				background-size: 190px auto;
 				/* border: 1px solid white; */
@@ -211,31 +222,47 @@ function getYoutubeVideoID(url) {
 		.vidimg:hover {
 			 filter: brightness(1.1) contrast(1.1);
 		}
+		.cardbottom {
+			 margin-top: auto;
+				flex-basis: grow; width: 100%;
+				max-height: 1.3em; overflow: hidden; width: 100%; height: 1.3em;
+		  display: flex; flex-direction: row; flex: auto 1; justify-content: space-between;
+		}
+		.cardbottom .presenter {
+    max-width: 60%; overflow: hidden;
+		}
+		.cardbottom .duration {
+    text-align: right;
+		}
 
 
   .details {
-    padding: 5px 9px;
+    padding: 3px 2px; padding-bottom: 0px;
     font-size: .7rem;
     color: gray;
-    height: 70px;
+    /* height: 49px; */
     /* background: rgb(195, 247, 195); */
-    display: flex;
-    flex-direction: column;
+				display: flex;
+				flex-direction: column;
+				/* margin-top: -2px; */
+				flex: auto 1;
+				height: 50px;
   }
-  h3.title {
-    margin: 0;
-    line-height: 1.4em;
-    max-height: 2.8em;
+  .title {
+    margin: 0; padding-left: 2px;
+    line-height: .95em;
+    max-height: 3em;
     overflow: hidden;
     font-size: .75rem;
-    font-family: arial, sans-serif;
+    /* font-family: arial, sans-serif; */
     color: black;
   }
-  span {
-    line-height: 1.1em;
-    max-height: 1.1em;
-    overflow: hidden;
-  }
+  /* .presenters {
+    line-height: 1em;
+    max-height: 1em;
+				overflow: hidden;
+				font-family: arial, sans-serif;
+  } */
   .card.loading {
     position: relative;
     background-image: url('/loader.gif');
@@ -243,5 +270,9 @@ function getYoutubeVideoID(url) {
     background-position: 0%;
     background-size: 180px;
     opacity: .8;
-  }
+		}
+
+
+
+
 </style>
