@@ -184,9 +184,9 @@ function getYoutubeVideoID(url) {
 
 .card:before {
 	 z-index:9;
-	 content:""; height:2px; position:absolute; left:0; right:0;
+	 content:""; height:3px; position:absolute; left:0; right:0;
 		clip-path: polygon(0% 0%, 5% 100%, 10% 0%, 15% 100%, 20% 0%, 25% 100%, 30% 0%, 35% 100%, 40% 0%, 45% 100%, 50% 0%, 55% 100%, 60% 0%, 65% 100%, 70% 0%, 75% 100%, 80% 0%, 85% 100%, 90% 0%, 95% 100%, 100% 0%);
-		background-color: #eee; top: 0;
+		background-color: #eee; top: -1px;
 }
 
 
@@ -251,7 +251,7 @@ function getYoutubeVideoID(url) {
   .title {
     margin: 0; padding-left: 2px;
     line-height: 1em;
-    max-height: 3.2em;
+    max-height: 3.1em;
     overflow: hidden;
     font-size: .75rem;
 				color: rgb(65, 53, 82);
