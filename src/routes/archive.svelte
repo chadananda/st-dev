@@ -166,7 +166,7 @@ function getYoutubeVideoID(url) {
 
  .card {
     width: 180px;
-    height: 150px;
+    height: 152px;
     min-height: 150px;
     box-shadow:1px 1px 8px 0px rgba(0,0,0,0.15);
     background-color: white;
@@ -183,7 +183,7 @@ function getYoutubeVideoID(url) {
 	}
 
 .card:before {
-	 z-index:99;
+	 z-index:9;
 	 content:""; height:2px; position:absolute; left:0; right:0;
 		clip-path: polygon(0% 0%, 5% 100%, 10% 0%, 15% 100%, 20% 0%, 25% 100%, 30% 0%, 35% 100%, 40% 0%, 45% 100%, 50% 0%, 55% 100%, 60% 0%, 65% 100%, 70% 0%, 75% 100%, 80% 0%, 85% 100%, 90% 0%, 95% 100%, 100% 0%);
 		background-color: #eee; top: 0;
@@ -246,30 +246,21 @@ function getYoutubeVideoID(url) {
 				flex-direction: column;
 				/* margin-top: -2px; */
 				flex: auto 1;
-				height: 50px;
+				height: 52px;
   }
   .title {
     margin: 0; padding-left: 2px;
-    line-height: .95em;
-    max-height: 3em;
+    line-height: 1em;
+    max-height: 3.2em;
     overflow: hidden;
     font-size: .75rem;
-    /* font-family: arial, sans-serif; */
 				color: rgb(65, 53, 82);
 				text-align: center;
 		}
 		.title.short {
 				font-size: .95rem;
-				/* color: purple; */
 				padding-top: 3px;
-				/* padding-left: 5px; */
 		}
-  /* .presenters {
-    line-height: 1em;
-    max-height: 1em;
-				overflow: hidden;
-				font-family: arial, sans-serif;
-  } */
   .card.loading {
     position: relative;
     background-image: url('/loader.gif');
