@@ -29,16 +29,18 @@ import { webinars } from '../store'
 // import Media from '../components/Media.svelte'
 // import Debug from '../components/Debug.svelte'
 
-const keyItems = (items, keyed={}) => {
-		items.forEach(item => keyed[item.meta.id] = item)
+const keyedItems = (items, keyed={}) => {
+  items = items.sort(()=>.5-Math.random()) // shuffle
+		items.forEach(item => {
+			item.isPinned = !!userPins[item.meta.id] // temp store local pinned status
+			keyed[item.meta.id] = item
+		})
 		return keyed
 }
 
 // initial value of reactive list
-$: allItems = keyItems($webinars.archive)
-$: randomList = Object.values(allItems) // raw list
-			                .sort(()=>.5-Math.random()) // randomized
-$: filteredList = randomList
+$: allItems = keyedItems($webinars.archive)
+$: filteredList = Object.values(userPins).concat(Object.values(allItems).filter(item => !userPins[item.meta.id]))  // move pinned items to front
 let category = '' //  category filter
 
 
@@ -49,7 +51,8 @@ const debounce = userString => {
 		timer = setTimeout(() => {
 				let filterStr = userString.normalize('NFD').replace(/['"‘’“”\u0300-\u036f]/g, '').toLowerCase()
 				if (filterStr.length<2) filterStr = ''
-				filteredList = randomList.filter(o=>o.meta.filtertext.match(filterStr))
+				filteredList = Object.values(userPins).concat(Object.values(allItems).filter(item => !userPins[item.meta.id]))
+				                     .filter(o=>o.meta.filtertext.match(filterStr))
 	 }, 250)
 }
 
@@ -78,13 +81,17 @@ function loadPins(){
 }
 function savePins(){
 		let list = Object.keys(userPins)
-		console.log('saving', list)
+		// console.log('saving all pins', list)
 	 localStorage.setItem('st_pinned_talks', JSON.stringify(list))
 }
 function addPin(id){
+		// console.log('adding pin', id)
+		allItems[id].isPinned = true
 		userPins[id] = allItems[id]; savePins()
 }
 function removePin(id){
+		// console.log('removing pin', id)
+		allItems[id].isPinned = false
 		delete(userPins[id]); savePins()
 }
 function tryLoadingWhenReady() {
@@ -93,7 +100,7 @@ function tryLoadingWhenReady() {
 }
 $: userPins = {} // id-keyed object of items
 onMount(tryLoadingWhenReady)
-$: console.log('User pins', Object.keys(userPins))
+// $: console.log('User pins', Object.keys(userPins))
 
 
 </script>
@@ -124,7 +131,7 @@ $: console.log('User pins', Object.keys(userPins))
 	</div>
 
 	<div class="mediastuff relative flex flex-wrap w-full justify-center">
-		{#if !randomList || randomList.length === 0}
+		{#if !filteredList || filteredList.length === 0}
 			{#each Array(1) as item}
 			 	<div class="card loading" />
 			{/each}
@@ -132,9 +139,16 @@ $: console.log('User pins', Object.keys(userPins))
 			{#each filteredList as item}
 			 <div on:click={showPopup(item)} class="media group relative">
 
+				      <!-- floating unpin button -->
+							 {#if !!userPins[item.meta.id]}
+										<img class="unpin w-4 absolute right-0 bottom-0" src="/pin.svg" alt="unpin item"
+										     on:click|stopPropagation={removePin(item.meta.id)}
+															onmouseover="this.src='/unpin.svg'" onmouseout="this.src='/pin.svg'" 	/>
+        {:else}
           <!-- floating pin button -->
 										<img class="pin w-6 absolute right-0 bottom-0" src="/pin.svg" alt="pin item"
 										     on:click|stopPropagation={addPin(item.meta.id)} />
+         {/if}
 
           <!-- floating play button  -->
 								  <img class="play w-12 absolute" src="/play.svg" alt="play item"
@@ -212,6 +226,13 @@ $: console.log('User pins', Object.keys(userPins))
 			opacity:.75;
 	}
 	.pin:hover {cursor:pointer; opacity:1;}
+
+	.unpin {z-index:9; bottom: 15px; margin-right:-3px;
+			/* filter: drop-shadow(1px 1px 2px rgb(145, 145, 145)); */
+			opacity:.85;
+	}
+	.unpin:hover {cursor:pointer; opacity:1;}
+
 	.play {display: none; z-index:9; top: 40px; left: 71px; opacity:.25;}
 	.media:hover .pin {display: block;}
 	.media:hover .play {display: block; opacity:.15;}
