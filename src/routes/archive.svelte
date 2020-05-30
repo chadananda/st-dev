@@ -20,16 +20,27 @@ const showPopup = (item) => {
 		})
 }
 
+
+
+
+
 // archive items, youtube videos
 import { webinars } from '../store'
 // import Media from '../components/Media.svelte'
 // import Debug from '../components/Debug.svelte'
 
+const keyItems = (items, keyed={}) => {
+		items.forEach(item => keyed[item.meta.id] = item)
+		return keyed
+}
 
 // initial value of reactive list
-$: archive = ($webinars.archive || []).sort(()=>.5-Math.random())
-$: filteredItems = archive
+$: allItems = keyItems($webinars.archive)
+$: randomList = Object.values(allItems) // raw list
+			                .sort(()=>.5-Math.random()) // randomized
+$: filteredList = randomList
 let category = '' //  category filter
+
 
 // debounce for rebuilding reactive list
 let timer
@@ -38,7 +49,7 @@ const debounce = userString => {
 		timer = setTimeout(() => {
 				let filterStr = userString.normalize('NFD').replace(/['"‘’“”\u0300-\u036f]/g, '').toLowerCase()
 				if (filterStr.length<2) filterStr = ''
-				filteredItems = archive.filter(o=>o.meta.filtertext.match(filterStr))
+				filteredList = randomList.filter(o=>o.meta.filtertext.match(filterStr))
 	 }, 250)
 }
 
@@ -53,6 +64,37 @@ function getYoutubeVideoID(url) {
   // Logger.log('extractYoutubeID, url:"'+url+'", id:"'+id+'"')
   return id
 }
+
+
+// manage user pinned items
+// userPins is a keyed object of items -- but only the keys are saved and retrieved
+import { onMount } from 'svelte';
+function loadPins(){
+		userPins = {}
+		let loaded, parsed
+		loaded = localStorage.getItem('st_pinned_talks')
+		if (loaded) parsed = (JSON.parse(loaded) || [])
+		if (parsed) parsed.forEach(id => userPins[id] = allItems[id])
+}
+function savePins(){
+		let list = Object.keys(userPins)
+		console.log('saving', list)
+	 localStorage.setItem('st_pinned_talks', JSON.stringify(list))
+}
+function addPin(id){
+		userPins[id] = allItems[id]; savePins()
+}
+function removePin(id){
+		delete(userPins[id]); savePins()
+}
+function tryLoadingWhenReady() {
+		if (! window || !allItems || !Object.keys(allItems).length || !window.localStorage) setTimeout(tryLoadingWhenReady, 1000)
+	  	else loadPins()
+}
+$: userPins = {} // id-keyed object of items
+onMount(tryLoadingWhenReady)
+$: console.log('User pins', Object.keys(userPins))
+
 
 </script>
 
@@ -82,18 +124,25 @@ function getYoutubeVideoID(url) {
 	</div>
 
 	<div class="mediastuff relative flex flex-wrap w-full justify-center">
-		{#if !archive || archive.length === 0}
+		{#if !randomList || randomList.length === 0}
 			{#each Array(1) as item}
 			 	<div class="card loading" />
 			{/each}
 		{:else}
-			{#each filteredItems as item}
-			 <div on:click={showPopup(item)} class="media">
-				  <!-- <VisibilityGuard let:hasBeenVisible> -->
-						  <!-- {#if hasBeenVisible} -->
+			{#each filteredList as item}
+			 <div on:click={showPopup(item)} class="media group relative">
+
+          <!-- floating pin button -->
+										<img class="pin w-6 absolute right-0 bottom-0" src="/pin.svg" alt="pin item"
+										     on:click|stopPropagation={addPin(item.meta.id)} />
+
+          <!-- floating play button  -->
+								  <img class="play w-12 absolute" src="/play.svg" alt="play item"
+										     on:click.stopPropagation={addPin(item.meta.id)} />
+
+          <!-- card  -->
 										<div class="card" itemscope
 												itemtype="https://schema.org/{item.meta[item.meta.schema.type] || item.meta.schema.type || 'Thing'}">
-												<!-- <slot name="header"></slot> -->
 												<div class="image" class:empty={!item.image || !item.image.src}>
 														{#if item.image}
 														  <div class="vidimg" style="background-image: url({item.image.src.replace(/hqdefault/, 'mqdefault')})" />
@@ -109,10 +158,8 @@ function getYoutubeVideoID(url) {
 														</div>
 												</div>
 										</div>
-								<!-- {:else}
-          <div class="card loading" />
-								{/if}
-						</VisibilityGuard> -->
+
+
 				</div>
 			{/each}
 		{/if}
@@ -158,11 +205,18 @@ function getYoutubeVideoID(url) {
 	}
 
 
-
- .media {
-			position: relative;
-			/* margin: 20px; */
+	.media { position: relative;}
+	.media:hover {cursor: pointer;}
+	.pin {display: none;  z-index:9; bottom: 15px; margin-right:-10px;
+			filter: drop-shadow(1px 1px 2px rgb(145, 145, 145));
+			opacity:.75;
 	}
+	.pin:hover {cursor:pointer; opacity:1;}
+	.play {display: none; z-index:9; top: 40px; left: 71px; opacity:.25;}
+	.media:hover .pin {display: block;}
+	.media:hover .play {display: block; opacity:.15;}
+	.play:hover {opacity: 1 !important;}
+
 
  .card {
     width: 180px;
@@ -177,7 +231,7 @@ function getYoutubeVideoID(url) {
 				font-family: 'Cabin Sketch';
 				padding-top: 10px;
  }
- .card:hover {
+ .media:hover .card {
 		 cursor: pointer;
    box-shadow:4px 4px 5px 0px rgba(0,0,0,0.75);
 	}
@@ -219,7 +273,7 @@ function getYoutubeVideoID(url) {
 				position: relative;
 
 		}
-		.vidimg:hover {
+		.media:hover .vidimg {
 			 filter: brightness(1.1) contrast(1.1);
 		}
 		.cardbottom {
