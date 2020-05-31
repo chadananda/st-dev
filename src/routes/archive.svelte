@@ -20,8 +20,30 @@ const showPopup = (item) => {
 		})
 }
 
-
-
+function stripString(str) {
+				return str.toLowerCase()
+				          .replace(new RegExp(/\s/g),"")
+				          .replace(new RegExp(/[àáâãäå]/g),"a")
+				          .replace(new RegExp(/æ/g),"ae")
+				          .replace(new RegExp(/ç/g),"c")
+				          .replace(new RegExp(/[èéêë]/g),"e")
+				          .replace(new RegExp(/[ìíîï]/g),"i")
+				          .replace(new RegExp(/ñ/g),"n")
+              .replace(new RegExp(/[òóôõö]/g),"o")
+				          .replace(new RegExp(/œ/g),"oe")
+				          .replace(new RegExp(/[ùúûü]/g),"u")
+				          .replace(new RegExp(/[ýÿ]/g),"y")
+														.replace(new RegExp(/\W/g),"")
+														.normalize('NFD').replace(/['"‘’“”\u0300-\u036f]/g, '')
+}
+function titleCleanup(title) {
+		return title.replace(/Bah[a|á][\'|’|‘]?[i|í]/g, 'Bahá’í')
+														.replace(/Bah[a|á][\'|’|‘]?[u|o][\'|’|‘]?ll[a|á]h/gi, 'Bahá’u’lláh')
+														.replace(/Bab/, 'Báb')
+														.replace(/[\'|‘']?Abd[u|o][\'|’|‘]?l[\-| ][B|b]ah[a|á]/, '‘Abdu’l-Bahá')
+														.replace(/q[u|o]r[\'|’|‘]?[a|á]n/, "Qur’án")
+														.replace(/\'s /, "’s ")
+}
 
 
 // archive items, youtube videos
@@ -34,8 +56,8 @@ const keyedItems = (items, keyed={}) => {
 		items.forEach(item => {
 			item.isPinned = !!userPins[item.meta.id] // temp store local pinned status
 			item.image.src = (item.image.src||'').replace(/hqdefault/, 'mqdefault').replace(/\/default/, '/mqdefault')
+			item.title = titleCleanup(item.title)
 			keyed[item.meta.id] = item
-
 		})
 		return keyed
 }
@@ -51,10 +73,10 @@ let timer
 const debounce = userString => {
   clearTimeout(timer)
 		timer = setTimeout(() => {
-				let filterStr = userString.normalize('NFD').replace(/['"‘’“”\u0300-\u036f]/g, '').toLowerCase()
+				let filterStr = stripString(userString)
 				if (filterStr.length<2) filterStr = ''
 				filteredList = Object.values(userPins).concat(Object.values(allItems).filter(item => !userPins[item.meta.id]))
-				                     .filter(o=>o.meta.filtertext.match(filterStr))
+				                     .filter(o=> stripString(o.meta.filtertext).match(filterStr))
 	 }, 250)
 }
 
