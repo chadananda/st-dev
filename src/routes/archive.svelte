@@ -33,7 +33,9 @@ const keyedItems = (items, keyed={}) => {
   items = items.sort(()=>.5-Math.random()) // shuffle
 		items.forEach(item => {
 			item.isPinned = !!userPins[item.meta.id] // temp store local pinned status
+			item.image.src = (item.image.src||'').replace(/hqdefault/, 'mqdefault').replace(/\/default/, '/mqdefault')
 			keyed[item.meta.id] = item
+
 		})
 		return keyed
 }
@@ -159,7 +161,7 @@ onMount(tryLoadingWhenReady)
 												itemtype="https://schema.org/{item.meta[item.meta.schema.type] || item.meta.schema.type || 'Thing'}">
 												<div class="image" class:empty={!item.image || !item.image.src}>
 														{#if item.image}
-														  <div class="vidimg" style="background-image: url({item.image.src.replace(/hqdefault/, 'mqdefault')})" />
+														  <div class="vidimg" style="background-image: url({item.image.src})" />
 														{/if}
 												</div>
 												<div class="details">
