@@ -37,11 +37,11 @@ function stripString(str) {
 														.normalize('NFD').replace(/['"‘’“”\u0300-\u036f]/g, '')
 }
 function titleCleanup(title) {
-		return title.replace(/Bah[a|á][\'|’|‘]?[i|í]/g, 'Bahá’í')
+		return title.replace(/Bah[a|á][\'|’|‘]?[i|í]/gi, 'Bahá’í')
 														.replace(/Bah[a|á][\'|’|‘]?[u|o][\'|’|‘]?ll[a|á]h/gi, 'Bahá’u’lláh')
 														.replace(/Bab/, 'Báb')
-														.replace(/[\'|‘']?Abd[u|o][\'|’|‘]?l[\-| ][B|b]ah[a|á]/, '‘Abdu’l-Bahá')
-														.replace(/q[u|o]r[\'|’|‘]?[a|á]n/, "Qur’án")
+														.replace(/[\'|‘']?Abd[u|o][\'|’|‘]?l[\-| ][B|b]ah[a|á]/i, '‘Abdu’l-Bahá')
+														.replace(/q[u|o]r[\'|’|‘]?[a|á]n/i, "Qur’án")
 														.replace(/\'s /, "’s ")
 }
 
@@ -57,6 +57,7 @@ const keyedItems = (items, keyed={}) => {
 			item.isPinned = !!userPins[item.meta.id] // temp store local pinned status
 			item.image.src = (item.image.src||'').replace(/hqdefault/, 'mqdefault').replace(/\/default/, '/mqdefault')
 			item.title = titleCleanup(item.title)
+			item.meta.filtertext = stripString(item.meta.filtertext)
 			keyed[item.meta.id] = item
 		})
 		return keyed
@@ -76,7 +77,7 @@ const debounce = userString => {
 				let filterStr = stripString(userString)
 				if (filterStr.length<2) filterStr = ''
 				filteredList = Object.values(userPins).concat(Object.values(allItems).filter(item => !userPins[item.meta.id]))
-				                     .filter(o=> stripString(o.meta.filtertext).match(filterStr))
+				                     .filter(o=> o.meta.filtertext.match(filterStr))
 	 }, 250)
 }
 
@@ -134,9 +135,9 @@ onMount(tryLoadingWhenReady)
  <div class="navcontainer">
 		<div class="medianav flex">
 
-			<h2 class="filter-label flex-grow">Talks of the Spirit</h2>
+			<h2 class="filter-label flex-grow" title="{filteredList.length}">Talks of the Spirit</h2>
 
-			<select class="filter2 flex-none w-64" bind:value={category}>
+			<!-- <select class="filter2 flex-none w-64" bind:value={category}>
 					<option value="">All</option>
 					<option value="---" disabled>---</option>
 					<option value="Mon">Baha'i</option>
@@ -147,7 +148,7 @@ onMount(tryLoadingWhenReady)
 					<option value="Sat">Judaic</option>
 					<option value="Sun">Zoroastrian</option>
 					<option value="Sun">Confucian</option>
-				</select> &nbsp; &nbsp;
+				</select> &nbsp; &nbsp; -->
 
 					<input type="search" class="filter" placeholder="filter title or author"
 								on:input={ ({ target: { value } }) => debounce(value) } />
@@ -234,13 +235,12 @@ onMount(tryLoadingWhenReady)
 			width: 30%; min-width: 200px;
 			margin-top: 2px; margin-bottom: 2px;
 	}
-	.filter2 {
+	/* .filter2 {
 			width: 15%; min-width: 100px;
 			margin-top: 2px; margin-bottom: 2px;
 			padding:0; padding-left:8px;
-			font-size: 90%;
-			/* padding:0; */
-	}
+			font-size: 90%; .card
+	} */
 
 
 	.media { position: relative;}
