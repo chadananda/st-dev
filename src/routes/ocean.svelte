@@ -184,9 +184,12 @@
   let OS = {};
   let ocean_keywords = "interfaith,christian,islam,judaism,bible search,qur'an search,Zoroastrianism,Hinduism,Sikh"
   let artifacts = {
-    windows:  'https://ocean-download.dev2.us/win32_setup.exe',
-    mac:      'https://ocean-download.dev2.us/mac_setup.pkg',
-    linux:    'https://ocean-download.dev2.us/linux_setup.AppImage',
+    //windows:  'https://ocean-download.dev2.us/win32_setup.exe',
+    windows:  'https://portal-artifacts-production.dev2.us/ffa-ocean/ocean/ocean-electron-win/Ocean2.0-reader-win.x32.exe',
+    //mac:      'https://ocean-download.dev2.us/mac_setup.pkg',
+    mac:      'https://portal-artifacts-production.dev2.us/ffa-ocean/ocean/ocean-electron-mac/Ocean2.0-reader-mac.x64.pkg',
+    //linux:    'https://ocean-download.dev2.us/linux_setup.AppImage',
+    linux:    'https://portal-artifacts-production.dev2.us/ffa-ocean/ocean/ocean-electron-linux/Ocean2.0-reader-linux.x64.AppImage',
     android:  'https://play.google.com/store/apps/details?id=org.ocean.reader',
     ios:      'https://itunes.apple.com/us/app/ocean-reader/id1287394047?mt=8&app=itunes&ign-mpt=uo%3D4'
   }
@@ -667,7 +670,7 @@
    margin-right: 18px;
    display: inline-block;
    position: relative;
-   top: 10px;
+   top: 0;
  }
  .download-button span {
    font-weight: 600;
@@ -839,7 +842,7 @@
     white-space: nowrap;
   }
   .download-button img {
-    top: 10px;
+    /* top: 10px; */
     /* margin-top: -5px; */
   }
 

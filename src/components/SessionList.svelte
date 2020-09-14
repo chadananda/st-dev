@@ -1,4 +1,7 @@
 <script>
+  // edit sessions at:
+  // https://docs.google.com/spreadsheets/d/1NUscRAuSmD5sOVcRlBXokQa-5SBlg8bZAsFqqLApz44/edit
+  //
   export let CourseID = ''
   export let sessions
   let today = (new Date()).toISOString().split('T')[0]
@@ -21,7 +24,7 @@
   )) as session}
     <tr class="session pb-1 even:bg-gray-200"
       class:full={session.Total >= session.Capacity}
-      class:closed={session.StartDate < today}
+      class:closed={session.StartDate < today || true}
       class:tentative={!session.Confirmed}>
       <td class="date">{session.StartDateDisplay} – {session.EndDateDisplay}</td>
       <td class="title"><a href="{(session.meta || {}).href || session.href}" on:click={() => {
