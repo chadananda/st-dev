@@ -68,7 +68,7 @@
     }
     .date { width:9em; }
     .cost { width:4em; text-align:center; }
-    .places { width:5em; text-align:center; }
+    // .places { width:5em; text-align:center; }
   }
 </style>
 
