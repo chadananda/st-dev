@@ -12,7 +12,7 @@
 
   <div class="container">
     <div class="logo">
-      <img src="/ocean_assets/images/ocean-logo2.svg" alt="No image" width="100" class="logo_icon" />
+      <img src="/ocean_assets/images/ocean-logo2.svg" alt="Ocean 2.0 Logo" width="100" class="logo_icon" />
       <div>Ocean 2.0 Interfaith Reader
         <span>Immersive Library of the World’s Sacred Literature</span>
       </div>
@@ -34,27 +34,27 @@
     <div class="download-links">
       {#if OS.android}
       <a class="download-button" href="{artifacts.android}">
-        <img src="/ocean_assets/images/icon_android_button.svg" alt="No image" width="30" /> App for
+        <img src="/ocean_assets/images/icon_android_button.svg" alt="android download" width="30" /> App for
         <span> Android</span>
       </a>
       {:else if OS.ios}
       <a class="download-button" href="{artifacts.ios}">
-        <img src="/ocean_assets/images/icon_ios_button.svg" alt="No image" width="30" /> App for
+        <img src="/ocean_assets/images/icon_ios_button.svg" alt="ios link" width="30" /> App for
         <span> iOS</span>
       </a>
       {:else if OS.mac}
       <a class="download-button" href="{artifacts.mac}">
-        <img src="/ocean_assets/images/icon_subtract_button.svg" alt="No image" width="30" /> Installer for
+        <img src="/ocean_assets/images/icon_subtract_button.svg" alt="mac download" width="30" /> Installer for
         <span> Mac</span>
       </a>
       {:else if OS.linux}
       <a class="download-button" href="{artifacts.linux}">
-        <img src="/ocean_assets/images/icon_linux_button2.svg" alt="No image" width="30" /> Installer for
+        <img src="/ocean_assets/images/icon_linux_button2.svg" alt="linux download" width="30" /> Installer for
         <span> Linux</span>
       </a>
       {:else if OS.windows}
       <a v-if="OS.windows" class="download-button" href="{artifacts.windows}">
-        <img src="/ocean_assets/images/icon_windows_button.svg" alt="No image" width="30" /> Installer for
+        <img src="/ocean_assets/images/icon_windows_button.svg" alt="windows download" width="30" /> Installer for
         <span> Windows</span>
       </a>
       {/if}
@@ -71,9 +71,9 @@
   </div>
 
   <div class="img-promo">
-    <img src="/ocean_assets/images/iMac-ocean.png" width="962" class="big-img first" alt="App image Large"/>
-    <img src="/ocean_assets/images/promo_portrait.webp" width="262"  class="md-img" alt="App image medium" style="float:right"/>
-    <img src="/ocean_assets/images/promo_sm.webp" width="360" class="sm-img" alt="App image small"/>
+    <img src="/ocean_assets/images/iMac-ocean.png" width="962" class="big-img first" alt="App  Large"/>
+    <img src="/ocean_assets/images/promo_portrait.webp" width="262"  class="md-img" alt="App  medium" style="float:right"/>
+    <img src="/ocean_assets/images/promo_sm.webp" width="360" class="sm-img" alt="App small"/>
   </div>
 
   </div>
@@ -85,7 +85,7 @@
     <div class="about-content">
       <div class="icons-block">
         <div class="icons icon-read">
-            <img src="/ocean_assets/images/icon_open_book.svg" alt="No image"/>
+            <img src="/ocean_assets/images/icon_open_book.svg" alt="icon read"/>
         </div>
         <h3>Read</h3>
         <span>The Ocean library contains a vast collection of the world’s great religious classics.</span>
@@ -93,7 +93,7 @@
       </div>
       <div class="icons-block">
         <div class="icons icon-read">
-            <img src="/ocean_assets/images/icon_headphones.svg" alt="No image"/>
+            <img src="/ocean_assets/images/icon_headphones.svg" alt="icon read"/>
         </div>
         <h3>Listen</h3>
         <span>Many books are word-aligned with an audio reading to provide an enjoyable “read-along” experience.</span>
@@ -101,7 +101,7 @@
       </div>
       <div class="icons-block">
         <div class="icons icon-read">
-            <img src="/ocean_assets/images/icon_search.svg" alt="No image"/>
+            <img src="/ocean_assets/images/icon_search.svg" alt="icon search"/>
         </div>
         <h3>Search</h3>
         <span>Full text search across thousands of books, articles and website resources.</span>
@@ -119,8 +119,8 @@
     </div>
 
     <div class="images-wrapper">
-      <img src="/ocean_assets/images/1.webp" width="462" class="big-img" alt="No image"/>
-      <img src="/ocean_assets/images/1_sm.webp" width="462" class="sm-img" alt="No image"/>
+      <img src="/ocean_assets/images/1.webp" width="462" class="big-img" alt="ocean sshot"/>
+      <img src="/ocean_assets/images/1_sm.webp" width="462" class="sm-img" alt="ocean sshot"/>
     </div>
 
   </div>
@@ -134,8 +134,8 @@
         you can still search, but only in non copyright-encumbered library books.</span>
     </div>
     <div class="images-wrapper">
-      <img src="/ocean_assets/images/2.webp" width="462" class="big-img" alt="No image"/>
-      <img src="/ocean_assets/images/2_sm.webp" width="462" class="sm-img" alt="No image"/>
+      <img src="/ocean_assets/images/2.webp" width="462" class="big-img" alt="ocean sshot"/>
+      <img src="/ocean_assets/images/2_sm.webp" width="462" class="sm-img" alt="ocean sshot"/>
     </div>
   </div>
 </section>
@@ -149,8 +149,8 @@
           </span>
       </div>
       <div class="images-wrapper">
-          <img src="/ocean_assets/images/3.webp" width="462" class="big-img" alt="No image"/>
-          <img src="/ocean_assets/images/3_sm.webp" width="462" class="sm-img" alt="No image"/>
+          <img src="/ocean_assets/images/3.webp" width="462" class="big-img" alt="ocean sshot"/>
+          <img src="/ocean_assets/images/3_sm.webp" width="462" class="sm-img" alt="ocean sshot"/>
       </div>
     </div>
 </section>
@@ -164,8 +164,8 @@
     </div>
 
     <div class="images-wrapper">
-        <img src="/ocean_assets/images/4.webp" width="462" class="big-img" alt="No image"/>
-        <img src="/ocean_assets/images/4_sm.webp" width="462" class="sm-img" alt="No image"/>
+        <img src="/ocean_assets/images/4.webp" width="462" class="big-img" alt="ocean sshot"/>
+        <img src="/ocean_assets/images/4_sm.webp" width="462" class="sm-img" alt="ocean sshot"/>
     </div>
 
   </div>

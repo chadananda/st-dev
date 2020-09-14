@@ -4,9 +4,9 @@
 
   {#if sessions.length > 1}
     <div class="field">
-    <label>Session date</label>
-    <select name="StartDate" bind:value={values.StartDate} class="w-full" class:error={errors.StartDate} on:change={validateForm} >
-    
+    <label for="StartDate">Session date</label>
+    <select name="StartDate" bind:value={values.StartDate} class="w-full" class:error={errors.StartDate} on:blur={validateForm} >
+
       <option disabled selected value="" class="italic grey-500">- please select a date -</option>
       {#each sessionOptions as item}
         <option disabled={item.disabled ? true : false} value={item.id}>{item.title}</option>
@@ -17,10 +17,10 @@
   {/if}
 
   <div class="field">
-    <label>Name</label>
+    <label for="FullName">Name</label>
     <input type="text" name="FullName" bind:value={values.FullName} class:error={errors.FullName} autocomplete="name" class="w-full"
       on:blur={validateForm}
-      on:change={(e) => {
+      on:blur={(e) => {
         let first = e.target.value.split(' ')
         let last = ''
         if (first.length > 1) last = first.splice(-1, 1)[0]
@@ -31,25 +31,25 @@
   </div>
 
   <div class="field">
-    <label>Email address</label>
+    <label for="Email">Email address</label>
     <input type="email" name="Email" bind:value={values.Email} class:error={errors.Email} autocomplete="email" class="w-full" on:blur={validateForm} />
     {#if errors.Email} <p class="error">{errors.Email}</p> {/if}
   </div>
 
   <div class="field">
-    <label>Phone number</label>
+    <label for="Phone">Phone number</label>
     <input type="tel" name="Phone" bind:value={values.Phone} class:error={errors.Phone} autocomplete="tel" class="w-full" on:keyup={formatPhone} on:blur={validateForm} />
     {#if errors.Phone} <p class="error">{errors.Phone}</p> {/if}
   </div>
 
   <div class="field clearfix w-full">
-    <label class="w-1/2 inline-block">How many people are in your party?</label>
+    <label for="People" class="w-1/2 inline-block">How many people are in your party?</label>
     <input class="w-12 inline-block text-right" type="text" name="People" bind:value={values.People} class:error={errors.People} on:blur={validateForm} />
     {#if errors.People} <p class="error">{errors.People}</p> {/if}
   </div>
 
   <div class="field clearfix options-chips">
-    <label>Where do you plan to stay?</label>
+    <label for="Housing">Where do you plan to stay?</label>
     {#each housingOptions as item}
       <input type="radio" bind:group={values.Housing} name="Housing" id="Housing-{item.id}" value="{item.id}" class:error={errors.Housing} checked={item.id === 'dorm'} on:blur={validateForm} >
       <label for="Housing-{item.id}">
