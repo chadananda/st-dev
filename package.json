@@ -1,7 +1,7 @@
 {
   "name": "sacred-traditions",
   "description": "Home of 'Ocean 2.0 Interfaith Reader' and lots of other fun projects...",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "scripts": {
     "dev": "sapper dev -p 1844 -o",
     "serve": "lt -h http://serverless.social -p 1844 -o",

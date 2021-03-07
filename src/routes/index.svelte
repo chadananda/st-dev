@@ -62,7 +62,7 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 
 
 <div class="item news pr-3 md:pr-32">
-	<h2><a href="/ocean">Ocean 2.0 Interfaith Reader - Updates</a></h2>
+	<h2><a href="https://oceanlibrary.com">Ocean 2.0 Interfaith Reader - Updates</a></h2>
 	<h4 class="-mt-1"> Lots of freshly-narrated and word-aligned books </h4>
 
 	<img class="floater invisible md:visible" src="/ocean_assets/images/sshot_pickthall.png" alt="Ocean reading dawn-breakers" style="width: 300px; transform: rotate(-1deg);" />

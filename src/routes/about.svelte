@@ -13,9 +13,9 @@
 
 <p> In 2019 we hosted a half-dozen seminar retreats at a facility in the Sierra Mountains of Northern California. In 2020 we will do the same and try to expand the program with as many interesting interfaith speakers as possible.</p>
 
-<p>Also in 2019 we launched the free cross-platform app "<a href="/ocean">Ocean 2.0 Interfaith Reader</a>" -- an ebook reader loaded with the world's religious literature with many books audio aligned word-for-word for a delightful read-along experience. The program runs on most platforms including Mac, Windows, Android and iOS (as well as some Linux support)</p>
+<p>Also in 2019 we launched the free cross-platform app "<a href="https://oceanlibrary.com">Ocean 2.0 Interfaith Reader</a>" -- an ebook reader loaded with the world's religious literature with many books audio aligned word-for-word for a delightful read-along experience. The program runs on most platforms including Mac, Windows, Android and iOS (as well as some Linux support)</p>
 <br>
-<center><a href="/ocean"><img src="/ocean_assets/sshot1.png" alt="ocean screenshot" style="max-width:90%; box-shadow: 3px 3px 17px -5px rgba(0,0,0,0.69); " /></a></center>
+<center><a href="https://oceanlibrary.com"><img src="/ocean_assets/sshot1.png" alt="ocean screenshot" style="max-width:90%; box-shadow: 3px 3px 17px -5px rgba(0,0,0,0.69); " /></a></center>
 
 
 
