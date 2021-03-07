@@ -104,10 +104,10 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 </ol>
 
 
-<h4 class="center"><a href='/ocean'> Download Page for Ocean 2.0 Interfaith Reader ⤳ </a></h4>
-			<!-- <li><a href='/ocean'>Ocean Youtube videos ⤳ </a></li>
-			<li><a href='/ocean'>Ocean 2.0 Facebook Group ⤳ </a></li>
-			<li><a href='/ocean'>Ocean Twitter sharing ⤳ </a></li> -->
+<h4 class="center"><a href="https://oceanlibrary.com"> Download Page for Ocean 2.0 Interfaith Reader ⤳ </a></h4>
+			<!-- <li><a href="https://oceanlibrary.com">Ocean Youtube videos ⤳ </a></li>
+			<li><a href="https://oceanlibrary.com">Ocean 2.0 Facebook Group ⤳ </a></li>
+			<li><a href="https://oceanlibrary.com">Ocean Twitter sharing ⤳ </a></li> -->
 
 </div>
 

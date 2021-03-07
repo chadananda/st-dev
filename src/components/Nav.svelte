@@ -17,7 +17,7 @@
 		{/if}
 
 
-		 <a class="block mr-1 md:mr-4 lg:mr-8 p-2 rounded-full" href="/ocean">
+		 <a class="block mr-1 md:mr-4 lg:mr-8 p-2 rounded-full" href="https://oceanlibrary.com">
 			  <img class="w-5 inline -mt-1" src="/ocean_assets/images/ocean-logo2.svg" alt="Ocean 2.0 Reader" />
 					<span class="hidden sm:inline">Ocean </span><span class="hidden md:inline"> 2.0 </span><span class="hidden lg:inline"> Reader</span>
 			</a>
@@ -67,7 +67,7 @@
  <!-- Home page Nav links -->
 	<nav class="flex justify-center items-center sticky bg-white">
 
-		 <a class="block mr-8 p-2 rounded-full" href="/ocean">
+		 <a class="block mr-8 p-2 rounded-full" href="https://oceanlibrary.com">
 			  <img class="w-5 inline -mt-1" src="/ocean_assets/images/ocean-logo2.svg" alt="the world inside a drop" />
 					<span class="hidden sm:inline">Ocean </span><span class="hidden md:inline"> 2.0 </span><span class="hidden lg:inline">  Reader</span>
 			</a>
