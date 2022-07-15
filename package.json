@@ -104,7 +104,7 @@
     "slugify": "^1.4.5",
     "spacetime": "^6.6.3",
     "spacetime-informal": "^0.3.0",
-    "svelte": "^3.25.0",
+    "svelte": "^3.49.0",
     "svelte-fullcalendar": "^1.0.1",
     "svelte-image": "^0.2.7",
     "svelte-infinite-scroll": "^1.4.1",
