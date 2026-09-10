@@ -10,7 +10,7 @@
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run",
-    "deploy": "NODE_ENV=production sapper export --concurrent 1 --entry '/jsonlinks /' && push-dir --dir=__sapper__/export --branch=gh-pages --cleanup --verbose",
+    "deploy": "NODE_ENV=production sapper export --concurrent 1 --entry '/jsonlinks /' && gh-pages --dotfiles -d __sapper__/export -b gh-pages",
     "deploys3": "./deployS3.sh",
     "watch:tailwind": "postcss static/tailwind.css -o static/index.css -w",
     "build:tailwind": "NODE_ENV=production postcss static/tailwind.css -o static/index.css",
@@ -71,6 +71,7 @@
     "@rollup/plugin-terser": "^1.0.0",
     "autoprefixer": "^9.8.6",
     "fs-sync": "^1.0.6",
+    "gh-pages": "^6.3.0",
     "gray-matter": "^4.0.3",
     "js-yaml": "^5.4.1",
     "klaw-sync": "^8.0.0",
@@ -88,7 +89,6 @@
     "postcss": "^7.0.32",
     "postcss-cli": "^7.1.2",
     "postcss-load-config": "^2.1.0",
-    "push-dir": "^0.4.1",
     "rollup": "^2.80.0",
     "rollup-plugin-svelte": "^7.2.3",
     "rrule": "^2.8.1",
@@ -105,5 +105,8 @@
     "svelte-simple-modal": "^0.6.0",
     "tailwindcss": "^1.8.10",
     "yup": "^0.29.3"
+  },
+  "overrides": {
+    "axios": "^1.20.0"
   }
 }
