@@ -9,7 +9,7 @@
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "test": "node --test tests/*.test.mjs",
+    "test": "node scripts/run-tests.mjs tests/*.test.mjs",
     "deploy": "npm run export && gh-pages --dotfiles -d __sapper__/export -b gh-pages",
     "deploys3": "./deployS3.sh",
     "watch:tailwind": "postcss static/tailwind.css -o static/index.css -w",
