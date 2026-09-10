@@ -6,3 +6,7 @@ yarn-error.log
 /cypress/screenshots/
 /__sapper__/
 yarn.lock
+
+# scratch — never committed
+tmp/
+worker-status.json
