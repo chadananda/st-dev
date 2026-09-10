@@ -3,8 +3,8 @@ import replace from '@rollup/plugin-replace';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import svelte from 'rollup-plugin-svelte';
-import babel from 'rollup-plugin-babel';
-import { terser } from 'rollup-plugin-terser';
+import { babel } from '@rollup/plugin-babel';
+import terser from '@rollup/plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 import sveltePreprocess from 'svelte-preprocess'
@@ -30,12 +30,12 @@ export default {
 		output: config.client.output(),
 		plugins: [
 			replace({
+				preventAssignment: true,
 				'process.browser': true,
 				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
 			svelte({
-				dev,
-				hydratable: true,
+				compilerOptions: { dev, hydratable: true },
 				preprocess,
 				emitCss: true
 			}),
@@ -46,7 +46,7 @@ export default {
 			commonjs(),
 			legacy && babel({
 				extensions: ['.js', '.mjs', '.html', '.svelte'],
-				runtimeHelpers: true,
+				babelHelpers: 'runtime',
 				exclude: ['node_modules/@babel/**'],
 				presets: [
 					['@babel/preset-env', {
@@ -72,13 +72,13 @@ export default {
 		output: config.server.output(),
 		plugins: [
 			replace({
+				preventAssignment: true,
 				'process.browser': false,
 				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
 			svelte({
-				generate: 'ssr',
-				preprocess,
-				dev
+				compilerOptions: { generate: 'ssr', dev },
+				preprocess
 			}),
 			resolve(),
 			json(),
@@ -97,6 +97,7 @@ export default {
 			resolve(),
 			json(),
 			replace({
+				preventAssignment: true,
 				'process.browser': true,
 				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
