@@ -1,3 +1,4 @@
+import asDateString from '../../components/asDateString' // normalise front-matter dates
 
 // This file is called `_articles.js` rather than `articles.js`, because
 // we don't want to create an `/articles/articles` route — the leading
@@ -65,22 +66,6 @@ function md2JSON(file) {
 				})
 		json.html = md.render(markdown)
 		return json
-}
-
-// Normalise a front-matter pubdate to a plain "YYYY-MM-DD" string.
-//
-// YAML libraries disagree about unquoted dates: js-yaml 3 resolved `pubdate:
-// 2016-03-11` to a Date at UTC midnight, js-yaml 4+ leaves it a string. Handing
-// that Date to moment reinterprets it in local time, so west of UTC every
-// article silently published one day early -- which is why the live site serves
-// /articles/2016-03-10_essay-on-the-trinity for an article dated 2016-03-11.
-// Read the UTC components explicitly so the slug depends on the front matter
-// alone, not on the YAML version or the builder's timezone.
-function asDateString(pubdate) {
-  if (pubdate instanceof Date && !isNaN(pubdate)) {
-    return pubdate.toISOString().split('T')[0]
-  }
-  return String(pubdate == null ? '' : pubdate).trim()
 }
 
 function validateArticleFields(ar) {

@@ -9,7 +9,7 @@
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "test": "run-p --race dev cy:run",
+    "test": "node --test tests/*.test.mjs",
     "deploy": "npm run export && gh-pages --dotfiles -d __sapper__/export -b gh-pages",
     "deploys3": "./deployS3.sh",
     "watch:tailwind": "postcss static/tailwind.css -o static/index.css -w",
@@ -19,7 +19,8 @@
     "gate:accept": "GATE_BASE_URL=https://sacred-traditions.org node \"$HOME/.claude/quality/gate.mjs\" --project \"$PWD\" --accept",
     "predeploy": "npm run gate",
     "predeploys3": "npm run gate",
-    "prepublishOnly": "npm run gate"
+    "prepublishOnly": "npm run gate",
+    "test:e2e": "run-p --race dev cy:run"
   },
   "repository": "git@github.com:chadananda/st-dev.git",
   "keywords": [

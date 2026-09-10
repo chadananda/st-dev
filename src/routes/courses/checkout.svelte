@@ -74,6 +74,9 @@
 
 
 <svelte:head>
+    <title>Registration Checkout: sacred-traditions.org</title>
+    <!-- A checkout step, not a landing page: keep it out of the index. -->
+    <meta data-key="robots" name="robots" content="noindex, nofollow"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <script src="https://www.paypal.com/sdk/js?client-id={paypalClientID}&currency=USD" on:load={paypalLoaded}></script>
