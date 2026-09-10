@@ -10,6 +10,21 @@ const md = require('markdown-it')('commonmark', {
 const slugify = require('slugify')
 const now = (new Date()).toISOString().split('T')[0]
 
+// Normalise a front-matter pubdate to a plain "YYYY-MM-DD" string.
+//
+// gray-matter parses YAML with js-yaml 3, which resolves an unquoted
+// `pubdate: 2026-01-01` to a Date rather than a string. The listing filter
+// below compares pubdate against a "YYYY-MM-DD" string, and a Date coerces to
+// "Thu Jan 01 2026 ..." -- which never compares <= a numeric date string, so
+// the entry would be dropped from the listing with no error. Coerce to the
+// UTC calendar date so the comparison stays string-to-string.
+function asDateString(pubdate) {
+  if (pubdate instanceof Date && !isNaN(pubdate)) {
+    return pubdate.toISOString().split('T')[0]
+  }
+  return pubdate == null ? '' : String(pubdate).trim()
+}
+
 export default function getContent(filePath = '', opts = {}) {
   let options = {
     index: false,
@@ -32,7 +47,7 @@ export default function getContent(filePath = '', opts = {}) {
       }
       delete f.orig
       f.meta.title = f.meta.title || path.parse(f.meta.file.path).name.replace(/[-_]/g, ' ')
-      f.meta.pubdate = f.meta.pubdate || f.meta.file.date.toISOString().split('T')[0]
+      f.meta.pubdate = asDateString(f.meta.pubdate) || f.meta.file.date.toISOString().split('T')[0]
 
       if (!f.excerpt) {
         // try to get the first paragraph

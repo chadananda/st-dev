@@ -57,7 +57,7 @@ function md2JSON(file) {
 		let md = require('markdown-it')()
 				.use(require('markdown-it-attrs'))
 				.use(require('markdown-it-footnote'))
-				.use(require('markdown-it-emoji'))
+				.use(require('markdown-it-emoji').full)
 				.use(require('markdown-it-underline'))
 				.use(require('markdown-it-front-matter'), (fm) => {
 						let vals = yaml.load(fm.trim()) // parse yaml header from current json object
@@ -65,6 +65,22 @@ function md2JSON(file) {
 				})
 		json.html = md.render(markdown)
 		return json
+}
+
+// Normalise a front-matter pubdate to a plain "YYYY-MM-DD" string.
+//
+// YAML libraries disagree about unquoted dates: js-yaml 3 resolved `pubdate:
+// 2016-03-11` to a Date at UTC midnight, js-yaml 4+ leaves it a string. Handing
+// that Date to moment reinterprets it in local time, so west of UTC every
+// article silently published one day early -- which is why the live site serves
+// /articles/2016-03-10_essay-on-the-trinity for an article dated 2016-03-11.
+// Read the UTC components explicitly so the slug depends on the front matter
+// alone, not on the YAML version or the builder's timezone.
+function asDateString(pubdate) {
+  if (pubdate instanceof Date && !isNaN(pubdate)) {
+    return pubdate.toISOString().split('T')[0]
+  }
+  return String(pubdate == null ? '' : pubdate).trim()
 }
 
 function validateArticleFields(ar) {
@@ -79,7 +95,7 @@ function validateArticleFields(ar) {
 			if (date.year() > 2500) return false
 			return true
 		}
-		let date = new Moment(ar.pubdate, "YYYY-MM-DD")
+		let date = new Moment(asDateString(ar.pubdate), "YYYY-MM-DD")
 		if (!isValidPubdate(date)) date = new Moment(fname.split('_')[0].trim(), "YYYY-MM-DD")
 		if (!isValidPubdate(date)) console.error ('Warning, article has no valid date in header or filename: ', ar.file, date.year())
 		ar.pubdate = date.format("YYYY-MM-DD")
