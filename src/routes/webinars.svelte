@@ -160,7 +160,7 @@
 							</li>
     {/each}
 				</ul>
-				<SvelteInfiniteScroll threshold={100} on:loadmore={() => {endDate = endDate.add(1, 'month')}} />
+				<SvelteInfiniteScroll threshold={100} on:loadMore={() => {endDate = endDate.add(1, 'month')}} />
 			{/each}
 		{/if}
 	</div>
@@ -175,7 +175,7 @@
 				<Media item={item.event} >
 					<div class="date">{item.date.goto(tz).format('nice')}</div>
 				</Media>
-				<SvelteInfiniteScroll threshold={100} on:loadmore={() => {endDate = endDate.add(1, 'month')}} />
+				<SvelteInfiniteScroll threshold={100} on:loadMore={() => {endDate = endDate.add(1, 'month')}} />
 			{/each}
 		{/if}
 	</div> -->
