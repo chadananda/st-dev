@@ -11,12 +11,12 @@ export const personSchema = yup.object().shape({
     then: yup.string().required().oneOf(['M', 'F']),
     otherwise: yup.string().oneOf(['M','F'])
   }),
-  Sleep: yup.string().default(3).label('Slumber depth').when('Housing', {
+  Sleep: yup.string().default('3').label('Slumber depth').when('Housing', {
     is: 'dorm',
     then: yup.string().required().oneOf(['1','2','3','4','5']),
     otherwise: yup.string().oneOf(['','1','2','3','4','5'])
   }),
-  Snore: yup.mixed().default(3).label('Snore probability').when('Housing', {
+  Snore: yup.mixed().default('3').label('Snore probability').when('Housing', {
     is: 'dorm',
     then: yup.string().required().oneOf(['1','2','3','4','5']),
     otherwise: yup.string().oneOf(['','1','2','3','4','5'])
