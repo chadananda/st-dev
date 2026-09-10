@@ -1,4 +1,4 @@
-<footer class="flex bg-gray-100 p-2 rounded-t-lg border sticky bottom-0 w-full text-xs font-bold text-gray-500 justify-between">
+<footer class="flex bg-gray-100 p-2 rounded-t-lg border lg:sticky lg:bottom-0 w-full text-xs font-bold text-gray-700 justify-between">
     <div>
       <a href="/about">About</a>
       <a href="/contact">Contact</a>

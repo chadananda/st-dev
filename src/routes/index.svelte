@@ -8,9 +8,9 @@
 <h1 class="title"> Fresh New Stuff! </h1>
 
 <div class="item news pr-3 md:pr-32">
- <img class="floater invisible md:visible" src="/courses/db-sun.jpg" alt="db challenge participants" style="width: 250px; transform: rotate(-1deg); margin-top: -2em; margin-left:-6em;" />
+ <img class="floater hidden lg:block" src="/courses/db-sun.jpg" alt="db challenge participants" style="width: 250px; transform: rotate(-1deg); margin-top: -2em; margin-left:-6em;" />
 	<h2><a href="/courses/db-challenge">The Dawn-Breakers Challenge - 2021</a></h2>
-	<img class="floater invisible md:visible" src="/db-challenge/db-chall-jul-2019.jpg" alt="db challenge participants" style="margin-top:1.5em; margin-left:1em; margin-bottom: 1em;" />
+	<img class="floater hidden lg:block" src="/db-challenge/db-chall-jul-2019.jpg" alt="db challenge participants" style="margin-top:1.5em; margin-left:1em; margin-bottom: 1em;" />
 	<p>Last year we had a wonderful adventure with a series of in-depth Dawn-Breakers study retreats.  And, by popular demand, we’re going to do it all over again. <b><i>But, according Covid-19, not this year!! </i></b>	  </p>
 
 	<p>So if you're especially stir-crazy, take a minute to sign up, in advance, for an adventure study retreat in 2021. </p>
@@ -19,7 +19,7 @@
 Nabíl’s narrative is not merely a narrative; it is a book of meditation. It does not only teach. It actually inspires and incites to action.... It quickens and stimulates our dormant energies and makes us soar on a higher plane.
 </p>
 
-		<img class="floater invisible md:visible" src="/db-challenge/class-study.jpg" alt="db challenge participants" style="width: 280px; transform: rotate(-2deg); margin-top:-5em; margin-left:1em;"/>
+		<img class="floater hidden lg:block" src="/db-challenge/class-study.jpg" alt="db challenge participants" style="width: 280px; transform: rotate(-2deg); margin-top:-5em; margin-left:1em;"/>
 	<!-- <p>Also, I finally have a good place to put a bunch of downloadable resources. A big thanks to Dropbox for motivating me -- by freezing my account due to too much download traffic.</p> -->
 
 		<ul>
@@ -36,7 +36,7 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 
 <!-- <div class="item news pr-3 md:pr-32">
 	<h2><a href="/courses">Spiritual <i>Weekend</i> Retreats!</a></h2>
-	<img class="floater invisible md:visible" src="/courses/weekend-catalog.png" alt="" style="width: 200px; transform: rotate(1deg); margin-top:-2.5em;" />
+	<img class="floater hidden lg:block" src="/courses/weekend-catalog.png" alt="" style="width: 200px; transform: rotate(1deg); margin-top:-2.5em;" />
 
 	<p>We’ve lined up a fantastic array of speakers for weekend study programs - each of whom demonstrates God's brilliant gift of genius in their particular areas of exptertise. </p>
 
@@ -66,7 +66,7 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 	<h2><a href="https://oceanlibrary.com">Ocean 2.0 Interfaith Reader - Updates</a></h2>
 	<h3 class="as-h4 -mt-1"> Lots of freshly-narrated and word-aligned books </h3>
 
-	<img class="floater invisible md:visible" src="/ocean_assets/images/sshot_pickthall.png" alt="Ocean reading dawn-breakers" style="width: 300px; transform: rotate(-1deg);" />
+	<img class="floater hidden lg:block" src="/ocean_assets/images/sshot_pickthall.png" alt="Ocean reading dawn-breakers" style="width: 300px; transform: rotate(-1deg);" />
 	<!-- <p>This entire winter has been spent porting Ocean 2.0 to a faster and more lightweight framework. The advantage of this is that I get to keep Ocean in ‘beta’ status for yet another year. ;) </p> -->
 
  <p>We’ve been busy all winter fixing mis-reads, adding new books, narrating and aligning audio. No one will ever believe how difficult it is to audio-align a book. Nearly every single word must be manually checked and adjusted. ;)  Some of the books with completed narration now include:</p>
@@ -85,7 +85,7 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 
 
 <h3 class="as-h4">Our Bahá’í Collection now includes the following narrated books:</h3>
-<img class="floater invisible md:visible" src="/ocean_assets/images/library_sshot.png" alt="Ocean library" style="width: 300px; transform: rotate(1deg); margin-top:0em;" />
+<img class="floater hidden lg:block" src="/ocean_assets/images/library_sshot.png" alt="Ocean library" style="width: 300px; transform: rotate(1deg); margin-top:0em;" />
 
 <ol>
 	<li class="italic"> The Dawn-Breakers </li>
@@ -113,7 +113,7 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 </div>
 
 <!-- <div class="item news pr-3 md:pr-32">
-	<img class="floater invisible md:visible" src="/sshot-readalong.gif" alt="db challenge participants" style="width: 250px; transform: rotate(-2deg); margin-top:0em; filter: brightness(.6) contrast(5);" />
+	<img class="floater hidden lg:block" src="/sshot-readalong.gif" alt="db challenge participants" style="width: 250px; transform: rotate(-2deg); margin-top:0em; filter: brightness(.6) contrast(5);" />
 	<h2><a href="/courses/arabic-bootcamp"> Literary Arabic Bootcamp - A crazy experiment... </a></h2>
 
 	<p>It’s been a busy winter. We’ve been preparing a really fun experimental Intensive Arabic retreat. The aim is to get students from nearly zero to daily reading of real Arabic literature -  in just 6 days. This program will be appropriate for beginner and intermediate students - as the core daily work will be self-paced. </p>
