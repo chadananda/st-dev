@@ -8,18 +8,18 @@ export const personSchema = yup.object().shape({
   Housing: yup.string().default('dorm').label('Housing').oneOf(['dorm','RV','day']),
   Sex: yup.mixed().default(undefined).label('Dorm gender').when('Housing', {
     is: 'dorm',
-    then: yup.string().required().oneOf(['M', 'F']),
-    otherwise: yup.string().oneOf(['M','F'])
+    then: (schema) => schema.required().oneOf(['M', 'F']),
+    otherwise: (schema) => schema.oneOf(['M','F'])
   }),
   Sleep: yup.string().default('3').label('Slumber depth').when('Housing', {
     is: 'dorm',
-    then: yup.string().required().oneOf(['1','2','3','4','5']),
-    otherwise: yup.string().oneOf(['','1','2','3','4','5'])
+    then: (schema) => schema.required().oneOf(['1','2','3','4','5']),
+    otherwise: (schema) => schema.oneOf(['','1','2','3','4','5'])
   }),
   Snore: yup.mixed().default('3').label('Snore probability').when('Housing', {
     is: 'dorm',
-    then: yup.string().required().oneOf(['1','2','3','4','5']),
-    otherwise: yup.string().oneOf(['','1','2','3','4','5'])
+    then: (schema) => schema.required().oneOf(['1','2','3','4','5']),
+    otherwise: (schema) => schema.oneOf(['','1','2','3','4','5'])
   }),
   Diet: yup.array().default([]).label('Diet'),
   Allergies: yup.array().default([]).label('Allergies'),
@@ -57,13 +57,13 @@ export const signupFormSchema = yup.object().shape({
     idx: yup.number().default(0),
     Email: yup.string().default('').label('Email').when('idx', {
       is: 0,
-      then: yup.string().required().email(),
-      otherwise: yup.string().email()
+      then: (schema) => schema.required().email(),
+      otherwise: (schema) => schema.email()
     }),
     Phone: yup.string().default('').label('Phone number').when('idx', {
       is: 0,
-      then: yup.string().matches(/(^\+[-\d\. ]+$|^\(?\d{3}[-\.\) ]*\d{3}[-\. ]*\d{4}$)/, {message: 'A valid phone number is required'}),
-      otherwise: yup.string().matches(/(^\+[-\d\. ]+$|^\(?\d{3}[-\.\) ]*\d{3}[-\. ]*\d{4}$)/, { excludeEmptyString: true, message: 'This is not a valid phone number.'}),
+      then: (schema) => schema.matches(/(^\+[-\d\. ]+$|^\(?\d{3}[-\.\) ]*\d{3}[-\. ]*\d{4}$)/, {message: 'A valid phone number is required'}),
+      otherwise: (schema) => schema.matches(/(^\+[-\d\. ]+$|^\(?\d{3}[-\.\) ]*\d{3}[-\. ]*\d{4}$)/, { excludeEmptyString: true, message: 'This is not a valid phone number.'}),
     }),
   })),
 })
