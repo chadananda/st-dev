@@ -1,4 +1,5 @@
 <script>
+  import Seo from '../components/Seo.svelte'
  // components
 	import Media from '../components/Media.svelte'
 	import SvelteInfiniteScroll from 'svelte-infinite-scroll'
@@ -100,6 +101,10 @@
 
 
 </script>
+
+<Seo
+  title="Webinars &amp; Live Sessions: sacred-traditions.org"
+  description="Upcoming and past live webinars on the sacred literature of the world’s religious traditions."/>
 
 	<div class="navcontainer">
 		<div class="medianav flex">

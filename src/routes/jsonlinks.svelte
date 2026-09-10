@@ -1,3 +1,8 @@
+<svelte:head>
+  <title>Link index: sacred-traditions.org</title>
+  <!-- Crawler seed for `sapper export`, not a page for readers. -->
+  <meta data-key="robots" name="robots" content="noindex, follow"/>
+</svelte:head>
 
 <ul>
 {#each links as a}

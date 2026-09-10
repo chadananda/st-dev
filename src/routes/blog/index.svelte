@@ -7,8 +7,13 @@
 </script>
 
 <script>
+  import Seo from '../../components/Seo.svelte'
 	 export let content
 </script>
+
+<Seo
+  title="Recent News: sacred-traditions.org"
+  description="News and announcements from Sacred Traditions — course signups, new recordings, and updates to the Ocean 2.0 Interfaith Reader."/>
 
 <h1>Recent news</h1>
 

@@ -1,6 +1,9 @@
+<Seo
+  title="𝐎𝐜𝐞𝐚𝐧 𝟐.𝟎 𝐈𝐧𝐭𝐞𝐫𝐟𝐚𝐢𝐭𝐡 𝐑𝐞𝐚𝐝𝐞𝐫 ㊪ sacred-traditions.org"
+  description="𝐎𝐜𝐞𝐚𝐧 𝟐.𝟎 𝐈𝐧𝐭𝐞𝐫𝐟𝐚𝐢𝐭𝐡 𝐑𝐞𝐚𝐝𝐞𝐫 is a custom ebook reader designed for exploration and study of the sacred literature of the world’s religious traditions. It provides a simple cross-platform reading experience with an immersive audio-integrated reading experience and usful study and research tools."
+  image="/ocean_assets/images/promo.webp"/>
+
 <svelte:head>
-  <title>𝐎𝐜𝐞𝐚𝐧 𝟐.𝟎 𝐈𝐧𝐭𝐞𝐫𝐟𝐚𝐢𝐭𝐡 𝐑𝐞𝐚𝐝𝐞𝐫 ㊪ sacred-traditions.org </title>
-   <meta data-key="description" name="description" content="𝐎𝐜𝐞𝐚𝐧 𝟐.𝟎 𝐈𝐧𝐭𝐞𝐫𝐟𝐚𝐢𝐭𝐡 𝐑𝐞𝐚𝐝𝐞𝐫 is a custom ebook reader designed for exploration and study of the sacred literature of the world’s religious traditions. It provides a simple cross-platform reading experience with an immersive audio-integrated reading experience and usful study and research tools."/>
    <meta name="keywords" content="{ocean_keywords}" />
    <meta name="theme-color" content="#ffffff"/>
    <meta name="msapplication-TileColor" content="#2d89ef"/>
@@ -179,6 +182,7 @@
 
 
 <script>
+  import Seo from '../components/Seo.svelte'
   import { onMount } from 'svelte';
 
   let OS = {};

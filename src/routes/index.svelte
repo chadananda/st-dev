@@ -1,9 +1,10 @@
- <svelte:head>
-	<title>Sacred Traditions - Interfaith Exploration: sacred-traditions.org</title>
+<script>
+  import Seo from '../components/Seo.svelte'
+</script>
 
-</svelte:head>
-
-
+<Seo
+  title="Sacred Traditions - Interfaith Exploration: sacred-traditions.org"
+  description="Interfaith exploration of the sacred literature of the world’s religious traditions — articles, courses, webinars, and the Ocean 2.0 Interfaith Reader."/>
 <h1 class="title"> Fresh New Stuff! </h1>
 
 <div class="item news pr-3 md:pr-32">
@@ -56,14 +57,14 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 	<a href="/courses/langness-masters-teaching">David and Teresa Langness</a> and
 	<a href="/courses/stockman-abd-visit">Robert Stockman</a>.  </p>
 
-	<h4><a href='/courses/' class="text-lg">See the entire 2020 Calendar ⤳ </a></h4>
+	<h3 class="as-h4"><a href='/courses/' class="text-lg">See the entire 2020 Calendar ⤳ </a></h3>
 
 </div> -->
 
 
 <div class="item news pr-3 md:pr-32">
 	<h2><a href="https://oceanlibrary.com">Ocean 2.0 Interfaith Reader - Updates</a></h2>
-	<h4 class="-mt-1"> Lots of freshly-narrated and word-aligned books </h4>
+	<h3 class="as-h4 -mt-1"> Lots of freshly-narrated and word-aligned books </h3>
 
 	<img class="floater invisible md:visible" src="/ocean_assets/images/sshot_pickthall.png" alt="Ocean reading dawn-breakers" style="width: 300px; transform: rotate(-1deg);" />
 	<!-- <p>This entire winter has been spent porting Ocean 2.0 to a faster and more lightweight framework. The advantage of this is that I get to keep Ocean in ‘beta’ status for yet another year. ;) </p> -->
@@ -83,7 +84,7 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 
 
 
-<h4>Our Bahá’í Collection now includes the following narrated books:</h4>
+<h3 class="as-h4">Our Bahá’í Collection now includes the following narrated books:</h3>
 <img class="floater invisible md:visible" src="/ocean_assets/images/library_sshot.png" alt="Ocean library" style="width: 300px; transform: rotate(1deg); margin-top:0em;" />
 
 <ol>
@@ -104,7 +105,7 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 </ol>
 
 
-<h4 class="center"><a href="https://oceanlibrary.com"> Download Page for Ocean 2.0 Interfaith Reader ⤳ </a></h4>
+<h3 class="as-h4 center"><a href="https://oceanlibrary.com"> Download Page for Ocean 2.0 Interfaith Reader ⤳ </a></h3>
 			<!-- <li><a href="https://oceanlibrary.com">Ocean Youtube videos ⤳ </a></li>
 			<li><a href="https://oceanlibrary.com">Ocean 2.0 Facebook Group ⤳ </a></li>
 			<li><a href="https://oceanlibrary.com">Ocean Twitter sharing ⤳ </a></li> -->
@@ -119,7 +120,7 @@ Nabíl’s narrative is not merely a narrative; it is a book of meditation. It d
 
 	<p>If you are up for a serious immersion challenge, come and join us this summer! </p>
 
-	<h4><a href='/courses/arabic-bootcamp'>Intensive 5-Day Arabic Boot Camp ⤳ </a></h4>
+	<h3 class="as-h4"><a href='/courses/arabic-bootcamp'>Intensive 5-Day Arabic Boot Camp ⤳ </a></h3>
 
 </div> -->
 

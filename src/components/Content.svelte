@@ -9,6 +9,7 @@
 
 	<meta name="title" content="{content.meta.title}">
 	<meta name="description" content="{content.meta.description}">
+	<link rel="canonical" href="https://sacred-traditions.org/{content.meta.href.replace(/^\/*/, '')}">
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="{(content.meta.schema.ogType || content.meta[content.meta.schema.type] || content.meta.schema.type || 'website').toLowerCase()}">

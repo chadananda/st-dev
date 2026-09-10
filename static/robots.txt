@@ -1,0 +1,10 @@
+# https://sacred-traditions.org
+User-agent: *
+Allow: /
+
+# Crawler seed for `sapper export`, not a page for readers.
+Disallow: /jsonlinks
+# Netlify CMS admin UI.
+Disallow: /admin
+
+Sitemap: https://sacred-traditions.org/sitemap.xml

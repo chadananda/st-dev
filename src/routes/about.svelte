@@ -1,7 +1,6 @@
-<svelte:head>
-  <title>About: Sacred-Traditions.org</title>
-</svelte:head>
-
+<Seo
+  title="About: Sacred-Traditions.org"
+  description="Who we are and why we built Sacred Traditions: a home for interfaith study of the world’s sacred literature."/>
 <h1>About Sacred Traditions</h1>
 
 <p>As the world contracts due to technology, difference between ideas and culture become more and more apparent. A wonderful result has been the many movements towards Interfaith tolerance. But "tolerance" is a bit boring. Or little organization is not so interested in tolerance but ratner "appreciation". "Appreciation" is what you see when you consider the wide popularity of the Muslim / Iranian mystical poet Rumi throughout the West. The truth is that ideas are owned by no-one and everyone. And the reality of every religion is a collection of big ideas. "Tolerance" is to accept that we have different ideas. "Appreciation" is to recognize that there is much universal value in the ideas of others.
@@ -23,6 +22,7 @@
 
 
 <script>
+  import Seo from '../components/Seo.svelte'
   // import IconsWrapper from "~/components/IconsWrapper.vue"
   // import OtherLayout from '~/layouts/Other.vue'
   // export default {

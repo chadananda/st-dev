@@ -1,11 +1,14 @@
-<svelte:head>
-  <title>Privacy Policy: Sacred-Traditions.org</title>
-</svelte:head>
+<script>
+  import Seo from '../components/Seo.svelte'
+</script>
 
+<Seo
+  title="Privacy Policy: Sacred-Traditions.org"
+  description="How Sacred Traditions handles your data, what we collect, and how to reach us about it."/>
 <div class="privacy">
 
    <h1>Privacy Policy</h1>
-			<h3>Your privacy so important to us that we pasted in some privacy boilerplate.</h3>
+			<h2 class="as-h3">Your privacy so important to us that we pasted in some privacy boilerplate.</h2>
 
 			<p> Sacred Traditions, Inc. is located at:</p>
 			<address class="ml-3 text-sm mb-2 italic bg-gray-200 rounded w-1/2 p-2">

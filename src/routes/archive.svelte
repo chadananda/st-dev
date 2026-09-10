@@ -1,9 +1,14 @@
+<Seo
+  title="Video Archive: sacred-traditions.org"
+  description="Recorded talks and webinars on interfaith study, sacred literature, and the world’s religious traditions."/>
+
 <svelte:head>
 		<script src="https://cdn.plyr.io/3.6.2/plyr.js"></script>
 		<link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
 </svelte:head>
 
 <script>
+  import Seo from '../components/Seo.svelte'
 // import VisibilityGuard from '../components/VisibilityGuard.svelte' // does not render until item is almost visible
 
 // video player popup

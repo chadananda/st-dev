@@ -8,6 +8,7 @@
 </script>
 
 <script>
+  import Seo from '../../components/Seo.svelte'
 	export let content
 	export let sessions
 	export let noSerialize
@@ -15,6 +16,10 @@
 	import SessionList from '../../components/SessionList.svelte'
 	import { goto } from '@sapper/app'
 </script>
+
+<Seo
+  title="Course Catalog: sacred-traditions.org"
+  description="Courses, retreats and intensives on the sacred literature of the world’s religious traditions — Arabic, Persian, comparative religion and interfaith study."/>
 
 <h1 class="title">2021 Course Catalog</h1>
 

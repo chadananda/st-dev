@@ -1,8 +1,9 @@
-<svelte:head>
-	 <title>{article.title} by {article.author} | 𝑺𝒂𝒄𝒓𝒆𝒅-𝑻𝒓𝒂𝒅𝒊𝒕𝒊𝒐𝒏𝒔.𝒐𝒓𝒈</title>
+<Seo
+  title="{article.title} by {article.author} | 𝑺𝒂𝒄𝒓𝒆𝒅-𝑻𝒓𝒂𝒅𝒊𝒕𝒊𝒐𝒏𝒔.𝒐𝒓𝒈"
+  description={article.snip}
+  image={`/articles/${article.img}`}
+  type="article"/>
 
-		<meta data-key="description" name="description" content="{article.snip}"/>
-</svelte:head>
 
 
 
@@ -61,6 +62,7 @@
 </script>
 
 <script>
+  import Seo from '../../components/Seo.svelte'
 		export let article;
 		import ArticleNextPrev from '../../components/ArticleNextPrev.svelte'
 		import ArticlesSimilar from '../../components/ArticlesSimilar.svelte'
