@@ -1,3 +1,5 @@
+// Fetches bookable course sessions from the signup backend, cached for 15 minutes.
+// Deps: ./getUrl
 import url from './getUrl'
 const cacheMinutes = 15
 const adjacentDays = 3

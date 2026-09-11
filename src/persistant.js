@@ -1,3 +1,5 @@
+// Svelte store wrappers that persist to localStorage, with optional staleness timestamps.
+// Deps: svelte/store. Guards every access on process.browser -- these run during SSR too.
 import {get, readable, writable} from 'svelte/store';
 
 function noop(data) { return data }

@@ -1,3 +1,4 @@
+// GET /articles/<slug>.json -- one article by slug. Deps: ./_articles.js
 import articles from './_articles.js';
 
 const lookup = new Map();

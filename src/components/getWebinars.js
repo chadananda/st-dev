@@ -1,3 +1,5 @@
+// Loads the webinar schedule from a Google Sheet and expands recurring events into
+// dated occurrences. Deps: spacetime, spacetime-informal, rrule
 const sheetID = '1nlsYAMLxbLdaf1gBJGgyMze4AvKfaws4zQbqEBi4iYw'
 import spacetime from 'spacetime'
 spacetime.extend({ical: function() {

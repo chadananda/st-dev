@@ -1,3 +1,5 @@
+// Service worker: precaches the app shell, serves static assets cache-first, routes
+// network-first with a cache fallback. Deps: @sapper/service-worker
 import { timestamp, files, shell, routes } from '@sapper/service-worker';
 
 const ASSETS = `cache${timestamp}`;

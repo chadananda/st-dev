@@ -1,3 +1,6 @@
+// Loads articles from src/content/articles at build time: front matter + rendered
+// markdown, slugged by pubdate. Deps: fs-sync, klaw-sync, js-yaml, markdown-it,
+// slugify, moment, md5, ../../components/asDateString
 import asDateString from '../../components/asDateString' // normalise front-matter dates
 
 // This file is called `_articles.js` rather than `articles.js`, because
@@ -41,15 +44,12 @@ function readArticles(articles_dir) {
 
 function copyArticleAssets() {
 		// gather up all asset files and copy to /static/articles/
-		let copycount = 0
 		klaw(ARTICLES_DIR, {nodir: true}).map(o=>o.path)
 				.filter(f=>path.parse(f).ext.match(/(.gif|.png|.svg|.jpg|.jpeg|.mp3|.m4u|.map)/))
 				.forEach(file => {
 						let target = STATIC_DIR +'/'+ path.basename(file)
-						if (!exists(target)) copycount++ // report new files copies
-						copy(file, target) // copy regardless - because we don't want to check to see if it has changed
+						copy(file, target) // copy regardless - we don't check whether it changed
 				})
-			if (copycount) console.log('Copied '+copycount+' asset files from articles collection.')
 }
 
 function md2JSON(file) {
@@ -137,14 +137,12 @@ function interlinkArticles(articles) {
 					})
 			})
 
-//console.log(tagmatches)
 
 			tagmatches.forEach(id2 => {
 					if (!ar.tagmatches) ar.tagmatches = [arinfo(id2)]
 					   else ar.tagmatches.push(arinfo(id2))
 			})
 
-   //console.log('article matches:', ar.tagmatches)
 			// next and previous article
 			let lang_ars = articles.filter(ar2 => ar2.language === ar.language) // create a list matching language
 			lang_ars.forEach((ar2, i) => {

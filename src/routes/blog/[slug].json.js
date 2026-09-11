@@ -1,3 +1,4 @@
+// GET /blog/<slug>.json -- one post by slug. Deps: ../../components/getContent
 import getContent from '../../components/getContent'
 
 let lookup;

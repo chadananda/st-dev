@@ -1,3 +1,4 @@
+// GET /blog.json -- blog index, newest first. Deps: ../../components/getContent
 import getContent from '../../components/getContent'
 
 const c = getContent('blog', {sort: 'pubdate', sortDir: 'desc', index: true})

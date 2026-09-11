@@ -1,3 +1,4 @@
+// GET /courses/<slug>.json -- one course by slug. Deps: ../../components/getContent
 import getContent from '../../components/getContent'
 
 let lookup;

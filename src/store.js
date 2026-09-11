@@ -1,3 +1,5 @@
+// Svelte stores for the signup cart and the webinar list, persisted to localStorage.
+// Deps: svelte/store, ./persistant, ./components/getWebinars
 import { writable } from 'svelte/store'
 import { readablePersistantUpdating } from './persistant'
 import { getWebinars, webinarsEmpty, initLocalWebinars } from './components/getWebinars'

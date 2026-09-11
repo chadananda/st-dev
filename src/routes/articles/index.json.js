@@ -1,3 +1,4 @@
+// GET /articles.json -- the article index, without rendered bodies. Deps: ./_articles.js
 import articles from './_articles.js';
 
 // const contents = JSON.stringify(articles.map(ar => {

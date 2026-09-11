@@ -1,3 +1,6 @@
+// yup validation schemas for retreat registration (person, cart item, signup form).
+// Deps: yup 1.x -- when() branches must be callables, and must extend the passed schema
+// rather than return a fresh one, or the field's default is lost. Covered by tests/schemas.test.mjs
 import * as yup from 'yup'
 
 export const personSchema = yup.object().shape({

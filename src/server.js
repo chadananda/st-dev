@@ -1,3 +1,5 @@
+// Production server: compression -> static /static -> Sapper SSR. Deps: polka, sirv,
+// compression, @sapper/server. Only used by `npm start`; the site deploys as a static export.
 import sirv from 'sirv';
 import polka from 'polka';
 import compression from 'compression';
@@ -13,5 +15,5 @@ polka() // You can also use Express
 		sapper.middleware()
 	)
 	.listen(PORT, err => {
-		if (err) console.log('error', err);
+		if (err) console.error('server failed to listen on port ' + PORT, err);
 	});

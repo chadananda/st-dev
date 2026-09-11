@@ -1,3 +1,4 @@
+// GET /courses.json -- course index, metadata only. Deps: ../../components/getContent
 import getContent from '../../components/getContent'
 
 const c = getContent('courses', {metaOnly: true})

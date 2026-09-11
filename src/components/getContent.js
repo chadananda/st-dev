@@ -1,3 +1,5 @@
+// Reads markdown under src/content/<dir> into rendered entries for blog and courses.
+// Deps: klaw-sync, gray-matter, markdown-it, slugify, ./asDateString
 import asDateString from './asDateString' // normalise front-matter dates
 const path = require('path');
 const basePath = path.resolve(process.cwd() + '/src/content')
